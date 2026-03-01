@@ -10,59 +10,72 @@
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Nunito',sans-serif;background:linear-gradient(160deg,#FFF8E1 0%,#FFF3E0 40%,#FCE4EC 100%);min-height:100vh;padding:20px;overflow-x:hidden;}
 
-  body.advanced{background:linear-gradient(160deg,#1A0A2E 0%,#0D1F3C 50%,#1A1A2E 100%);}
-  body.advanced .question-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);}
+  body.advanced,body.gept{background:linear-gradient(160deg,#1A0A2E 0%,#0D1F3C 50%,#1A1A2E 100%);}
+  body.advanced .question-card,body.gept .question-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);}
   body.advanced .question-card::before{background:linear-gradient(90deg,#7B1FA2,#E65100,#1565C0);}
-  body.advanced h1{color:white;text-shadow:0 0 30px rgba(255,213,79,0.3);}
+  body.gept .question-card::before{background:linear-gradient(90deg,#00695C,#0277BD,#E65100);}
+  body.advanced h1,body.gept h1{color:white;}
   body.advanced h1 span{color:#FFE082;}
-  body.advanced .subtitle{color:rgba(255,255,255,0.5);}
-  body.advanced .scorebar{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);}
-  body.advanced .score-label{color:rgba(255,255,255,0.4);}
+  body.gept h1 span{color:#80CBC4;}
+  body.advanced .subtitle,body.gept .subtitle{color:rgba(255,255,255,0.5);}
+  body.advanced .scorebar,body.gept .scorebar{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);}
+  body.advanced .score-label,body.gept .score-label{color:rgba(255,255,255,0.4);}
   body.advanced .score-value.points{color:#FFE082;}
+  body.gept .score-value.points{color:#80CBC4;}
   body.advanced .question-num{color:#FFE082;}
-  body.advanced .dialogue-box{background:rgba(255,255,255,0.05);border-color:rgba(255,213,79,0.2);}
-  body.advanced .bubble-left{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);}
+  body.gept .question-num{color:#80CBC4;}
+  body.advanced .dialogue-box,body.gept .dialogue-box{background:rgba(255,255,255,0.05);border-color:rgba(255,213,79,0.15);}
+  body.gept .dialogue-box{border-color:rgba(128,203,196,0.2);}
+  body.advanced .bubble-left,body.gept .bubble-left{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);}
   body.advanced .bubble.question-bubble{background:rgba(255,213,79,0.1);border-color:rgba(255,213,79,0.4);color:#FFE082;}
-  body.advanced .options-label{color:rgba(255,255,255,0.4);}
-  body.advanced .option-btn{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);}
+  body.gept .bubble.question-bubble{background:rgba(128,203,196,0.1);border-color:rgba(128,203,196,0.4);color:#80CBC4;}
+  body.advanced .options-label,body.gept .options-label{color:rgba(255,255,255,0.4);}
+  body.advanced .option-btn,body.gept .option-btn{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);}
   body.advanced .option-btn:hover:not(:disabled){border-color:#FFD54F;background:rgba(255,213,79,0.1);}
-  body.advanced .option-btn.correct-ans{border-color:var(--correct);background:rgba(102,187,106,0.15);color:#A5D6A7;}
-  body.advanced .option-btn.wrong-ans{border-color:var(--wrong);background:rgba(239,83,80,0.12);color:#EF9A9A;}
+  body.gept .option-btn:hover:not(:disabled){border-color:#80CBC4;background:rgba(128,203,196,0.1);}
+  body.advanced .option-btn.correct-ans,body.gept .option-btn.correct-ans{border-color:var(--correct);background:rgba(102,187,106,0.15);color:#A5D6A7;}
+  body.advanced .option-btn.wrong-ans,body.gept .option-btn.wrong-ans{border-color:var(--wrong);background:rgba(239,83,80,0.12);color:#EF9A9A;}
   body.advanced .option-letter{background:rgba(255,255,255,0.1);color:white;}
-  body.advanced .option-btn:hover:not(:disabled) .option-letter{background:#FFD54F;color:#333;}
-  body.advanced .option-btn.correct-ans .option-letter{background:var(--correct);color:white;}
-  body.advanced .option-btn.wrong-ans .option-letter{background:var(--wrong);color:white;}
-  body.advanced .feedback.correct{background:rgba(102,187,106,0.15);color:#A5D6A7;border:1px solid rgba(102,187,106,0.3);}
-  body.advanced .feedback.wrong{background:rgba(239,83,80,0.12);color:#EF9A9A;border:1px solid rgba(239,83,80,0.3);}
-  body.advanced .explanation{color:rgba(255,255,255,0.5);}
+  body.gept .option-letter{background:rgba(255,255,255,0.1);color:white;}
+  body.advanced .option-btn.correct-ans .option-letter,body.gept .option-btn.correct-ans .option-letter{background:var(--correct);color:white;}
+  body.advanced .option-btn.wrong-ans .option-letter,body.gept .option-btn.wrong-ans .option-letter{background:var(--wrong);color:white;}
+  body.advanced .feedback.correct,body.gept .feedback.correct{background:rgba(102,187,106,0.15);color:#A5D6A7;border:1px solid rgba(102,187,106,0.3);}
+  body.advanced .feedback.wrong,body.gept .feedback.wrong{background:rgba(239,83,80,0.12);color:#EF9A9A;border:1px solid rgba(239,83,80,0.3);}
+  body.advanced .explanation,body.gept .explanation{color:rgba(255,255,255,0.5);}
   body.advanced .btn-next{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
-  body.advanced .result-screen{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);}
-  body.advanced .result-title{color:white;}
-  body.advanced .result-score{color:#FFE082;}
-  body.advanced .result-msg{color:rgba(255,255,255,0.5);}
-  body.advanced .result-stat-label{color:rgba(255,255,255,0.35);}
-  body.advanced .back-btn{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);}
-  body.advanced .back-btn:hover{color:white;}
-  body.advanced .progress-bar{background:rgba(255,255,255,0.1);}
+  body.gept .btn-next{background:linear-gradient(135deg,#00695C,#0277BD);}
+  body.advanced .result-screen,body.gept .result-screen{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);}
+  body.advanced .result-title,body.gept .result-title{color:white;}
+  body.advanced .result-score{color:#FFE082;}body.gept .result-score{color:#80CBC4;}
+  body.advanced .result-msg,body.gept .result-msg{color:rgba(255,255,255,0.5);}
+  body.advanced .result-stat-label,body.gept .result-stat-label{color:rgba(255,255,255,0.35);}
+  body.advanced .back-btn,body.gept .back-btn{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);}
+  body.advanced .back-btn:hover,body.gept .back-btn:hover{color:white;}
+  body.advanced .progress-bar,body.gept .progress-bar{background:rgba(255,255,255,0.1);}
   body.advanced .progress-fill{background:linear-gradient(90deg,#7B1FA2,#1565C0);}
-  body.advanced .speaker-name{color:rgba(255,255,255,0.35);}
+  body.gept .progress-fill{background:linear-gradient(90deg,#00695C,#0277BD);}
+  body.advanced .speaker-name,body.gept .speaker-name{color:rgba(255,255,255,0.35);}
+  body.advanced .btn-restart{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
+  body.gept .btn-restart{background:linear-gradient(135deg,#00695C,#0277BD);}
+  body.advanced .btn-home{background:linear-gradient(135deg,#1565C0,#00838F);}
+  body.gept .btn-home{background:linear-gradient(135deg,#0277BD,#00695C);}
+  body.advanced .context-box,body.gept .context-box{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);}
 
   .wrapper{max-width:760px;margin:0 auto;position:relative;z-index:1;}
   .back-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Fredoka One',cursive;font-size:15px;color:#666;text-decoration:none;margin-bottom:16px;padding:7px 16px;background:white;border-radius:30px;box-shadow:0 2px 10px rgba(0,0,0,0.08);transition:all 0.2s ease;}
   .back-btn:hover{color:#FF7043;transform:translateX(-3px);}
-
-  .adv-tag{display:none;margin-bottom:8px;}
-  body.advanced .adv-tag{display:inline-block;background:linear-gradient(135deg,#7B1FA2,#1565C0);color:white;font-family:'Fredoka One',cursive;font-size:12px;letter-spacing:2px;padding:4px 14px;border-radius:20px;text-transform:uppercase;}
-
+  .mode-tag{display:none;margin-bottom:8px;}
+  body.advanced .mode-tag{display:inline-block;background:linear-gradient(135deg,#7B1FA2,#1565C0);color:white;font-family:'Fredoka One',cursive;font-size:12px;letter-spacing:2px;padding:4px 14px;border-radius:20px;text-transform:uppercase;}
+  body.gept .mode-tag{display:inline-block;background:linear-gradient(135deg,#00695C,#0277BD);color:white;font-family:'Fredoka One',cursive;font-size:12px;letter-spacing:2px;padding:4px 14px;border-radius:20px;text-transform:uppercase;}
   header{text-align:center;margin-bottom:28px;animation:fadeUp 0.6s ease both;}
   @keyframes fadeUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
   .title-badge{display:inline-block;background:linear-gradient(135deg,#FFD54F,#FF7043);color:white;font-family:'Fredoka One',cursive;font-size:13px;letter-spacing:2px;padding:5px 16px;border-radius:20px;margin-bottom:8px;text-transform:uppercase;}
   body.advanced .title-badge{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
+  body.gept .title-badge{background:linear-gradient(135deg,#00695C,#0277BD);}
   h1{font-family:'Fredoka One',cursive;font-size:clamp(28px,6vw,46px);color:var(--ink);line-height:1.1;}
   h1 span{color:#FF7043;}
   .subtitle{font-size:15px;color:#666;margin-top:6px;font-weight:600;}
-
-  .scorebar{display:flex;justify-content:space-between;align-items:center;background:white;border-radius:20px;padding:14px 22px;margin-bottom:22px;box-shadow:0 4px 20px rgba(0,0,0,0.08);animation:fadeUp 0.6s ease 0.1s both;}
+  .scorebar{display:flex;justify-content:space-between;align-items:center;background:white;border-radius:20px;padding:14px 22px;margin-bottom:22px;box-shadow:0 4px 20px rgba(0,0,0,0.08);}
   .score-item{text-align:center;}
   .score-label{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#999;}
   .score-value{font-family:'Fredoka One',cursive;font-size:28px;line-height:1;margin-top:2px;}
@@ -73,10 +86,14 @@
   .progress-label{font-size:12px;font-weight:800;color:#999;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
   .progress-bar{background:#EEE;border-radius:10px;height:12px;overflow:hidden;}
   .progress-fill{height:100%;background:linear-gradient(90deg,#FFD54F,#FF7043);border-radius:10px;transition:width 0.5s cubic-bezier(0.34,1.56,0.64,1);width:0%;}
-
-  .question-card{background:white;border-radius:28px;padding:32px 28px 24px;box-shadow:0 8px 40px rgba(0,0,0,0.1);margin-bottom:20px;animation:fadeUp 0.6s ease 0.2s both;position:relative;overflow:hidden;}
+  .question-card{background:white;border-radius:28px;padding:32px 28px 24px;box-shadow:0 8px 40px rgba(0,0,0,0.1);margin-bottom:20px;position:relative;overflow:hidden;}
   .question-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#FFD54F,#FF7043,#FF4081);}
   .question-num{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#FF7043;margin-bottom:12px;}
+
+  /* Context box for GEPT situational setup */
+  .context-box{background:#FFF8E1;border:1px solid #FFE082;border-radius:14px;padding:12px 16px;margin-bottom:16px;font-size:14px;font-weight:700;color:#795548;line-height:1.6;display:none;}
+  .context-box.show{display:block;}
+  .context-icon{font-size:16px;margin-right:6px;}
 
   .dialogue-box{background:#FFFDE7;border-radius:20px;padding:20px;margin-bottom:24px;border:2px solid #FFE082;}
   .bubble-row{display:flex;align-items:flex-end;gap:10px;margin-bottom:14px;}
@@ -85,7 +102,8 @@
   .avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
   .avatar-a{background:#FFD54F;}
   .avatar-b{background:#80DEEA;}
-  .bubble{max-width:75%;padding:10px 16px;border-radius:18px;font-size:16px;font-weight:700;line-height:1.5;color:var(--ink);}
+  .avatar-c{background:#CE93D8;}
+  .bubble{max-width:80%;padding:10px 16px;border-radius:18px;font-size:15px;font-weight:700;line-height:1.6;color:var(--ink);}
   .bubble-left{background:white;border-bottom-left-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,0.08);}
   .bubble-right{background:#FF7043;color:white;border-bottom-right-radius:4px;}
   .bubble.question-bubble{background:#FFF3E0;border:2px dashed #FFB74D;color:#E65100;}
@@ -95,12 +113,12 @@
 
   .options-label{font-size:14px;font-weight:800;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;}
   .options{display:flex;flex-direction:column;gap:10px;}
-  .option-btn{padding:14px 20px;border:3px solid #E0E0E0;border-radius:16px;background:white;color:var(--ink);font-family:'Nunito',sans-serif;font-size:16px;font-weight:700;cursor:pointer;text-align:left;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);display:flex;align-items:center;gap:10px;}
+  .option-btn{padding:13px 18px;border:3px solid #E0E0E0;border-radius:16px;background:white;color:var(--ink);font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;cursor:pointer;text-align:left;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);display:flex;align-items:flex-start;gap:10px;line-height:1.5;}
   .option-btn:hover:not(:disabled){transform:translateX(4px);border-color:#FF7043;box-shadow:0 4px 16px rgba(255,112,67,0.15);}
   .option-btn:disabled{cursor:default;}
   .option-btn.correct-ans{border-color:var(--correct);background:#E8F5E9;color:#2E7D32;}
   .option-btn.wrong-ans{border-color:var(--wrong);background:#FFEBEE;color:#C62828;opacity:0.75;}
-  .option-letter{width:30px;height:30px;border-radius:50%;background:#F5F5F5;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:16px;flex-shrink:0;transition:all 0.2s ease;}
+  .option-letter{width:30px;height:30px;min-width:30px;border-radius:50%;background:#F5F5F5;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:16px;flex-shrink:0;transition:all 0.2s ease;margin-top:1px;}
   .option-btn:hover:not(:disabled) .option-letter{background:#FF7043;color:white;}
   .option-btn.correct-ans .option-letter{background:var(--correct);color:white;}
   .option-btn.wrong-ans .option-letter{background:var(--wrong);color:white;}
@@ -135,9 +153,6 @@
   .btn-restart:hover{transform:translateY(-3px) scale(1.05);}
   .btn-home{font-family:'Fredoka One',cursive;font-size:20px;padding:14px 32px;border:none;border-radius:18px;background:linear-gradient(135deg,#FF7043,#AB47BC);color:white;text-decoration:none;display:inline-block;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 6px 24px rgba(255,112,67,0.35);}
   .btn-home:hover{transform:translateY(-3px) scale(1.05);}
-  body.advanced .btn-restart{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
-  body.advanced .btn-home{background:linear-gradient(135deg,#1565C0,#00838F);}
-
   .confetti-piece{position:fixed;pointer-events:none;z-index:999;border-radius:2px;animation:confettiFall linear forwards;}
   @keyframes confettiFall{0%{transform:translateY(-10px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
 </style>
@@ -146,7 +161,7 @@
 <div class="wrapper">
   <a href="index.html" class="back-btn" id="backBtn">← 主選單</a>
   <header>
-    <div class="adv-tag">🔥 全民英檢初級</div>
+    <div class="mode-tag" id="modeTag">高階版</div>
     <div class="title-badge">💬 關卡 3</div>
     <h1>對話<span id="h1sub">練習</span></h1>
     <p class="subtitle" id="headerSub">看對話情境，選出最正確的回應！</p>
@@ -161,13 +176,11 @@
 
   <div class="question-card" id="questionCard">
     <div class="question-num" id="questionNum">題目 1 / 8</div>
+    <div class="context-box" id="contextBox"></div>
     <div class="dialogue-box" id="dialogueBox"></div>
-    <div class="options-label">你會怎麼回答？</div>
+    <div class="options-label" id="optionsLabel">你會怎麼回答？</div>
     <div class="options" id="optionsEl"></div>
-    <div class="feedback" id="feedbackEl">
-      <span class="icon" id="feedbackIcon"></span>
-      <div><div id="feedbackText"></div><div class="explanation" id="explanationEl"></div></div>
-    </div>
+    <div class="feedback" id="feedbackEl"><span class="icon" id="feedbackIcon"></span><div><div id="feedbackText"></div><div class="explanation" id="explanationEl"></div></div></div>
     <button class="btn-next" id="btnNext" onclick="nextQuestion()">下一題 →</button>
   </div>
 
@@ -208,56 +221,186 @@ const ADVANCED_Q = [
   {dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:'Your room is messy. Have you cleaned it yet?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Not yet. I haven't cleaned it yet.",correct:true},{text:"Not yet. I didn't clean it yet.",correct:false},{text:"Not yet. I haven't clean it yet.",correct:false}],explanation:"現在完成式否定：haven't + p.p.，注意 p.p. 是 cleaned，不是原形 clean。"},
   {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'This story was written by a famous writer, was it?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"No, it wasn't. It was written by an unknown author.",correct:true},{text:"No, it weren't. It was written by an unknown author.",correct:false},{text:"No, it isn't. It was written by an unknown author.",correct:false}],explanation:"Was it? 的否定回答是 No, it wasn't.，被動語態過去式 it 用 was/wasn't。"},
   {dialogue:[{speaker:'A',avatar:'👦',name:'Ken',text:"I called you yesterday, but you didn't answer. What were you doing?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Sorry, I was taking a shower at that time.',correct:true},{text:'Sorry, I took a shower at that time.',correct:false},{text:'Sorry, I am taking a shower at that time.',correct:false}],explanation:'was/were + Ving 是過去進行式，表示「當時正在做的事」，所以用 I was taking a shower。'},
-  {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:'You can speak Japanese very well, can you?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Actually, I can't speak it very well yet.",correct:true},{text:"Actually, I cannot speak it very well yet.",correct:false},{text:"Actually, I can't speaks it very well yet.",correct:false}],explanation:"can't 和 cannot 都是正確的否定形式，但 can't speak 是正確的，因為助動詞後面接原形動詞 speak，不加 s。第一個選項最自然。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:'You can speak Japanese very well, can you?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Actually, I can't speak it very well yet.",correct:true},{text:"Actually, I cannot speaks it very well yet.",correct:false},{text:"Actually, I am not speak it very well yet.",correct:false}],explanation:"can't 後面接原形動詞 speak（不加 s）。"},
+];
+
+// GEPT: realistic multi-turn dialogues with richer context and situational settings
+const GEPT_Q = [
+  {
+    context:"📞 情境：你打電話到一家餐廳，想預約座位。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Restaurant Staff',text:"Good evening, Golden Garden Restaurant. How may I help you?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Hi, I'd like to make a reservation for this Saturday evening."},
+      {speaker:'A',avatar:'👩',name:'Staff',text:"Certainly. How many people will be in your party, and what time would you prefer?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"There will be four of us, and we'd prefer seven o'clock if possible.",correct:true},
+      {text:"We are four people, and seven o'clock is our prefer time.",correct:false},
+      {text:"Four people will come, and we prefer at seven o'clock.",correct:false}
+    ],
+    explanation:"There will be + 數字 是標準的英文表達人數方式。we'd prefer（= we would prefer）搭配 if possible 是禮貌的請求表達。"
+  },
+  {
+    context:"🏥 情境：你陪朋友去看診，醫生正在問診。",
+    dialogue:[
+      {speaker:'A',avatar:'👨‍⚕️',name:'Doctor',text:"So, what seems to be the problem today?"},
+      {speaker:'B',avatar:'👦',name:'Friend',text:"I've been having a terrible headache and a sore throat since yesterday morning."},
+      {speaker:'A',avatar:'👨‍⚕️',name:'Doctor',text:"I see. Have you taken any medication for it?"},
+      {speaker:'B',avatar:'🧒',name:'You (helping)',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"He took some painkillers last night, but they didn't seem to help much.",correct:true},
+      {text:"He has took some painkillers last night, but they didn't seem to help.",correct:false},
+      {text:"He was taking painkillers last night, but didn't help much.",correct:false}
+    ],
+    explanation:"描述昨晚已完成的動作用過去簡單式 took。didn't seem to help much 是「似乎沒有太大幫助」的自然表達。"
+  },
+  {
+    context:"🛍️ 情境：你在百貨公司想換一件衣服的尺寸。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me. I bought this jacket here last week, but I'm afraid it's a bit too small for me."},
+      {speaker:'B',avatar:'👩',name:'Store Clerk',text:"Of course! Do you have your receipt with you?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Yes, I do. Would it be possible to exchange it for a larger size?"},
+      {speaker:'B',avatar:'👩',name:'Clerk',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Certainly. Let me check if we have the next size available in stock.",correct:true},
+      {text:"Sure. Let me check if we had the next size available in stock.",correct:false},
+      {text:"Of course. Let me check if we have the next size is available in stock.",correct:false}
+    ],
+    explanation:"if 引導的間接問句用現在式（if we have...），不用過去式。if we have the next size available in stock 是「確認是否有下一個尺寸的庫存」的標準商業用語。"
+  },
+  {
+    context:"🚉 情境：你在火車站詢問列車資訊。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me. Could you tell me which platform the train to Kaohsiung departs from?"},
+      {speaker:'B',avatar:'👨',name:'Station Staff',text:"The next train to Kaohsiung leaves from Platform 3 at 2:45."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"I see. And has it been delayed at all today?"},
+      {speaker:'B',avatar:'👨',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"No, it's running on schedule today. You should be fine if you head over now.",correct:true},
+      {text:"No, it runs on schedule today. You should fine if you head over now.",correct:false},
+      {text:"No, it has run on schedule. You should be fine if you will head over now.",correct:false}
+    ],
+    explanation:"it's running on schedule（現在進行式）強調「目前」正常運行。if 引導的條件子句用現在式（if you head over），不用未來式。"
+  },
+  {
+    context:"🏫 情境：你和外籍老師談論你的學習計畫。",
+    dialogue:[
+      {speaker:'A',avatar:'👩‍🏫',name:'Ms. Carter',text:"I hear you're planning to study abroad next year. Which country have you decided on?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"I've been seriously considering Canada or Australia, but I haven't made a final decision yet."},
+      {speaker:'A',avatar:'👩‍🏫',name:'Ms. Carter',text:"Both are excellent choices. What are the main factors you're looking at?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Mainly the quality of the language programs and whether the cost of living is manageable on my budget.",correct:true},
+      {text:"Mainly the quality of language programs and if the cost of living is manage on my budget.",correct:false},
+      {text:"Mainly quality of the language programs and whether cost of living can manage by my budget.",correct:false}
+    ],
+    explanation:"whether + 子句（whether the cost is manageable）是間接問句的標準結構。manageable（可負擔的）是形容詞，on my budget 表示「在我的預算範圍內」。"
+  },
+  {
+    context:"🍽️ 情境：你在餐廳遇到食物有問題，和服務生溝通。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me. I ordered the grilled salmon, but this doesn't look right. It seems to be undercooked."},
+      {speaker:'B',avatar:'👨',name:'Waiter',text:"I'm so sorry about that. Would you like me to take it back to the kitchen?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Yes, please. And could you also let the chef know that I'm allergic to shellfish?"},
+      {speaker:'B',avatar:'👨',name:'Waiter',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Absolutely. I'll make sure the kitchen is aware of your allergy and have the dish remade right away.",correct:true},
+      {text:"Sure. I will make sure kitchen knows your allergy and remake the dish right away.",correct:false},
+      {text:"Of course. I'll make sure the kitchen was aware of your allergy and have the dish remake right away.",correct:false}
+    ],
+    explanation:"I'll make sure + 子句（the kitchen is aware）是「確保…」的標準說法。have the dish remade（使菜重新製作）是 have something done 的使役句型，p.p. 用 remade，不是原形 remake。"
+  },
+  {
+    context:"📱 情境：你致電給朋友的家人，朋友不在家。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hello, may I speak to Jason, please?"},
+      {speaker:'B',avatar:'👩',name:'Jason's Mom',text:"I'm afraid he's not in right now. He's gone to the library to work on a project."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Oh, I see. Do you know what time he's expected back?"},
+      {speaker:'B',avatar:'👩',name:'Mom',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"He said he'd be home by six, but you're welcome to leave a message if you'd like.",correct:true},
+      {text:"He said he will be home by six, but you're welcome leaving a message if you like.",correct:false},
+      {text:"He says he would be home by six, but you welcome to leave message if you like.",correct:false}
+    ],
+    explanation:"間接引語中的未來式：said he'd be（= he said he would be）。be welcome to + 原形動詞 是「歡迎去做某事」的固定用法。if you'd like 是禮貌的表達方式。"
+  },
+  {
+    context:"🏨 情境：你致電飯店確認訂房資訊。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I made a reservation last week for two nights starting this Friday under the name Chen."},
+      {speaker:'B',avatar:'👨',name:'Receptionist',text:"Let me pull that up for you. Yes, I have a reservation for a double room, checking in Friday and checking out Sunday. Is that correct?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"That's right. I was also wondering whether breakfast is included in the rate."},
+      {speaker:'B',avatar:'👨',name:'Receptionist',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Your rate includes breakfast for two guests each morning, served from six-thirty to ten in our dining room.",correct:true},
+      {text:"Your rate include breakfast for two guests every morning, serve from six-thirty to ten in our dining room.",correct:false},
+      {text:"Your rate is including breakfast for two guests each morning, is serving from six-thirty to ten.",correct:false}
+    ],
+    explanation:"主詞 Your rate 是單數，動詞用 includes（不是 include）。served from... 是過去分詞片語作後置修飾，修飾 breakfast（早餐是「被提供」的）。"
+  },
 ];
 
 const params = new URLSearchParams(window.location.search);
-const isAdvanced = params.get('difficulty') === 'advanced';
-const QUESTION_BANK = isAdvanced ? ADVANCED_Q : BASIC_Q;
+const difficulty = params.get('difficulty') || 'basic';
+const QUESTION_BANK = difficulty === 'gept' ? GEPT_Q : difficulty === 'advanced' ? ADVANCED_Q : BASIC_Q;
 
-if(isAdvanced){
-  document.body.classList.add('advanced');
-  document.getElementById('headerSub').textContent='模擬英檢初級對話，選出最自然的回應！';
-  document.getElementById('backBtn').href='index.html?difficulty=advanced';
-  document.getElementById('homeBtn').href='index.html?difficulty=advanced';
+if(difficulty !== 'basic'){
+  document.body.classList.add(difficulty);
+  document.getElementById('modeTag').textContent = difficulty === 'gept' ? '🎯 英檢初級挑戰' : '⚡ 高階版';
+  document.getElementById('headerSub').textContent = difficulty === 'gept' ? '模擬真實生活情境（電話、購物、問路），選出最自然的回應！' : '模擬英檢初級對話情境，選出最自然的回應！';
+  document.getElementById('optionsLabel').textContent = difficulty === 'gept' ? '選出最自然、最道地的回應：' : '你會怎麼回答？';
+  document.getElementById('backBtn').href = `index.html?difficulty=${difficulty}`;
+  document.getElementById('homeBtn').href = `index.html?difficulty=${difficulty}`;
 }
 
 let questions=[],current=0,score=0,correctCount=0,wrongCount=0,answered=false;
-
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
 function renderQuestion(){
   const q=questions[current];answered=false;
   document.getElementById('questionNum').textContent=`題目 ${current+1} / ${questions.length}`;
   document.getElementById('progressFill').style.width=`${(current/questions.length)*100}%`;
+
+  // Context box
+  const ctxBox=document.getElementById('contextBox');
+  if(q.context){ctxBox.innerHTML=`<span class="context-icon">📌</span>${q.context}`;ctxBox.className='context-box show';}
+  else{ctxBox.className='context-box';}
+
   const dialogueBox=document.getElementById('dialogueBox');dialogueBox.innerHTML='';
   q.dialogue.forEach(line=>{
-    const row=document.createElement('div');row.className='bubble-row'+(line.speaker==='B'?' right':'');
-    const avatar=document.createElement('div');avatar.className='avatar avatar-'+line.speaker.toLowerCase();avatar.textContent=line.avatar;
-    const col=document.createElement('div');col.className='bubble-col'+(line.speaker==='B'?' right':'');
+    const isRight=line.speaker==='B';
+    const row=document.createElement('div');row.className='bubble-row'+(isRight?' right':'');
+    const avatar=document.createElement('div');avatar.className=`avatar avatar-${line.speaker==='A'?'a':line.speaker==='B'?'b':'c'}`;avatar.textContent=line.avatar;
+    const col=document.createElement('div');col.className='bubble-col'+(isRight?' right':'');
     const name=document.createElement('div');name.className='speaker-name';name.textContent=line.name;
-    const bubble=document.createElement('div');bubble.className='bubble '+(line.speaker==='B'?(line.isQuestion?'question-bubble':'bubble-right'):'bubble-left');bubble.textContent=line.text;
-    col.appendChild(name);col.appendChild(bubble);row.appendChild(avatar);row.appendChild(col);dialogueBox.appendChild(row);
+    const bubble=document.createElement('div');
+    bubble.className='bubble '+(isRight?(line.isQuestion?'question-bubble':'bubble-right'):'bubble-left');
+    bubble.textContent=line.text;col.appendChild(name);col.appendChild(bubble);row.appendChild(avatar);row.appendChild(col);dialogueBox.appendChild(row);
   });
+
   const optsEl=document.getElementById('optionsEl');optsEl.innerHTML='';
   const letters=['A','B','C'];const shuffled=shuffle(q.options);
   shuffled.forEach((opt,i)=>{
     const btn=document.createElement('button');btn.className='option-btn';
-    btn.innerHTML=`<span class="option-letter">${letters[i]}</span>${opt.text}`;
+    btn.innerHTML=`<span class="option-letter">${letters[i]}</span><span>${opt.text}</span>`;
     btn.onclick=()=>checkAnswer(opt.correct,btn,shuffled);optsEl.appendChild(btn);
   });
-  const fb=document.getElementById('feedbackEl');fb.className='feedback';
+  document.getElementById('feedbackEl').className='feedback';
   document.getElementById('feedbackText').textContent='';document.getElementById('explanationEl').textContent='';
   document.getElementById('btnNext').className='btn-next';
 }
 
 function checkAnswer(isCorrect,btn,shuffledOpts){
   if(answered)return;answered=true;
-  document.querySelectorAll('.option-btn').forEach((b,i)=>{
-    b.disabled=true;
-    if(shuffledOpts[i].correct)b.className='option-btn correct-ans';
-    else if(b===btn&&!isCorrect)b.className='option-btn wrong-ans';
-  });
+  document.querySelectorAll('.option-btn').forEach((b,i)=>{b.disabled=true;if(shuffledOpts[i].correct)b.className='option-btn correct-ans';else if(b===btn&&!isCorrect)b.className='option-btn wrong-ans';});
   const fb=document.getElementById('feedbackEl');const q=questions[current];
   if(isCorrect){score+=10;correctCount++;fb.className='feedback correct show';document.getElementById('feedbackIcon').textContent='🎉';document.getElementById('feedbackText').textContent='答對了！對話選得很好！';spawnConfetti(6);}
   else{wrongCount++;fb.className='feedback wrong show';document.getElementById('feedbackIcon').textContent='😅';document.getElementById('feedbackText').textContent='答錯了！看看綠色的正確答案。';}
@@ -275,7 +418,7 @@ function showResult(){
   document.getElementById('rWrong').textContent=wrongCount;document.getElementById('rAccuracy').textContent=accuracy+'%';
   document.getElementById('progressFill').style.width='100%';
   let emoji,title,msg;
-  if(accuracy>=90){emoji='🏆';title=isAdvanced?'英檢對話達人！':'對話高手！';msg=isAdvanced?'英檢初級對話難不倒你！':'你的英文對話能力超強！';}
+  if(accuracy>=90){emoji='🏆';title=difficulty==='gept'?'生活英語達人！':'英檢對話達人！';msg=difficulty==='gept'?'真實情境對話難不倒你，英語溝通能力超強！':'英檢初級對話難不倒你！';}
   else if(accuracy>=70){emoji='⭐';title='做得很好！';msg='大部分對話都選對了，繼續加油！';}
   else if(accuracy>=50){emoji='💪';title='不錯喔！';msg='再練習幾次，你一定能更進步！';}
   else{emoji='📚';title='繼續努力！';msg='多讀對話幾次，你會越來越棒的！';}

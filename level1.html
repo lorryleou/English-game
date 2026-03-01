@@ -6,255 +6,149 @@
 <title>英文小勇士 — 關卡 1：填空大挑戰</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root { --sky:#4FC3F7; --ink:#1A1A2E; --card-bg:#FFFFFF; --correct:#43A047; --wrong:#E53935; }
-  * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:'Nunito',sans-serif; background:linear-gradient(160deg,#E3F2FD 0%,#F3E5F5 50%,#E8F5E9 100%); min-height:100vh; padding:20px; overflow-x:hidden; }
+  :root{--ink:#1A1A2E;--correct:#43A047;--wrong:#E53935;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Nunito',sans-serif;background:linear-gradient(160deg,#E3F2FD 0%,#F3E5F5 50%,#E8F5E9 100%);min-height:100vh;padding:20px;overflow-x:hidden;}
 
-  /* Advanced body theme */
-  body.advanced { background:linear-gradient(160deg,#1A0A2E 0%,#0D1F3C 50%,#1A1A2E 100%); }
-  body.advanced .question-card { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.14); color:white; }
-  body.advanced .question-card::before { background:linear-gradient(90deg,#7B1FA2,#1565C0,#00838F); }
-  body.advanced h1 { color:white; text-shadow:0 0 30px rgba(206,147,216,0.5); }
-  body.advanced h1 span { color:#CE93D8; }
-  body.advanced .subtitle { color:rgba(255,255,255,0.5); }
-  body.advanced .scorebar { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); }
-  body.advanced .score-label { color:rgba(255,255,255,0.4); }
-  body.advanced .score-value.points { color:#CE93D8; }
-  body.advanced .question-num { color:#CE93D8; }
-  body.advanced .sentence { color:white; }
-  body.advanced .hint { color:rgba(255,255,255,0.45); }
-  body.advanced .blank { border-color:rgba(255,255,255,0.25); background:rgba(255,255,255,0.06); color:white; }
-  body.advanced .blank.correct { border-color:var(--correct); background:rgba(102,187,106,0.2); color:#A5D6A7; }
-  body.advanced .blank.wrong { border-color:var(--wrong); background:rgba(239,83,80,0.2); color:#EF9A9A; }
-  body.advanced .option-btn { background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.18); color:rgba(255,255,255,0.85); }
-  body.advanced .option-btn:hover:not(:disabled) { border-color:#CE93D8; background:rgba(206,147,216,0.1); }
-  body.advanced .option-btn.correct-ans { border-color:var(--correct); background:rgba(102,187,106,0.15); color:#A5D6A7; }
-  body.advanced .option-btn.wrong-ans { border-color:var(--wrong); background:rgba(239,83,80,0.12); color:#EF9A9A; }
-  body.advanced .feedback.correct { background:rgba(102,187,106,0.15); color:#A5D6A7; border:1px solid rgba(102,187,106,0.3); }
-  body.advanced .feedback.wrong { background:rgba(239,83,80,0.12); color:#EF9A9A; border:1px solid rgba(239,83,80,0.3); }
-  body.advanced .explanation { color:rgba(255,255,255,0.5); }
-  body.advanced .btn-next { background:linear-gradient(135deg,#7B1FA2,#1565C0); box-shadow:0 6px 24px rgba(123,31,162,0.4); }
-  body.advanced .result-screen { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.14); }
-  body.advanced .result-title { color:white; }
-  body.advanced .result-score { color:#CE93D8; }
-  body.advanced .result-msg { color:rgba(255,255,255,0.5); }
-  body.advanced .result-stat-label { color:rgba(255,255,255,0.35); }
-  body.advanced .back-btn { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.5); }
-  body.advanced .back-btn:hover { color:white; }
-  body.advanced .progress-bar { background:rgba(255,255,255,0.1); }
-  body.advanced .progress-fill { background:linear-gradient(90deg,#7B1FA2,#1565C0); }
+  body.advanced,body.gept{background:linear-gradient(160deg,#1A0A2E 0%,#0D1F3C 50%,#1A1A2E 100%);}
+  body.advanced .question-card,body.gept .question-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);color:white;}
+  body.advanced .question-card::before{background:linear-gradient(90deg,#7B1FA2,#1565C0,#00838F);}
+  body.gept .question-card::before{background:linear-gradient(90deg,#00695C,#0277BD,#01579B);}
+  body.advanced h1,body.gept h1{color:white;}
+  body.advanced h1 span{color:#CE93D8;}
+  body.gept h1 span{color:#80CBC4;}
+  body.advanced .subtitle,body.gept .subtitle{color:rgba(255,255,255,0.5);}
+  body.advanced .scorebar,body.gept .scorebar{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);}
+  body.advanced .score-label,body.gept .score-label{color:rgba(255,255,255,0.4);}
+  body.advanced .score-value.points{color:#CE93D8;}
+  body.gept .score-value.points{color:#80CBC4;}
+  body.advanced .question-num{color:#CE93D8;}
+  body.gept .question-num{color:#80CBC4;}
+  body.advanced .sentence,body.gept .sentence{color:white;}
+  body.advanced .hint,body.gept .hint{color:rgba(255,255,255,0.45);}
+  body.advanced .blank,body.gept .blank{border-color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.06);color:white;}
+  body.advanced .blank.correct,body.gept .blank.correct{border-color:var(--correct);background:rgba(102,187,106,0.2);color:#A5D6A7;}
+  body.advanced .blank.wrong,body.gept .blank.wrong{border-color:var(--wrong);background:rgba(239,83,80,0.2);color:#EF9A9A;}
+  body.advanced .option-btn,body.gept .option-btn{background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.18);color:rgba(255,255,255,0.85);}
+  body.advanced .option-btn:hover:not(:disabled){border-color:#CE93D8;background:rgba(206,147,216,0.1);}
+  body.gept .option-btn:hover:not(:disabled){border-color:#80CBC4;background:rgba(128,203,196,0.1);}
+  body.advanced .option-btn.correct-ans,body.gept .option-btn.correct-ans{border-color:var(--correct);background:rgba(102,187,106,0.15);color:#A5D6A7;}
+  body.advanced .option-btn.wrong-ans,body.gept .option-btn.wrong-ans{border-color:var(--wrong);background:rgba(239,83,80,0.12);color:#EF9A9A;}
+  body.advanced .feedback.correct,body.gept .feedback.correct{background:rgba(102,187,106,0.15);color:#A5D6A7;border:1px solid rgba(102,187,106,0.3);}
+  body.advanced .feedback.wrong,body.gept .feedback.wrong{background:rgba(239,83,80,0.12);color:#EF9A9A;border:1px solid rgba(239,83,80,0.3);}
+  body.advanced .explanation,body.gept .explanation{color:rgba(255,255,255,0.5);}
+  body.advanced .btn-next{background:linear-gradient(135deg,#7B1FA2,#1565C0);box-shadow:0 6px 24px rgba(123,31,162,0.4);}
+  body.gept .btn-next{background:linear-gradient(135deg,#00695C,#0277BD);box-shadow:0 6px 24px rgba(0,105,92,0.4);}
+  body.advanced .result-screen,body.gept .result-screen{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);}
+  body.advanced .result-title,body.gept .result-title{color:white;}
+  body.advanced .result-score{color:#CE93D8;}
+  body.gept .result-score{color:#80CBC4;}
+  body.advanced .result-msg,body.gept .result-msg{color:rgba(255,255,255,0.5);}
+  body.advanced .result-stat-label,body.gept .result-stat-label{color:rgba(255,255,255,0.35);}
+  body.advanced .back-btn,body.gept .back-btn{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);}
+  body.advanced .back-btn:hover,body.gept .back-btn:hover{color:white;}
+  body.advanced .progress-bar,body.gept .progress-bar{background:rgba(255,255,255,0.1);}
+  body.advanced .progress-fill{background:linear-gradient(90deg,#7B1FA2,#1565C0);}
+  body.gept .progress-fill{background:linear-gradient(90deg,#00695C,#0277BD);}
+  body.advanced .btn-restart{background:linear-gradient(135deg,#7B1FA2,#1565C0);box-shadow:0 6px 24px rgba(123,31,162,0.4);}
+  body.gept .btn-restart{background:linear-gradient(135deg,#00695C,#0277BD);box-shadow:0 6px 24px rgba(0,105,92,0.4);}
+  body.advanced .btn-home{background:linear-gradient(135deg,#1565C0,#00838F);}
+  body.gept .btn-home{background:linear-gradient(135deg,#0277BD,#00695C);}
 
-  .cloud { position:fixed; background:white; border-radius:50px; opacity:0.5; pointer-events:none; z-index:0; }
-  .cloud::before,.cloud::after { content:''; position:absolute; background:white; border-radius:50%; }
-  .cloud-1 { width:120px; height:40px; top:8%; left:-30px; animation:drift 18s linear infinite; }
-  .cloud-1::before { width:60px; height:60px; top:-30px; left:15px; }
-  .cloud-1::after { width:40px; height:40px; top:-20px; left:55px; }
-  @keyframes drift { from{transform:translateX(-150px)} to{transform:translateX(110vw)} }
+  .wrapper{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+  .back-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Fredoka One',cursive;font-size:15px;color:#666;text-decoration:none;margin-bottom:16px;padding:7px 16px;background:white;border-radius:30px;box-shadow:0 2px 10px rgba(0,0,0,0.08);transition:all 0.2s ease;}
+  .back-btn:hover{color:#FF7043;transform:translateX(-3px);}
 
-  body.advanced .cloud { display:none; }
+  .mode-tag{display:none;margin-bottom:8px;}
+  body.advanced .mode-tag{display:inline-block;background:linear-gradient(135deg,#7B1FA2,#1565C0);color:white;font-family:'Fredoka One',cursive;font-size:12px;letter-spacing:2px;padding:4px 14px;border-radius:20px;text-transform:uppercase;}
+  body.gept .mode-tag{display:inline-block;background:linear-gradient(135deg,#00695C,#0277BD);color:white;font-family:'Fredoka One',cursive;font-size:12px;letter-spacing:2px;padding:4px 14px;border-radius:20px;text-transform:uppercase;}
 
-  .wrapper { max-width:760px; margin:0 auto; position:relative; z-index:1; }
+  header{text-align:center;margin-bottom:28px;animation:slideDown 0.6s ease;}
+  @keyframes slideDown{from{transform:translateY(-30px);opacity:0}to{transform:translateY(0);opacity:1}}
+  .title-badge{display:inline-block;background:linear-gradient(135deg,#FF7043,#AB47BC);color:white;font-family:'Fredoka One',cursive;font-size:13px;letter-spacing:2px;padding:5px 16px;border-radius:20px;margin-bottom:8px;text-transform:uppercase;}
+  body.advanced .title-badge{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
+  body.gept .title-badge{background:linear-gradient(135deg,#00695C,#0277BD);}
+  h1{font-family:'Fredoka One',cursive;font-size:clamp(28px,6vw,46px);color:var(--ink);line-height:1.1;text-shadow:3px 3px 0 rgba(0,0,0,0.08);}
+  h1 span{color:#FF7043;}
+  .subtitle{font-size:15px;color:#666;margin-top:6px;font-weight:600;}
 
-  .back-btn {
-    display:inline-flex; align-items:center; gap:6px;
-    font-family:'Fredoka One',cursive; font-size:15px;
-    color:#666; text-decoration:none; margin-bottom:16px;
-    padding:7px 16px; background:white; border-radius:30px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08); transition:all 0.2s ease;
-  }
-  .back-btn:hover { color:#FF7043; transform:translateX(-3px); }
+  .scorebar{display:flex;justify-content:space-between;align-items:center;background:white;border-radius:20px;padding:14px 22px;margin-bottom:22px;box-shadow:0 4px 20px rgba(0,0,0,0.08);}
+  .score-item{text-align:center;}
+  .score-label{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#999;}
+  .score-value{font-family:'Fredoka One',cursive;font-size:28px;line-height:1;margin-top:2px;}
+  .score-value.points{color:#FF7043;}
+  .score-value.correct{color:var(--correct);}
+  .score-value.wrong{color:var(--wrong);}
+  .progress-wrap{flex:1;margin:0 20px;}
+  .progress-label{font-size:12px;font-weight:800;color:#999;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
+  .progress-bar{background:#EEE;border-radius:10px;height:12px;overflow:hidden;}
+  .progress-fill{height:100%;background:linear-gradient(90deg,#FF7043,#AB47BC);border-radius:10px;transition:width 0.5s cubic-bezier(0.34,1.56,0.64,1);width:0%;}
 
-  /* Advanced badge in header */
-  .adv-tag {
-    display:none; margin-bottom:8px;
-  }
-  body.advanced .adv-tag {
-    display:inline-block;
-    background:linear-gradient(135deg,#7B1FA2,#1565C0);
-    color:white; font-family:'Fredoka One',cursive;
-    font-size:12px; letter-spacing:2px; padding:4px 14px;
-    border-radius:20px; text-transform:uppercase;
-  }
+  .question-card{background:white;border-radius:28px;padding:36px 32px 28px;box-shadow:0 8px 40px rgba(0,0,0,0.1);margin-bottom:20px;position:relative;overflow:hidden;}
+  .question-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#4FC3F7,#AB47BC,#FF7043);}
+  .question-num{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#AB47BC;margin-bottom:10px;}
+  .sentence{font-size:clamp(16px,3.5vw,22px);font-weight:700;color:var(--ink);line-height:1.9;min-height:70px;display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+  .blank{display:inline-flex;align-items:center;justify-content:center;min-width:90px;height:44px;border-radius:12px;border:3px dashed #CCC;background:#F8F8F8;font-family:'Fredoka One',cursive;font-size:20px;color:var(--ink);transition:all 0.3s ease;padding:0 14px;}
+  .blank.correct{border-style:solid;border-color:var(--correct);background:#E8F5E9;color:var(--correct);}
+  .blank.wrong{border-style:solid;border-color:var(--wrong);background:#FFEBEE;color:var(--wrong);}
+  .hint{font-size:13px;color:#999;font-weight:600;font-style:italic;margin-bottom:12px;line-height:1.6;}
+  .options{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+  .option-btn{font-family:'Fredoka One',cursive;font-size:18px;padding:9px 22px;border:3px solid #E0E0E0;border-radius:16px;background:white;color:var(--ink);cursor:pointer;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);}
+  .option-btn:hover:not(:disabled){transform:translateY(-3px) scale(1.05);border-color:#AB47BC;box-shadow:0 6px 20px rgba(171,71,188,0.2);}
+  .option-btn.correct-ans{border-color:var(--correct);background:#E8F5E9;color:var(--correct);}
+  .option-btn.wrong-ans{border-color:var(--wrong);background:#FFEBEE;color:var(--wrong);opacity:0.7;}
+  .option-btn:disabled{cursor:default;}
 
-  header { text-align:center; margin-bottom:28px; animation:slideDown 0.6s ease; }
-  @keyframes slideDown { from{transform:translateY(-30px);opacity:0} to{transform:translateY(0);opacity:1} }
+  .feedback{min-height:52px;display:flex;align-items:flex-start;gap:10px;font-size:15px;font-weight:700;margin-top:16px;padding:12px 18px;border-radius:14px;opacity:0;transform:translateY(6px);transition:all 0.3s ease;}
+  .feedback.show{opacity:1;transform:translateY(0);}
+  .feedback.correct{background:#E8F5E9;color:#2E7D32;}
+  .feedback.wrong{background:#FFEBEE;color:#C62828;}
+  .feedback .icon{font-size:22px;flex-shrink:0;}
+  .explanation{font-size:13px;font-weight:600;color:#555;margin-top:4px;line-height:1.6;}
 
-  .title-badge {
-    display:inline-block;
-    background:linear-gradient(135deg,#FF7043,#AB47BC);
-    color:white; font-family:'Fredoka One',cursive;
-    font-size:13px; letter-spacing:2px; padding:5px 16px;
-    border-radius:20px; margin-bottom:8px; text-transform:uppercase;
-  }
-  body.advanced .title-badge { background:linear-gradient(135deg,#7B1FA2,#1565C0); }
+  .btn-next{width:100%;padding:16px;font-family:'Fredoka One',cursive;font-size:22px;border:none;border-radius:18px;background:linear-gradient(135deg,#FF7043,#AB47BC);color:white;cursor:pointer;margin-top:16px;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 6px 24px rgba(255,112,67,0.35);display:none;}
+  .btn-next:hover{transform:translateY(-3px);}
+  .btn-next.visible{display:block;animation:popIn 0.4s cubic-bezier(0.34,1.56,0.64,1);}
+  @keyframes popIn{from{transform:scale(0.7);opacity:0}to{transform:scale(1);opacity:1}}
 
-  h1 { font-family:'Fredoka One',cursive; font-size:clamp(28px,6vw,46px); color:var(--ink); line-height:1.1; text-shadow:3px 3px 0 rgba(0,0,0,0.08); }
-  h1 span { color:#FF7043; }
-  .subtitle { font-size:15px; color:#666; margin-top:6px; font-weight:600; }
+  .result-screen{display:none;text-align:center;background:white;border-radius:28px;padding:48px 32px;box-shadow:0 8px 40px rgba(0,0,0,0.12);}
+  .result-screen.show{display:block;animation:slideDown 0.6s ease;}
+  .result-emoji{font-size:72px;margin-bottom:16px;animation:bounce 1s ease infinite alternate;}
+  @keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-12px)}}
+  .result-title{font-family:'Fredoka One',cursive;font-size:36px;color:var(--ink);margin-bottom:8px;}
+  .result-score{font-family:'Fredoka One',cursive;font-size:56px;color:#FF7043;margin:12px 0;}
+  .result-msg{font-size:16px;color:#666;font-weight:600;margin-bottom:28px;}
+  .result-detail{display:flex;justify-content:center;gap:32px;margin-bottom:28px;}
+  .result-stat{text-align:center;}
+  .result-stat-num{font-family:'Fredoka One',cursive;font-size:32px;}
+  .result-stat-num.g{color:var(--correct);}
+  .result-stat-num.b{color:var(--wrong);}
+  .result-stat-label{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#999;}
+  .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .btn-restart{font-family:'Fredoka One',cursive;font-size:20px;padding:14px 32px;border:none;border-radius:18px;background:linear-gradient(135deg,#66BB6A,#4FC3F7);color:white;cursor:pointer;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 6px 24px rgba(102,187,106,0.35);}
+  .btn-restart:hover{transform:translateY(-3px) scale(1.05);}
+  .btn-home{font-family:'Fredoka One',cursive;font-size:20px;padding:14px 32px;border:none;border-radius:18px;background:linear-gradient(135deg,#FF7043,#AB47BC);color:white;text-decoration:none;display:inline-block;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 6px 24px rgba(255,112,67,0.35);}
+  .btn-home:hover{transform:translateY(-3px) scale(1.05);}
 
-  .scorebar {
-    display:flex; justify-content:space-between; align-items:center;
-    background:var(--card-bg); border-radius:20px; padding:14px 22px;
-    margin-bottom:22px; box-shadow:0 4px 20px rgba(0,0,0,0.08);
-    animation:slideDown 0.6s ease 0.1s both;
-  }
-  .score-item { text-align:center; }
-  .score-label { font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#999; }
-  .score-value { font-family:'Fredoka One',cursive; font-size:28px; line-height:1; margin-top:2px; }
-  .score-value.points { color:#FF7043; }
-  .score-value.correct { color:var(--correct); }
-  .score-value.wrong { color:var(--wrong); }
-  .progress-wrap { flex:1; margin:0 20px; }
-  .progress-label { font-size:12px; font-weight:800; color:#999; text-transform:uppercase; letter-spacing:1px; margin-bottom:5px; }
-  .progress-bar { background:#EEE; border-radius:10px; height:12px; overflow:hidden; }
-  .progress-fill { height:100%; background:linear-gradient(90deg,#FF7043,#AB47BC); border-radius:10px; transition:width 0.5s cubic-bezier(0.34,1.56,0.64,1); width:0%; }
-
-  .question-card {
-    background:var(--card-bg); border-radius:28px; padding:36px 32px 28px;
-    box-shadow:0 8px 40px rgba(0,0,0,0.1),0 2px 8px rgba(0,0,0,0.06);
-    margin-bottom:20px; animation:slideDown 0.6s ease 0.2s both;
-    position:relative; overflow:hidden;
-  }
-  .question-card::before {
-    content:''; position:absolute; top:0; left:0; right:0; height:5px;
-    background:linear-gradient(90deg,#4FC3F7,#AB47BC,#FF7043);
-  }
-
-  .question-num { font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:#AB47BC; margin-bottom:10px; }
-  .sentence {
-    font-size:clamp(18px,4vw,26px); font-weight:700; color:var(--ink);
-    line-height:1.8; min-height:80px; display:flex; align-items:center;
-    flex-wrap:wrap; gap:8px; margin-bottom:14px;
-  }
-  .blank {
-    display:inline-flex; align-items:center; justify-content:center;
-    min-width:90px; height:44px; border-radius:12px;
-    border:3px dashed #CCC; background:#F8F8F8;
-    font-family:'Fredoka One',cursive; font-size:22px; color:var(--ink);
-    transition:all 0.3s ease; padding:0 14px;
-  }
-  .blank.correct { border-style:solid; border-color:var(--correct); background:#E8F5E9; color:var(--correct); }
-  .blank.wrong { border-style:solid; border-color:var(--wrong); background:#FFEBEE; color:var(--wrong); }
-  .hint { font-size:13px; color:#999; font-weight:600; font-style:italic; }
-  .options { display:flex; flex-wrap:wrap; gap:12px; margin-top:10px; }
-  .option-btn {
-    font-family:'Fredoka One',cursive; font-size:20px; padding:10px 24px;
-    border:3px solid #E0E0E0; border-radius:16px; background:white;
-    color:var(--ink); cursor:pointer; transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1); user-select:none;
-  }
-  .option-btn:hover:not(:disabled) { transform:translateY(-3px) scale(1.05); border-color:#AB47BC; box-shadow:0 6px 20px rgba(171,71,188,0.2); }
-  .option-btn:active:not(:disabled) { transform:scale(0.97); }
-  .option-btn.correct-ans { border-color:var(--correct); background:#E8F5E9; color:var(--correct); }
-  .option-btn.wrong-ans { border-color:var(--wrong); background:#FFEBEE; color:var(--wrong); opacity:0.7; }
-  .option-btn:disabled { cursor:default; }
-
-  .feedback {
-    min-height:52px; display:flex; align-items:flex-start; gap:10px;
-    font-size:16px; font-weight:700; margin-top:16px; padding:12px 18px;
-    border-radius:14px; opacity:0; transform:translateY(6px); transition:all 0.3s ease;
-  }
-  .feedback.show { opacity:1; transform:translateY(0); }
-  .feedback.correct { background:#E8F5E9; color:#2E7D32; }
-  .feedback.wrong { background:#FFEBEE; color:#C62828; }
-  .feedback .icon { font-size:24px; flex-shrink:0; }
-  .explanation { font-size:13px; font-weight:600; color:#555; margin-top:6px; line-height:1.6; }
-
-  .stars { display:flex; gap:6px; font-size:22px; margin-top:14px; }
-  .star { opacity:0.2; transition:all 0.3s ease; }
-  .star.lit { opacity:1; animation:starPop 0.4s cubic-bezier(0.34,1.56,0.64,1); }
-  @keyframes starPop { 0%{transform:scale(0)} 70%{transform:scale(1.3)} 100%{transform:scale(1)} }
-
-  .btn-next {
-    width:100%; padding:16px; font-family:'Fredoka One',cursive; font-size:22px;
-    border:none; border-radius:18px; background:linear-gradient(135deg,#FF7043,#AB47BC);
-    color:white; cursor:pointer; margin-top:16px;
-    transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);
-    box-shadow:0 6px 24px rgba(255,112,67,0.35); display:none;
-  }
-  .btn-next:hover { transform:translateY(-3px); }
-  .btn-next.visible { display:block; animation:popIn 0.4s cubic-bezier(0.34,1.56,0.64,1); }
-  @keyframes popIn { from{transform:scale(0.7);opacity:0} to{transform:scale(1);opacity:1} }
-
-  .result-screen {
-    display:none; text-align:center; background:var(--card-bg); border-radius:28px;
-    padding:48px 32px; box-shadow:0 8px 40px rgba(0,0,0,0.12);
-  }
-  .result-screen.show { display:block; animation:slideDown 0.6s ease; }
-  .result-emoji { font-size:72px; margin-bottom:16px; animation:bounce 1s ease infinite alternate; }
-  @keyframes bounce { from{transform:translateY(0)} to{transform:translateY(-12px)} }
-  .result-title { font-family:'Fredoka One',cursive; font-size:36px; color:var(--ink); margin-bottom:8px; }
-  .result-score { font-family:'Fredoka One',cursive; font-size:56px; color:#FF7043; margin:12px 0; }
-  .result-msg { font-size:16px; color:#666; font-weight:600; margin-bottom:28px; }
-  .result-detail { display:flex; justify-content:center; gap:32px; margin-bottom:28px; }
-  .result-stat { text-align:center; }
-  .result-stat-num { font-family:'Fredoka One',cursive; font-size:32px; }
-  .result-stat-num.g { color:var(--correct); }
-  .result-stat-num.b { color:var(--wrong); }
-  .result-stat-label { font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#999; }
-  .btn-row { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-  .btn-restart {
-    font-family:'Fredoka One',cursive; font-size:20px; padding:14px 32px;
-    border:none; border-radius:18px; background:linear-gradient(135deg,#66BB6A,#4FC3F7);
-    color:white; cursor:pointer; transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);
-    box-shadow:0 6px 24px rgba(102,187,106,0.35);
-  }
-  .btn-restart:hover { transform:translateY(-3px) scale(1.05); }
-  .btn-home {
-    font-family:'Fredoka One',cursive; font-size:20px; padding:14px 32px;
-    border:none; border-radius:18px; background:linear-gradient(135deg,#FF7043,#AB47BC);
-    color:white; text-decoration:none; display:inline-block;
-    transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);
-    box-shadow:0 6px 24px rgba(255,112,67,0.35);
-  }
-  .btn-home:hover { transform:translateY(-3px) scale(1.05); }
-  body.advanced .btn-restart { background:linear-gradient(135deg,#7B1FA2,#1565C0); box-shadow:0 6px 24px rgba(123,31,162,0.4); }
-  body.advanced .btn-home { background:linear-gradient(135deg,#1565C0,#00838F); }
-
-  .confetti-piece {
-    position:fixed; pointer-events:none; z-index:999; border-radius:2px;
-    animation:confettiFall linear forwards;
-  }
-  @keyframes confettiFall {
-    0%{transform:translateY(-10px) rotate(0deg);opacity:1}
-    100%{transform:translateY(100vh) rotate(720deg);opacity:0}
-  }
-  @media(max-width:500px){
-    .question-card{padding:24px 18px 20px}
-    .options{gap:8px}
-    .option-btn{font-size:18px;padding:8px 18px}
-  }
+  .confetti-piece{position:fixed;pointer-events:none;z-index:999;border-radius:2px;animation:confettiFall linear forwards;}
+  @keyframes confettiFall{0%{transform:translateY(-10px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
 </style>
 </head>
 <body>
-<div class="cloud cloud-1"></div>
-
 <div class="wrapper">
   <a href="index.html" class="back-btn" id="backBtn">← 主選單</a>
-
   <header>
-    <div class="adv-tag">🔥 全民英檢初級</div>
+    <div class="mode-tag" id="modeTag">高階版</div>
     <div class="title-badge">📝 關卡 1</div>
-    <h1>填空大挑戰<br><span id="h1sub">Be 動詞 & 助動詞</span></h1>
+    <h1>填空大挑戰<br><span id="h1sub">Be 動詞 &amp; 助動詞</span></h1>
     <p class="subtitle" id="headerSub">選出正確的動詞，完成句子！</p>
   </header>
 
   <div class="scorebar">
-    <div class="score-item">
-      <div class="score-label">⭐ 分數</div>
-      <div class="score-value points" id="scoreDisplay">0</div>
-    </div>
-    <div class="progress-wrap">
-      <div class="progress-label">進度</div>
-      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-    </div>
-    <div class="score-item">
-      <div class="score-label">✅ 答對</div>
-      <div class="score-value correct" id="correctDisplay">0</div>
-    </div>
-    <div class="score-item">
-      <div class="score-label">❌ 答錯</div>
-      <div class="score-value wrong" id="wrongDisplay">0</div>
-    </div>
+    <div class="score-item"><div class="score-label">⭐ 分數</div><div class="score-value points" id="scoreDisplay">0</div></div>
+    <div class="progress-wrap"><div class="progress-label">進度</div><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div></div>
+    <div class="score-item"><div class="score-label">✅ 答對</div><div class="score-value correct" id="correctDisplay">0</div></div>
+    <div class="score-item"><div class="score-label">❌ 答錯</div><div class="score-value wrong" id="wrongDisplay">0</div></div>
   </div>
 
   <div class="question-card" id="questionCard">
@@ -262,14 +156,7 @@
     <div class="sentence" id="sentenceEl"></div>
     <div class="hint" id="hintEl"></div>
     <div class="options" id="optionsEl"></div>
-    <div class="feedback" id="feedbackEl">
-      <span class="icon" id="feedbackIcon"></span>
-      <div>
-        <div id="feedbackText"></div>
-        <div class="explanation" id="explanationEl"></div>
-      </div>
-    </div>
-    <div class="stars" id="starsEl"></div>
+    <div class="feedback" id="feedbackEl"><span class="icon" id="feedbackIcon"></span><div><div id="feedbackText"></div><div class="explanation" id="explanationEl"></div></div></div>
     <button class="btn-next" id="btnNext" onclick="nextQuestion()">下一題 →</button>
   </div>
 
@@ -291,176 +178,215 @@
 </div>
 
 <script>
-// ── Question Banks ────────────────────────────
-
 const BASIC_Q = [
-  { before:"She", blank:"is", after:"a good student.", options:["am","is","are","be"], hint:"💡 She = 第三人稱單數", explanation:"主詞是 She（第三人稱單數），所以 be 動詞用 is。" },
-  { before:"They", blank:"are", after:"in the park.", options:["am","is","are","was"], hint:"💡 They = 複數", explanation:"主詞是 They（複數），所以 be 動詞用 are。" },
-  { before:"I", blank:"am", after:"very happy today.", options:["am","is","are","were"], hint:"💡 I 用哪個 be 動詞？", explanation:"主詞是 I，be 動詞固定用 am。" },
-  { before:"The cats", blank:"are", after:"very cute.", options:["am","is","are","were"], hint:"💡 The cats = 複數名詞", explanation:"主詞是 The cats（複數），所以用 are。" },
-  { before:"My brother", blank:"is", after:"tall and strong.", options:["am","is","are","were"], hint:"💡 My brother = 一個人", explanation:"My brother 是第三人稱單數，用 is。" },
-  { before:"Yesterday, the weather", blank:"was", after:"sunny.", options:["is","are","was","were"], hint:"💡 Yesterday = 過去式", explanation:"yesterday 表示過去，weather 是單數，所以用 was。" },
-  { before:"We", blank:"were", after:"at school last Monday.", options:["is","are","was","were"], hint:"💡 We = 複數 + 過去式", explanation:"主詞 We 是複數，過去式用 were。" },
-  { before:"She", blank:"can", after:"swim very fast.", options:["can","cans","is","are"], hint:"💡 表示能力用什麼助動詞？", explanation:"can 表示「能力」，後接原形動詞，不加 s。" },
-  { before:"You", blank:"should", after:"eat more vegetables.", options:["should","shoulds","are","is"], hint:"💡 表示建議用什麼助動詞？", explanation:"should 表示「應該、建議」，後面接原形動詞。" },
-  { before:"Tom", blank:"will", after:"visit us tomorrow.", options:["will","wills","is","was"], hint:"💡 Tomorrow = 未來式", explanation:"tomorrow 表示未來，用 will，後面接原形動詞。" },
-  { before:"They", blank:"must", after:"wear a helmet.", options:["must","musts","are","is"], hint:"💡 表示規定、必須用什麼？", explanation:"must 表示「必須、規定」，後面接原形動詞。" },
-  { before:"Does she", blank:"have", after:"a pet?", options:["have","has","is","are"], hint:"💡 Does 開頭的問句，動詞怎麼變？", explanation:"Does 後面的動詞要用原形，所以是 have 而不是 has。" },
-  { before:"He", blank:"doesn't", after:"like cold weather.", options:["doesn't","don't","isn't","aren't"], hint:"💡 He 的否定助動詞是什麼？", explanation:"He 是第三人稱單數，否定用 doesn't，後接原形動詞。" },
-  { before:"We", blank:"don't", after:"have homework today.", options:["don't","doesn't","isn't","aren't"], hint:"💡 We 的否定助動詞是什麼？", explanation:"We 是複數，否定用 don't。" },
-  { before:"It", blank:"is", after:"raining outside.", options:["am","is","are","were"], hint:"💡 It = 第三人稱單數", explanation:"It 是第三人稱單數，be 動詞用 is。" },
+  {before:"She",blank:"is",after:"a good student.",options:["am","is","are","be"],hint:"💡 She = 第三人稱單數",explanation:"主詞是 She（第三人稱單數），所以 be 動詞用 is。"},
+  {before:"They",blank:"are",after:"in the park.",options:["am","is","are","was"],hint:"💡 They = 複數",explanation:"主詞是 They（複數），所以 be 動詞用 are。"},
+  {before:"I",blank:"am",after:"very happy today.",options:["am","is","are","were"],hint:"💡 I 用哪個 be 動詞？",explanation:"主詞是 I，be 動詞固定用 am。"},
+  {before:"The cats",blank:"are",after:"very cute.",options:["am","is","are","were"],hint:"💡 The cats = 複數名詞",explanation:"主詞是 The cats（複數），所以用 are。"},
+  {before:"My brother",blank:"is",after:"tall and strong.",options:["am","is","are","were"],hint:"💡 My brother = 一個人",explanation:"My brother 是第三人稱單數，用 is。"},
+  {before:"Yesterday, the weather",blank:"was",after:"sunny.",options:["is","are","was","were"],hint:"💡 Yesterday = 過去式",explanation:"yesterday 表示過去，weather 是單數，所以用 was。"},
+  {before:"We",blank:"were",after:"at school last Monday.",options:["is","are","was","were"],hint:"💡 We = 複數 + 過去式",explanation:"主詞 We 是複數，過去式用 were。"},
+  {before:"She",blank:"can",after:"swim very fast.",options:["can","cans","is","are"],hint:"💡 表示能力用什麼助動詞？",explanation:"can 表示「能力」，後接原形動詞，不加 s。"},
+  {before:"You",blank:"should",after:"eat more vegetables.",options:["should","shoulds","are","is"],hint:"💡 表示建議用什麼助動詞？",explanation:"should 表示「應該、建議」，後面接原形動詞。"},
+  {before:"Tom",blank:"will",after:"visit us tomorrow.",options:["will","wills","is","was"],hint:"💡 Tomorrow = 未來式",explanation:"tomorrow 表示未來，用 will，後面接原形動詞。"},
+  {before:"They",blank:"must",after:"wear a helmet.",options:["must","musts","are","is"],hint:"💡 表示規定、必須用什麼？",explanation:"must 表示「必須、規定」，後面接原形動詞。"},
+  {before:"Does she",blank:"have",after:"a pet?",options:["have","has","is","are"],hint:"💡 Does 開頭的問句，動詞怎麼變？",explanation:"Does 後面的動詞要用原形，所以是 have 而不是 has。"},
+  {before:"He",blank:"doesn't",after:"like cold weather.",options:["doesn't","don't","isn't","aren't"],hint:"💡 He 的否定助動詞是什麼？",explanation:"He 是第三人稱單數，否定用 doesn't，後接原形動詞。"},
+  {before:"We",blank:"don't",after:"have homework today.",options:["don't","doesn't","isn't","aren't"],hint:"💡 We 的否定助動詞是什麼？",explanation:"We 是複數，否定用 don't。"},
+  {before:"It",blank:"is",after:"raining outside.",options:["am","is","are","were"],hint:"💡 It = 第三人稱單數",explanation:"It 是第三人稱單數，be 動詞用 is。"},
 ];
 
 const ADVANCED_Q = [
-  // 現在完成式
-  { before:"She", blank:"has", after:"already finished her homework.", options:["has","have","is","was"], hint:"💡 現在完成式：主詞 She + ___ + p.p.", explanation:"現在完成式結構是 have/has + p.p.，She 是第三人稱單數，所以用 has。" },
-  { before:"They", blank:"have", after:"lived here for five years.", options:["have","has","are","were"], hint:"💡 現在完成式：主詞 They + ___ + p.p.", explanation:"They 是複數，現在完成式用 have。" },
-  { before:"I", blank:"have", after:"never been to Japan.", options:["have","has","am","was"], hint:"💡 現在完成式 + never 的結構", explanation:"I 用 have，never been 是現在完成式的否定用法。" },
-  // 被動語態
-  { before:"The window", blank:"was", after:"broken by the ball.", options:["was","were","is","has"], hint:"💡 被動語態：主詞 + ___ + p.p.", explanation:"被動語態用 be + p.p.，The window 是單數過去式，所以用 was broken。" },
-  { before:"These books", blank:"were", after:"written by a famous author.", options:["was","were","are","have"], hint:"💡 被動語態：複數主詞 + 過去式", explanation:"These books 是複數，被動語態過去式用 were written。" },
-  { before:"The letter", blank:"is being", after:"written right now.", options:["is being","are being","was being","has been"], hint:"💡 現在進行式被動：___ + p.p.", explanation:"現在進行式被動語態：is/are being + p.p.，主詞 The letter 是單數用 is being。" },
-  // 附加問句
-  { before:"He is a doctor,", blank:"isn't he", after:"?", options:["isn't he","is he","wasn't he","aren't he"], hint:"💡 附加問句：肯定句用否定附加問句", explanation:"附加問句規則：前半句肯定（is）→ 後半句否定（isn't he）。" },
-  { before:"They weren't at home,", blank:"were they", after:"?", options:["were they","weren't they","are they","is it"], hint:"💡 附加問句：否定句用肯定附加問句", explanation:"前半句否定（weren't）→ 後半句用肯定（were they）。" },
-  { before:"She can swim,", blank:"can't she", after:"?", options:["can't she","can she","couldn't she","isn't she"], hint:"💡 助動詞 can 的附加問句", explanation:"can 開頭的附加問句：肯定句（can）→ 否定附加（can't she）。" },
-  // 情態動詞 + have + p.p.
-  { before:"You should", blank:"have called", after:"me last night.", options:["have called","call","has called","calling"], hint:"💡 should + ___ + p.p. 表示過去應該做的事", explanation:"should have + p.p. 表示「過去應該做但沒做」，所以是 should have called。" },
-  { before:"He must", blank:"have forgotten", after:"the meeting.", options:["have forgotten","forget","has forgotten","be forgetting"], hint:"💡 must + ___ + p.p. 表示對過去的推測", explanation:"must have + p.p. 表示對過去的強烈推測，是 must have forgotten。" },
-  // There is / There are
-  { before:"There", blank:"is", after:"a cat under the table.", options:["is","are","was","be"], hint:"💡 There ___ + 單數名詞", explanation:"There is/are 中，動詞由後面的名詞決定。a cat 是單數，用 There is。" },
-  { before:"There", blank:"are", after:"many students in the library.", options:["is","are","was","were"], hint:"💡 There ___ + 複數名詞", explanation:"many students 是複數，所以用 There are。" },
-  // 現在完成式 + since/for
-  { before:"She has been sick", blank:"since", after:"Monday.", options:["since","for","during","from"], hint:"💡 現在完成式 + ___ + 時間點", explanation:"since 後面接「時間點」（Monday），for 後面接「時間長度」（three days）。" },
-  { before:"We have studied English", blank:"for", after:"three years.", options:["for","since","during","from"], hint:"💡 現在完成式 + ___ + 時間長度", explanation:"for 後面接時間長度（three years），since 後面接時間點。" },
+  {before:"She",blank:"has",after:"already finished her homework.",options:["has","have","is","was"],hint:"💡 現在完成式：She + ___ + p.p.",explanation:"現在完成式結構是 have/has + p.p.，She 是第三人稱單數，所以用 has。"},
+  {before:"They",blank:"have",after:"lived here for five years.",options:["have","has","are","were"],hint:"💡 現在完成式：They + ___",explanation:"They 是複數，現在完成式用 have。"},
+  {before:"I",blank:"have",after:"never been to Japan.",options:["have","has","am","was"],hint:"💡 現在完成式 + never",explanation:"I 用 have，never been 是現在完成式的否定用法。"},
+  {before:"The window",blank:"was broken",after:"by the ball.",options:["was broken","were broken","is broken","has broken"],hint:"💡 被動語態：主詞 + ___ （過去式）",explanation:"被動語態用 be + p.p.，The window 是單數過去式，用 was broken。"},
+  {before:"These books",blank:"were",after:"written by a famous author.",options:["was","were","are","have"],hint:"💡 被動語態：複數主詞 + 過去式",explanation:"These books 是複數，被動語態過去式用 were written。"},
+  {before:"He is a doctor,",blank:"isn't he",after:"?",options:["isn't he","is he","wasn't he","aren't he"],hint:"💡 附加問句：肯定句用否定附加問句",explanation:"附加問句規則：前半句肯定（is）→ 後半句否定（isn't he）。"},
+  {before:"They weren't at home,",blank:"were they",after:"?",options:["were they","weren't they","are they","is it"],hint:"💡 附加問句：否定句用肯定附加問句",explanation:"前半句否定（weren't）→ 後半句用肯定（were they）。"},
+  {before:"You should",blank:"have called",after:"me last night.",options:["have called","call","has called","calling"],hint:"💡 should + ___ + p.p. 表示過去應該做的事",explanation:"should have + p.p. 表示「過去應該做但沒做」，所以是 should have called。"},
+  {before:"There",blank:"are",after:"many students in the library.",options:["is","are","was","were"],hint:"💡 There ___ + 複數名詞",explanation:"many students 是複數，所以用 There are。"},
+  {before:"She has been sick",blank:"since",after:"Monday.",options:["since","for","during","from"],hint:"💡 現在完成式 + ___ + 時間點",explanation:"since 後面接「時間點」（Monday），for 後面接「時間長度」（three days）。"},
+  {before:"He must",blank:"have forgotten",after:"the meeting.",options:["have forgotten","forget","has forgotten","be forgetting"],hint:"💡 must + ___ + p.p. 表示對過去的推測",explanation:"must have + p.p. 表示對過去的強烈推測。"},
+  {before:"We have studied English",blank:"for",after:"three years.",options:["for","since","during","from"],hint:"💡 現在完成式 + ___ + 時間長度",explanation:"for 後面接時間長度（three years），since 後面接時間點。"},
 ];
 
-// ── Init ─────────────────────────────────────
+// GEPT: longer, more complex sentences with richer context
+const GEPT_Q = [
+  {
+    before:"My sister, who has been studying medicine in Tainan",
+    blank:"for",
+    after:"six years, is finally coming home next month.",
+    options:["for","since","during","within"],
+    hint:"💡 表示「持續了多長時間」用哪個介系詞？",
+    explanation:"for 後面接時間長度（six years），since 後面接時間點（2018）。整句是現在完成進行式：has been studying for six years。"
+  },
+  {
+    before:"The new shopping mall that",
+    blank:"was built",
+    after:"on the outskirts of our city last year has already attracted thousands of visitors.",
+    options:["was built","has built","is building","built"],
+    hint:"💡 that 引導關係子句，主詞是 mall，動作是「被建造」",
+    explanation:"shopping mall 是「被建造」的，用被動語態 was built。was 用過去式是因為 last year。"
+  },
+  {
+    before:"I",
+    blank:"have been waiting",
+    after:"for the bus for almost forty minutes, and it still hasn't arrived.",
+    options:["have been waiting","waited","was waiting","have waited"],
+    hint:"💡 等了四十分鐘且現在還在等，用什麼時態？",
+    explanation:"現在完成進行式 have been + Ving 表示「從過去某時開始，一直持續到現在仍在進行」的動作，強調動作的持續性。"
+  },
+  {
+    before:"By the time we arrived at the concert hall, the performance",
+    blank:"had already started",
+    after:", so we had to wait outside until the first intermission.",
+    options:["had already started","already started","has already started","was already started"],
+    hint:"💡 我們到達之前，表演就開始了，用什麼時態？",
+    explanation:"過去完成式 had + p.p. 表示「在過去某個時間點之前就已經發生的事」。By the time we arrived 是過去，所以表演開始用 had already started。"
+  },
+  {
+    before:"The tropical fish that",
+    blank:"are being raised",
+    after:"in the new aquarium downtown have drawn a lot of attention from marine biologists.",
+    options:["are being raised","have raised","were raised","are raised"],
+    hint:"💡 魚「正在被飼養」，現在進行式的被動語態",
+    explanation:"現在進行式被動態：are being + p.p.（raised）。表示「目前正在被飼養」的持續狀態。"
+  },
+  {
+    before:"Although the project",
+    blank:"had been delayed",
+    after:"several times due to bad weather, the team managed to complete it before the deadline.",
+    options:["had been delayed","was delayed","has been delayed","have been delayed"],
+    hint:"💡 計畫在「完成之前」就已被延誤多次，用什麼時態？",
+    explanation:"過去完成式被動態：had been + p.p.。動作（delay）在過去完成（complete）之前就已經多次發生，所以用 had been delayed。"
+  },
+  {
+    before:"If the weather",
+    blank:"had been",
+    after:"better yesterday, we would have gone hiking in the mountains.",
+    options:["had been","were","was","has been"],
+    hint:"💡 與過去事實相反的假設，if 子句用什麼時態？",
+    explanation:"與過去事實相反的假設句（If + 過去完成式, would have + p.p.）。if 子句用 had been，主句用 would have gone。"
+  },
+  {
+    before:"The scientist who",
+    blank:"has devoted",
+    after:"her entire career to finding a cure for this disease was awarded the Nobel Prize last week.",
+    options:["has devoted","had devoted","devoted","was devoted"],
+    hint:"💡 科學家「從過去到現在一直致力於」研究，用什麼時態？",
+    explanation:"現在完成式 has + p.p.（devoted）表示「從過去到現在一直持續的行為」。整句強調她一生都投入於此研究。"
+  },
+  {
+    before:"Not only",
+    blank:"was",
+    after:"the concert hall beautifully decorated, but the performers also gave an outstanding show.",
+    options:["was","were","is","has"],
+    hint:"💡 Not only 放在句首時，主詞與動詞需要倒裝",
+    explanation:"Not only 放在句首時，子句需要倒裝（助動詞 + 主詞）。concert hall 是單數過去式，用 was。Not only was + 主詞 + 形容詞。"
+  },
+  {
+    before:"The documents that were submitted last Friday",
+    blank:"haven't been reviewed",
+    after:"yet, according to the secretary.",
+    options:["haven't been reviewed","weren't reviewed","aren't reviewed","hadn't been reviewed"],
+    hint:"💡 文件「到現在還沒被審查」，現在完成式被動否定",
+    explanation:"現在完成式被動否定：haven't been + p.p.（reviewed）。表示「到目前為止尚未被執行」的被動動作。"
+  },
+  {
+    before:"She",
+    blank:"must have been",
+    after:"exhausted after running a full marathon in such hot weather.",
+    options:["must have been","should have been","would have been","might be"],
+    hint:"💡 對過去狀態的強烈推測，她跑完馬拉松後「一定很累」",
+    explanation:"must have been + 形容詞 表示對過去狀態的強烈推測。must have + p.p./been 是推測過去必定發生的事或狀態。"
+  },
+  {
+    before:"The report",
+    blank:"is supposed to be",
+    after:"submitted to the director by five o'clock this afternoon, but no one has finished it yet.",
+    options:["is supposed to be","supposed to be","was supposed to be","has been supposed to"],
+    hint:"💡 報告「應該要被提交」，表示義務或期望",
+    explanation:"be supposed to + V 表示「應該要、被期望去做」。is supposed to be submitted 是現在式被動，表示今天下午的期限。"
+  },
+];
+
 const params = new URLSearchParams(window.location.search);
-const isAdvanced = params.get('difficulty') === 'advanced';
-const QUESTION_BANK = isAdvanced ? ADVANCED_Q : BASIC_Q;
+const difficulty = params.get('difficulty') || 'basic';
+const QUESTION_BANK = difficulty === 'gept' ? GEPT_Q : difficulty === 'advanced' ? ADVANCED_Q : BASIC_Q;
+const isBasic = difficulty === 'basic';
 
-if (isAdvanced) {
-  document.body.classList.add('advanced');
-  document.getElementById('h1sub').textContent = '英檢初級程度';
-  document.getElementById('headerSub').textContent = '選出正確的詞彙，完成英檢初級句型！';
-  document.getElementById('backBtn').href = 'index.html?difficulty=advanced';
-  document.getElementById('homeBtn').href = 'index.html?difficulty=advanced';
+if (!isBasic) {
+  document.body.classList.add(difficulty);
+  const modeTag = document.getElementById('modeTag');
+  modeTag.textContent = difficulty === 'gept' ? '🎯 英檢初級挑戰' : '⚡ 高階版';
+  document.getElementById('h1sub').textContent = difficulty === 'gept' ? '英檢初級長句挑戰' : '英檢初級程度';
+  document.getElementById('headerSub').textContent = difficulty === 'gept' ? '在完整的生活句子中，找出正確的詞彙！' : '選出正確的詞彙，完成英檢初級句型！';
+  document.getElementById('backBtn').href = `index.html?difficulty=${difficulty}`;
+  document.getElementById('homeBtn').href = `index.html?difficulty=${difficulty}`;
 }
 
-let questions = [], current = 0, score = 0, correctCount = 0, wrongCount = 0, answered = false;
+let questions=[], current=0, score=0, correctCount=0, wrongCount=0, answered=false;
 
-function shuffle(arr) {
-  const a=[...arr]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a;
-}
+function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
-function renderQuestion() {
-  const q = questions[current];
-  answered = false;
-  document.getElementById('questionNum').textContent = `題目 ${current+1} / ${questions.length}`;
-  document.getElementById('sentenceEl').innerHTML = `${q.before} <span class="blank" id="blankSpan">___</span> ${q.after}`;
-  document.getElementById('hintEl').textContent = q.hint;
-  const optsEl = document.getElementById('optionsEl');
-  optsEl.innerHTML = '';
-  shuffle(q.options).forEach(opt => {
-    const btn = document.createElement('button');
-    btn.className = 'option-btn';
-    btn.textContent = opt;
-    btn.onclick = () => checkAnswer(opt, btn);
-    optsEl.appendChild(btn);
+function renderQuestion(){
+  const q=questions[current];answered=false;
+  document.getElementById('questionNum').textContent=`題目 ${current+1} / ${questions.length}`;
+  document.getElementById('sentenceEl').innerHTML=`${q.before} <span class="blank" id="blankSpan">___</span> ${q.after}`;
+  document.getElementById('hintEl').textContent=q.hint;
+  const optsEl=document.getElementById('optionsEl');optsEl.innerHTML='';
+  shuffle(q.options).forEach(opt=>{
+    const btn=document.createElement('button');btn.className='option-btn';btn.textContent=opt;
+    btn.onclick=()=>checkAnswer(opt,btn);optsEl.appendChild(btn);
   });
-  const fb = document.getElementById('feedbackEl');
-  fb.className = 'feedback';
-  document.getElementById('feedbackText').textContent = '';
-  document.getElementById('explanationEl').textContent = '';
-  renderStars(0);
-  document.getElementById('btnNext').className = 'btn-next';
-  document.getElementById('progressFill').style.width = `${(current/questions.length)*100}%`;
+  document.getElementById('feedbackEl').className='feedback';
+  document.getElementById('feedbackText').textContent='';document.getElementById('explanationEl').textContent='';
+  document.getElementById('btnNext').className='btn-next';
+  document.getElementById('progressFill').style.width=`${(current/questions.length)*100}%`;
 }
 
-function renderStars(n) {
-  const el = document.getElementById('starsEl');
-  el.innerHTML = '';
-  for(let i=1;i<=3;i++){const s=document.createElement('span');s.className='star'+(i<=n?' lit':'');s.textContent='⭐';el.appendChild(s);}
+function checkAnswer(chosen,btn){
+  if(answered)return;answered=true;
+  const q=questions[current];const isCorrect=chosen===q.blank;
+  const blank=document.getElementById('blankSpan');blank.textContent=chosen;blank.className='blank '+(isCorrect?'correct':'wrong');
+  document.querySelectorAll('.option-btn').forEach(b=>{b.disabled=true;if(b.textContent===q.blank)b.className='option-btn correct-ans';else if(b===btn&&!isCorrect)b.className='option-btn wrong-ans';});
+  const fb=document.getElementById('feedbackEl');
+  if(isCorrect){score+=10;correctCount++;fb.className='feedback correct show';document.getElementById('feedbackIcon').textContent='🎉';document.getElementById('feedbackText').textContent='答對了！太厲害！';spawnConfetti(6);}
+  else{wrongCount++;fb.className='feedback wrong show';document.getElementById('feedbackIcon').textContent='😅';document.getElementById('feedbackText').textContent=`答錯了！正確答案是「${q.blank}」`;}
+  document.getElementById('explanationEl').textContent=q.explanation;
+  document.getElementById('scoreDisplay').textContent=score;document.getElementById('correctDisplay').textContent=correctCount;document.getElementById('wrongDisplay').textContent=wrongCount;
+  document.getElementById('btnNext').className='btn-next visible';
 }
 
-function checkAnswer(chosen, btn) {
-  if(answered) return;
-  answered = true;
-  const q = questions[current];
-  const isCorrect = chosen === q.blank;
-  const blank = document.getElementById('blankSpan');
-  blank.textContent = chosen;
-  blank.className = 'blank ' + (isCorrect ? 'correct' : 'wrong');
-  document.querySelectorAll('.option-btn').forEach(b => {
-    b.disabled = true;
-    if(b.textContent === q.blank) b.className = 'option-btn correct-ans';
-    else if(b === btn && !isCorrect) b.className = 'option-btn wrong-ans';
-  });
-  const fb = document.getElementById('feedbackEl');
-  if(isCorrect) {
-    score+=10; correctCount++;
-    fb.className='feedback correct show';
-    document.getElementById('feedbackIcon').textContent='🎉';
-    document.getElementById('feedbackText').textContent='答對了！太厲害！';
-    renderStars(3); spawnConfetti(6);
-  } else {
-    wrongCount++;
-    fb.className='feedback wrong show';
-    document.getElementById('feedbackIcon').textContent='😅';
-    document.getElementById('feedbackText').textContent=`答錯了！正確答案是 "${q.blank}"`;
-    renderStars(0);
-  }
-  document.getElementById('explanationEl').textContent = q.explanation;
-  document.getElementById('scoreDisplay').textContent = score;
-  document.getElementById('correctDisplay').textContent = correctCount;
-  document.getElementById('wrongDisplay').textContent = wrongCount;
-  document.getElementById('btnNext').className = 'btn-next visible';
-}
+function nextQuestion(){current++;if(current>=questions.length)showResult();else renderQuestion();}
 
-function nextQuestion() {
-  current++;
-  if(current >= questions.length) showResult();
-  else renderQuestion();
-}
-
-function showResult() {
-  document.getElementById('questionCard').style.display='none';
-  document.getElementById('resultScreen').classList.add('show');
-  const accuracy = Math.round((correctCount/questions.length)*100);
-  document.getElementById('resultScore').textContent = score + ' 分';
-  document.getElementById('rCorrect').textContent = correctCount;
-  document.getElementById('rWrong').textContent = wrongCount;
-  document.getElementById('rAccuracy').textContent = accuracy + '%';
+function showResult(){
+  document.getElementById('questionCard').style.display='none';document.getElementById('resultScreen').classList.add('show');
+  const accuracy=Math.round((correctCount/questions.length)*100);
+  document.getElementById('resultScore').textContent=score+' 分';document.getElementById('rCorrect').textContent=correctCount;
+  document.getElementById('rWrong').textContent=wrongCount;document.getElementById('rAccuracy').textContent=accuracy+'%';
   document.getElementById('progressFill').style.width='100%';
   let emoji,title,msg;
-  if(accuracy>=90){emoji='🏆';title='超級英雄！';msg=isAdvanced?'英檢初級填空難不倒你！你太厲害了！':'Be 動詞和助動詞難不倒你！';}
+  if(accuracy>=90){emoji='🏆';title=difficulty==='gept'?'英檢達人！':'超級英雄！';msg=difficulty==='gept'?'英檢初級長句難不倒你！你太厲害了！':'Be 動詞和助動詞難不倒你！';}
   else if(accuracy>=70){emoji='⭐';title='做得很好！';msg='繼續加油，你已經掌握大部分了！';}
   else if(accuracy>=50){emoji='💪';title='不錯喔！';msg='再練習幾次，你一定可以更進步！';}
   else{emoji='📚';title='繼續努力！';msg='多練習幾次，你會越來越棒的！';}
-  document.getElementById('resultEmoji').textContent=emoji;
-  document.getElementById('resultTitle').textContent=title;
-  document.getElementById('resultMsg').textContent=msg;
-  if(accuracy>=70) spawnConfetti(20);
+  document.getElementById('resultEmoji').textContent=emoji;document.getElementById('resultTitle').textContent=title;document.getElementById('resultMsg').textContent=msg;
+  if(accuracy>=70)spawnConfetti(20);
 }
 
-function restart() {
+function restart(){
   current=0;score=0;correctCount=0;wrongCount=0;
-  questions=shuffle(QUESTION_BANK).slice(0,10);
-  document.getElementById('scoreDisplay').textContent=0;
-  document.getElementById('correctDisplay').textContent=0;
-  document.getElementById('wrongDisplay').textContent=0;
-  document.getElementById('resultScreen').classList.remove('show');
-  document.getElementById('questionCard').style.display='';
-  renderQuestion();
+  questions=shuffle(QUESTION_BANK).slice(0,Math.min(10,QUESTION_BANK.length));
+  document.getElementById('scoreDisplay').textContent=0;document.getElementById('correctDisplay').textContent=0;document.getElementById('wrongDisplay').textContent=0;
+  document.getElementById('resultScreen').classList.remove('show');document.getElementById('questionCard').style.display='';renderQuestion();
 }
 
 const CONFETTI_COLORS=['#FF7043','#AB47BC','#4FC3F7','#FFD54F','#66BB6A','#FF4081'];
-function spawnConfetti(n) {
-  for(let i=0;i<n;i++){setTimeout(()=>{const el=document.createElement('div');el.className='confetti-piece';el.style.left=Math.random()*100+'vw';el.style.background=CONFETTI_COLORS[Math.floor(Math.random()*CONFETTI_COLORS.length)];el.style.animationDuration=(1.5+Math.random()*1.5)+'s';el.style.animationDelay=Math.random()*0.5+'s';el.style.width=el.style.height=(8+Math.random()*8)+'px';el.style.borderRadius=Math.random()>0.5?'50%':'2px';document.body.appendChild(el);setTimeout(()=>el.remove(),3000);},i*80);}
-}
+function spawnConfetti(n){for(let i=0;i<n;i++){setTimeout(()=>{const el=document.createElement('div');el.className='confetti-piece';el.style.left=Math.random()*100+'vw';el.style.background=CONFETTI_COLORS[Math.floor(Math.random()*CONFETTI_COLORS.length)];el.style.animationDuration=(1.5+Math.random()*1.5)+'s';el.style.animationDelay=Math.random()*0.5+'s';el.style.width=el.style.height=(8+Math.random()*8)+'px';el.style.borderRadius=Math.random()>0.5?'50%':'2px';document.body.appendChild(el);setTimeout(()=>el.remove(),3000);},i*80);}}
 
-questions = shuffle(QUESTION_BANK).slice(0, 10);
+questions=shuffle(QUESTION_BANK).slice(0,Math.min(10,QUESTION_BANK.length));
 renderQuestion();
 </script>
 </body>

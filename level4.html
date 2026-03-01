@@ -9,19 +9,49 @@
   :root{--ink:#1A1A2E;--correct:#43A047;--wrong:#E53935;}
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Nunito',sans-serif;background:#0F1B35;min-height:100vh;padding:20px;overflow-x:hidden;position:relative;}
-  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(1px 1px at 10% 15%,rgba(255,255,255,0.8) 0%,transparent 100%),radial-gradient(1.5px 1.5px at 30% 40%,rgba(255,255,255,0.6) 0%,transparent 100%),radial-gradient(1px 1px at 50% 10%,rgba(255,255,255,0.9) 0%,transparent 100%),radial-gradient(2px 2px at 70% 60%,rgba(255,255,255,0.5) 0%,transparent 100%),radial-gradient(1px 1px at 85% 30%,rgba(255,255,255,0.7) 0%,transparent 100%),radial-gradient(1.5px 1.5px at 20% 80%,rgba(255,255,255,0.6) 0%,transparent 100%),radial-gradient(1px 1px at 60% 75%,rgba(255,255,255,0.5) 0%,transparent 100%),radial-gradient(1px 1px at 40% 55%,rgba(255,255,255,0.7) 0%,transparent 100%),linear-gradient(160deg,#0F1B35 0%,#1A0A2E 60%,#0D1F3C 100%);}
+  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:
+    radial-gradient(1px 1px at 10% 15%,rgba(255,255,255,0.8) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 30% 40%,rgba(255,255,255,0.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 50% 10%,rgba(255,255,255,0.9) 0%,transparent 100%),
+    radial-gradient(2px 2px at 70% 60%,rgba(255,255,255,0.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 85% 30%,rgba(255,255,255,0.7) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 20% 80%,rgba(255,255,255,0.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 60% 75%,rgba(255,255,255,0.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 40% 55%,rgba(255,255,255,0.7) 0%,transparent 100%),
+    linear-gradient(160deg,#0F1B35 0%,#1A0A2E 60%,#0D1F3C 100%);}
 
-  /* Advanced: tighter timer = 20s, else 15s */
+  body.advanced .progress-fill-dark{background:linear-gradient(90deg,#7B1FA2,#1565C0);}
+  body.advanced .question-card::before{background:linear-gradient(90deg,#7B1FA2,#1565C0,#FFD54F);}
+  body.advanced .btn-check-dark{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
+  body.advanced .opt-btn:hover:not(:disabled){border-color:#CE93D8;background:rgba(171,71,188,0.1);}
+  body.advanced .opt-btn:hover:not(:disabled) .opt-letter{background:#7B1FA2;}
+  body.advanced .btn-next-dark{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
+  body.advanced .btn-again{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
+  body.advanced .end-score{color:#CE93D8;}
+
+  body.gept .progress-fill-dark{background:linear-gradient(90deg,#00838F,#1B5E20);}
+  body.gept .question-card::before{background:linear-gradient(90deg,#00838F,#1B5E20,#F9A825);}
+  body.gept .btn-check-dark{background:linear-gradient(135deg,#00838F,#1B5E20);}
+  body.gept .opt-btn:hover:not(:disabled){border-color:#80CBC4;background:rgba(0,131,143,0.1);}
+  body.gept .opt-btn:hover:not(:disabled) .opt-letter{background:#00838F;}
+  body.gept .btn-next-dark{background:linear-gradient(135deg,#00838F,#1B5E20);}
+  body.gept .btn-again{background:linear-gradient(135deg,#00838F,#1B5E20);}
+  body.gept .end-score{color:#80CBC4;}
+  body.gept h1 span{color:#80CBC4;}
+
+  .context-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:12px 16px;margin-bottom:14px;font-size:14px;font-weight:700;color:rgba(255,255,255,0.6);line-height:1.5;display:none;}
+  body.gept .context-box{display:block;}
 
   .wrapper{max-width:760px;margin:0 auto;position:relative;z-index:1;}
   .back-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Fredoka One',cursive;font-size:15px;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:16px;padding:7px 16px;background:rgba(255,255,255,0.08);border-radius:30px;border:1px solid rgba(255,255,255,0.15);transition:all 0.2s ease;}
   .back-btn:hover{color:white;transform:translateX(-3px);}
-
   header{text-align:center;margin-bottom:24px;animation:fadeUp 0.6s ease both;}
   @keyframes fadeUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
   .title-badge{display:inline-block;background:linear-gradient(135deg,#AB47BC,#4FC3F7);color:white;font-family:'Fredoka One',cursive;font-size:13px;letter-spacing:2px;padding:5px 16px;border-radius:20px;margin-bottom:8px;text-transform:uppercase;}
-  .adv-header-badge{display:none;background:linear-gradient(135deg,#7B1FA2,#1565C0);color:white;font-family:'Fredoka One',cursive;font-size:12px;letter-spacing:2px;padding:4px 14px;border-radius:20px;text-transform:uppercase;margin-bottom:8px;}
-  h1{font-family:'Fredoka One',cursive;font-size:clamp(28px,6vw,48px);color:white;line-height:1.1;text-shadow:0 0 30px rgba(171,71,188,0.5);}
+  .mode-tag{display:none;font-family:'Fredoka One',cursive;font-size:12px;letter-spacing:2px;padding:4px 14px;border-radius:20px;text-transform:uppercase;color:white;margin-bottom:8px;}
+  body.advanced .mode-tag{display:inline-block;background:linear-gradient(135deg,#7B1FA2,#1565C0);}
+  body.gept .mode-tag{display:inline-block;background:linear-gradient(135deg,#00838F,#1B5E20);}
+  h1{font-family:'Fredoka One',cursive;font-size:clamp(28px,6vw,48px);color:white;line-height:1.1;text-shadow:0 0 30px rgba(171,71,188,0.4);}
   h1 span{color:#CE93D8;}
   .subtitle{font-size:15px;color:rgba(255,255,255,0.5);margin-top:6px;font-weight:600;}
 
@@ -30,7 +60,7 @@
   .hud-label{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:4px;}
   .hud-value{font-family:'Fredoka One',cursive;font-size:28px;color:white;line-height:1;}
   .hud-value.score{color:#FFD54F;}
-  .hud-value.lives{color:#FF4081;letter-spacing:3px;font-size:22px;}
+  .hud-value.lives{font-size:22px;letter-spacing:3px;}
   .timer-wrap{text-align:center;}
   .timer-circle{width:80px;height:80px;border-radius:50%;border:4px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 6px;transition:border-color 0.5s ease;}
   .timer-num{font-family:'Fredoka One',cursive;font-size:30px;color:white;transition:color 0.5s ease;}
@@ -47,14 +77,13 @@
 
   .question-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:28px;padding:28px 24px 22px;backdrop-filter:blur(12px);animation:fadeUp 0.6s ease 0.2s both;position:relative;overflow:hidden;margin-bottom:16px;}
   .question-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#AB47BC,#4FC3F7,#FFD54F);}
-
   .q-type-badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px;color:white;}
   .badge-fill{background:rgba(171,71,188,0.6);}
   .badge-rearrange{background:rgba(79,195,247,0.6);}
   .badge-dialogue{background:rgba(255,213,79,0.5);color:#FFF3E0;}
 
-  .question-text{font-size:clamp(16px,3.5vw,22px);font-weight:700;color:white;line-height:1.6;margin-bottom:8px;}
-  .blank-dark{display:inline-flex;align-items:center;justify-content:center;min-width:80px;height:38px;border-radius:10px;border:2.5px dashed rgba(255,255,255,0.3);background:rgba(255,255,255,0.07);font-family:'Fredoka One',cursive;font-size:20px;color:white;padding:0 12px;transition:all 0.3s ease;}
+  .question-text{font-size:clamp(14px,3vw,19px);font-weight:700;color:white;line-height:1.8;margin-bottom:8px;}
+  .blank-dark{display:inline-flex;align-items:center;justify-content:center;min-width:110px;height:36px;border-radius:10px;border:2.5px dashed rgba(255,255,255,0.3);background:rgba(255,255,255,0.07);font-family:'Fredoka One',cursive;font-size:16px;color:white;padding:0 12px;transition:all 0.3s ease;vertical-align:middle;}
   .blank-dark.correct{border-style:solid;border-color:#66BB6A;background:rgba(102,187,106,0.2);color:#A5D6A7;}
   .blank-dark.wrong{border-style:solid;border-color:#EF5350;background:rgba(239,83,80,0.2);color:#EF9A9A;}
   .q-hint{font-size:13px;color:rgba(255,255,255,0.4);font-weight:600;font-style:italic;margin-bottom:16px;}
@@ -63,9 +92,8 @@
   .answer-zone-dark.correct-zone{border-color:#66BB6A;background:rgba(102,187,106,0.1);border-style:solid;}
   .answer-zone-dark.wrong-zone{border-color:#EF5350;background:rgba(239,83,80,0.1);border-style:solid;}
   .zone-placeholder{color:rgba(255,255,255,0.2);font-weight:700;font-size:14px;pointer-events:none;}
-
   .word-bank-dark{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
-  .chip-dark{font-family:'Fredoka One',cursive;font-size:16px;padding:6px 14px;border-radius:10px;cursor:pointer;user-select:none;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);border:2px solid;}
+  .chip-dark{font-family:'Fredoka One',cursive;font-size:14px;padding:6px 12px;border-radius:10px;cursor:pointer;user-select:none;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);border:2px solid;}
   .chip-dark:hover{transform:translateY(-2px) scale(1.05);}
   .chip-d0{background:rgba(255,112,67,0.2);border-color:#FF7043;color:#FF8A65;}
   .chip-d1{background:rgba(79,195,247,0.2);border-color:#4FC3F7;color:#80DEEA;}
@@ -74,6 +102,16 @@
   .chip-d4{background:rgba(255,213,79,0.2);border-color:#FFD54F;color:#FFE082;}
   .chip-d5{background:rgba(255,64,129,0.2);border-color:#FF4081;color:#FF80AB;}
   .chip-d6{background:rgba(121,134,203,0.2);border-color:#7986CB;color:#9FA8DA;}
+  .chip-d7{background:rgba(0,188,212,0.2);border-color:#00BCD4;color:#80DEEA;}
+  .chip-d8{background:rgba(255,167,38,0.2);border-color:#FFA726;color:#FFCC80;}
+  .correct-sent-dark{font-size:13px;font-weight:700;color:#A5D6A7;background:rgba(102,187,106,0.1);border-radius:10px;padding:8px 12px;margin-top:8px;display:none;}
+  .check-row{display:flex;gap:10px;margin-top:10px;}
+  .btn-check-dark{flex:1;padding:12px;font-family:'Fredoka One',cursive;font-size:18px;border:none;border-radius:14px;background:linear-gradient(135deg,#AB47BC,#4FC3F7);color:white;cursor:pointer;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);}
+  .btn-check-dark:hover:not(:disabled){transform:translateY(-2px);}
+  .btn-check-dark:disabled{opacity:0.5;cursor:default;}
+  .btn-clear-dark{padding:12px 16px;font-family:'Fredoka One',cursive;font-size:18px;border:2px solid rgba(255,255,255,0.2);border-radius:14px;background:transparent;color:rgba(255,255,255,0.5);cursor:pointer;transition:all 0.2s ease;}
+  .btn-clear-dark:hover:not(:disabled){border-color:#FF4081;color:#FF4081;}
+  .btn-clear-dark:disabled{opacity:0.4;cursor:default;}
 
   .dialogue-dark{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:16px;margin-bottom:16px;}
   .dbubble-row{display:flex;align-items:flex-end;gap:8px;margin-bottom:12px;}
@@ -85,36 +123,28 @@
   .dbubble-col{display:flex;flex-direction:column;}
   .dbubble-col.right{align-items:flex-end;}
   .dspeaker{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:3px;}
-  .dbubble{max-width:75%;padding:8px 14px;border-radius:14px;font-size:14px;font-weight:700;line-height:1.5;}
+  .dbubble{max-width:82%;padding:8px 14px;border-radius:14px;font-size:13px;font-weight:700;line-height:1.6;}
   .dbubble-left{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);border-bottom-left-radius:3px;}
-  .dbubble-right-q{background:rgba(255,213,79,0.15);border:1.5px dashed rgba(255,213,79,0.4);color:#FFE082;border-bottom-right-radius:3px;}
+  .dbubble-right{background:rgba(79,195,247,0.15);color:#B3E5FC;border-bottom-right-radius:3px;}
+  .dbubble-right-q{background:rgba(255,213,79,0.12);border:1.5px dashed rgba(255,213,79,0.4);color:#FFE082;border-bottom-right-radius:3px;}
 
   .options{display:flex;flex-direction:column;gap:8px;}
-  .opt-btn{padding:12px 16px;border:2px solid rgba(255,255,255,0.15);border-radius:14px;background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.85);font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;cursor:pointer;text-align:left;display:flex;align-items:center;gap:10px;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);}
+  .opt-btn{padding:11px 15px;border:2px solid rgba(255,255,255,0.15);border-radius:14px;background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.85);font-family:'Nunito',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-align:left;display:flex;align-items:flex-start;gap:10px;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);line-height:1.5;}
   .opt-btn:hover:not(:disabled){transform:translateX(4px);border-color:#AB47BC;background:rgba(171,71,188,0.1);}
   .opt-btn:disabled{cursor:default;}
   .opt-btn.correct-ans{border-color:#66BB6A;background:rgba(102,187,106,0.15);color:#A5D6A7;}
   .opt-btn.wrong-ans{border-color:#EF5350;background:rgba(239,83,80,0.12);color:#EF9A9A;opacity:0.8;}
-  .opt-letter{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:14px;flex-shrink:0;color:white;}
+  .opt-letter{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:13px;flex-shrink:0;color:white;margin-top:1px;}
   .opt-btn:hover:not(:disabled) .opt-letter{background:#AB47BC;}
   .opt-btn.correct-ans .opt-letter{background:#66BB6A;}
   .opt-btn.wrong-ans .opt-letter{background:#EF5350;}
-
-  .check-row{display:flex;gap:10px;margin-top:10px;}
-  .btn-check-dark{flex:1;padding:12px;font-family:'Fredoka One',cursive;font-size:18px;border:none;border-radius:14px;background:linear-gradient(135deg,#AB47BC,#4FC3F7);color:white;cursor:pointer;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 4px 18px rgba(171,71,188,0.4);}
-  .btn-check-dark:hover:not(:disabled){transform:translateY(-2px);}
-  .btn-check-dark:disabled{opacity:0.5;cursor:default;}
-  .btn-clear-dark{padding:12px 16px;font-family:'Fredoka One',cursive;font-size:18px;border:2px solid rgba(255,255,255,0.2);border-radius:14px;background:transparent;color:rgba(255,255,255,0.5);cursor:pointer;transition:all 0.2s ease;}
-  .btn-clear-dark:hover:not(:disabled){border-color:#FF4081;color:#FF4081;}
-  .btn-clear-dark:disabled{opacity:0.4;cursor:default;}
 
   .feedback-dark{display:flex;align-items:flex-start;gap:10px;font-size:14px;font-weight:700;padding:12px 16px;border-radius:14px;margin-top:14px;opacity:0;transform:translateY(6px);transition:all 0.3s ease;}
   .feedback-dark.show{opacity:1;transform:translateY(0);}
   .feedback-dark.correct{background:rgba(102,187,106,0.15);color:#A5D6A7;border:1px solid rgba(102,187,106,0.3);}
   .feedback-dark.wrong{background:rgba(239,83,80,0.12);color:#EF9A9A;border:1px solid rgba(239,83,80,0.3);}
   .feedback-dark .icon{font-size:20px;flex-shrink:0;}
-  .expl-dark{font-size:12px;font-weight:600;color:rgba(255,255,255,0.4);margin-top:4px;line-height:1.6;}
-  .correct-sent-dark{font-size:13px;font-weight:700;color:#A5D6A7;background:rgba(102,187,106,0.1);border-radius:10px;padding:8px 12px;margin-top:8px;display:none;}
+  .expl-dark{font-size:12px;font-weight:600;color:rgba(255,255,255,0.4);margin-top:4px;line-height:1.7;}
 
   .btn-next-dark{width:100%;padding:14px;font-family:'Fredoka One',cursive;font-size:20px;border:none;border-radius:16px;background:linear-gradient(135deg,#AB47BC,#4FC3F7);color:white;cursor:pointer;margin-top:14px;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 6px 24px rgba(171,71,188,0.4);display:none;}
   .btn-next-dark:hover{transform:translateY(-3px);}
@@ -133,10 +163,9 @@
   .estat-num{font-family:'Fredoka One',cursive;font-size:30px;}
   .estat-num.g{color:#66BB6A;}
   .estat-num.b{color:#EF5350;}
-  .estat-num.t{color:#FFD54F;}
   .estat-label{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.35);}
   .end-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-  .btn-again{font-family:'Fredoka One',cursive;font-size:20px;padding:14px 32px;border:none;border-radius:18px;background:linear-gradient(135deg,#AB47BC,#4FC3F7);color:white;cursor:pointer;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 6px 24px rgba(171,71,188,0.4);}
+  .btn-again{font-family:'Fredoka One',cursive;font-size:20px;padding:14px 32px;border:none;border-radius:18px;background:linear-gradient(135deg,#AB47BC,#4FC3F7);color:white;cursor:pointer;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);}
   .btn-again:hover{transform:translateY(-3px) scale(1.05);}
   .btn-home-dark{font-family:'Fredoka One',cursive;font-size:20px;padding:14px 32px;border:2px solid rgba(255,255,255,0.2);border-radius:18px;background:transparent;color:rgba(255,255,255,0.7);text-decoration:none;display:inline-block;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);}
   .btn-home-dark:hover{border-color:white;color:white;transform:translateY(-3px);}
@@ -150,12 +179,11 @@
 <body>
 <div class="wrapper">
   <a href="index.html" class="back-btn" id="backBtn">← 主選單</a>
-
   <header>
-    <div class="adv-header-badge" id="advHeaderBadge">🔥 全民英檢初級</div>
+    <div class="mode-tag" id="modeTag">⚡ 高階版</div>
     <div class="title-badge">🏆 關卡 4</div>
     <h1>終極<span>闖關</span></h1>
-    <p class="subtitle" id="headerSub">15 秒倒數！用完生命值就 Game Over！</p>
+    <p class="subtitle" id="headerSub">15 秒倒數！答錯扣生命值，撐到最後才算贏！</p>
   </header>
 
   <div class="hud">
@@ -174,9 +202,13 @@
   </div>
 
   <div class="question-card" id="questionCard">
-    <div class="q-type-badge" id="typeBadge">填空</div>
+    <div class="q-type-badge" id="typeBadge">📝 填空</div>
+    <div class="context-box" id="contextBox"></div>
     <div id="questionBody"></div>
-    <div class="feedback-dark" id="feedbackEl"><span class="icon" id="feedbackIcon"></span><div><div id="feedbackText"></div><div class="expl-dark" id="explanationEl"></div></div></div>
+    <div class="feedback-dark" id="feedbackEl">
+      <span class="icon" id="feedbackIcon"></span>
+      <div><div id="feedbackText"></div><div class="expl-dark" id="explanationEl"></div></div>
+    </div>
     <button class="btn-next-dark" id="btnNext" onclick="nextQuestion()">下一題 →</button>
   </div>
 
@@ -188,7 +220,7 @@
     <div class="end-stats">
       <div class="estat"><div class="estat-num g" id="eCorrect">0</div><div class="estat-label">答對</div></div>
       <div class="estat"><div class="estat-num b" id="eWrong">0</div><div class="estat-label">答錯</div></div>
-      <div class="estat"><div class="estat-num t" id="eAccuracy">0%</div><div class="estat-label">正確率</div></div>
+      <div class="estat"><div class="estat-num" style="color:#FFD54F" id="eAccuracy">0%</div><div class="estat-label">正確率</div></div>
     </div>
     <div class="end-btns">
       <button class="btn-again" onclick="restart()">🔄 再挑戰</button>
@@ -198,72 +230,212 @@
 </div>
 
 <script>
-// ── Question Banks ─────────────────────────────────────────────
-const FILL_BASIC = [
-  {type:'fill',before:"She",blank:"is",after:"a good student.",options:["am","is","are","be"],hint:"💡 She = 第三人稱單數",explanation:"She 是單數，be 動詞用 is。"},
-  {type:'fill',before:"They",blank:"are",after:"playing outside.",options:["am","is","are","was"],hint:"💡 They = 複數",explanation:"They 是複數，be 動詞用 are。"},
-  {type:'fill',before:"I",blank:"am",after:"very excited!",options:["am","is","are","were"],hint:"💡 I 配哪個 be 動詞？",explanation:"I 固定用 am。"},
-  {type:'fill',before:"We",blank:"were",after:"at the zoo last Sunday.",options:["is","are","was","were"],hint:"💡 We + 過去式",explanation:"We 是複數，過去式 be 動詞用 were。"},
-  {type:'fill',before:"He",blank:"can",after:"speak three languages.",options:["can","cans","is","are"],hint:"💡 表示能力用什麼？",explanation:"can 表示能力，後面接原形動詞。"},
-  {type:'fill',before:"You",blank:"should",after:"study hard.",options:["should","shoulds","are","is"],hint:"💡 表示建議用什麼？",explanation:"should 表示建議，後面接原形動詞。"},
-  {type:'fill',before:"She",blank:"doesn't",after:"eat meat.",options:["doesn't","don't","isn't","aren't"],hint:"💡 She 的否定助動詞？",explanation:"第三人稱單數否定用 doesn't，後接原形動詞。"},
+// ════════════════════════════════════════════════════════════════
+//  BASIC 題庫（基礎版）
+// ════════════════════════════════════════════════════════════════
+const FILL_BASIC=[
+  {type:'fill',before:'She',blank:'is',after:'a good student.',options:['am','is','are','be'],hint:'💡 She = 第三人稱單數',explanation:'She 是單數，be 動詞要用 is。'},
+  {type:'fill',before:'They',blank:'are',after:'playing outside now.',options:['am','is','are','was'],hint:'💡 They = 複數',explanation:'They 是複數，be 動詞用 are。'},
+  {type:'fill',before:'I',blank:'am',after:'very excited today!',options:['am','is','are','were'],hint:'💡 I 搭配哪個 be 動詞？',explanation:'I 固定搭配 am。'},
+  {type:'fill',before:'We',blank:'were',after:'at the zoo last Sunday.',options:['is','are','was','were'],hint:'💡 We + 過去式 be 動詞',explanation:'We 是複數，過去式 be 動詞用 were。'},
+  {type:'fill',before:'He',blank:"doesn't",after:'eat vegetables.',options:["doesn't","don't","isn't","aren't"],hint:'💡 He 的現在式否定助動詞？',explanation:"第三人稱單數否定用 doesn't，後接原形動詞。"},
+  {type:'fill',before:'You',blank:'should',after:'drink more water every day.',options:['should','must to','can to','is'],hint:'💡 「應該」怎麼說？',explanation:'should 表示建議，後接原形動詞。'},
+  {type:'fill',before:'Can you',blank:'swim',after:'?',options:['swim','swims','swimming','swam'],hint:'💡 can 後面接什麼形式？',explanation:'can 是助動詞，後面一定接原形動詞 swim。'},
+];
+const REARRANGE_BASIC=[
+  {type:'rearrange',words:['He','can','run','very','fast','.'],answer:'He can run very fast .',explanation:'can 表示能力，後面接原形動詞 run。'},
+  {type:'rearrange',words:['We',"don't",'have','school','today','.'],answer:"We don't have school today .",explanation:"We 的否定用 don't，後面接原形動詞。"},
+  {type:'rearrange',words:['The','children','were','very','noisy','.'],answer:'The children were very noisy .',explanation:'children 是複數，過去式 be 動詞用 were。'},
+  {type:'rearrange',words:['She','must','go','home','now','.'],answer:'She must go home now .',explanation:'must 是助動詞，後面接原形動詞 go。'},
+];
+const DIALOGUE_BASIC=[
+  {type:'dialogue',dialogue:[{speaker:'A',avatar:'👦',name:'Tom',text:'Are you ready for the test?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, I am! I studied hard.',correct:true},{text:'Yes, I is! I studied hard.',correct:false},{text:'Yes, I are! I studied hard.',correct:false}],explanation:'Are you...? 的肯定簡答是 Yes, I am.'},
+  {type:'dialogue',dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:'Did you finish your homework?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, I did. I finished it an hour ago.',correct:true},{text:'Yes, I do. I finished it an hour ago.',correct:false},{text:'Yes, I did. I finish it an hour ago.',correct:false}],explanation:"Did you...? 的肯定簡答是 Yes, I did.（過去式問句）。"},
 ];
 
-const FILL_ADVANCED = [
-  {type:'fill',before:"She",blank:"has",after:"already finished her homework.",options:["has","have","is","was"],hint:"💡 現在完成式：She + ___ + p.p.",explanation:"現在完成式：have/has + p.p.，She 是單數用 has。"},
-  {type:'fill',before:"They",blank:"have",after:"lived here for five years.",options:["have","has","are","were"],hint:"💡 現在完成式：They + ___",explanation:"They 是複數，現在完成式用 have。"},
-  {type:'fill',before:"The window",blank:"was broken",after:"by the ball.",options:["was broken","were broken","is broken","has broken"],hint:"💡 被動語態：主詞 + ___ （過去式）",explanation:"被動語態：was/were + p.p.，The window 是單數過去式用 was broken。"},
-  {type:'fill',before:"He is a doctor,",blank:"isn't he",after:"?",options:["isn't he","is he","wasn't he","doesn't he"],hint:"💡 附加問句：肯定句 → 否定附加",explanation:"前半句肯定（is）→ 後半句否定附加（isn't he）。"},
-  {type:'fill',before:"You should",blank:"have called",after:"me last night.",options:["have called","call","has called","calling"],hint:"💡 should + ___ + p.p. = 過去應做未做",explanation:"should have + p.p. 表示過去應該做但沒做的事。"},
-  {type:'fill',before:"There",blank:"are",after:"many books on the shelf.",options:["is","are","was","were"],hint:"💡 There ___ + 複數名詞",explanation:"many books 是複數，所以用 There are。"},
-  {type:'fill',before:"She has been sick",blank:"since",after:"Monday.",options:["since","for","during","from"],hint:"💡 現在完成式 + ___ + 時間點",explanation:"since 後接時間點（Monday），for 後接時間長度（three days）。"},
-  {type:'fill',before:"He must",blank:"have forgotten",after:"the meeting.",options:["have forgotten","forget","has forgotten","be forgetting"],hint:"💡 must + ___ + p.p. = 對過去的推測",explanation:"must have + p.p. 表示對過去的強烈推測。"},
+// ════════════════════════════════════════════════════════════════
+//  ADVANCED 題庫（高階版）
+// ════════════════════════════════════════════════════════════════
+const FILL_ADVANCED=[
+  {type:'fill',before:'She',blank:'has finished',after:'her homework already.',options:['has finished','have finished','finished','is finishing'],hint:'💡 現在完成式：She（單數）+ ___',explanation:'現在完成式：have/has + p.p.，She 是單數所以用 has finished。'},
+  {type:'fill',before:'The window',blank:'was broken',after:'by the ball.',options:['was broken','were broken','has broken','broke'],hint:'💡 被動語態：主詞（單數）+ ___ （過去式）',explanation:'被動語態：was/were + p.p.，The window 是單數，過去式用 was broken。'},
+  {type:'fill',before:'He is a doctor,',blank:"isn't he",after:'?',options:["isn't he","is he","wasn't he","doesn't he"],hint:'💡 肯定句的附加問句用否定形式',explanation:"前半句是肯定式（is），所以附加問句用否定（isn't he）。"},
+  {type:'fill',before:'You should',blank:'have called',after:'me before coming over.',options:['have called','call','has called','be calling'],hint:'💡 過去「應做未做」：should + ___ + p.p.',explanation:'should have + p.p. 表示過去應該做卻沒做的事。'},
+  {type:'fill',before:'There',blank:'are',after:'many students waiting outside the classroom.',options:['is','are','was','were'],hint:'💡 There ___ + 複數名詞',explanation:'many students 是複數，所以用 There are。'},
+  {type:'fill',before:'She has been learning piano',blank:'since',after:'she was five years old.',options:['since','for','during','from'],hint:'💡 ___ + 時間點（she was five）',explanation:'since 後接時間點，for 後接時間長度（for ten years）。'},
+  {type:'fill',before:'He must',blank:'have forgotten',after:'about the meeting—he never showed up.',options:['have forgotten','forget','has forgotten','been forgetting'],hint:'💡 對過去的強烈推測：must + ___ + p.p.',explanation:'must have + p.p. 表示對過去某事的強烈推測。'},
+  {type:'fill',before:'The project',blank:'has been completed',after:'by the team ahead of schedule.',options:['has been completed','have been completed','was completed','has completed'],hint:'💡 現在完成式被動：has/have + been + p.p.',explanation:'現在完成式被動：has/have been + p.p.，主詞 The project 是單數用 has been completed。'},
+];
+const REARRANGE_ADVANCED=[
+  {type:'rearrange',words:['She','has','already','finished','her','homework','.'],answer:'She has already finished her homework .',explanation:'現在完成式：She（單數）用 has + p.p.（finished），already 放在 has 和 p.p. 之間。'},
+  {type:'rearrange',words:['The','window','was','broken','by','the','ball','.'],answer:'The window was broken by the ball .',explanation:'被動語態：主詞 + was/were + p.p. + by + 動作者。'},
+  {type:'rearrange',words:['You','should','have','called','me','last','night','.'],answer:'You should have called me last night .',explanation:'should have + p.p. 表示過去應該做但沒做的事。'},
+  {type:'rearrange',words:['There','are','many','books','on','the','shelf','.'],answer:'There are many books on the shelf .',explanation:'many books 是複數，所以用 There are，而非 There is。'},
+];
+const DIALOGUE_ADVANCED=[
+  {type:'dialogue',dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'Have you ever been to another country?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, I have. I've been to Japan twice.",correct:true},{text:'Yes, I did. I went to Japan twice.',correct:false},{text:"Yes, I had. I have been to Japan twice.",correct:false}],explanation:"Have you ever...? 是現在完成式問句，回答用 Yes, I have.，I've been = I have been，強調「經驗」。"},
+  {type:'dialogue',dialogue:[{speaker:'A',avatar:'👦',name:'Ken',text:"I called you last night, but you didn't pick up. What were you doing?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Sorry, I was taking a shower at that time.',correct:true},{text:'Sorry, I took a shower at that time.',correct:false},{text:'Sorry, I am taking a shower at that time.',correct:false}],explanation:'was/were + V-ing 是過去進行式，表示「當時正在進行的動作」。'},
+  {type:'dialogue',dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:'Your room is a mess. Have you cleaned it yet?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Not yet. I haven't cleaned it yet.",correct:true},{text:"Not yet. I didn't clean it yet.",correct:false},{text:"Not yet. I haven't clean it yet.",correct:false}],explanation:"現在完成式否定：haven't + p.p.，注意 p.p. 是 cleaned，不能用原形 clean。"},
 ];
 
-const REARRANGE_BASIC = [
-  {type:'rearrange',words:["He","can","run","very","fast","."],answer:"He can run very fast .",explanation:"can 表示能力，後面接原形動詞 run。"},
-  {type:'rearrange',words:["We","don't","have","school","today","."],answer:"We don't have school today .",explanation:"We 的否定用 don't，後面接原形動詞。"},
-  {type:'rearrange',words:["The","children","were","very","noisy","."],answer:"The children were very noisy .",explanation:"children 是複數，過去式 be 動詞用 were。"},
+// ════════════════════════════════════════════════════════════════
+//  GEPT 題庫（英檢初級挑戰）
+// ════════════════════════════════════════════════════════════════
+const FILL_GEPT=[
+  {
+    type:'fill',
+    before:'My older sister, who',blank:'has been working',after:'at a hospital in Tainan for the past three years, is finally moving back home next month.',
+    options:['has been working','have been working','was working','had worked'],
+    hint:'💡 從過去持續到現在：現在完成進行式（主詞 who 指 My older sister = 單數）',
+    explanation:'has been + V-ing 是現在完成進行式，表示「過去開始、持續到現在」的動作。主詞 who 指 My older sister（單數），所以用 has been working，不是 have been working。'
+  },
+  {
+    type:'fill',
+    before:'The new community center,',blank:'which was designed',after:'by a well-known local architect, will officially open to the public next weekend.',
+    options:['which was designed','which is designed','which designed','that was design'],
+    hint:'💡 關係子句中的被動語態（已完成的動作用過去式）',
+    explanation:'which was designed by... 是關係子句中的被動語態（過去式），表示建築「被設計」的動作已完成。design 的 p.p. 是 designed，which designed 是主動語態，語意不對。'
+  },
+  {
+    type:'fill',
+    before:'If you',blank:'had arrived',after:"at the station ten minutes earlier, you wouldn't have missed the last train to Taipei.",
+    options:['had arrived','arrived','have arrived','were arriving'],
+    hint:'💡 與過去事實相反的假設（第三條件句）：If + ___ p.p.',
+    explanation:"與過去事實相反的假設句（第三條件句）：If + 主詞 + had + p.p.，後半句用 wouldn't have + p.p.。表示「當時如果有做，結果就不同了」。"
+  },
+  {
+    type:'fill',
+    before:'Despite',blank:'having studied',after:'English for over ten years, she still feels nervous whenever she has to speak in front of a large audience.',
+    options:['having studied','studying','to have studied','been studying'],
+    hint:'💡 介系詞 despite 後接動名詞；完成式動名詞 = having + p.p.',
+    explanation:'despite 是介系詞，後面接動名詞（Ving）。having studied 是動名詞完成式（having + p.p.），強調「在緊張之前，學英文的動作已經進行了一段時間」。'
+  },
+  {
+    type:'fill',
+    before:'The report',blank:'is expected to be submitted',after:'by Friday afternoon, so the team has been working overtime all week.',
+    options:['is expected to be submitted','is expected to submit','expects to be submitted','was expected to be submit'],
+    hint:'💡 被動 + 不定詞被動：be expected to + be + p.p.',
+    explanation:'is expected to be submitted = 「被預期要被提交」，雙重被動結構：be expected to + be + p.p.。注意 submitted 是 submit 的 p.p.，不能用原形 submit。'
+  },
+];
+const REARRANGE_GEPT=[
+  {
+    type:'rearrange',
+    words:['My','sister',',','who','lives','in','Tainan',',','has','just','bought','a','new','apartment','.'],
+    answer:'My sister , who lives in Tainan , has just bought a new apartment .',
+    explanation:'關係子句 who lives in Tainan 放在 My sister 後補充說明，主要子句用現在完成式 has just bought（just 表示「剛剛」）。'
+  },
+  {
+    type:'rearrange',
+    words:['If','it','rains','tomorrow',',','we','will','have','to','cancel','the','outdoor','event','.'],
+    answer:'If it rains tomorrow , we will have to cancel the outdoor event .',
+    explanation:'第一條件句（真實假設）：If + 現在式（rains），主要子句用 will + 原形。注意 if 子句不用 will，用現在式 rains 代替 will rain。'
+  },
+  {
+    type:'rearrange',
+    words:['The','presentation','that','he','prepared','was','so','impressive','that','everyone','applauded','.'],
+    answer:'The presentation that he prepared was so impressive that everyone applauded .',
+    explanation:'so + 形容詞 + that 子句 = 「如此…以致於」。that he prepared 是關係子句修飾 The presentation，主動語態，表示「他準備的簡報」。'
+  },
+  {
+    type:'rearrange',
+    words:['She','would','rather','stay','home','than','go','to','the','party','tonight','.'],
+    answer:'She would rather stay home than go to the party tonight .',
+    explanation:'would rather + 原形動詞 + than + 原形動詞 = 「寧願…也不要…」的固定句型，than 前後都接原形動詞（stay、go），不加 to。'
+  },
+];
+const DIALOGUE_GEPT=[
+  {
+    type:'dialogue',
+    context:'📞 情境：你打電話到診所預約看診。',
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Receptionist',text:"Good morning, Sunshine Clinic. How may I help you?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Hi, I'd like to make an appointment to see Dr. Lin. I've been having a persistent cough for about a week."},
+      {speaker:'A',avatar:'👩',name:'Receptionist',text:"I see. Has the cough been accompanied by any other symptoms, such as a fever or difficulty breathing?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Not really. It's mainly just the cough, though I've been feeling a bit more tired than usual.",correct:true},
+      {text:"Not really. It's mainly just the cough, though I feel more tired than usual since a week.",correct:false},
+      {text:"No, it's mainly the cough, though I've been feel more tire than usually.",correct:false}
+    ],
+    explanation:"though I've been feeling 用現在完成進行式，表示「一段時間以來持續的狀態」。more tired than usual 是比較級的正確用法，than usual（比平常）是固定搭配。"
+  },
+  {
+    type:'dialogue',
+    context:'🛍️ 情境：你在超市詢問員工某個商品的位置。',
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me. I've been looking for the imported cheese section, but I can't seem to find it anywhere."},
+      {speaker:'B',avatar:'👨',name:'Staff',text:"Of course! It used to be near the deli counter, but we recently rearranged the store."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Oh, I see. That explains why I couldn't find it. Could you point me in the right direction?"},
+      {speaker:'B',avatar:'👨',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Certainly. Head down this aisle, turn left at the end, and you'll find it right next to the yogurt section.",correct:true},
+      {text:"Sure. Go down this aisle, turn left at end, and you find it right next to yogurt section.",correct:false},
+      {text:"Of course. Head down this aisle, turn left at the end, and you will found it next to the yogurt.",correct:false}
+    ],
+    explanation:"and you'll find it 用未來式（will + 原形），表示「照著做就會找到」。right next to 表示「就在旁邊」，right 在此作副詞加強語氣。will found 是錯誤的，will 後只接原形動詞 find。"
+  },
+  {
+    type:'dialogue',
+    context:'🏨 情境：你致電飯店確認訂房，並詢問早到是否可提早入住。',
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I made a reservation for two nights starting this Friday under the name Chen. I was hoping to know whether early check-in would be possible, as our flight arrives quite early in the morning."},
+      {speaker:'B',avatar:'👨',name:'Receptionist',text:"Let me check your booking first. Yes, I can see your reservation for a deluxe double room. May I ask approximately what time you'd be arriving?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Our flight lands at seven, so we'd probably reach the hotel by around eight-thirty."},
+      {speaker:'B',avatar:'👨',name:'Receptionist',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"We'll do our best to accommodate you. If the room is ready before the standard check-in time, we'll certainly have it prepared for you.",correct:true},
+      {text:"We do our best accommodate you. If room is ready before standard check-in time, we certainly let you know.",correct:false},
+      {text:"We'll do our best to accommodate you. If the room will be ready before check-in time, we'll certainly let you knew.",correct:false}
+    ],
+    explanation:"We'll do our best to + 原形動詞 是「盡力做某事」的標準商業用語。if 引導的條件子句用現在式（If the room is ready），不用未來式（if the room will be ready 是錯的）。have it prepared 是使役句型 have + 物 + p.p.。"
+  },
+  {
+    type:'dialogue',
+    context:'🏫 情境：你和外籍老師討論你的英語學習狀況。',
+    dialogue:[
+      {speaker:'A',avatar:'👩‍🏫',name:'Ms. Carter',text:"I've noticed that your spoken English has improved quite a lot since the beginning of the semester. What have you been doing differently?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Thank you! I've been trying to watch English TV shows without subtitles, and I've also started keeping a journal in English."},
+      {speaker:'A',avatar:'👩‍🏫',name:'Ms. Carter',text:"That's excellent! Immersing yourself in the language is one of the most effective strategies. Did you find it difficult in the beginning?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"It was quite challenging at first, but I've gradually gotten used to it over the past few weeks.",correct:true},
+      {text:"It is quite challenging in the beginning, but I gradually get used to it over past few weeks.",correct:false},
+      {text:"It was quite challenge at beginning, but I've gradually gotten use to it over the past few weeks.",correct:false}
+    ],
+    explanation:"It was challenging（過去式）描述已發生的經歷，at first 表示「起初、一開始」。I've gradually gotten used to it 用現在完成式，表示「從過去到現在逐漸習慣了」。get used to + N/Ving 是「習慣於」的固定用法，注意 gotten used to（不是 gotten use to）。"
+  },
 ];
 
-const REARRANGE_ADVANCED = [
-  {type:'rearrange',words:["She","has","already","finished","her","homework","."],answer:"She has already finished her homework .",explanation:"現在完成式：She（單數）用 has + p.p.（finished）。"},
-  {type:'rearrange',words:["The","window","was","broken","by","the","ball","."],answer:"The window was broken by the ball .",explanation:"被動語態：主詞 + was/were + p.p.，The window 是單數過去式用 was broken。"},
-  {type:'rearrange',words:["You","should","have","called","me","last","night","."],answer:"You should have called me last night .",explanation:"should have + p.p. 表示過去應該做但沒做。"},
-  {type:'rearrange',words:["He","is","a","doctor",",","isn't","he","?"],answer:"He is a doctor , isn't he ?",explanation:"附加問句：肯定句（is）→ 否定附加（isn't he）。"},
-];
+// ════════════════════════════════════════════════════════════════
+//  Game Setup
+// ════════════════════════════════════════════════════════════════
+const params=new URLSearchParams(window.location.search);
+const difficulty=params.get('difficulty')||'basic';
 
-const DIALOGUE_BASIC = [
-  {type:'dialogue',dialogue:[{speaker:'A',avatar:'👦',name:'Mike',text:'Are you ready for the test?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, I am! I studied hard.",correct:true},{text:"Yes, I is! I studied hard.",correct:false},{text:"Yes, I are! I studied hard.",correct:false}],explanation:'Are you...? 回答用 Yes, I am.'},
-  {type:'dialogue',dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:'Will you help me with dinner?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Sure! I will help you!",correct:true},{text:"Sure! I wills help you!",correct:false},{text:"Sure! I am help you!",correct:false}],explanation:'Will you...? 回答用 Yes, I will.'},
-];
+const FILL_Q  =difficulty==='gept'?FILL_GEPT  :difficulty==='advanced'?FILL_ADVANCED  :FILL_BASIC;
+const RARR_Q  =difficulty==='gept'?REARRANGE_GEPT:difficulty==='advanced'?REARRANGE_ADVANCED:REARRANGE_BASIC;
+const DIAL_Q  =difficulty==='gept'?DIALOGUE_GEPT :difficulty==='advanced'?DIALOGUE_ADVANCED :DIALOGUE_BASIC;
+const ALL_Q   =[...FILL_Q,...RARR_Q,...DIAL_Q];
 
-const DIALOGUE_ADVANCED = [
-  {type:'dialogue',dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'Have you ever been to another country?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, I have. I've been to Japan.",correct:true},{text:"Yes, I did. I went to Japan.",correct:false},{text:"Yes, I had. I have been to Japan.",correct:false}],explanation:"Have you ever...? 用現在完成式回答 Yes, I have."},
-  {type:'dialogue',dialogue:[{speaker:'A',avatar:'👦',name:'Ken',text:"I called you but you didn't answer. What were you doing?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Sorry, I was taking a shower.',correct:true},{text:'Sorry, I took a shower at that time.',correct:false},{text:'Sorry, I am taking a shower.',correct:false}],explanation:'was/were + Ving 是過去進行式，表示當時正在做的事。'},
-  {type:'dialogue',dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:'Your room is messy. Have you cleaned it yet?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Not yet. I haven't cleaned it yet.",correct:true},{text:"Not yet. I didn't clean it yet.",correct:false},{text:"Not yet. I haven't clean it yet.",correct:false}],explanation:"現在完成式否定：haven't + p.p.（cleaned），注意 p.p. 不是原形 clean。"},
-];
+const MAX_QUESTIONS=12;
+const MAX_LIVES=3;
+const TIMER_START=difficulty==='gept'?25:difficulty==='advanced'?20:15;
 
-// ── Setup ──────────────────────────────────────────────────────
-const params = new URLSearchParams(window.location.search);
-const isAdvanced = params.get('difficulty') === 'advanced';
-
-const FILL_Q = isAdvanced ? FILL_ADVANCED : FILL_BASIC;
-const REARRANGE_Q = isAdvanced ? REARRANGE_ADVANCED : REARRANGE_BASIC;
-const DIALOGUE_Q = isAdvanced ? DIALOGUE_ADVANCED : DIALOGUE_BASIC;
-const ALL_Q = [...FILL_Q, ...REARRANGE_Q, ...DIALOGUE_Q];
-
-const MAX_QUESTIONS = 12;
-const MAX_LIVES = 3;
-const TIMER_START = isAdvanced ? 20 : 15; // advanced gets 20s (harder questions)
-
-if(isAdvanced){
-  document.getElementById('advHeaderBadge').style.display='inline-block';
-  document.getElementById('headerSub').textContent='20 秒倒數！英檢初級句型大考驗！';
-  document.getElementById('backBtn').href='index.html?difficulty=advanced';
-  document.getElementById('homeBtn').href='index.html?difficulty=advanced';
-  document.getElementById('timerNum').textContent='20';
+if(difficulty!=='basic'){
+  document.body.classList.add(difficulty);
+  document.getElementById('modeTag').textContent=difficulty==='gept'?'🎯 英檢初級挑戰':'⚡ 高階版';
+  document.getElementById('headerSub').textContent=difficulty==='gept'
+    ?'25 秒倒數！長句、複雜句型、真實情境對話全都有！'
+    :'20 秒倒數！英檢初級句型大考驗，撐到最後才算贏！';
+  document.getElementById('backBtn').href=`index.html?difficulty=${difficulty}`;
+  document.getElementById('homeBtn').href=`index.html?difficulty=${difficulty}`;
 }
+document.getElementById('timerNum').textContent=TIMER_START;
 
 let questions=[],current=0,score=0,correctCount=0,wrongCount=0;
 let lives=MAX_LIVES,timerVal=TIMER_START,timerInterval=null,answered=false;
@@ -272,140 +444,273 @@ let rearrangeBank=[],rearrangeAnswer=[],rearrangeAnswered=false;
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function pickQuestions(){return shuffle(ALL_Q).slice(0,MAX_QUESTIONS);}
 
-// ── Timer ──────────────────────────────────────────────────────
+// Timer
 function startTimer(){
   clearInterval(timerInterval);timerVal=TIMER_START;updateTimerDisplay();
   timerInterval=setInterval(()=>{timerVal--;updateTimerDisplay();if(timerVal<=0){clearInterval(timerInterval);if(!answered)timeOut();}},1000);
 }
 function updateTimerDisplay(){
   document.getElementById('timerNum').textContent=timerVal;
-  const circle=document.getElementById('timerCircle');
-  circle.className=timerVal<=5?'timer-circle urgent':'timer-circle';
+  document.getElementById('timerCircle').className=timerVal<=5?'timer-circle urgent':'timer-circle';
 }
-function timeOut(){loseLife();showFeedback(false,'⏰ 時間到！',questions[current].explanation||'');document.getElementById('btnNext').className='btn-next-dark visible';markCorrectAnswer();}
+function timeOut(){
+  answered=true;loseLife();
+  showFeedback(false,'⏰ 時間到！',questions[current].explanation||'');
+  markCorrectAnswer();
+  if(lives>0)document.getElementById('btnNext').className='btn-next-dark visible';
+}
 function markCorrectAnswer(){
   const q=questions[current];
   if(q.type==='fill'){document.querySelectorAll('.opt-btn').forEach(b=>{b.disabled=true;if(b.dataset.correct==='1')b.className='opt-btn correct-ans';});}
-  else if(q.type==='rearrange'){document.getElementById('btnCheckDark').disabled=true;document.getElementById('btnClearDark').disabled=true;const cs=document.getElementById('correctSentDark');cs.textContent='✅ '+q.answer;cs.style.display='block';}
-  else if(q.type==='dialogue'){document.querySelectorAll('.opt-btn').forEach(b=>{b.disabled=true;if(b.dataset.correct==='1')b.className='opt-btn correct-ans';});}
+  else if(q.type==='rearrange'){
+    document.getElementById('btnCheckDark').disabled=true;
+    document.getElementById('btnClearDark').disabled=true;
+    const cs=document.getElementById('correctSentDark');cs.textContent='✅ 正確答案：'+q.answer;cs.style.display='block';
+  } else if(q.type==='dialogue'){document.querySelectorAll('.opt-btn').forEach(b=>{b.disabled=true;if(b.dataset.correct==='1')b.className='opt-btn correct-ans';});}
 }
 
-// ── Lives ──────────────────────────────────────────────────────
+// Lives
 function loseLife(){
-  lives--;updateLivesDisplay();document.body.classList.add('flash');setTimeout(()=>document.body.classList.remove('flash'),500);
+  lives--;updateLivesDisplay();
+  document.body.classList.add('flash');setTimeout(()=>document.body.classList.remove('flash'),500);
   if(lives<=0)setTimeout(()=>showEnd(true),900);
 }
-function updateLivesDisplay(){document.getElementById('livesDisplay').textContent=['❤️'.repeat(Math.max(0,lives)),'🖤'.repeat(Math.max(0,MAX_LIVES-lives))].join('')||'💀';}
+function updateLivesDisplay(){
+  document.getElementById('livesDisplay').textContent='❤️'.repeat(Math.max(0,lives))+'🖤'.repeat(Math.max(0,MAX_LIVES-lives))||'💀';
+}
 
-// ── Render ─────────────────────────────────────────────────────
+// Render
 function renderQuestion(){
   if(lives<=0)return;
   const q=questions[current];answered=false;
   document.getElementById('progressFill').style.width=`${(current/questions.length)*100}%`;
   document.getElementById('progressCount').textContent=`${current} / ${questions.length}`;
   document.getElementById('feedbackEl').className='feedback-dark';
-  document.getElementById('feedbackText').textContent='';document.getElementById('explanationEl').textContent='';
+  document.getElementById('feedbackText').textContent='';
+  document.getElementById('explanationEl').textContent='';
   document.getElementById('btnNext').className='btn-next-dark';
+  const ctxBox=document.getElementById('contextBox');
+  ctxBox.textContent=q.context||'';
+  ctxBox.style.display=q.context?'block':'none';
   if(q.type==='fill')renderFill(q);
   else if(q.type==='rearrange')renderRearrange(q);
-  else if(q.type==='dialogue')renderDialogue(q);
+  else renderDialogue(q);
   startTimer();
 }
 
+// Fill
 function renderFill(q){
-  document.getElementById('typeBadge').textContent='📝 填空';document.getElementById('typeBadge').className='q-type-badge badge-fill';
-  const body=document.getElementById('questionBody');
-  body.innerHTML=`<div class="question-text">${q.before} <span class="blank-dark" id="blankSpan">___</span> ${q.after}</div><div class="q-hint">${q.hint}</div><div class="options" id="optionsEl"></div>`;
+  document.getElementById('typeBadge').textContent='📝 填空';
+  document.getElementById('typeBadge').className='q-type-badge badge-fill';
+  document.getElementById('questionBody').innerHTML=
+    `<div class="question-text">${q.before} <span class="blank-dark" id="blankSpan">___</span> ${q.after}</div>
+     <div class="q-hint">${q.hint}</div>
+     <div class="options" id="optionsEl"></div>`;
   const optsEl=document.getElementById('optionsEl');
   shuffle(q.options).forEach(opt=>{
-    const btn=document.createElement('button');btn.className='opt-btn';btn.dataset.correct=opt===q.blank?'1':'0';
-    const letter=document.createElement('span');letter.className='opt-letter';letter.textContent=opt.substring(0,1).toUpperCase();
-    btn.appendChild(letter);btn.appendChild(document.createTextNode(' '+opt));
-    btn.onclick=()=>checkFill(opt===q.blank,btn,q);optsEl.appendChild(btn);
+    const btn=document.createElement('button');btn.className='opt-btn';
+    btn.dataset.correct=opt===q.blank?'1':'0';
+    btn.innerHTML=`<span class="opt-letter">${opt[0].toUpperCase()}</span>${opt}`;
+    btn.onclick=()=>checkFill(opt===q.blank,btn,q);
+    optsEl.appendChild(btn);
   });
 }
 function checkFill(isCorrect,btn,q){
   if(answered)return;answered=true;clearInterval(timerInterval);
-  const blank=document.getElementById('blankSpan');blank.className='blank-dark '+(isCorrect?'correct':'wrong');blank.textContent=btn.textContent.trim();
-  document.querySelectorAll('.opt-btn').forEach(b=>{b.disabled=true;if(b.dataset.correct==='1')b.className='opt-btn correct-ans';else if(b===btn&&!isCorrect)b.className='opt-btn wrong-ans';});
+  const blank=document.getElementById('blankSpan');
+  blank.className='blank-dark '+(isCorrect?'correct':'wrong');
+  blank.textContent=btn.textContent.trim();
+  document.querySelectorAll('.opt-btn').forEach(b=>{
+    b.disabled=true;
+    if(b.dataset.correct==='1')b.className='opt-btn correct-ans';
+    else if(b===btn&&!isCorrect)b.className='opt-btn wrong-ans';
+  });
   if(isCorrect){score+=10;correctCount++;spawnConfetti(5);}else{wrongCount++;loseLife();}
-  showFeedback(isCorrect,isCorrect?'🎉 答對了！+10 分':`😅 答錯了！正確答案是 "${q.blank}"`,q.explanation);
   document.getElementById('scoreDisplay').textContent=score;
+  showFeedback(isCorrect,isCorrect?'🎉 答對了！+10 分':`😅 答錯了！正確答案是「${q.blank}」`,q.explanation);
   if(lives>0)document.getElementById('btnNext').className='btn-next-dark visible';
 }
 
+// Rearrange
 function renderRearrange(q){
-  document.getElementById('typeBadge').textContent='🧩 重組';document.getElementById('typeBadge').className='q-type-badge badge-rearrange';
+  document.getElementById('typeBadge').textContent='🧩 重組';
+  document.getElementById('typeBadge').className='q-type-badge badge-rearrange';
   rearrangeBank=shuffle([...q.words]);rearrangeAnswer=[];rearrangeAnswered=false;
-  const body=document.getElementById('questionBody');
-  body.innerHTML=`<div class="q-hint" style="margin-bottom:12px">💡 點選單字，組成正確的句子</div><div class="answer-zone-dark" id="answerZoneDark"><span class="zone-placeholder">點下方單字放這裡</span></div><div class="word-bank-dark" id="wordBankDark"></div><div class="correct-sent-dark" id="correctSentDark"></div><div class="check-row"><button class="btn-clear-dark" id="btnClearDark" onclick="clearRearrange()">↩ 清除</button><button class="btn-check-dark" id="btnCheckDark" onclick="checkRearrange()">✔ 確認</button></div>`;
+  document.getElementById('questionBody').innerHTML=
+    `<div class="q-hint" style="margin-bottom:12px">💡 點選下方單字，依序組成正確的句子</div>
+     <div class="answer-zone-dark" id="answerZoneDark"><span class="zone-placeholder">點下方單字放這裡</span></div>
+     <div class="word-bank-dark" id="wordBankDark"></div>
+     <div class="correct-sent-dark" id="correctSentDark"></div>
+     <div class="check-row">
+       <button class="btn-clear-dark" id="btnClearDark" onclick="clearRearrange()">↩ 清除</button>
+       <button class="btn-check-dark" id="btnCheckDark" onclick="checkRearrange()">✔ 確認答案</button>
+     </div>`;
   renderRBank();renderRAnswer();
 }
-function renderRBank(){const el=document.getElementById('wordBankDark');el.innerHTML='';rearrangeBank.forEach((w,i)=>{const chip=document.createElement('div');chip.className=`chip-dark chip-d${i%7}`;chip.textContent=w;chip.dataset.idx=i;chip.onclick=()=>rMoveToAnswer(i);el.appendChild(chip);});}
-function renderRAnswer(){const zone=document.getElementById('answerZoneDark');zone.innerHTML='';if(rearrangeAnswer.length===0){zone.innerHTML='<span class="zone-placeholder">點下方單字放這裡</span>';return;}rearrangeAnswer.forEach((item,i)=>{const chip=document.createElement('div');chip.className=`chip-dark chip-d${item.ci%7}`;chip.textContent=item.word;chip.onclick=()=>rMoveToBank(i);zone.appendChild(chip);});}
-function rMoveToAnswer(idx){if(rearrangeAnswered)return;const bankEl=document.getElementById('wordBankDark');const chips=bankEl.querySelectorAll('.chip-dark');let ci=0;chips.forEach((c,i)=>{if(parseInt(c.dataset.idx)===idx)ci=i%7;});rearrangeAnswer.push({word:rearrangeBank[idx],ci});rearrangeBank.splice(idx,1);renderRBank();renderRAnswer();}
-function rMoveToBank(idx){if(rearrangeAnswered)return;rearrangeBank.push(rearrangeAnswer[idx].word);rearrangeAnswer.splice(idx,1);renderRBank();renderRAnswer();}
-function clearRearrange(){if(rearrangeAnswered)return;rearrangeBank=shuffle([...questions[current].words]);rearrangeAnswer=[];renderRBank();renderRAnswer();}
+function renderRBank(){
+  const el=document.getElementById('wordBankDark');el.innerHTML='';
+  rearrangeBank.forEach((w,i)=>{
+    const chip=document.createElement('div');
+    chip.className=`chip-dark chip-d${i%9}`;chip.textContent=w;chip.dataset.idx=i;
+    chip.onclick=()=>rMoveToAnswer(i);el.appendChild(chip);
+  });
+}
+function renderRAnswer(){
+  const zone=document.getElementById('answerZoneDark');zone.innerHTML='';
+  if(rearrangeAnswer.length===0){zone.innerHTML='<span class="zone-placeholder">點下方單字放這裡</span>';return;}
+  rearrangeAnswer.forEach((item,i)=>{
+    const chip=document.createElement('div');
+    chip.className=`chip-dark chip-d${item.ci%9}`;chip.textContent=item.word;
+    chip.onclick=()=>rMoveToBank(i);zone.appendChild(chip);
+  });
+}
+function rMoveToAnswer(idx){
+  if(rearrangeAnswered)return;
+  const chips=document.getElementById('wordBankDark').querySelectorAll('.chip-dark');
+  let ci=0;chips.forEach((c,i)=>{if(parseInt(c.dataset.idx)===idx)ci=i%9;});
+  rearrangeAnswer.push({word:rearrangeBank[idx],ci});
+  rearrangeBank.splice(idx,1);renderRBank();renderRAnswer();
+}
+function rMoveToBank(idx){
+  if(rearrangeAnswered)return;
+  rearrangeBank.push(rearrangeAnswer[idx].word);
+  rearrangeAnswer.splice(idx,1);renderRBank();renderRAnswer();
+}
+function clearRearrange(){
+  if(rearrangeAnswered)return;
+  rearrangeBank=shuffle([...questions[current].words]);rearrangeAnswer=[];renderRBank();renderRAnswer();
+}
 function checkRearrange(){
-  if(rearrangeAnswered||rearrangeAnswer.length===0)return;rearrangeAnswered=true;answered=true;clearInterval(timerInterval);
-  const q=questions[current];const userAns=rearrangeAnswer.map(w=>w.word).join(' ');const isCorrect=userAns===q.answer;
+  if(rearrangeAnswered||rearrangeAnswer.length===0)return;
+  rearrangeAnswered=true;answered=true;clearInterval(timerInterval);
+  const q=questions[current];
+  const userAns=rearrangeAnswer.map(w=>w.word).join(' ');
+  const isCorrect=userAns===q.answer;
   const zone=document.getElementById('answerZoneDark');
-  document.getElementById('btnCheckDark').disabled=true;document.getElementById('btnClearDark').disabled=true;
+  document.getElementById('btnCheckDark').disabled=true;
+  document.getElementById('btnClearDark').disabled=true;
   if(isCorrect){zone.className='answer-zone-dark correct-zone';score+=10;correctCount++;spawnConfetti(5);}
-  else{zone.className='answer-zone-dark wrong-zone';wrongCount++;loseLife();const cs=document.getElementById('correctSentDark');cs.textContent='✅ '+q.answer;cs.style.display='block';}
+  else{
+    zone.className='answer-zone-dark wrong-zone';wrongCount++;loseLife();
+    const cs=document.getElementById('correctSentDark');
+    cs.textContent='✅ 正確答案：'+q.answer;cs.style.display='block';
+  }
   document.getElementById('scoreDisplay').textContent=score;
   showFeedback(isCorrect,isCorrect?'🎉 答對了！+10 分':'😅 答錯了！',q.explanation);
   if(lives>0)document.getElementById('btnNext').className='btn-next-dark visible';
 }
 
+// Dialogue
 function renderDialogue(q){
-  document.getElementById('typeBadge').textContent='💬 對話';document.getElementById('typeBadge').className='q-type-badge badge-dialogue';
-  const body=document.getElementById('questionBody');
-  let dlgHTML='<div class="dialogue-dark">';
-  q.dialogue.forEach(line=>{const isRight=line.speaker==='B';dlgHTML+=`<div class="dbubble-row${isRight?' right':''}"><div class="davatar davatar-${line.speaker.toLowerCase()}">${line.avatar}</div><div class="dbubble-col${isRight?' right':''}"><div class="dspeaker">${line.name}</div><div class="dbubble ${isRight?'dbubble-right-q':'dbubble-left'}">${line.text}</div></div></div>`;});
-  dlgHTML+='</div><div class="options" id="optionsEl"></div>';body.innerHTML=dlgHTML;
-  const letters=['A','B','C'];const shuffled=shuffle(q.options);const optsEl=document.getElementById('optionsEl');
-  shuffled.forEach((opt,i)=>{const btn=document.createElement('button');btn.className='opt-btn';btn.dataset.correct=opt.correct?'1':'0';btn.innerHTML=`<span class="opt-letter">${letters[i]}</span>${opt.text}`;btn.onclick=()=>checkDialogue(opt.correct,btn,shuffled,q);optsEl.appendChild(btn);});
+  document.getElementById('typeBadge').textContent='💬 對話';
+  document.getElementById('typeBadge').className='q-type-badge badge-dialogue';
+  let html='<div class="dialogue-dark">';
+  q.dialogue.forEach(line=>{
+    const isRight=line.speaker==='B';
+    const bc=isRight?(line.isQuestion?'dbubble-right-q':'dbubble-right'):'dbubble-left';
+    html+=`<div class="dbubble-row${isRight?' right':''}">
+      <div class="davatar davatar-${line.speaker.toLowerCase()}">${line.avatar}</div>
+      <div class="dbubble-col${isRight?' right':''}">
+        <div class="dspeaker">${line.name}</div>
+        <div class="dbubble ${bc}">${line.text}</div>
+      </div></div>`;
+  });
+  html+='</div><div class="options" id="optionsEl"></div>';
+  document.getElementById('questionBody').innerHTML=html;
+  const letters=['A','B','C','D'];
+  const shuffled=shuffle(q.options);
+  const optsEl=document.getElementById('optionsEl');
+  shuffled.forEach((opt,i)=>{
+    const btn=document.createElement('button');btn.className='opt-btn';
+    btn.dataset.correct=opt.correct?'1':'0';
+    btn.innerHTML=`<span class="opt-letter">${letters[i]}</span>${opt.text}`;
+    btn.onclick=()=>checkDialogue(opt.correct,btn,shuffled,q);
+    optsEl.appendChild(btn);
+  });
 }
 function checkDialogue(isCorrect,btn,shuffled,q){
   if(answered)return;answered=true;clearInterval(timerInterval);
-  document.querySelectorAll('.opt-btn').forEach((b,i)=>{b.disabled=true;if(shuffled[i].correct)b.className='opt-btn correct-ans';else if(b===btn&&!isCorrect)b.className='opt-btn wrong-ans';});
+  document.querySelectorAll('.opt-btn').forEach((b,i)=>{
+    b.disabled=true;
+    if(shuffled[i].correct)b.className='opt-btn correct-ans';
+    else if(b===btn&&!isCorrect)b.className='opt-btn wrong-ans';
+  });
   if(isCorrect){score+=10;correctCount++;spawnConfetti(5);}else{wrongCount++;loseLife();}
   document.getElementById('scoreDisplay').textContent=score;
   showFeedback(isCorrect,isCorrect?'🎉 答對了！+10 分':'😅 答錯了！',q.explanation);
   if(lives>0)document.getElementById('btnNext').className='btn-next-dark visible';
 }
 
-function showFeedback(isCorrect,text,expl){const fb=document.getElementById('feedbackEl');fb.className='feedback-dark show '+(isCorrect?'correct':'wrong');document.getElementById('feedbackIcon').textContent=isCorrect?'🎉':'😅';document.getElementById('feedbackText').textContent=text;document.getElementById('explanationEl').textContent=expl;}
+// Feedback & Nav
+function showFeedback(isCorrect,text,expl){
+  const fb=document.getElementById('feedbackEl');
+  fb.className='feedback-dark show '+(isCorrect?'correct':'wrong');
+  document.getElementById('feedbackIcon').textContent=isCorrect?'🎉':'😅';
+  document.getElementById('feedbackText').textContent=text;
+  document.getElementById('explanationEl').textContent=expl;
+}
+function nextQuestion(){
+  if(lives<=0)return;
+  current++;
+  if(current>=questions.length)showEnd(false);else renderQuestion();
+}
 
-function nextQuestion(){if(lives<=0)return;current++;if(current>=questions.length)showEnd(false);else renderQuestion();}
-
+// End Screen
 function showEnd(gameOver){
   clearInterval(timerInterval);
-  document.getElementById('questionCard').style.display='none';document.getElementById('endScreen').classList.add('show');
-  const accuracy=correctCount+wrongCount>0?Math.round((correctCount/(correctCount+wrongCount))*100):0;
-  document.getElementById('endScore').textContent=score+' 分';document.getElementById('eCorrect').textContent=correctCount;
-  document.getElementById('eWrong').textContent=wrongCount;document.getElementById('eAccuracy').textContent=accuracy+'%';
+  document.getElementById('questionCard').style.display='none';
+  document.getElementById('endScreen').classList.add('show');
+  const total=correctCount+wrongCount;
+  const accuracy=total>0?Math.round((correctCount/total)*100):0;
+  document.getElementById('endScore').textContent=score+' 分';
+  document.getElementById('eCorrect').textContent=correctCount;
+  document.getElementById('eWrong').textContent=wrongCount;
+  document.getElementById('eAccuracy').textContent=accuracy+'%';
   document.getElementById('progressFill').style.width='100%';
   document.getElementById('progressCount').textContent=`${Math.min(current,questions.length)} / ${questions.length}`;
   let emoji,title,msg;
-  if(gameOver){emoji='💀';title='Game Over！';msg=`你失去了所有生命值，得到 ${score} 分！再試一次吧！`;}
-  else if(accuracy>=90){emoji='🏆';title=isAdvanced?'英檢高手！':'完美闖關！';msg=isAdvanced?'英檢初級所有題型都難不倒你！':'你是英文小勇士！';spawnConfetti(30);}
-  else if(accuracy>=70){emoji='🌟';title='闖關成功！';msg='做得很棒！繼續練習，你會更厲害！';spawnConfetti(15);}
-  else{emoji='💪';title='繼續加油！';msg='下次一定更好！多練習各個關卡，再來挑戰！';}
-  document.getElementById('endEmoji').textContent=emoji;document.getElementById('endTitle').textContent=title;document.getElementById('endMsg').textContent=msg;
+  if(gameOver){emoji='💀';title='Game Over！';msg=`挑戰中斷，累計 ${score} 分。失去所有生命值！再試一次吧！`;}
+  else if(accuracy>=90){
+    emoji='🏆';
+    title=difficulty==='gept'?'英檢達人！':difficulty==='advanced'?'完美闖關！':'英文小勇士！';
+    msg=difficulty==='gept'?'英檢初級挑戰全數通過，實力驚人！':'所有關卡都難不倒你！';
+    spawnConfetti(30);
+  } else if(accuracy>=70){
+    emoji='🌟';title='闖關成功！';msg='做得很棒！再多練習，你會更厲害！';spawnConfetti(15);
+  } else {
+    emoji='💪';title='繼續加油！';msg='別灰心！多練習各關卡，下次一定更好！';
+  }
+  document.getElementById('endEmoji').textContent=emoji;
+  document.getElementById('endTitle').textContent=title;
+  document.getElementById('endMsg').textContent=msg;
 }
 
 function restart(){
   current=0;score=0;correctCount=0;wrongCount=0;lives=MAX_LIVES;
   questions=pickQuestions();
-  document.getElementById('scoreDisplay').textContent=0;updateLivesDisplay();
-  document.getElementById('endScreen').classList.remove('show');document.getElementById('questionCard').style.display='';
+  document.getElementById('scoreDisplay').textContent=0;
+  updateLivesDisplay();
+  document.getElementById('endScreen').classList.remove('show');
+  document.getElementById('questionCard').style.display='';
   renderQuestion();
 }
 
-const CONFETTI_COLORS=['#FF7043','#AB47BC','#4FC3F7','#FFD54F','#66BB6A','#FF4081'];
-function spawnConfetti(n){for(let i=0;i<n;i++){setTimeout(()=>{const el=document.createElement('div');el.className='confetti-piece';el.style.left=Math.random()*100+'vw';el.style.background=CONFETTI_COLORS[Math.floor(Math.random()*CONFETTI_COLORS.length)];el.style.animationDuration=(1.5+Math.random()*1.5)+'s';el.style.animationDelay=Math.random()*0.5+'s';el.style.width=el.style.height=(8+Math.random()*8)+'px';el.style.borderRadius=Math.random()>0.5?'50%':'2px';document.body.appendChild(el);setTimeout(()=>el.remove(),3000);},i*60);}}
+// Confetti
+const CONFETTI_COLORS=['#FF7043','#AB47BC','#4FC3F7','#FFD54F','#66BB6A','#FF4081','#80CBC4'];
+function spawnConfetti(n){
+  for(let i=0;i<n;i++){
+    setTimeout(()=>{
+      const el=document.createElement('div');el.className='confetti-piece';
+      el.style.left=Math.random()*100+'vw';
+      el.style.background=CONFETTI_COLORS[Math.floor(Math.random()*CONFETTI_COLORS.length)];
+      el.style.animationDuration=(1.5+Math.random()*1.5)+'s';
+      el.style.animationDelay=Math.random()*0.5+'s';
+      el.style.width=el.style.height=(8+Math.random()*8)+'px';
+      el.style.borderRadius=Math.random()>0.5?'50%':'2px';
+      document.body.appendChild(el);setTimeout(()=>el.remove(),3000);
+    },i*60);
+  }
+}
 
 questions=pickQuestions();renderQuestion();
 </script>

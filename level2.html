@@ -10,54 +10,67 @@
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Nunito',sans-serif;background:linear-gradient(160deg,#E0F7FA 0%,#E8F5E9 50%,#FFF8E1 100%);min-height:100vh;padding:20px;overflow-x:hidden;}
 
-  body.advanced{background:linear-gradient(160deg,#1A0A2E 0%,#0D1F3C 50%,#1A1A2E 100%);}
-  body.advanced .question-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);}
+  body.advanced,body.gept{background:linear-gradient(160deg,#1A0A2E 0%,#0D1F3C 50%,#1A1A2E 100%);}
+  body.advanced .question-card,body.gept .question-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);}
   body.advanced .question-card::before{background:linear-gradient(90deg,#7B1FA2,#1565C0,#00838F);}
-  body.advanced h1,body.advanced .question-label{color:white;}
+  body.gept .question-card::before{background:linear-gradient(90deg,#00695C,#0277BD,#01579B);}
+  body.advanced h1,body.gept h1{color:white;}
   body.advanced h1 span{color:#80DEEA;}
-  body.advanced .subtitle{color:rgba(255,255,255,0.5);}
-  body.advanced .scorebar{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);}
-  body.advanced .score-label{color:rgba(255,255,255,0.4);}
+  body.gept h1 span{color:#80CBC4;}
+  body.advanced .subtitle,body.gept .subtitle{color:rgba(255,255,255,0.5);}
+  body.advanced .scorebar,body.gept .scorebar{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);}
+  body.advanced .score-label,body.gept .score-label{color:rgba(255,255,255,0.4);}
   body.advanced .score-value.points{color:#80DEEA;}
+  body.gept .score-value.points{color:#80CBC4;}
   body.advanced .question-num{color:#80DEEA;}
-  body.advanced .answer-zone{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.2);}
-  body.advanced .answer-zone.correct-zone{border-color:var(--correct);background:rgba(102,187,106,0.1);}
-  body.advanced .answer-zone.wrong-zone{border-color:var(--wrong);background:rgba(239,83,80,0.1);}
-  body.advanced .answer-zone-placeholder{color:rgba(255,255,255,0.25);}
-  body.advanced .feedback.correct{background:rgba(102,187,106,0.15);color:#A5D6A7;border:1px solid rgba(102,187,106,0.3);}
-  body.advanced .feedback.wrong{background:rgba(239,83,80,0.12);color:#EF9A9A;border:1px solid rgba(239,83,80,0.3);}
-  body.advanced .explanation{color:rgba(255,255,255,0.5);}
-  body.advanced .correct-sentence{background:rgba(102,187,106,0.15);color:#A5D6A7;}
+  body.gept .question-num{color:#80CBC4;}
+  body.advanced .question-label,body.gept .question-label{color:rgba(255,255,255,0.6);}
+  body.advanced .answer-zone,body.gept .answer-zone{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.2);}
+  body.advanced .answer-zone.correct-zone,body.gept .answer-zone.correct-zone{border-color:var(--correct);background:rgba(102,187,106,0.1);}
+  body.advanced .answer-zone.wrong-zone,body.gept .answer-zone.wrong-zone{border-color:var(--wrong);background:rgba(239,83,80,0.1);}
+  body.advanced .answer-zone-placeholder,body.gept .answer-zone-placeholder{color:rgba(255,255,255,0.25);}
+  body.advanced .chip-0{background:rgba(255,112,67,0.15);color:#FF8A65;}body.advanced .chip-1{background:rgba(79,195,247,0.15);color:#80DEEA;}body.advanced .chip-2{background:rgba(171,71,188,0.15);color:#CE93D8;}body.advanced .chip-3{background:rgba(102,187,106,0.15);color:#A5D6A7;}body.advanced .chip-4{background:rgba(255,213,79,0.15);color:#FFE082;}body.advanced .chip-5{background:rgba(255,64,129,0.15);color:#FF80AB;}body.advanced .chip-6{background:rgba(121,134,203,0.15);color:#9FA8DA;}
+  body.gept .chip-0{background:rgba(0,105,92,0.2);color:#80CBC4;}body.gept .chip-1{background:rgba(2,119,189,0.2);color:#81D4FA;}body.gept .chip-2{background:rgba(0,131,143,0.2);color:#80DEEA;}body.gept .chip-3{background:rgba(102,187,106,0.15);color:#A5D6A7;}body.gept .chip-4{background:rgba(255,213,79,0.15);color:#FFE082;}body.gept .chip-5{background:rgba(255,138,101,0.15);color:#FFCCBC;}body.gept .chip-6{background:rgba(121,134,203,0.15);color:#9FA8DA;}
+  body.advanced .feedback.correct,body.gept .feedback.correct{background:rgba(102,187,106,0.15);color:#A5D6A7;border:1px solid rgba(102,187,106,0.3);}
+  body.advanced .feedback.wrong,body.gept .feedback.wrong{background:rgba(239,83,80,0.12);color:#EF9A9A;border:1px solid rgba(239,83,80,0.3);}
+  body.advanced .explanation,body.gept .explanation{color:rgba(255,255,255,0.5);}
+  body.advanced .correct-sentence,body.gept .correct-sentence{background:rgba(102,187,106,0.15);color:#A5D6A7;}
   body.advanced .btn-next{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
+  body.gept .btn-next{background:linear-gradient(135deg,#00695C,#0277BD);}
   body.advanced .btn-check{background:linear-gradient(135deg,#7B1FA2,#1565C0);box-shadow:0 6px 24px rgba(123,31,162,0.4);}
-  body.advanced .btn-clear{border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.5);}
-  body.advanced .btn-clear:hover:not(:disabled){border-color:#FF4081;color:#FF4081;}
-  body.advanced .result-screen{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);}
-  body.advanced .result-title{color:white;}
-  body.advanced .result-score{color:#80DEEA;}
-  body.advanced .result-msg{color:rgba(255,255,255,0.5);}
-  body.advanced .result-stat-label{color:rgba(255,255,255,0.35);}
-  body.advanced .back-btn{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);}
-  body.advanced .back-btn:hover{color:white;}
-  body.advanced .progress-bar{background:rgba(255,255,255,0.1);}
+  body.gept .btn-check{background:linear-gradient(135deg,#00695C,#0277BD);box-shadow:0 6px 24px rgba(0,105,92,0.4);}
+  body.advanced .btn-clear,body.gept .btn-clear{border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.5);background:transparent;}
+  body.advanced .btn-clear:hover:not(:disabled),body.gept .btn-clear:hover:not(:disabled){border-color:#FF4081;color:#FF4081;}
+  body.advanced .result-screen,body.gept .result-screen{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);}
+  body.advanced .result-title,body.gept .result-title{color:white;}
+  body.advanced .result-score{color:#80DEEA;}body.gept .result-score{color:#80CBC4;}
+  body.advanced .result-msg,body.gept .result-msg{color:rgba(255,255,255,0.5);}
+  body.advanced .result-stat-label,body.gept .result-stat-label{color:rgba(255,255,255,0.35);}
+  body.advanced .back-btn,body.gept .back-btn{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);}
+  body.advanced .back-btn:hover,body.gept .back-btn:hover{color:white;}
+  body.advanced .progress-bar,body.gept .progress-bar{background:rgba(255,255,255,0.1);}
   body.advanced .progress-fill{background:linear-gradient(90deg,#7B1FA2,#1565C0);}
+  body.gept .progress-fill{background:linear-gradient(90deg,#00695C,#0277BD);}
+  body.advanced .btn-restart{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
+  body.gept .btn-restart{background:linear-gradient(135deg,#00695C,#0277BD);}
+  body.advanced .btn-home{background:linear-gradient(135deg,#1565C0,#00838F);}
+  body.gept .btn-home{background:linear-gradient(135deg,#0277BD,#00695C);}
 
   .wrapper{max-width:760px;margin:0 auto;position:relative;z-index:1;}
   .back-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Fredoka One',cursive;font-size:15px;color:#666;text-decoration:none;margin-bottom:16px;padding:7px 16px;background:white;border-radius:30px;box-shadow:0 2px 10px rgba(0,0,0,0.08);transition:all 0.2s ease;}
   .back-btn:hover{color:#4FC3F7;transform:translateX(-3px);}
-
-  .adv-tag{display:none;margin-bottom:8px;}
-  body.advanced .adv-tag{display:inline-block;background:linear-gradient(135deg,#7B1FA2,#1565C0);color:white;font-family:'Fredoka One',cursive;font-size:12px;letter-spacing:2px;padding:4px 14px;border-radius:20px;text-transform:uppercase;}
-
+  .mode-tag{display:none;margin-bottom:8px;}
+  body.advanced .mode-tag{display:inline-block;background:linear-gradient(135deg,#7B1FA2,#1565C0);color:white;font-family:'Fredoka One',cursive;font-size:12px;letter-spacing:2px;padding:4px 14px;border-radius:20px;text-transform:uppercase;}
+  body.gept .mode-tag{display:inline-block;background:linear-gradient(135deg,#00695C,#0277BD);color:white;font-family:'Fredoka One',cursive;font-size:12px;letter-spacing:2px;padding:4px 14px;border-radius:20px;text-transform:uppercase;}
   header{text-align:center;margin-bottom:28px;animation:fadeUp 0.6s ease both;}
   @keyframes fadeUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
   .title-badge{display:inline-block;background:linear-gradient(135deg,#4FC3F7,#66BB6A);color:white;font-family:'Fredoka One',cursive;font-size:13px;letter-spacing:2px;padding:5px 16px;border-radius:20px;margin-bottom:8px;text-transform:uppercase;}
   body.advanced .title-badge{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
+  body.gept .title-badge{background:linear-gradient(135deg,#00695C,#0277BD);}
   h1{font-family:'Fredoka One',cursive;font-size:clamp(28px,6vw,46px);color:var(--ink);line-height:1.1;}
   h1 span{color:#4FC3F7;}
   .subtitle{font-size:15px;color:#666;margin-top:6px;font-weight:600;}
-
-  .scorebar{display:flex;justify-content:space-between;align-items:center;background:white;border-radius:20px;padding:14px 22px;margin-bottom:22px;box-shadow:0 4px 20px rgba(0,0,0,0.08);animation:fadeUp 0.6s ease 0.1s both;}
+  .scorebar{display:flex;justify-content:space-between;align-items:center;background:white;border-radius:20px;padding:14px 22px;margin-bottom:22px;box-shadow:0 4px 20px rgba(0,0,0,0.08);}
   .score-item{text-align:center;}
   .score-label{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#999;}
   .score-value{font-family:'Fredoka One',cursive;font-size:28px;line-height:1;margin-top:2px;}
@@ -68,20 +81,16 @@
   .progress-label{font-size:12px;font-weight:800;color:#999;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;}
   .progress-bar{background:#EEE;border-radius:10px;height:12px;overflow:hidden;}
   .progress-fill{height:100%;background:linear-gradient(90deg,#4FC3F7,#66BB6A);border-radius:10px;transition:width 0.5s cubic-bezier(0.34,1.56,0.64,1);width:0%;}
-
-  .question-card{background:white;border-radius:28px;padding:32px 28px 24px;box-shadow:0 8px 40px rgba(0,0,0,0.1);margin-bottom:20px;animation:fadeUp 0.6s ease 0.2s both;position:relative;overflow:hidden;}
+  .question-card{background:white;border-radius:28px;padding:32px 28px 24px;box-shadow:0 8px 40px rgba(0,0,0,0.1);margin-bottom:20px;position:relative;overflow:hidden;}
   .question-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#4FC3F7,#66BB6A,#FFD54F);}
   .question-num{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#4FC3F7;margin-bottom:8px;}
-  .question-label{font-size:16px;font-weight:700;color:#666;margin-bottom:18px;}
-
+  .question-label{font-size:15px;font-weight:700;color:#666;margin-bottom:18px;}
   .answer-zone{min-height:68px;border:3px dashed #B0BEC5;border-radius:18px;background:#F8FBFF;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 14px;margin-bottom:20px;transition:border-color 0.3s ease;}
   .answer-zone.correct-zone{border-color:var(--correct);background:#E8F5E9;border-style:solid;}
   .answer-zone.wrong-zone{border-color:var(--wrong);background:#FFEBEE;border-style:solid;}
   .answer-zone-placeholder{color:#B0BEC5;font-weight:700;font-size:15px;pointer-events:none;}
-
-  .word-chip{font-family:'Fredoka One',cursive;font-size:18px;padding:8px 16px;border-radius:12px;cursor:pointer;user-select:none;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);border:2.5px solid;display:inline-flex;align-items:center;}
+  .word-chip{font-family:'Fredoka One',cursive;font-size:17px;padding:7px 14px;border-radius:12px;cursor:pointer;user-select:none;transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);border:2.5px solid;display:inline-flex;align-items:center;}
   .word-chip:hover{transform:translateY(-3px) scale(1.05);}
-  .word-chip:active{transform:scale(0.97);}
   .chip-0{background:#FFF3E0;border-color:#FF7043;color:#BF360C;}
   .chip-1{background:#E3F2FD;border-color:#4FC3F7;color:#01579B;}
   .chip-2{background:#F3E5F5;border-color:#AB47BC;color:#6A1B9A;}
@@ -89,26 +98,14 @@
   .chip-4{background:#FFF8E1;border-color:#FFD54F;color:#E65100;}
   .chip-5{background:#FCE4EC;border-color:#FF4081;color:#880E4F;}
   .chip-6{background:#E8EAF6;border-color:#7986CB;color:#1A237E;}
-
-  /* Advanced chip dark mode */
-  body.advanced .chip-0{background:rgba(255,112,67,0.15);color:#FF8A65;}
-  body.advanced .chip-1{background:rgba(79,195,247,0.15);color:#80DEEA;}
-  body.advanced .chip-2{background:rgba(171,71,188,0.15);color:#CE93D8;}
-  body.advanced .chip-3{background:rgba(102,187,106,0.15);color:#A5D6A7;}
-  body.advanced .chip-4{background:rgba(255,213,79,0.15);color:#FFE082;}
-  body.advanced .chip-5{background:rgba(255,64,129,0.15);color:#FF80AB;}
-  body.advanced .chip-6{background:rgba(121,134,203,0.15);color:#9FA8DA;}
-
   .word-bank{display:flex;flex-wrap:wrap;gap:10px;min-height:50px;margin-bottom:20px;}
-  .correct-sentence{font-size:15px;font-weight:700;color:#2E7D32;background:#E8F5E9;border-radius:12px;padding:10px 16px;margin-bottom:16px;display:none;}
-
+  .correct-sentence{font-size:15px;font-weight:700;color:#2E7D32;background:#E8F5E9;border-radius:12px;padding:10px 16px;margin-bottom:16px;display:none;line-height:1.6;}
   .feedback{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:700;padding:12px 18px;border-radius:14px;margin-bottom:16px;opacity:0;transform:translateY(6px);transition:all 0.3s ease;}
   .feedback.show{opacity:1;transform:translateY(0);}
   .feedback.correct{background:#E8F5E9;color:#2E7D32;}
   .feedback.wrong{background:#FFEBEE;color:#C62828;}
   .feedback .icon{font-size:24px;}
   .explanation{font-size:13px;font-weight:600;color:#555;margin-top:4px;line-height:1.6;}
-
   .btn-row{display:flex;gap:12px;}
   .btn-check{flex:1;padding:14px;font-family:'Fredoka One',cursive;font-size:20px;border:none;border-radius:18px;background:linear-gradient(135deg,#4FC3F7,#66BB6A);color:white;cursor:pointer;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 6px 24px rgba(79,195,247,0.35);}
   .btn-check:hover:not(:disabled){transform:translateY(-3px);}
@@ -120,7 +117,6 @@
   .btn-next:hover{transform:translateY(-3px);}
   .btn-next.visible{display:block;animation:popIn 0.4s cubic-bezier(0.34,1.56,0.64,1);}
   @keyframes popIn{from{transform:scale(0.7);opacity:0}to{transform:scale(1);opacity:1}}
-
   .result-screen{display:none;text-align:center;background:white;border-radius:28px;padding:48px 32px;box-shadow:0 8px 40px rgba(0,0,0,0.12);}
   .result-screen.show{display:block;animation:fadeUp 0.6s ease;}
   .result-emoji{font-size:72px;margin-bottom:16px;animation:bounce 1s ease infinite alternate;}
@@ -139,9 +135,6 @@
   .btn-restart:hover{transform:translateY(-3px) scale(1.05);}
   .btn-home{font-family:'Fredoka One',cursive;font-size:20px;padding:14px 32px;border:none;border-radius:18px;background:linear-gradient(135deg,#4FC3F7,#AB47BC);color:white;text-decoration:none;display:inline-block;transition:all 0.25s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 6px 24px rgba(79,195,247,0.35);}
   .btn-home:hover{transform:translateY(-3px) scale(1.05);}
-  body.advanced .btn-restart{background:linear-gradient(135deg,#7B1FA2,#1565C0);}
-  body.advanced .btn-home{background:linear-gradient(135deg,#1565C0,#00838F);}
-
   .confetti-piece{position:fixed;pointer-events:none;z-index:999;border-radius:2px;animation:confettiFall linear forwards;}
   @keyframes confettiFall{0%{transform:translateY(-10px) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
 </style>
@@ -149,9 +142,8 @@
 <body>
 <div class="wrapper">
   <a href="index.html" class="back-btn" id="backBtn">← 主選單</a>
-
   <header>
-    <div class="adv-tag">🔥 全民英檢初級</div>
+    <div class="mode-tag" id="modeTag">高階版</div>
     <div class="title-badge">🧩 關卡 2</div>
     <h1>句子<span id="h1sub">重組</span></h1>
     <p class="subtitle" id="headerSub">把打亂的單字卡排列成正確的句子！</p>
@@ -166,7 +158,7 @@
 
   <div class="question-card" id="questionCard">
     <div class="question-num" id="questionNum">題目 1 / 10</div>
-    <div class="question-label">📌 把下面的單字卡點一下，排列成正確的句子：</div>
+    <div class="question-label" id="questionLabel">📌 把下面的單字卡點一下，排列成正確的句子：</div>
     <div class="answer-zone" id="answerZone"><span class="answer-zone-placeholder">點選下方單字，放到這裡 ↓</span></div>
     <div class="word-bank" id="wordBank"></div>
     <div class="correct-sentence" id="correctSentence"></div>
@@ -198,7 +190,7 @@
 <script>
 const BASIC_Q = [
   {words:["She","is","a","good","student","."],answer:"She is a good student .",explanation:"主詞 She 是單數，be 動詞用 is。"},
-  {words:["They","are","playing","in","the","park","."],answer:"They are playing in the park .",explanation:"主詞 They 是複數，be 動詞用 are。"},
+  {words:["They","are","playing","in","the","park","."],answer:"They are playing in the park .",explanation:"主詞 They 是複數，be 動詞用 are；現在進行式用 are + Ving。"},
   {words:["I","am","very","hungry","now","."],answer:"I am very hungry now .",explanation:"主詞 I 配合 be 動詞 am。"},
   {words:["He","can","ride","a","bike","."],answer:"He can ride a bike .",explanation:"can 表示能力，後面接原形動詞 ride。"},
   {words:["We","were","at","home","yesterday","."],answer:"We were at home yesterday .",explanation:"yesterday 表示過去，We 是複數，用 were。"},
@@ -220,21 +212,78 @@ const ADVANCED_Q = [
   {words:["She","has","never","been","to","Japan","."],answer:"She has never been to Japan .",explanation:"現在完成式否定：has + never + p.p.（been），She 是單數用 has。"},
   {words:["You","should","have","called","me","last","night","."],answer:"You should have called me last night .",explanation:"should have + p.p. 表示過去應該做但沒做，所以是 should have called。"},
   {words:["There","are","many","students","in","the","library","."],answer:"There are many students in the library .",explanation:"many students 是複數，所以用 There are。"},
-  {words:["The","letter","is","being","written","right","now","."],answer:"The letter is being written right now .",explanation:"現在進行式被動：is + being + p.p.，The letter 是單數用 is being written。"},
   {words:["He","must","have","forgotten","the","meeting","."],answer:"He must have forgotten the meeting .",explanation:"must have + p.p. 表示對過去的強烈推測，是 must have forgotten。"},
   {words:["They","weren't","at","home",",","were","they","?"],answer:"They weren't at home , were they ?",explanation:"附加問句：前半句否定（weren't）→ 後半句肯定（were they）。"},
   {words:["There","is","a","cat","under","the","table","."],answer:"There is a cat under the table .",explanation:"a cat 是單數，所以用 There is。"},
+  {words:["The","letter","is","being","written","right","now","."],answer:"The letter is being written right now .",explanation:"現在進行式被動：is + being + p.p.，The letter 是單數用 is being written。"},
+];
+
+// GEPT: longer sentences with relative clauses, subordinate clauses, and complex structures
+const GEPT_Q = [
+  {
+    words:["The","old","library","that","was","built","over","a","hundred","years","ago","is","now","a","popular","tourist","attraction","."],
+    answer:"The old library that was built over a hundred years ago is now a popular tourist attraction .",
+    explanation:"that 引導關係子句（that was built...），修飾 library。主句是 The old library ... is now a tourist attraction。被動語態 was built 表示圖書館「被建造」。"
+  },
+  {
+    words:["By","the","time","she","graduated","from","university",",","she","had","already","worked","part-time","for","three","years","."],
+    answer:"By the time she graduated from university , she had already worked part-time for three years .",
+    explanation:"By the time 引導時間子句。在主句動作（graduated）之前發生的事，用過去完成式 had + p.p.（had already worked）。"
+  },
+  {
+    words:["Not","only","was","the","food","at","the","restaurant","delicious",",","but","the","service","was","also","excellent","."],
+    answer:"Not only was the food at the restaurant delicious , but the service was also excellent .",
+    explanation:"Not only 放在句首時，後面的子句需要倒裝（was the food...）。這是強調句型，not only...but also 表示「不只…還…」。"
+  },
+  {
+    words:["The","annual","report","that","was","supposed","to","be","submitted","last","Friday","hasn't","been","reviewed","by","the","manager","yet","."],
+    answer:"The annual report that was supposed to be submitted last Friday hasn't been reviewed by the manager yet .",
+    explanation:"複合結構：that was supposed to be submitted 是關係子句（被動語態）；hasn't been reviewed 是現在完成式被動否定，表示「到目前仍未被審查」。"
+  },
+  {
+    words:["If","the","weather","had","been","nicer","last","weekend",",","we","would","have","gone","hiking","in","the","mountains","."],
+    answer:"If the weather had been nicer last weekend , we would have gone hiking in the mountains .",
+    explanation:"與過去事實相反的假設句：If + 過去完成式（had been），主句用 would have + p.p.（would have gone）。天氣實際上不好，所以沒去爬山。"
+  },
+  {
+    words:["My","sister",",","who","has","been","living","abroad","for","several","years",",","is","finally","coming","back","to","Taiwan","next","month","."],
+    answer:"My sister , who has been living abroad for several years , is finally coming back to Taiwan next month .",
+    explanation:"who 引導關係子句（who has been living abroad...）。現在完成進行式 has been living 強調「持續住在國外」。主句用現在進行式表示確定的未來計畫（is coming back）。"
+  },
+  {
+    words:["The","documents","that","were","sent","to","us","last","month","have","already","been","processed","by","our","team","."],
+    answer:"The documents that were sent to us last month have already been processed by our team .",
+    explanation:"that were sent 是被動語態關係子句，修飾 documents。主句 have already been processed 是現在完成式被動語態，表示「已經被處理完成」。"
+  },
+  {
+    words:["She","must","have","been","very","tired","after","working","overtime","every","day","for","the","entire","month","."],
+    answer:"She must have been very tired after working overtime every day for the entire month .",
+    explanation:"must have been + 形容詞 表示對過去狀態的強烈推測。after working overtime 是介系詞片語，說明原因。整句表示「她一定非常疲倦」。"
+  },
+  {
+    words:["The","new","community","center",",","which","was","designed","by","a","famous","architect",",","will","be","opened","to","the","public","next","spring","."],
+    answer:"The new community center , which was designed by a famous architect , will be opened to the public next spring .",
+    explanation:"which 引導關係子句（which was designed by...），是被動語態。主句 will be opened 是未來式被動語態，表示「將會被開放」。"
+  },
+  {
+    words:["Had","we","known","about","the","traffic","jam","earlier",",","we","would","have","taken","a","different","route","."],
+    answer:"Had we known about the traffic jam earlier , we would have taken a different route .",
+    explanation:"這是 If 被省略後的倒裝假設句。Had we known = If we had known，表示與過去事實相反的假設。主句用 would have + p.p.（would have taken）。"
+  },
 ];
 
 const params = new URLSearchParams(window.location.search);
-const isAdvanced = params.get('difficulty') === 'advanced';
-const QUESTION_BANK = isAdvanced ? ADVANCED_Q : BASIC_Q;
+const difficulty = params.get('difficulty') || 'basic';
+const QUESTION_BANK = difficulty === 'gept' ? GEPT_Q : difficulty === 'advanced' ? ADVANCED_Q : BASIC_Q;
 
-if(isAdvanced){
-  document.body.classList.add('advanced');
-  document.getElementById('headerSub').textContent='拼出正確的英檢初級句型！';
-  document.getElementById('backBtn').href='index.html?difficulty=advanced';
-  document.getElementById('homeBtn').href='index.html?difficulty=advanced';
+if(difficulty !== 'basic'){
+  document.body.classList.add(difficulty);
+  const modeTag = document.getElementById('modeTag');
+  modeTag.textContent = difficulty === 'gept' ? '🎯 英檢初級挑戰' : '⚡ 高階版';
+  document.getElementById('headerSub').textContent = difficulty === 'gept' ? '重組含子句的長句，訓練真實英檢閱讀能力！' : '拼出含有完成式、被動語態的複雜句子！';
+  document.getElementById('backBtn').href = `index.html?difficulty=${difficulty}`;
+  document.getElementById('homeBtn').href = `index.html?difficulty=${difficulty}`;
+  if(difficulty === 'gept') document.getElementById('questionLabel').textContent = '📌 把下面的單字卡點一下，排列成完整的長句：';
 }
 
 let questions=[],current=0,score=0,correctCount=0,wrongCount=0;
@@ -246,7 +295,7 @@ function renderQuestion(){
   const q=questions[current];answered=false;answerWords=[];bankWords=shuffle([...q.words]);
   document.getElementById('questionNum').textContent=`題目 ${current+1} / ${questions.length}`;
   document.getElementById('progressFill').style.width=`${(current/questions.length)*100}%`;
-  const fb=document.getElementById('feedbackEl');fb.className='feedback';
+  document.getElementById('feedbackEl').className='feedback';
   document.getElementById('feedbackText').textContent='';document.getElementById('explanationEl').textContent='';
   document.getElementById('correctSentence').style.display='none';
   document.getElementById('btnNext').className='btn-next';
@@ -257,22 +306,18 @@ function renderQuestion(){
 
 function renderBank(){
   const el=document.getElementById('wordBank');el.innerHTML='';
-  bankWords.forEach((w,i)=>{
-    const chip=document.createElement('div');chip.className=`word-chip chip-${i%7}`;chip.textContent=w;chip.dataset.idx=i;chip.onclick=()=>moveToAnswer(i);el.appendChild(chip);
-  });
+  bankWords.forEach((w,i)=>{const chip=document.createElement('div');chip.className=`word-chip chip-${i%7}`;chip.textContent=w;chip.dataset.idx=i;chip.onclick=()=>moveToAnswer(i);el.appendChild(chip);});
 }
 function renderAnswer(){
   const zone=document.getElementById('answerZone');zone.innerHTML='';
   if(answerWords.length===0){zone.innerHTML='<span class="answer-zone-placeholder">點選下方單字，放到這裡 ↓</span>';return;}
-  answerWords.forEach((item,i)=>{
-    const chip=document.createElement('div');chip.className=`word-chip chip-${item.colorIdx%7}`;chip.textContent=item.word;chip.onclick=()=>moveToBank(i);zone.appendChild(chip);
-  });
+  answerWords.forEach((item,i)=>{const chip=document.createElement('div');chip.className=`word-chip chip-${item.ci%7}`;chip.textContent=item.word;chip.onclick=()=>moveToBank(i);zone.appendChild(chip);});
 }
 function moveToAnswer(bankIdx){
   if(answered)return;
-  const bankEl=document.getElementById('wordBank');const chips=bankEl.querySelectorAll('.word-chip');let colorIdx=0;
-  chips.forEach((c,i)=>{if(parseInt(c.dataset.idx)===bankIdx)colorIdx=i%7;});
-  answerWords.push({word:bankWords[bankIdx],colorIdx});bankWords.splice(bankIdx,1);renderBank();renderAnswer();
+  const bankEl=document.getElementById('wordBank');const chips=bankEl.querySelectorAll('.word-chip');let ci=0;
+  chips.forEach((c,i)=>{if(parseInt(c.dataset.idx)===bankIdx)ci=i%7;});
+  answerWords.push({word:bankWords[bankIdx],ci});bankWords.splice(bankIdx,1);renderBank();renderAnswer();
 }
 function moveToBank(answerIdx){if(answered)return;bankWords.push(answerWords[answerIdx].word);answerWords.splice(answerIdx,1);renderBank();renderAnswer();}
 function clearAnswer(){if(answered)return;const q=questions[current];bankWords=shuffle([...q.words]);answerWords=[];renderBank();renderAnswer();}
@@ -282,14 +327,9 @@ function checkAnswer(){
   const q=questions[current];const userAnswer=answerWords.map(w=>w.word).join(' ');const isCorrect=userAnswer===q.answer;
   document.getElementById('btnCheck').disabled=true;document.getElementById('btnClear').disabled=true;
   const zone=document.getElementById('answerZone');const fb=document.getElementById('feedbackEl');
-  if(isCorrect){
-    score+=10;correctCount++;zone.className='answer-zone correct-zone';fb.className='feedback correct show';
-    document.getElementById('feedbackIcon').textContent='🎉';document.getElementById('feedbackText').textContent='答對了！排列完全正確！';spawnConfetti(6);
-  } else {
-    wrongCount++;zone.className='answer-zone wrong-zone';fb.className='feedback wrong show';
-    document.getElementById('feedbackIcon').textContent='😅';document.getElementById('feedbackText').textContent='答錯了！正確答案是：';
-    const cs=document.getElementById('correctSentence');cs.textContent='✅ '+q.answer;cs.style.display='block';
-  }
+  if(isCorrect){score+=10;correctCount++;zone.className='answer-zone correct-zone';fb.className='feedback correct show';document.getElementById('feedbackIcon').textContent='🎉';document.getElementById('feedbackText').textContent='答對了！排列完全正確！';spawnConfetti(6);}
+  else{wrongCount++;zone.className='answer-zone wrong-zone';fb.className='feedback wrong show';document.getElementById('feedbackIcon').textContent='😅';document.getElementById('feedbackText').textContent='答錯了！正確答案是：';
+    const cs=document.getElementById('correctSentence');cs.textContent='✅ '+q.answer;cs.style.display='block';}
   document.getElementById('explanationEl').textContent=q.explanation;
   document.getElementById('scoreDisplay').textContent=score;document.getElementById('correctDisplay').textContent=correctCount;document.getElementById('wrongDisplay').textContent=wrongCount;
   document.getElementById('btnNext').className='btn-next visible';
@@ -304,7 +344,7 @@ function showResult(){
   document.getElementById('rWrong').textContent=wrongCount;document.getElementById('rAccuracy').textContent=accuracy+'%';
   document.getElementById('progressFill').style.width='100%';
   let emoji,title,msg;
-  if(accuracy>=90){emoji='🏆';title='句子達人！';msg=isAdvanced?'英檢初級句型都難不倒你！':'你的語感超強，句子排列難不倒你！';}
+  if(accuracy>=90){emoji='🏆';title=difficulty==='gept'?'長句達人！':'句子達人！';msg=difficulty==='gept'?'英檢初級長句難不倒你！':'你的語感超強，句子排列難不倒你！';}
   else if(accuracy>=70){emoji='⭐';title='做得很好！';msg='大部分句子都排對了，繼續加油！';}
   else if(accuracy>=50){emoji='💪';title='不錯喔！';msg='再多練習幾次，你一定能更進步！';}
   else{emoji='📚';title='繼續努力！';msg='多讀幾次句子，你會越來越棒的！';}
@@ -314,7 +354,7 @@ function showResult(){
 
 function restart(){
   current=0;score=0;correctCount=0;wrongCount=0;
-  questions=shuffle(QUESTION_BANK).slice(0,10);
+  questions=shuffle(QUESTION_BANK).slice(0,Math.min(10,QUESTION_BANK.length));
   document.getElementById('scoreDisplay').textContent=0;document.getElementById('correctDisplay').textContent=0;document.getElementById('wrongDisplay').textContent=0;
   document.getElementById('resultScreen').classList.remove('show');document.getElementById('questionCard').style.display='';renderQuestion();
 }
@@ -322,7 +362,7 @@ function restart(){
 const CONFETTI_COLORS=['#FF7043','#AB47BC','#4FC3F7','#FFD54F','#66BB6A','#FF4081'];
 function spawnConfetti(n){for(let i=0;i<n;i++){setTimeout(()=>{const el=document.createElement('div');el.className='confetti-piece';el.style.left=Math.random()*100+'vw';el.style.background=CONFETTI_COLORS[Math.floor(Math.random()*CONFETTI_COLORS.length)];el.style.animationDuration=(1.5+Math.random()*1.5)+'s';el.style.animationDelay=Math.random()*0.5+'s';el.style.width=el.style.height=(8+Math.random()*8)+'px';el.style.borderRadius=Math.random()>0.5?'50%':'2px';document.body.appendChild(el);setTimeout(()=>el.remove(),3000);},i*80);}}
 
-questions=shuffle(QUESTION_BANK).slice(0,10);renderQuestion();
+questions=shuffle(QUESTION_BANK).slice(0,Math.min(10,QUESTION_BANK.length));renderQuestion();
 </script>
 </body>
 </html>
