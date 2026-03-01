@@ -6,10 +6,7 @@
 <title>英文小勇士 — 主選單</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --ink: #1A1A2E;
-    --card: #FFFFFF;
-  }
+  :root { --ink: #1A1A2E; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
@@ -20,7 +17,6 @@
     position: relative;
   }
 
-  /* Starfield */
   .stars-bg {
     position: fixed; inset: 0; pointer-events: none; z-index: 0;
     background:
@@ -42,21 +38,13 @@
       linear-gradient(160deg, #0F1B35 0%, #1A0A2E 50%, #0D1F3C 100%);
   }
 
-  /* Shooting star */
   .shooting-star {
-    position: fixed;
-    width: 3px; height: 3px;
-    background: white;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 0;
+    position: fixed; width: 3px; height: 3px; background: white;
+    border-radius: 50%; pointer-events: none; z-index: 0;
   }
   .shooting-star::after {
-    content: '';
-    position: absolute;
-    top: 50%; right: 100%;
-    transform: translateY(-50%);
-    width: 60px; height: 1px;
+    content: ''; position: absolute; top: 50%; right: 100%;
+    transform: translateY(-50%); width: 60px; height: 1px;
     background: linear-gradient(to left, white, transparent);
   }
   .ss1 { top: 15%; left: 80%; animation: shoot 4s linear 1s infinite; }
@@ -67,13 +55,7 @@
     100% { transform: translate(-300px, 100px) rotate(20deg); opacity: 0; }
   }
 
-  /* Planet deco */
-  .planet {
-    position: fixed;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 0;
-  }
+  .planet { position: fixed; border-radius: 50%; pointer-events: none; z-index: 0; }
   .planet-1 {
     width: 200px; height: 200px;
     background: radial-gradient(circle at 35% 35%, #FF8A65, #E64A19);
@@ -88,19 +70,11 @@
     box-shadow: inset -10px -10px 25px rgba(0,0,0,0.4), 0 0 40px rgba(128,222,234,0.2);
     animation: float 10s ease-in-out 2s infinite;
   }
-  @keyframes float {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-  }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
-  /* Rocket */
   .rocket {
-    position: fixed;
-    font-size: 40px;
-    bottom: 20%;
-    right: 5%;
-    animation: rocketFloat 6s ease-in-out infinite;
-    z-index: 0;
+    position: fixed; font-size: 40px; bottom: 20%; right: 5%;
+    animation: rocketFloat 6s ease-in-out infinite; z-index: 0;
     filter: drop-shadow(0 0 10px rgba(255,200,100,0.5));
   }
   @keyframes rocketFloat {
@@ -108,55 +82,98 @@
     50% { transform: translateY(-20px) rotate(-15deg); }
   }
 
-  /* Layout */
   .wrapper {
-    max-width: 860px;
-    margin: 0 auto;
+    max-width: 860px; margin: 0 auto;
     padding: 40px 24px 60px;
-    position: relative;
-    z-index: 1;
+    position: relative; z-index: 1;
   }
 
   header {
-    text-align: center;
-    margin-bottom: 48px;
+    text-align: center; margin-bottom: 36px;
     animation: fadeUp 0.8s ease both;
   }
-  @keyframes fadeUp {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
+  @keyframes fadeUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
   .logo-badge {
     display: inline-block;
     background: linear-gradient(135deg, #FF7043, #FFD54F);
-    color: white;
-    font-family: 'Fredoka One', cursive;
-    font-size: 14px;
-    letter-spacing: 2px;
-    padding: 6px 20px;
-    border-radius: 30px;
-    margin-bottom: 16px;
-    text-transform: uppercase;
+    color: white; font-family: 'Fredoka One', cursive;
+    font-size: 14px; letter-spacing: 2px; padding: 6px 20px;
+    border-radius: 30px; margin-bottom: 16px; text-transform: uppercase;
   }
 
   h1 {
     font-family: 'Fredoka One', cursive;
     font-size: clamp(36px, 8vw, 64px);
-    color: white;
-    line-height: 1.1;
+    color: white; line-height: 1.1;
     text-shadow: 0 0 40px rgba(255,200,100,0.4);
     margin-bottom: 12px;
   }
   h1 .accent { color: #FFD54F; }
+  .tagline { font-size: 16px; color: rgba(255,255,255,0.6); font-weight: 600; }
 
-  .tagline {
-    font-size: 16px;
-    color: rgba(255,255,255,0.6);
-    font-weight: 600;
+  /* ── Difficulty Toggle ── */
+  .diff-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    animation: fadeUp 0.8s ease 0.05s both;
   }
 
-  /* Level cards grid */
+  .diff-label-top {
+    font-size: 12px; font-weight: 800; letter-spacing: 2px;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+    margin-bottom: 14px;
+  }
+
+  .diff-toggle {
+    display: flex;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50px;
+    padding: 5px;
+    gap: 4px;
+    backdrop-filter: blur(10px);
+  }
+
+  .diff-btn {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: rgba(255,255,255,0.5);
+    background: transparent;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .diff-btn:hover { color: white; }
+  .diff-btn.active-basic {
+    background: linear-gradient(135deg, #FF7043, #FFD54F);
+    color: white;
+    box-shadow: 0 4px 20px rgba(255,112,67,0.45);
+    transform: scale(1.04);
+  }
+  .diff-btn.active-advanced {
+    background: linear-gradient(135deg, #7B1FA2, #1565C0);
+    color: white;
+    box-shadow: 0 4px 20px rgba(123,31,162,0.5);
+    transform: scale(1.04);
+  }
+
+  .diff-desc {
+    margin-top: 14px;
+    font-size: 13px; font-weight: 700;
+    color: rgba(255,255,255,0.45);
+    text-align: center;
+    min-height: 20px;
+    transition: all 0.3s ease;
+  }
+  .diff-desc.advanced { color: #CE93D8; }
+
+  /* ── Level Cards ── */
   .levels-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -167,14 +184,10 @@
   .level-card {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 28px;
-    padding: 32px 28px;
-    cursor: pointer;
-    text-decoration: none;
-    display: block;
+    border-radius: 28px; padding: 32px 28px;
+    cursor: pointer; text-decoration: none; display: block;
     transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-    position: relative;
-    overflow: hidden;
+    position: relative; overflow: hidden;
     animation: fadeUp 0.8s ease both;
     backdrop-filter: blur(10px);
   }
@@ -184,104 +197,76 @@
   .level-card:nth-child(4) { animation-delay: 0.4s; }
 
   .level-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 28px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    content: ''; position: absolute; inset: 0;
+    border-radius: 28px; opacity: 0; transition: opacity 0.3s ease;
   }
   .level-card.l1::before { background: linear-gradient(135deg, rgba(255,112,67,0.15), rgba(171,71,188,0.15)); }
   .level-card.l2::before { background: linear-gradient(135deg, rgba(79,195,247,0.15), rgba(102,187,106,0.15)); }
   .level-card.l3::before { background: linear-gradient(135deg, rgba(255,213,79,0.15), rgba(255,112,67,0.15)); }
   .level-card.l4::before { background: linear-gradient(135deg, rgba(171,71,188,0.15), rgba(79,195,247,0.15)); }
-
   .level-card:hover { transform: translateY(-8px) scale(1.02); border-color: rgba(255,255,255,0.3); }
   .level-card:hover::before { opacity: 1; }
 
-  .card-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
+  /* Advanced mode card glow */
+  .level-card.adv-mode { border-color: rgba(206,147,216,0.3); }
+  .level-card.adv-mode:hover { border-color: rgba(206,147,216,0.6); }
 
-  .level-emoji {
-    font-size: 48px;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
-  }
+  .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  .level-emoji { font-size: 48px; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3)); }
 
   .level-num {
-    font-family: 'Fredoka One', cursive;
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 5px 14px;
-    border-radius: 20px;
-    border: 1.5px solid;
+    font-family: 'Fredoka One', cursive; font-size: 13px;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 20px; border: 1.5px solid;
   }
   .l1 .level-num { color: #FF7043; border-color: #FF7043; }
   .l2 .level-num { color: #4FC3F7; border-color: #4FC3F7; }
   .l3 .level-num { color: #FFD54F; border-color: #FFD54F; }
   .l4 .level-num { color: #CE93D8; border-color: #CE93D8; }
 
-  .level-title {
-    font-family: 'Fredoka One', cursive;
-    font-size: 26px;
-    color: white;
-    margin-bottom: 8px;
-  }
+  .level-title { font-family: 'Fredoka One', cursive; font-size: 26px; color: white; margin-bottom: 8px; }
 
+  /* Dynamic description area */
   .level-desc {
-    font-size: 14px;
-    color: rgba(255,255,255,0.55);
-    font-weight: 600;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 14px; color: rgba(255,255,255,0.55); font-weight: 600;
+    line-height: 1.6; margin-bottom: 20px; min-height: 60px;
+    transition: all 0.3s ease;
   }
 
-  .card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  /* Advanced badge on card */
+  .adv-badge {
+    display: none;
+    font-size: 11px; font-weight: 800; letter-spacing: 1px;
+    text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
+    background: linear-gradient(135deg, #7B1FA2, #1565C0);
+    color: white; margin-bottom: 10px;
   }
+  .adv-mode .adv-badge { display: inline-block; }
 
-  .difficulty {
-    display: flex;
-    gap: 4px;
-  }
-  .dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.2);
-  }
+  .card-footer { display: flex; align-items: center; justify-content: space-between; }
+  .difficulty { display: flex; gap: 4px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.2); }
   .dot.on { background: currentColor; }
   .l1 .dot.on { color: #FF7043; background: #FF7043; }
   .l2 .dot.on { color: #4FC3F7; background: #4FC3F7; }
   .l3 .dot.on { color: #FFD54F; background: #FFD54F; }
   .l4 .dot.on { color: #CE93D8; background: #CE93D8; }
-
-  .diff-label { font-size: 12px; color: rgba(255,255,255,0.4); font-weight: 700; margin-right: 6px; letter-spacing: 1px; }
+  .diff-label-card { font-size: 12px; color: rgba(255,255,255,0.4); font-weight: 700; margin-right: 6px; letter-spacing: 1px; }
 
   .go-btn {
-    font-family: 'Fredoka One', cursive;
-    font-size: 15px;
-    padding: 8px 18px;
-    border-radius: 30px;
-    color: white;
-    border: none;
+    font-family: 'Fredoka One', cursive; font-size: 15px;
+    padding: 8px 18px; border-radius: 30px; color: white; border: none;
+    transition: all 0.3s ease;
   }
   .l1 .go-btn { background: linear-gradient(135deg, #FF7043, #AB47BC); }
   .l2 .go-btn { background: linear-gradient(135deg, #4FC3F7, #66BB6A); }
   .l3 .go-btn { background: linear-gradient(135deg, #FFD54F, #FF7043); }
   .l4 .go-btn { background: linear-gradient(135deg, #AB47BC, #4FC3F7); }
+  .adv-mode .go-btn { background: linear-gradient(135deg, #7B1FA2, #1565C0) !important; }
 
-  /* Bottom tip */
   .tip {
-    text-align: center;
-    font-size: 14px;
-    color: rgba(255,255,255,0.3);
-    font-weight: 600;
+    text-align: center; font-size: 14px;
+    color: rgba(255,255,255,0.3); font-weight: 600;
     animation: fadeUp 0.8s ease 0.5s both;
   }
   .tip span { color: rgba(255,255,255,0.5); }
@@ -300,21 +285,38 @@
   <header>
     <div class="logo-badge">🌟 英文小勇士</div>
     <h1>Be 動詞<br><span class="accent">大冒險</span></h1>
-    <p class="tagline">選一個關卡，開始你的英文練習！</p>
+    <p class="tagline">選難度，再選關卡，開始挑戰！</p>
   </header>
 
-  <div class="levels-grid">
-    <a href="level1.html" class="level-card l1">
+  <!-- Difficulty Toggle -->
+  <div class="diff-section">
+    <div class="diff-label-top">選擇難度</div>
+    <div class="diff-toggle">
+      <button class="diff-btn active-basic" id="btnBasic" onclick="setDiff('basic')">
+        🌱 基礎版
+      </button>
+      <button class="diff-btn" id="btnAdvanced" onclick="setDiff('advanced')">
+        🔥 進階版
+      </button>
+    </div>
+    <div class="diff-desc" id="diffDesc">適合國小中高年級，練習基本 be 動詞與助動詞</div>
+  </div>
+
+  <!-- Level Cards -->
+  <div class="levels-grid" id="levelsGrid">
+
+    <a class="level-card l1" id="card1" href="level1.html">
+      <div class="adv-badge">全民英檢初級</div>
       <div class="card-top">
         <div class="level-emoji">📝</div>
         <div class="level-num">關卡 1</div>
       </div>
       <div class="level-title">填空大挑戰</div>
-      <div class="level-desc">選出正確的 be 動詞或助動詞，完成句子！練習 am / is / are / was / were / can / will …</div>
+      <div class="level-desc" id="desc1">選出正確的 be 動詞或助動詞，完成句子！練習 am / is / are / was / were / can / will …</div>
       <div class="card-footer">
         <div style="display:flex;align-items:center">
-          <span class="diff-label">難度</span>
-          <div class="difficulty">
+          <span class="diff-label-card">難度</span>
+          <div class="difficulty" id="dots1">
             <div class="dot on"></div><div class="dot"></div><div class="dot"></div>
           </div>
         </div>
@@ -322,17 +324,18 @@
       </div>
     </a>
 
-    <a href="level2.html" class="level-card l2">
+    <a class="level-card l2" id="card2" href="level2.html">
+      <div class="adv-badge">全民英檢初級</div>
       <div class="card-top">
         <div class="level-emoji">🧩</div>
         <div class="level-num">關卡 2</div>
       </div>
       <div class="level-title">句子重組</div>
-      <div class="level-desc">把打亂的單字卡拖拉排列成正確的句子，挑戰你的語感！</div>
+      <div class="level-desc" id="desc2">把打亂的單字卡排列成正確的句子，挑戰你的語感！</div>
       <div class="card-footer">
         <div style="display:flex;align-items:center">
-          <span class="diff-label">難度</span>
-          <div class="difficulty">
+          <span class="diff-label-card">難度</span>
+          <div class="difficulty" id="dots2">
             <div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
           </div>
         </div>
@@ -340,17 +343,18 @@
       </div>
     </a>
 
-    <a href="level3.html" class="level-card l3">
+    <a class="level-card l3" id="card3" href="level3.html">
+      <div class="adv-badge">全民英檢初級</div>
       <div class="card-top">
         <div class="level-emoji">💬</div>
         <div class="level-num">關卡 3</div>
       </div>
       <div class="level-title">對話練習</div>
-      <div class="level-desc">進入對話情境，選出最正確的回應，練習生活英文！</div>
+      <div class="level-desc" id="desc3">進入對話情境，選出最正確的回應，練習生活英文！</div>
       <div class="card-footer">
         <div style="display:flex;align-items:center">
-          <span class="diff-label">難度</span>
-          <div class="difficulty">
+          <span class="diff-label-card">難度</span>
+          <div class="difficulty" id="dots3">
             <div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
           </div>
         </div>
@@ -358,27 +362,95 @@
       </div>
     </a>
 
-    <a href="level4.html" class="level-card l4">
+    <a class="level-card l4" id="card4" href="level4.html">
+      <div class="adv-badge">全民英檢初級</div>
       <div class="card-top">
         <div class="level-emoji">🏆</div>
         <div class="level-num">關卡 4</div>
       </div>
       <div class="level-title">終極闖關</div>
-      <div class="level-desc">綜合所有題型！倒數計時＋生命值，挑戰你的最高分！</div>
+      <div class="level-desc" id="desc4">綜合所有題型！倒數計時＋生命值，挑戰你的最高分！</div>
       <div class="card-footer">
         <div style="display:flex;align-items:center">
-          <span class="diff-label">難度</span>
-          <div class="difficulty">
+          <span class="diff-label-card">難度</span>
+          <div class="difficulty" id="dots4">
             <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
           </div>
         </div>
         <div class="go-btn">開始 →</div>
       </div>
     </a>
+
   </div>
 
-  <p class="tip">建議依序完成關卡 1 → 2 → 3，再挑戰 <span>關卡 4</span> 🚀</p>
+  <p class="tip" id="tipText">建議依序完成關卡 1 → 2 → 3，再挑戰 <span>關卡 4</span> 🚀</p>
 </div>
 
+<script>
+const BASIC = {
+  desc: [
+    '選出正確的 be 動詞或助動詞，完成句子！練習 am / is / are / was / were / can / will …',
+    '把打亂的單字卡排列成正確的句子，挑戰你的語感！',
+    '進入對話情境，選出最正確的回應，練習生活英文！',
+    '綜合所有題型！倒數計時＋生命值，挑戰你的最高分！',
+  ],
+  dots: [1, 2, 2, 3],
+  diffDesc: '適合國小中高年級，練習基本 be 動詞與助動詞',
+  tip: '建議依序完成關卡 1 → 2 → 3，再挑戰 <span>關卡 4</span> 🚀',
+};
+
+const ADVANCED = {
+  desc: [
+    '進階填空：現在完成式、被動語態、情態動詞組合、附加問句等英檢初級句型！',
+    '進階重組：拼出含有完成式、被動語態的複雜句子！',
+    '進階對話：模擬英檢初級聽力對話情境，選出最自然的回應！',
+    '終極進階闖關！混合所有英檢句型，倒數計時＋生命值！',
+  ],
+  dots: [2, 3, 3, 3],
+  diffDesc: '全民英檢初級程度：完成式、被動語態、附加問句、情態動詞組合',
+  tip: '進階模式需要紮實的基礎，建議先完成基礎版 🔥',
+};
+
+let currentDiff = 'basic';
+
+function setDiff(diff) {
+  currentDiff = diff;
+  const isAdv = diff === 'advanced';
+  const data = isAdv ? ADVANCED : BASIC;
+
+  // Toggle buttons
+  document.getElementById('btnBasic').className = 'diff-btn' + (isAdv ? '' : ' active-basic');
+  document.getElementById('btnAdvanced').className = 'diff-btn' + (isAdv ? ' active-advanced' : '');
+
+  // Description
+  const descEl = document.getElementById('diffDesc');
+  descEl.textContent = data.diffDesc;
+  descEl.className = 'diff-desc' + (isAdv ? ' advanced' : '');
+
+  // Cards
+  for (let i = 1; i <= 4; i++) {
+    const card = document.getElementById('card' + i);
+    const desc = document.getElementById('desc' + i);
+    const dots = document.getElementById('dots' + i);
+    const href = `level${i}.html` + (isAdv ? '?difficulty=advanced' : '');
+
+    card.href = href;
+    card.className = 'level-card l' + i + (isAdv ? ' adv-mode' : '');
+    desc.textContent = data.desc[i - 1];
+
+    // Dots
+    const n = data.dots[i - 1];
+    dots.innerHTML = '';
+    for (let d = 1; d <= 3; d++) {
+      const dot = document.createElement('div');
+      dot.className = 'dot' + (d <= n ? ' on' : '');
+      dots.appendChild(dot);
+    }
+  }
+
+  // Tip
+  document.getElementById('tipText').innerHTML = data.tip;
+}
+</script>
 </body>
 </html>
