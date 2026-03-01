@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英文小勇士 — 關卡 3：對話練習</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1A1A2E;
+    --correct: #43A047;
+    --wrong: #E53935;
+    --gold: #FFD54F;
+    --orange: #FF7043;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(160deg, #FFF8E1 0%, #FFF3E0 40%, #FCE4EC 100%);
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+  }
+
+  .wrapper { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Fredoka One', cursive; font-size: 15px;
+    color: #666; text-decoration: none; margin-bottom: 16px;
+    padding: 7px 16px; background: white; border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: all 0.2s ease;
+  }
+  .back-btn:hover { color: #FF7043; transform: translateX(-3px); }
+
+  header {
+    text-align: center; margin-bottom: 28px;
+    animation: fadeUp 0.6s ease both;
+  }
+  @keyframes fadeUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+  .title-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFD54F, #FF7043);
+    color: white; font-family: 'Fredoka One', cursive;
+    font-size: 13px; letter-spacing: 2px; padding: 5px 16px;
+    border-radius: 20px; margin-bottom: 8px; text-transform: uppercase;
+  }
+  h1 { font-family: 'Fredoka One', cursive; font-size: clamp(28px,6vw,46px); color: var(--ink); line-height: 1.1; }
+  h1 span { color: #FF7043; }
+  .subtitle { font-size: 15px; color: #666; margin-top: 6px; font-weight: 600; }
+
+  .scorebar {
+    display: flex; justify-content: space-between; align-items: center;
+    background: white; border-radius: 20px; padding: 14px 22px;
+    margin-bottom: 22px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    animation: fadeUp 0.6s ease 0.1s both;
+  }
+  .score-item { text-align: center; }
+  .score-label { font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: #999; }
+  .score-value { font-family: 'Fredoka One', cursive; font-size: 28px; line-height: 1; margin-top: 2px; }
+  .score-value.points { color: #FF7043; }
+  .score-value.correct { color: var(--correct); }
+  .score-value.wrong { color: var(--wrong); }
+  .progress-wrap { flex: 1; margin: 0 20px; }
+  .progress-label { font-size: 12px; font-weight: 800; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+  .progress-bar { background: #EEE; border-radius: 10px; height: 12px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, #FFD54F, #FF7043); border-radius: 10px; transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); width: 0%; }
+
+  /* Question card */
+  .question-card {
+    background: white; border-radius: 28px; padding: 32px 28px 24px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.1); margin-bottom: 20px;
+    animation: fadeUp 0.6s ease 0.2s both; position: relative; overflow: hidden;
+  }
+  .question-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg, #FFD54F, #FF7043, #FF4081);
+  }
+
+  .question-num { font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #FF7043; margin-bottom: 12px; }
+
+  /* Dialogue bubbles */
+  .dialogue-box {
+    background: #FFFDE7;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 24px;
+    border: 2px solid #FFE082;
+  }
+
+  .bubble-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .bubble-row:last-child { margin-bottom: 0; }
+  .bubble-row.right { flex-direction: row-reverse; }
+
+  .avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .avatar-a { background: #FFD54F; }
+  .avatar-b { background: #80DEEA; }
+
+  .bubble {
+    max-width: 75%;
+    padding: 10px 16px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .bubble-left { background: white; border-bottom-left-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .bubble-right { background: #FF7043; color: white; border-bottom-right-radius: 4px; }
+  .bubble.question-bubble {
+    background: #FFF3E0;
+    border: 2px dashed #FFB74D;
+    color: #E65100;
+  }
+
+  .speaker-name {
+    font-size: 11px; font-weight: 800; letter-spacing: 1px;
+    text-transform: uppercase; color: #999; margin-bottom: 4px;
+  }
+  .bubble-col { display: flex; flex-direction: column; }
+  .bubble-col.right { align-items: flex-end; }
+
+  /* Answer options */
+  .options-label {
+    font-size: 14px; font-weight: 800; color: #888;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .options { display: flex; flex-direction: column; gap: 10px; }
+
+  .option-btn {
+    padding: 14px 20px;
+    border: 3px solid #E0E0E0;
+    border-radius: 16px;
+    background: white;
+    color: var(--ink);
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .option-btn:hover:not(:disabled) { transform: translateX(4px); border-color: #FF7043; box-shadow: 0 4px 16px rgba(255,112,67,0.15); }
+  .option-btn:disabled { cursor: default; }
+  .option-btn.correct-ans { border-color: var(--correct); background: #E8F5E9; color: #2E7D32; }
+  .option-btn.wrong-ans { border-color: var(--wrong); background: #FFEBEE; color: #C62828; opacity: 0.75; }
+  .option-letter {
+    width: 30px; height: 30px; border-radius: 50%;
+    background: #F5F5F5; display: flex; align-items: center; justify-content: center;
+    font-family: 'Fredoka One', cursive; font-size: 16px; flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+  .option-btn:hover:not(:disabled) .option-letter { background: #FF7043; color: white; }
+  .option-btn.correct-ans .option-letter { background: var(--correct); color: white; }
+  .option-btn.wrong-ans .option-letter { background: var(--wrong); color: white; }
+
+  /* Feedback */
+  .feedback {
+    display: flex; align-items: flex-start; gap: 10px; font-size: 15px; font-weight: 700;
+    padding: 14px 18px; border-radius: 14px; margin-top: 16px;
+    opacity: 0; transform: translateY(6px); transition: all 0.3s ease;
+  }
+  .feedback.show { opacity: 1; transform: translateY(0); }
+  .feedback.correct { background: #E8F5E9; color: #2E7D32; }
+  .feedback.wrong { background: #FFEBEE; color: #C62828; }
+  .feedback .icon { font-size: 22px; flex-shrink: 0; }
+  .explanation { font-size: 13px; font-weight: 600; color: #555; margin-top: 4px; line-height: 1.6; }
+
+  /* Next button */
+  .btn-next {
+    width: 100%; padding: 16px; font-family: 'Fredoka One', cursive; font-size: 22px;
+    border: none; border-radius: 18px; background: linear-gradient(135deg, #FFD54F, #FF7043);
+    color: white; cursor: pointer; margin-top: 16px;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 6px 24px rgba(255,213,79,0.4); display: none;
+  }
+  .btn-next:hover { transform: translateY(-3px); }
+  .btn-next.visible { display: block; animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  @keyframes popIn { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+  /* Result */
+  .result-screen {
+    display: none; text-align: center; background: white; border-radius: 28px;
+    padding: 48px 32px; box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  }
+  .result-screen.show { display: block; animation: fadeUp 0.6s ease; }
+  .result-emoji { font-size: 72px; margin-bottom: 16px; animation: bounce 1s ease infinite alternate; }
+  @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-12px); } }
+  .result-title { font-family: 'Fredoka One', cursive; font-size: 36px; color: var(--ink); margin-bottom: 8px; }
+  .result-score { font-family: 'Fredoka One', cursive; font-size: 56px; color: #FF7043; margin: 12px 0; }
+  .result-msg { font-size: 16px; color: #666; font-weight: 600; margin-bottom: 28px; }
+  .result-detail { display: flex; justify-content: center; gap: 32px; margin-bottom: 28px; }
+  .result-stat { text-align: center; }
+  .result-stat-num { font-family: 'Fredoka One', cursive; font-size: 32px; }
+  .result-stat-num.g { color: var(--correct); }
+  .result-stat-num.b { color: var(--wrong); }
+  .result-stat-label { font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: #999; }
+  .result-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-restart {
+    font-family: 'Fredoka One', cursive; font-size: 20px; padding: 14px 32px;
+    border: none; border-radius: 18px; background: linear-gradient(135deg, #FFD54F, #FF7043);
+    color: white; cursor: pointer; transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 6px 24px rgba(255,213,79,0.4);
+  }
+  .btn-restart:hover { transform: translateY(-3px) scale(1.05); }
+  .btn-home {
+    font-family: 'Fredoka One', cursive; font-size: 20px; padding: 14px 32px;
+    border: none; border-radius: 18px; background: linear-gradient(135deg, #FF7043, #AB47BC);
+    color: white; text-decoration: none; display: inline-block;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 6px 24px rgba(255,112,67,0.35);
+  }
+  .btn-home:hover { transform: translateY(-3px) scale(1.05); }
+
+  .confetti-piece {
+    position: fixed; pointer-events: none; z-index: 999;
+    border-radius: 2px; animation: confettiFall linear forwards;
+  }
+  @keyframes confettiFall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <a href="index.html" class="back-btn">← 主選單</a>
+
+  <header>
+    <div class="title-badge">💬 關卡 3</div>
+    <h1>對話<span>練習</span></h1>
+    <p class="subtitle">看對話情境，選出最正確的回應！</p>
+  </header>
+
+  <div class="scorebar">
+    <div class="score-item">
+      <div class="score-label">⭐ 分數</div>
+      <div class="score-value points" id="scoreDisplay">0</div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label">進度</div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+    <div class="score-item">
+      <div class="score-label">✅ 答對</div>
+      <div class="score-value correct" id="correctDisplay">0</div>
+    </div>
+    <div class="score-item">
+      <div class="score-label">❌ 答錯</div>
+      <div class="score-value wrong" id="wrongDisplay">0</div>
+    </div>
+  </div>
+
+  <div class="question-card" id="questionCard">
+    <div class="question-num" id="questionNum">題目 1 / 8</div>
+
+    <div class="dialogue-box" id="dialogueBox"></div>
+
+    <div class="options-label">你會怎麼回答？</div>
+    <div class="options" id="optionsEl"></div>
+
+    <div class="feedback" id="feedbackEl">
+      <span class="icon" id="feedbackIcon"></span>
+      <div>
+        <div id="feedbackText"></div>
+        <div class="explanation" id="explanationEl"></div>
+      </div>
+    </div>
+
+    <button class="btn-next" id="btnNext" onclick="nextQuestion()">下一題 →</button>
+  </div>
+
+  <div class="result-screen" id="resultScreen">
+    <div class="result-emoji" id="resultEmoji">🎉</div>
+    <div class="result-title" id="resultTitle">太棒了！</div>
+    <div class="result-score" id="resultScore">0 分</div>
+    <div class="result-msg" id="resultMsg"></div>
+    <div class="result-detail">
+      <div class="result-stat">
+        <div class="result-stat-num g" id="rCorrect">0</div>
+        <div class="result-stat-label">答對題數</div>
+      </div>
+      <div class="result-stat">
+        <div class="result-stat-num b" id="rWrong">0</div>
+        <div class="result-stat-label">答錯題數</div>
+      </div>
+      <div class="result-stat">
+        <div class="result-stat-num" style="color:#FF7043" id="rAccuracy">0%</div>
+        <div class="result-stat-label">正確率</div>
+      </div>
+    </div>
+    <div class="result-btns">
+      <button class="btn-restart" onclick="restart()">🔄 再玩一次</button>
+      <a href="index.html" class="btn-home">🏠 主選單</a>
+    </div>
+  </div>
+</div>
+
+<script>
+// dialogue: array of {speaker:'A'|'B', text, isQuestion:bool}
+// options: array of {text, correct:bool}
+// explanation: string
+const ALL_QUESTIONS = [
+  {
+    dialogue: [
+      { speaker: 'A', avatar: '👩‍🏫', name: 'Teacher Lisa', text: 'Good morning! How are you today?' },
+      { speaker: 'B', avatar: '🧒', name: 'You', text: '___?', isQuestion: true },
+    ],
+    options: [
+      { text: 'I am fine, thank you!', correct: true },
+      { text: 'I is fine, thank you!', correct: false },
+      { text: 'I are fine, thank you!', correct: false },
+    ],
+    explanation: '主詞 I 要配合 am，正確說法是 I am fine。'
+  },
+  {
+    dialogue: [
+      { speaker: 'A', avatar: '👦', name: 'Tom', text: 'Is your sister a student?' },
+      { speaker: 'B', avatar: '🧒', name: 'You', text: '___?', isQuestion: true },
+    ],
+    options: [
+      { text: 'Yes, she is.', correct: true },
+      { text: 'Yes, she are.', correct: false },
+      { text: 'Yes, she am.', correct: false },
+    ],
+    explanation: 'Is she...? 的簡短回答是 Yes, she is. 或 No, she isn\'t.'
+  },
+  {
+    dialogue: [
+      { speaker: 'A', avatar: '👩', name: 'Mom', text: 'Can you help me wash the dishes?' },
+      { speaker: 'B', avatar: '🧒', name: 'You', text: '___?', isQuestion: true },
+    ],
+    options: [
+      { text: 'Sure! I can do it!', correct: true },
+      { text: 'Sure! I can does it!', correct: false },
+      { text: 'Sure! I can did it!', correct: false },
+    ],
+    explanation: 'can 後面一定接原形動詞，所以是 I can do it，不用 does 或 did。'
+  },
+  {
+    dialogue: [
+      { speaker: 'A', avatar: '👦', name: 'Ben', text: 'Were you at the party last night?' },
+      { speaker: 'B', avatar: '🧒', name: 'You', text: '___?', isQuestion: true },
+    ],
+    options: [
+      { text: 'No, I wasn\'t. I was at home.', correct: true },
+      { text: 'No, I weren\'t. I was at home.', correct: false },
+      { text: 'No, I isn\'t. I was at home.', correct: false },
+    ],
+    explanation: 'Were you...? 的否定回答是 No, I wasn\'t（I 是單數，過去式用 was/wasn\'t）。'
+  },
+  {
+    dialogue: [
+      { speaker: 'A', avatar: '👩‍🏫', name: 'Teacher', text: 'What should you do when you feel sick?' },
+      { speaker: 'B', avatar: '🧒', name: 'You', text: '___?', isQuestion: true },
+    ],
+    options: [
+      { text: 'I should rest and drink water.', correct: true },
+      { text: 'I should rests and drinks water.', correct: false },
+      { text: 'I should rested and drank water.', correct: false },
+    ],
+    explanation: 'should 是助動詞，後面接原形動詞，所以是 rest 和 drink，不加 s 或變過去式。'
+  },
+  {
+    dialogue: [
+      { speaker: 'A', avatar: '👧', name: 'Amy', text: 'Does your brother play basketball?' },
+      { speaker: 'B', avatar: '🧒', name: 'You', text: '___?', isQuestion: true },
+    ],
+    options: [
+      { text: 'Yes, he does. He plays every day.', correct: true },
+      { text: 'Yes, he do. He plays every day.', correct: false },
+      { text: 'Yes, he is. He plays every day.', correct: false },
+    ],
+    explanation: 'Does he...? 的簡短回答是 Yes, he does. 注意用 does 而不是 do 或 is。'
+  },
+  {
+    dialogue: [
+      { speaker: 'A', avatar: '👦', name: 'Jack', text: 'Will you come to my birthday party?' },
+      { speaker: 'B', avatar: '🧒', name: 'You', text: '___?', isQuestion: true },
+    ],
+    options: [
+      { text: 'Yes, I will! I can\'t wait!', correct: true },
+      { text: 'Yes, I wills! I can\'t wait!', correct: false },
+      { text: 'Yes, I am! I can\'t wait!', correct: false },
+    ],
+    explanation: 'Will you...? 的回答是 Yes, I will. will 是助動詞，不加 s。'
+  },
+  {
+    dialogue: [
+      { speaker: 'A', avatar: '👩', name: 'Grandma', text: 'Are these your books?' },
+      { speaker: 'B', avatar: '🧒', name: 'You', text: '___?', isQuestion: true },
+    ],
+    options: [
+      { text: 'No, they aren\'t. They are Tom\'s.', correct: true },
+      { text: 'No, they isn\'t. They are Tom\'s.', correct: false },
+      { text: 'No, they wasn\'t. They are Tom\'s.', correct: false },
+    ],
+    explanation: 'Are these...? 複數問句的否定回答是 No, they aren\'t（複數現在式用 are/aren\'t）。'
+  },
+];
+
+let questions = [], current = 0, score = 0, correctCount = 0, wrongCount = 0;
+let answered = false;
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+
+function renderQuestion() {
+  const q = questions[current];
+  answered = false;
+
+  document.getElementById('questionNum').textContent = `題目 ${current + 1} / ${questions.length}`;
+  document.getElementById('progressFill').style.width = `${(current / questions.length) * 100}%`;
+
+  // Render dialogue
+  const dialogueBox = document.getElementById('dialogueBox');
+  dialogueBox.innerHTML = '';
+  q.dialogue.forEach(line => {
+    const row = document.createElement('div');
+    row.className = 'bubble-row' + (line.speaker === 'B' ? ' right' : '');
+
+    const avatar = document.createElement('div');
+    avatar.className = 'avatar avatar-' + line.speaker.toLowerCase();
+    avatar.textContent = line.avatar;
+
+    const col = document.createElement('div');
+    col.className = 'bubble-col' + (line.speaker === 'B' ? ' right' : '');
+
+    const name = document.createElement('div');
+    name.className = 'speaker-name';
+    name.textContent = line.name;
+
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble ' + (line.speaker === 'B' ? (line.isQuestion ? 'question-bubble' : 'bubble-right') : 'bubble-left');
+    bubble.textContent = line.text;
+
+    col.appendChild(name);
+    col.appendChild(bubble);
+    row.appendChild(avatar);
+    row.appendChild(col);
+    dialogueBox.appendChild(row);
+  });
+
+  // Options
+  const optsEl = document.getElementById('optionsEl');
+  optsEl.innerHTML = '';
+  const letters = ['A', 'B', 'C'];
+  const shuffled = shuffle(q.options);
+  shuffled.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = `<span class="option-letter">${letters[i]}</span>${opt.text}`;
+    btn.onclick = () => checkAnswer(opt.correct, btn, shuffled);
+    optsEl.appendChild(btn);
+  });
+
+  const fb = document.getElementById('feedbackEl');
+  fb.className = 'feedback';
+  document.getElementById('feedbackText').textContent = '';
+  document.getElementById('explanationEl').textContent = '';
+  document.getElementById('btnNext').className = 'btn-next';
+}
+
+function checkAnswer(isCorrect, btn, shuffledOpts) {
+  if (answered) return;
+  answered = true;
+
+  document.querySelectorAll('.option-btn').forEach((b, i) => {
+    b.disabled = true;
+    if (shuffledOpts[i].correct) b.className = 'option-btn correct-ans';
+    else if (b === btn && !isCorrect) b.className = 'option-btn wrong-ans';
+  });
+
+  const fb = document.getElementById('feedbackEl');
+  const q = questions[current];
+  if (isCorrect) {
+    score += 10; correctCount++;
+    fb.className = 'feedback correct show';
+    document.getElementById('feedbackIcon').textContent = '🎉';
+    document.getElementById('feedbackText').textContent = '答對了！對話選得很好！';
+    spawnConfetti(6);
+  } else {
+    wrongCount++;
+    fb.className = 'feedback wrong show';
+    document.getElementById('feedbackIcon').textContent = '😅';
+    document.getElementById('feedbackText').textContent = '答錯了！看看綠色的正確答案。';
+  }
+  document.getElementById('explanationEl').textContent = q.explanation;
+  document.getElementById('scoreDisplay').textContent = score;
+  document.getElementById('correctDisplay').textContent = correctCount;
+  document.getElementById('wrongDisplay').textContent = wrongCount;
+  document.getElementById('btnNext').className = 'btn-next visible';
+}
+
+function nextQuestion() {
+  current++;
+  if (current >= questions.length) showResult();
+  else renderQuestion();
+}
+
+function showResult() {
+  document.getElementById('questionCard').style.display = 'none';
+  document.getElementById('resultScreen').classList.add('show');
+  const accuracy = Math.round((correctCount / questions.length) * 100);
+  document.getElementById('resultScore').textContent = score + ' 分';
+  document.getElementById('rCorrect').textContent = correctCount;
+  document.getElementById('rWrong').textContent = wrongCount;
+  document.getElementById('rAccuracy').textContent = accuracy + '%';
+  document.getElementById('progressFill').style.width = '100%';
+  let emoji, title, msg;
+  if (accuracy >= 90) { emoji = '🏆'; title = '對話高手！'; msg = '你的英文對話能力超強！'; }
+  else if (accuracy >= 70) { emoji = '⭐'; title = '做得很好！'; msg = '大部分對話都選對了，繼續加油！'; }
+  else if (accuracy >= 50) { emoji = '💪'; title = '不錯喔！'; msg = '再練習幾次，你一定能更進步！'; }
+  else { emoji = '📚'; title = '繼續努力！'; msg = '多讀對話幾次，你會越來越棒的！'; }
+  document.getElementById('resultEmoji').textContent = emoji;
+  document.getElementById('resultTitle').textContent = title;
+  document.getElementById('resultMsg').textContent = msg;
+  if (accuracy >= 70) spawnConfetti(20);
+}
+
+function restart() {
+  current = 0; score = 0; correctCount = 0; wrongCount = 0;
+  questions = shuffle(ALL_QUESTIONS);
+  document.getElementById('scoreDisplay').textContent = 0;
+  document.getElementById('correctDisplay').textContent = 0;
+  document.getElementById('wrongDisplay').textContent = 0;
+  document.getElementById('resultScreen').classList.remove('show');
+  document.getElementById('questionCard').style.display = '';
+  renderQuestion();
+}
+
+const CONFETTI_COLORS = ['#FF7043','#AB47BC','#4FC3F7','#FFD54F','#66BB6A','#FF4081'];
+function spawnConfetti(n) {
+  for (let i = 0; i < n; i++) {
+    setTimeout(() => {
+      const el = document.createElement('div');
+      el.className = 'confetti-piece';
+      el.style.left = Math.random() * 100 + 'vw';
+      el.style.background = CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)];
+      el.style.animationDuration = (1.5 + Math.random() * 1.5) + 's';
+      el.style.animationDelay = Math.random() * 0.5 + 's';
+      el.style.width = el.style.height = (8 + Math.random() * 8) + 'px';
+      el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 3000);
+    }, i * 80);
+  }
+}
+
+questions = shuffle(ALL_QUESTIONS);
+renderQuestion();
+</script>
+</body>
+</html>

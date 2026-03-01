@@ -3,775 +3,382 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>英文小勇士 — 關卡 1：填空大挑戰</title>
+<title>英文小勇士 — 主選單</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --sky: #4FC3F7;
-    --sun: #FFD54F;
-    --grass: #66BB6A;
-    --coral: #FF7043;
-    --purple: #AB47BC;
-    --white: #FAFAFA;
     --ink: #1A1A2E;
-    --card-bg: #FFFFFF;
-    --correct: #43A047;
-    --wrong: #E53935;
+    --card: #FFFFFF;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Nunito', sans-serif;
-    background: linear-gradient(160deg, #E3F2FD 0%, #F3E5F5 50%, #E8F5E9 100%);
     min-height: 100vh;
-    padding: 20px;
+    background: #0F1B35;
     overflow-x: hidden;
+    position: relative;
   }
 
-  /* Floating clouds */
-  .cloud {
+  /* Starfield */
+  .stars-bg {
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background:
+      radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 40% 10%, rgba(255,255,255,0.9) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 60%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(2px 2px at 70% 25%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 75%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 90% 45%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 80%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 70%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(2px 2px at 60% 85%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 55%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 48% 32%, rgba(255,255,255,0.9) 0%, transparent 100%),
+      radial-gradient(1px 1px at 73% 50%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 88% 18%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(2px 2px at 20% 95%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      linear-gradient(160deg, #0F1B35 0%, #1A0A2E 50%, #0D1F3C 100%);
+  }
+
+  /* Shooting star */
+  .shooting-star {
     position: fixed;
+    width: 3px; height: 3px;
     background: white;
-    border-radius: 50px;
-    opacity: 0.6;
+    border-radius: 50%;
     pointer-events: none;
     z-index: 0;
   }
-  .cloud::before, .cloud::after {
+  .shooting-star::after {
     content: '';
     position: absolute;
-    background: white;
-    border-radius: 50%;
+    top: 50%; right: 100%;
+    transform: translateY(-50%);
+    width: 60px; height: 1px;
+    background: linear-gradient(to left, white, transparent);
   }
-  .cloud-1 { width: 120px; height: 40px; top: 8%; left: -30px; animation: drift 18s linear infinite; }
-  .cloud-1::before { width: 60px; height: 60px; top: -30px; left: 15px; }
-  .cloud-1::after { width: 40px; height: 40px; top: -20px; left: 55px; }
-  .cloud-2 { width: 90px; height: 30px; top: 20%; left: -20px; animation: drift 25s linear infinite 8s; opacity: 0.4; }
-  .cloud-2::before { width: 45px; height: 45px; top: -22px; left: 10px; }
-  .cloud-2::after { width: 30px; height: 30px; top: -15px; left: 42px; }
-  .cloud-3 { width: 100px; height: 35px; top: 60%; left: -25px; animation: drift 22s linear infinite 4s; opacity: 0.3; }
-  .cloud-3::before { width: 50px; height: 50px; top: -25px; left: 12px; }
-  .cloud-3::after { width: 35px; height: 35px; top: -18px; left: 48px; }
-  @keyframes drift { from { transform: translateX(-150px); } to { transform: translateX(110vw); } }
+  .ss1 { top: 15%; left: 80%; animation: shoot 4s linear 1s infinite; }
+  .ss2 { top: 35%; left: 60%; animation: shoot 5s linear 3s infinite; }
+  @keyframes shoot {
+    0% { transform: translate(0,0) rotate(20deg); opacity:1; }
+    70% { opacity: 1; }
+    100% { transform: translate(-300px, 100px) rotate(20deg); opacity: 0; }
+  }
 
+  /* Planet deco */
+  .planet {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .planet-1 {
+    width: 200px; height: 200px;
+    background: radial-gradient(circle at 35% 35%, #FF8A65, #E64A19);
+    top: -60px; right: -60px;
+    box-shadow: inset -20px -20px 40px rgba(0,0,0,0.4), 0 0 60px rgba(255,138,101,0.3);
+    animation: float 8s ease-in-out infinite;
+  }
+  .planet-2 {
+    width: 100px; height: 100px;
+    background: radial-gradient(circle at 35% 35%, #80DEEA, #00838F);
+    bottom: 80px; left: -30px;
+    box-shadow: inset -10px -10px 25px rgba(0,0,0,0.4), 0 0 40px rgba(128,222,234,0.2);
+    animation: float 10s ease-in-out 2s infinite;
+  }
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  /* Rocket */
+  .rocket {
+    position: fixed;
+    font-size: 40px;
+    bottom: 20%;
+    right: 5%;
+    animation: rocketFloat 6s ease-in-out infinite;
+    z-index: 0;
+    filter: drop-shadow(0 0 10px rgba(255,200,100,0.5));
+  }
+  @keyframes rocketFloat {
+    0%,100% { transform: translateY(0) rotate(-15deg); }
+    50% { transform: translateY(-20px) rotate(-15deg); }
+  }
+
+  /* Layout */
   .wrapper {
-    max-width: 760px;
+    max-width: 860px;
     margin: 0 auto;
+    padding: 40px 24px 60px;
     position: relative;
     z-index: 1;
   }
 
-  /* Header */
   header {
     text-align: center;
-    margin-bottom: 28px;
-    animation: slideDown 0.6s ease;
+    margin-bottom: 48px;
+    animation: fadeUp 0.8s ease both;
   }
-  @keyframes slideDown { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  @keyframes fadeUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
 
-  .title-badge {
+  .logo-badge {
     display: inline-block;
-    background: linear-gradient(135deg, #FF7043, #AB47BC);
+    background: linear-gradient(135deg, #FF7043, #FFD54F);
     color: white;
     font-family: 'Fredoka One', cursive;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 2px;
-    padding: 5px 16px;
-    border-radius: 20px;
-    margin-bottom: 8px;
+    padding: 6px 20px;
+    border-radius: 30px;
+    margin-bottom: 16px;
     text-transform: uppercase;
   }
 
   h1 {
     font-family: 'Fredoka One', cursive;
-    font-size: clamp(28px, 6vw, 46px);
-    color: var(--ink);
+    font-size: clamp(36px, 8vw, 64px);
+    color: white;
     line-height: 1.1;
-    text-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+    text-shadow: 0 0 40px rgba(255,200,100,0.4);
+    margin-bottom: 12px;
   }
-  h1 span { color: #FF7043; }
+  h1 .accent { color: #FFD54F; }
 
-  .subtitle {
-    font-size: 15px;
-    color: #666;
-    margin-top: 6px;
+  .tagline {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
     font-weight: 600;
   }
 
-  /* Score bar */
-  .scorebar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--card-bg);
-    border-radius: 20px;
-    padding: 14px 22px;
-    margin-bottom: 22px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    animation: slideDown 0.6s ease 0.1s both;
+  /* Level cards grid */
+  .levels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
   }
 
-  .score-item {
-    text-align: center;
-  }
-  .score-label {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #999;
-  }
-  .score-value {
-    font-family: 'Fredoka One', cursive;
-    font-size: 28px;
-    line-height: 1;
-    margin-top: 2px;
-  }
-  .score-value.points { color: #FF7043; }
-  .score-value.correct { color: var(--correct); }
-  .score-value.wrong { color: var(--wrong); }
-
-  .progress-wrap {
-    flex: 1;
-    margin: 0 20px;
-  }
-  .progress-label {
-    font-size: 12px;
-    font-weight: 800;
-    color: #999;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-  }
-  .progress-bar {
-    background: #EEE;
-    border-radius: 10px;
-    height: 12px;
-    overflow: hidden;
-  }
-  .progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #FF7043, #AB47BC);
-    border-radius: 10px;
-    transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    width: 0%;
-  }
-
-  /* Question card */
-  .question-card {
-    background: var(--card-bg);
+  .level-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
     border-radius: 28px;
-    padding: 36px 32px 28px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.1), 0 2px 8px rgba(0,0,0,0.06);
-    margin-bottom: 20px;
-    animation: slideDown 0.6s ease 0.2s both;
+    padding: 32px 28px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
+    animation: fadeUp 0.8s ease both;
+    backdrop-filter: blur(10px);
   }
-  .question-card::before {
+  .level-card:nth-child(1) { animation-delay: 0.1s; }
+  .level-card:nth-child(2) { animation-delay: 0.2s; }
+  .level-card:nth-child(3) { animation-delay: 0.3s; }
+  .level-card:nth-child(4) { animation-delay: 0.4s; }
+
+  .level-card::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #4FC3F7, #AB47BC, #FF7043);
+    inset: 0;
+    border-radius: 28px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .level-card.l1::before { background: linear-gradient(135deg, rgba(255,112,67,0.15), rgba(171,71,188,0.15)); }
+  .level-card.l2::before { background: linear-gradient(135deg, rgba(79,195,247,0.15), rgba(102,187,106,0.15)); }
+  .level-card.l3::before { background: linear-gradient(135deg, rgba(255,213,79,0.15), rgba(255,112,67,0.15)); }
+  .level-card.l4::before { background: linear-gradient(135deg, rgba(171,71,188,0.15), rgba(79,195,247,0.15)); }
+
+  .level-card:hover { transform: translateY(-8px) scale(1.02); border-color: rgba(255,255,255,0.3); }
+  .level-card:hover::before { opacity: 1; }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 
-  .question-num {
-    font-size: 12px;
-    font-weight: 800;
+  .level-emoji {
+    font-size: 48px;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+  }
+
+  .level-num {
+    font-family: 'Fredoka One', cursive;
+    font-size: 13px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #AB47BC;
-    margin-bottom: 10px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1.5px solid;
   }
+  .l1 .level-num { color: #FF7043; border-color: #FF7043; }
+  .l2 .level-num { color: #4FC3F7; border-color: #4FC3F7; }
+  .l3 .level-num { color: #FFD54F; border-color: #FFD54F; }
+  .l4 .level-num { color: #CE93D8; border-color: #CE93D8; }
 
-  .sentence {
-    font-size: clamp(18px, 4vw, 26px);
-    font-weight: 700;
-    color: var(--ink);
-    line-height: 1.8;
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 14px;
-  }
-
-  .blank {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 90px;
-    height: 44px;
-    border-radius: 12px;
-    border: 3px dashed #CCC;
-    background: #F8F8F8;
+  .level-title {
     font-family: 'Fredoka One', cursive;
-    font-size: 22px;
-    color: var(--ink);
-    transition: all 0.3s ease;
-    padding: 0 14px;
-  }
-  .blank.filled { border-style: solid; border-color: var(--sky); background: #E3F2FD; color: #0277BD; }
-  .blank.correct { border-color: var(--correct); background: #E8F5E9; color: var(--correct); }
-  .blank.wrong { border-color: var(--wrong); background: #FFEBEE; color: var(--wrong); }
-
-  .hint {
-    font-size: 13px;
-    color: #999;
-    font-weight: 600;
-    font-style: italic;
-  }
-
-  /* Options */
-  .options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 10px;
-  }
-
-  .option-btn {
-    font-family: 'Fredoka One', cursive;
-    font-size: 20px;
-    padding: 10px 24px;
-    border: 3px solid #E0E0E0;
-    border-radius: 16px;
-    background: white;
-    color: var(--ink);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    user-select: none;
-  }
-  .option-btn:hover:not(:disabled) {
-    transform: translateY(-3px) scale(1.05);
-    border-color: #AB47BC;
-    box-shadow: 0 6px 20px rgba(171,71,188,0.2);
-  }
-  .option-btn:active:not(:disabled) { transform: scale(0.97); }
-  .option-btn.selected { border-color: var(--sky); background: #E3F2FD; color: #0277BD; }
-  .option-btn.correct-ans { border-color: var(--correct); background: #E8F5E9; color: var(--correct); }
-  .option-btn.wrong-ans { border-color: var(--wrong); background: #FFEBEE; color: var(--wrong); opacity: 0.7; }
-  .option-btn:disabled { cursor: default; }
-
-  /* Feedback */
-  .feedback {
-    min-height: 52px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: 16px;
-    padding: 12px 18px;
-    border-radius: 14px;
-    opacity: 0;
-    transform: translateY(6px);
-    transition: all 0.3s ease;
-  }
-  .feedback.show { opacity: 1; transform: translateY(0); }
-  .feedback.correct { background: #E8F5E9; color: #2E7D32; }
-  .feedback.wrong { background: #FFEBEE; color: #C62828; }
-  .feedback .icon { font-size: 24px; }
-
-  /* Explanation */
-  .explanation {
-    font-size: 13px;
-    font-weight: 600;
-    color: #555;
-    margin-top: 6px;
-    line-height: 1.6;
-  }
-
-  /* Next button */
-  .btn-next {
-    width: 100%;
-    padding: 16px;
-    font-family: 'Fredoka One', cursive;
-    font-size: 22px;
-    border: none;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #FF7043, #AB47BC);
+    font-size: 26px;
     color: white;
-    cursor: pointer;
-    margin-top: 16px;
-    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 6px 24px rgba(255,112,67,0.35);
-    display: none;
-  }
-  .btn-next:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255,112,67,0.45); }
-  .btn-next:active { transform: scale(0.98); }
-  .btn-next.visible { display: block; animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
-  @keyframes popIn { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-
-  /* Stars */
-  .stars {
-    display: flex;
-    gap: 6px;
-    font-size: 22px;
-    margin-top: 14px;
-  }
-  .star { opacity: 0.2; transition: all 0.3s ease; }
-  .star.lit { opacity: 1; animation: starPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
-  @keyframes starPop { 0% { transform: scale(0); } 70% { transform: scale(1.3); } 100% { transform: scale(1); } }
-
-  /* Result screen */
-  .result-screen {
-    display: none;
-    text-align: center;
-    background: var(--card-bg);
-    border-radius: 28px;
-    padding: 48px 32px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-    animation: slideDown 0.6s ease;
-  }
-  .result-screen.show { display: block; }
-  .result-emoji { font-size: 72px; margin-bottom: 16px; animation: bounce 1s ease infinite alternate; }
-  @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-12px); } }
-  .result-title {
-    font-family: 'Fredoka One', cursive;
-    font-size: 36px;
-    color: var(--ink);
     margin-bottom: 8px;
   }
-  .result-score {
-    font-family: 'Fredoka One', cursive;
-    font-size: 56px;
-    color: #FF7043;
-    margin: 12px 0;
+
+  .level-desc {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 20px;
   }
-  .result-msg { font-size: 16px; color: #666; font-weight: 600; margin-bottom: 28px; }
-  .result-detail {
+
+  .card-footer {
     display: flex;
-    justify-content: center;
-    gap: 32px;
-    margin-bottom: 28px;
+    align-items: center;
+    justify-content: space-between;
   }
-  .result-stat { text-align: center; }
-  .result-stat-num { font-family: 'Fredoka One', cursive; font-size: 32px; }
-  .result-stat-num.g { color: var(--correct); }
-  .result-stat-num.b { color: var(--wrong); }
-  .result-stat-label { font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: #999; }
 
-  .btn-restart {
+  .difficulty {
+    display: flex;
+    gap: 4px;
+  }
+  .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+  }
+  .dot.on { background: currentColor; }
+  .l1 .dot.on { color: #FF7043; background: #FF7043; }
+  .l2 .dot.on { color: #4FC3F7; background: #4FC3F7; }
+  .l3 .dot.on { color: #FFD54F; background: #FFD54F; }
+  .l4 .dot.on { color: #CE93D8; background: #CE93D8; }
+
+  .diff-label { font-size: 12px; color: rgba(255,255,255,0.4); font-weight: 700; margin-right: 6px; letter-spacing: 1px; }
+
+  .go-btn {
     font-family: 'Fredoka One', cursive;
-    font-size: 22px;
-    padding: 16px 40px;
-    border: none;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #66BB6A, #4FC3F7);
+    font-size: 15px;
+    padding: 8px 18px;
+    border-radius: 30px;
     color: white;
-    cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 6px 24px rgba(102,187,106,0.35);
+    border: none;
   }
-  .btn-restart:hover { transform: translateY(-3px) scale(1.05); }
+  .l1 .go-btn { background: linear-gradient(135deg, #FF7043, #AB47BC); }
+  .l2 .go-btn { background: linear-gradient(135deg, #4FC3F7, #66BB6A); }
+  .l3 .go-btn { background: linear-gradient(135deg, #FFD54F, #FF7043); }
+  .l4 .go-btn { background: linear-gradient(135deg, #AB47BC, #4FC3F7); }
 
-  /* Confetti */
-  .confetti-piece {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    pointer-events: none;
-    z-index: 999;
-    border-radius: 2px;
-    animation: confettiFall linear forwards;
+  /* Bottom tip */
+  .tip {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255,255,255,0.3);
+    font-weight: 600;
+    animation: fadeUp 0.8s ease 0.5s both;
   }
-  @keyframes confettiFall {
-    0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-  }
-
-  @media (max-width: 500px) {
-    .question-card { padding: 24px 18px 20px; }
-    .options { gap: 8px; }
-    .option-btn { font-size: 18px; padding: 8px 18px; }
-  }
+  .tip span { color: rgba(255,255,255,0.5); }
 </style>
 </head>
 <body>
 
-<div class="cloud cloud-1"></div>
-<div class="cloud cloud-2"></div>
-<div class="cloud cloud-3"></div>
+<div class="stars-bg"></div>
+<div class="shooting-star ss1"></div>
+<div class="shooting-star ss2"></div>
+<div class="planet planet-1"></div>
+<div class="planet planet-2"></div>
+<div class="rocket">🚀</div>
 
 <div class="wrapper">
   <header>
-    <div class="title-badge">🌟 關卡 1</div>
-    <h1>填空大挑戰<br><span>Be 動詞 & 助動詞</span></h1>
-    <p class="subtitle">選出正確的動詞，完成句子！</p>
+    <div class="logo-badge">🌟 英文小勇士</div>
+    <h1>Be 動詞<br><span class="accent">大冒險</span></h1>
+    <p class="tagline">選一個關卡，開始你的英文練習！</p>
   </header>
 
-  <div class="scorebar">
-    <div class="score-item">
-      <div class="score-label">⭐ 分數</div>
-      <div class="score-value points" id="scoreDisplay">0</div>
-    </div>
-    <div class="progress-wrap">
-      <div class="progress-label">進度</div>
-      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-    </div>
-    <div class="score-item">
-      <div class="score-label">✅ 答對</div>
-      <div class="score-value correct" id="correctDisplay">0</div>
-    </div>
-    <div class="score-item">
-      <div class="score-label">❌ 答錯</div>
-      <div class="score-value wrong" id="wrongDisplay">0</div>
-    </div>
+  <div class="levels-grid">
+    <a href="level1.html" class="level-card l1">
+      <div class="card-top">
+        <div class="level-emoji">📝</div>
+        <div class="level-num">關卡 1</div>
+      </div>
+      <div class="level-title">填空大挑戰</div>
+      <div class="level-desc">選出正確的 be 動詞或助動詞，完成句子！練習 am / is / are / was / were / can / will …</div>
+      <div class="card-footer">
+        <div style="display:flex;align-items:center">
+          <span class="diff-label">難度</span>
+          <div class="difficulty">
+            <div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+          </div>
+        </div>
+        <div class="go-btn">開始 →</div>
+      </div>
+    </a>
+
+    <a href="level2.html" class="level-card l2">
+      <div class="card-top">
+        <div class="level-emoji">🧩</div>
+        <div class="level-num">關卡 2</div>
+      </div>
+      <div class="level-title">句子重組</div>
+      <div class="level-desc">把打亂的單字卡拖拉排列成正確的句子，挑戰你的語感！</div>
+      <div class="card-footer">
+        <div style="display:flex;align-items:center">
+          <span class="diff-label">難度</span>
+          <div class="difficulty">
+            <div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+          </div>
+        </div>
+        <div class="go-btn">開始 →</div>
+      </div>
+    </a>
+
+    <a href="level3.html" class="level-card l3">
+      <div class="card-top">
+        <div class="level-emoji">💬</div>
+        <div class="level-num">關卡 3</div>
+      </div>
+      <div class="level-title">對話練習</div>
+      <div class="level-desc">進入對話情境，選出最正確的回應，練習生活英文！</div>
+      <div class="card-footer">
+        <div style="display:flex;align-items:center">
+          <span class="diff-label">難度</span>
+          <div class="difficulty">
+            <div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+          </div>
+        </div>
+        <div class="go-btn">開始 →</div>
+      </div>
+    </a>
+
+    <a href="level4.html" class="level-card l4">
+      <div class="card-top">
+        <div class="level-emoji">🏆</div>
+        <div class="level-num">關卡 4</div>
+      </div>
+      <div class="level-title">終極闖關</div>
+      <div class="level-desc">綜合所有題型！倒數計時＋生命值，挑戰你的最高分！</div>
+      <div class="card-footer">
+        <div style="display:flex;align-items:center">
+          <span class="diff-label">難度</span>
+          <div class="difficulty">
+            <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+          </div>
+        </div>
+        <div class="go-btn">開始 →</div>
+      </div>
+    </a>
   </div>
 
-  <!-- Question area -->
-  <div class="question-card" id="questionCard">
-    <div class="question-num" id="questionNum">題目 1 / 10</div>
-    <div class="sentence" id="sentenceEl"></div>
-    <div class="hint" id="hintEl"></div>
-    <div class="options" id="optionsEl"></div>
-    <div class="feedback" id="feedbackEl">
-      <span class="icon" id="feedbackIcon"></span>
-      <div>
-        <div id="feedbackText"></div>
-        <div class="explanation" id="explanationEl"></div>
-      </div>
-    </div>
-    <div class="stars" id="starsEl"></div>
-    <button class="btn-next" id="btnNext" onclick="nextQuestion()">下一題 →</button>
-  </div>
-
-  <!-- Result screen -->
-  <div class="result-screen" id="resultScreen">
-    <div class="result-emoji" id="resultEmoji">🎉</div>
-    <div class="result-title" id="resultTitle">太棒了！</div>
-    <div class="result-score" id="resultScore">0 分</div>
-    <div class="result-msg" id="resultMsg"></div>
-    <div class="result-detail">
-      <div class="result-stat">
-        <div class="result-stat-num g" id="rCorrect">0</div>
-        <div class="result-stat-label">答對題數</div>
-      </div>
-      <div class="result-stat">
-        <div class="result-stat-num b" id="rWrong">0</div>
-        <div class="result-stat-label">答錯題數</div>
-      </div>
-      <div class="result-stat">
-        <div class="result-stat-num" style="color:#FF7043" id="rAccuracy">0%</div>
-        <div class="result-stat-label">正確率</div>
-      </div>
-    </div>
-    <button class="btn-restart" onclick="restart()">🔄 再玩一次</button>
-  </div>
+  <p class="tip">建議依序完成關卡 1 → 2 → 3，再挑戰 <span>關卡 4</span> 🚀</p>
 </div>
 
-<script>
-// ─────────────────────────────────────────────
-//  Question bank
-// ─────────────────────────────────────────────
-const ALL_QUESTIONS = [
-  // BE verbs – present
-  {
-    before: "She", blank: "is", after: "a good student.",
-    options: ["am", "is", "are", "be"],
-    hint: "💡 She = 第三人稱單數",
-    explanation: "主詞是 She（第三人稱單數），所以 be 動詞用 is。"
-  },
-  {
-    before: "They", blank: "are", after: "in the park.",
-    options: ["am", "is", "are", "was"],
-    hint: "💡 They = 複數",
-    explanation: "主詞是 They（複數），所以 be 動詞用 are。"
-  },
-  {
-    before: "I", blank: "am", after: "very happy today.",
-    options: ["am", "is", "are", "were"],
-    hint: "💡 I 用哪個 be 動詞？",
-    explanation: "主詞是 I，be 動詞固定用 am。"
-  },
-  {
-    before: "The cats", blank: "are", after: "very cute.",
-    options: ["am", "is", "are", "were"],
-    hint: "💡 The cats = 複數名詞",
-    explanation: "主詞是 The cats（複數），所以用 are。"
-  },
-  {
-    before: "My brother", blank: "is", after: "tall and strong.",
-    options: ["am", "is", "are", "were"],
-    hint: "💡 My brother = 一個人",
-    explanation: "My brother 是第三人稱單數，用 is。"
-  },
-  // BE verbs – past
-  {
-    before: "Yesterday, the weather", blank: "was", after: "sunny.",
-    options: ["is", "are", "was", "were"],
-    hint: "💡 Yesterday = 過去式",
-    explanation: "Yesterday 表示過去，weather 是單數，所以用 was。"
-  },
-  {
-    before: "We", blank: "were", after: "at school last Monday.",
-    options: ["is", "are", "was", "were"],
-    hint: "💡 We = 複數 + 過去式",
-    explanation: "主詞 We 是複數，過去式用 were。"
-  },
-  // Modal verbs
-  {
-    before: "She", blank: "can", after: "swim very fast.",
-    options: ["can", "cans", "is", "are"],
-    hint: "💡 表示能力用什麼助動詞？",
-    explanation: "can 表示「能力」，且助動詞後面接原形動詞 swim，不加 s。"
-  },
-  {
-    before: "You", blank: "should", after: "eat more vegetables.",
-    options: ["should", "shoulds", "are", "is"],
-    hint: "💡 表示建議用什麼助動詞？",
-    explanation: "should 表示「應該、建議」，後面接原形動詞。"
-  },
-  {
-    before: "Tom", blank: "will", after: "visit us tomorrow.",
-    options: ["will", "wills", "is", "was"],
-    hint: "💡 Tomorrow = 未來式",
-    explanation: "tomorrow 表示未來，用 will，後面接原形動詞 visit。"
-  },
-  {
-    before: "They", blank: "must", after: "wear a helmet.",
-    options: ["must", "musts", "are", "is"],
-    hint: "💡 表示規定、必須用什麼？",
-    explanation: "must 表示「必須、規定」，後面接原形動詞 wear。"
-  },
-  {
-    before: "Does she", blank: "have", after: "a pet?",
-    options: ["have", "has", "is", "are"],
-    hint: "💡 Does 開頭的問句，動詞怎麼變？",
-    explanation: "Does 後面的動詞要用原形，所以是 have 而不是 has。"
-  },
-  {
-    before: "He", blank: "doesn't", after: "like cold weather.",
-    options: ["doesn't", "don't", "isn't", "aren't"],
-    hint: "💡 He 的否定助動詞是什麼？",
-    explanation: "He 是第三人稱單數，否定用 doesn't，後面接原形動詞。"
-  },
-  {
-    before: "We", blank: "don't", after: "have homework today.",
-    options: ["don't", "doesn't", "isn't", "aren't"],
-    hint: "💡 We 的否定助動詞是什麼？",
-    explanation: "We 是複數，否定用 don't。"
-  },
-  {
-    before: "It", blank: "is", after: "raining outside.",
-    options: ["am", "is", "are", "were"],
-    hint: "💡 It = 第三人稱單數",
-    explanation: "It 是第三人稱單數，be 動詞用 is。"
-  },
-];
-
-// ─────────────────────────────────────────────
-//  State
-// ─────────────────────────────────────────────
-let questions = [];
-let current = 0;
-let score = 0;
-let correctCount = 0;
-let wrongCount = 0;
-let answered = false;
-let earnedStars = [];
-
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-function pickQuestions() {
-  return shuffle(ALL_QUESTIONS).slice(0, 10);
-}
-
-// ─────────────────────────────────────────────
-//  Render question
-// ─────────────────────────────────────────────
-function renderQuestion() {
-  const q = questions[current];
-  answered = false;
-
-  document.getElementById('questionNum').textContent = `題目 ${current + 1} / ${questions.length}`;
-
-  // Sentence with blank
-  const sentEl = document.getElementById('sentenceEl');
-  sentEl.innerHTML = `${q.before} <span class="blank" id="blankSpan">___</span> ${q.after}`;
-
-  document.getElementById('hintEl').textContent = q.hint;
-
-  // Options (shuffled)
-  const optsEl = document.getElementById('optionsEl');
-  optsEl.innerHTML = '';
-  const shuffledOpts = shuffle(q.options);
-  shuffledOpts.forEach(opt => {
-    const btn = document.createElement('button');
-    btn.className = 'option-btn';
-    btn.textContent = opt;
-    btn.onclick = () => checkAnswer(opt, btn);
-    optsEl.appendChild(btn);
-  });
-
-  // Reset feedback
-  const fb = document.getElementById('feedbackEl');
-  fb.className = 'feedback';
-  document.getElementById('feedbackText').textContent = '';
-  document.getElementById('explanationEl').textContent = '';
-
-  // Stars
-  renderStars(0);
-
-  // Next button
-  document.getElementById('btnNext').className = 'btn-next';
-
-  // Progress
-  document.getElementById('progressFill').style.width = `${(current / questions.length) * 100}%`;
-}
-
-function renderStars(n) {
-  const el = document.getElementById('starsEl');
-  el.innerHTML = '';
-  for (let i = 1; i <= 3; i++) {
-    const s = document.createElement('span');
-    s.className = 'star' + (i <= n ? ' lit' : '');
-    s.textContent = '⭐';
-    el.appendChild(s);
-  }
-}
-
-// ─────────────────────────────────────────────
-//  Check answer
-// ─────────────────────────────────────────────
-function checkAnswer(chosen, btn) {
-  if (answered) return;
-  answered = true;
-
-  const q = questions[current];
-  const isCorrect = chosen === q.blank;
-
-  // Update blank
-  const blank = document.getElementById('blankSpan');
-  blank.textContent = chosen;
-  blank.className = 'blank ' + (isCorrect ? 'correct' : 'wrong');
-
-  // Mark buttons
-  document.querySelectorAll('.option-btn').forEach(b => {
-    b.disabled = true;
-    if (b.textContent === q.blank) b.className = 'option-btn correct-ans';
-    else if (b === btn && !isCorrect) b.className = 'option-btn wrong-ans';
-  });
-
-  // Feedback
-  const fb = document.getElementById('feedbackEl');
-  const stars = isCorrect ? 3 : (chosen === q.blank ? 2 : 1);
-
-  if (isCorrect) {
-    score += 10;
-    correctCount++;
-    fb.className = 'feedback correct show';
-    document.getElementById('feedbackIcon').textContent = '🎉';
-    document.getElementById('feedbackText').textContent = '答對了！太厲害！';
-    renderStars(3);
-    spawnConfetti(6);
-  } else {
-    wrongCount++;
-    fb.className = 'feedback wrong show';
-    document.getElementById('feedbackIcon').textContent = '😅';
-    document.getElementById('feedbackText').textContent = `答錯了！正確答案是 "${q.blank}"`;
-    renderStars(0);
-  }
-  document.getElementById('explanationEl').textContent = q.explanation;
-
-  // Update scores
-  document.getElementById('scoreDisplay').textContent = score;
-  document.getElementById('correctDisplay').textContent = correctCount;
-  document.getElementById('wrongDisplay').textContent = wrongCount;
-
-  // Show next
-  document.getElementById('btnNext').className = 'btn-next visible';
-}
-
-function nextQuestion() {
-  current++;
-  if (current >= questions.length) {
-    showResult();
-  } else {
-    renderQuestion();
-  }
-}
-
-// ─────────────────────────────────────────────
-//  Result screen
-// ─────────────────────────────────────────────
-function showResult() {
-  document.getElementById('questionCard').style.display = 'none';
-  const rs = document.getElementById('resultScreen');
-  rs.classList.add('show');
-
-  const accuracy = Math.round((correctCount / questions.length) * 100);
-  document.getElementById('resultScore').textContent = score + ' 分';
-  document.getElementById('rCorrect').textContent = correctCount;
-  document.getElementById('rWrong').textContent = wrongCount;
-  document.getElementById('rAccuracy').textContent = accuracy + '%';
-  document.getElementById('progressFill').style.width = '100%';
-
-  let emoji, title, msg;
-  if (accuracy >= 90) {
-    emoji = '🏆'; title = '超級英雄！'; msg = '你太厲害了！Be 動詞和助動詞難不倒你！';
-  } else if (accuracy >= 70) {
-    emoji = '⭐'; title = '做得很好！'; msg = '繼續加油，你已經掌握大部分了！';
-  } else if (accuracy >= 50) {
-    emoji = '💪'; title = '不錯喔！'; msg = '再練習幾次，你一定可以更進步！';
-  } else {
-    emoji = '📚'; title = '繼續努力！'; msg = '多練習幾次，你會越來越棒的！';
-  }
-  document.getElementById('resultEmoji').textContent = emoji;
-  document.getElementById('resultTitle').textContent = title;
-  document.getElementById('resultMsg').textContent = msg;
-
-  if (accuracy >= 70) spawnConfetti(20);
-}
-
-function restart() {
-  current = 0; score = 0; correctCount = 0; wrongCount = 0;
-  questions = pickQuestions();
-  document.getElementById('scoreDisplay').textContent = 0;
-  document.getElementById('correctDisplay').textContent = 0;
-  document.getElementById('wrongDisplay').textContent = 0;
-  document.getElementById('resultScreen').classList.remove('show');
-  document.getElementById('questionCard').style.display = '';
-  renderQuestion();
-}
-
-// ─────────────────────────────────────────────
-//  Confetti
-// ─────────────────────────────────────────────
-const CONFETTI_COLORS = ['#FF7043','#AB47BC','#4FC3F7','#FFD54F','#66BB6A','#FF4081'];
-function spawnConfetti(n) {
-  for (let i = 0; i < n; i++) {
-    setTimeout(() => {
-      const el = document.createElement('div');
-      el.className = 'confetti-piece';
-      el.style.left = Math.random() * 100 + 'vw';
-      el.style.background = CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)];
-      el.style.animationDuration = (1.5 + Math.random() * 1.5) + 's';
-      el.style.animationDelay = Math.random() * 0.5 + 's';
-      el.style.width = el.style.height = (8 + Math.random() * 8) + 'px';
-      el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
-      document.body.appendChild(el);
-      setTimeout(() => el.remove(), 3000);
-    }, i * 80);
-  }
-}
-
-// ─────────────────────────────────────────────
-//  Init
-// ─────────────────────────────────────────────
-questions = pickQuestions();
-renderQuestion();
-</script>
 </body>
 </html>
