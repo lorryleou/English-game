@@ -454,7 +454,10 @@ function updateTimerDisplay(){
   document.getElementById('timerCircle').className=timerVal<=5?'timer-circle urgent':'timer-circle';
 }
 function timeOut(){
-  answered=true;loseLife();
+  answered=true;
+  wrongCount++;
+  document.getElementById('wrongDisplay').textContent=wrongCount;
+  loseLife();
   showFeedback(false,'⏰ 時間到！',questions[current].explanation||'');
   markCorrectAnswer();
   if(lives>0)document.getElementById('btnNext').className='btn-next-dark visible';

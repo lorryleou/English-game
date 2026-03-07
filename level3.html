@@ -211,6 +211,98 @@ const BASIC_Q = [
   {dialogue:[{speaker:'A',avatar:'👧',name:'Amy',text:'Does your brother play basketball?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, he does. He plays every day.',correct:true},{text:'Yes, he do. He plays every day.',correct:false},{text:'Yes, he is. He plays every day.',correct:false}],explanation:'Does he...? 的簡短回答是 Yes, he does.'},
   {dialogue:[{speaker:'A',avatar:'👦',name:'Jack',text:'Will you come to my birthday party?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, I will! I can't wait!",correct:true},{text:"Yes, I wills! I can't wait!",correct:false},{text:"Yes, I am! I can't wait!",correct:false}],explanation:"Will you...? 的回答是 Yes, I will."},
   {dialogue:[{speaker:'A',avatar:'👩',name:'Grandma',text:'Are these your books?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"No, they aren't. They are Tom's.",correct:true},{text:"No, they isn't. They are Tom's.",correct:false},{text:"No, they wasn't. They are Tom's.",correct:false}],explanation:"Are these...? 複數問句的否定回答是 No, they aren't。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Leo',text:'What are you doing right now?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I am reading a book.',correct:true},{text:'I reading a book.',correct:false},{text:'I reads a book.',correct:false}],explanation:'現在進行式：am/is/are + Ving，主詞 I 用 am，所以是 I am reading。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Cathy',text:'Is your mom cooking dinner now?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, she is. She is making pasta.',correct:true},{text:'Yes, she does. She is making pasta.',correct:false},{text:'Yes, she was. She is making pasta.',correct:false}],explanation:'Is she...? 現在進行式問句的簡短回答是 Yes, she is.'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Mike',text:'Are you and Tim playing games?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"No, we aren't. We are doing homework.",correct:true},{text:"No, we isn't. We are doing homework.",correct:false},{text:"No, we don't. We are doing homework.",correct:false}],explanation:"Are you...? 複數進行式問句的否定回答是 No, we aren't."},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'What time do you usually get up?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I usually get up at seven o\'clock.',correct:true},{text:'I usually gets up at seven o\'clock.',correct:false},{text:'I am usually get up at seven o\'clock.',correct:false}],explanation:'主詞 I 的現在簡單式動詞不加 s，頻率副詞 usually 放在動詞前。'},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Uncle',text:'Do you like vegetables?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, I do. I like carrots and broccoli.",correct:true},{text:"Yes, I like. I like carrots and broccoli.",correct:false},{text:"Yes, I does. I like carrots and broccoli.",correct:false}],explanation:'Do you...? 的簡短回答是 Yes, I do.（不能說 Yes, I like.）'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Nina',text:'Where does your dad work?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'He works at a hospital.',correct:true},{text:'He work at a hospital.',correct:false},{text:'He is work at a hospital.',correct:false}],explanation:'第三人稱單數（he）現在簡單式動詞要加 s，所以是 works。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Sam',text:'Does your school have a swimming pool?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"No, it doesn't. But we have a gym.",correct:true},{text:"No, it don't. But we have a gym.",correct:false},{text:"No, it isn't. But we have a gym.",correct:false}],explanation:"Does it...? 的否定簡短回答是 No, it doesn't.（第三人稱單數）"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:'What did you eat for breakfast today?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I ate toast and drank some milk.',correct:true},{text:'I eated toast and drinked some milk.',correct:false},{text:'I eat toast and drink some milk.',correct:false}],explanation:'過去簡單式：eat → ate，drink → drank（不規則動詞）。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Eric',text:'Did you watch TV last night?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"No, I didn't. I went to bed early.",correct:true},{text:"No, I not watch. I went to bed early.",correct:false},{text:"No, I wasn't. I went to bed early.",correct:false}],explanation:"Did you...? 的否定回答是 No, I didn't.（didn't 後接原形動詞）"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'Who went to the library yesterday?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I did. I went there after school.',correct:true},{text:'I went. I went there after school.',correct:false},{text:'Me did. I went there after school.',correct:false}],explanation:'Who...? 問句的強調回答用 I did.（助動詞 did 代替完整動詞）。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Jenny',text:'There is a new student in our class today!'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Really? What is his name?',correct:true},{text:'Really? What his name is?',correct:false},{text:'Really? What is him name?',correct:false}],explanation:'疑問句語序：What + be 動詞 + 主詞。his 是所有格（他的），不是受格 him。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Andy',text:'Is there a post office near here?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, there is. It\'s on Pine Street.',correct:true},{text:'Yes, it is. It\'s on Pine Street.',correct:false},{text:'Yes, there are. It\'s on Pine Street.',correct:false}],explanation:'Is there a...? 的回答是 Yes, there is.（單數用 is）。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:'Are there any apples in the fridge?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"No, there aren't. We need to buy some.",correct:true},{text:"No, there isn't. We need to buy some.",correct:false},{text:"No, they aren't. We need to buy some.",correct:false}],explanation:"Are there any...? 複數問句的否定回答是 No, there aren't."},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Peter',text:'How many students are in your class?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'There are thirty students in my class.',correct:true},{text:'There is thirty students in my class.',correct:false},{text:'They are thirty students in my class.',correct:false}],explanation:'複數名詞（thirty students）用 There are，不用 There is。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Lily',text:'How much water do you drink every day?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I drink about eight glasses a day.',correct:true},{text:'I drink about eight glass a day.',correct:false},{text:'I drinks about eight glasses a day.',correct:false}],explanation:'glass（杯子）是可數名詞，複數加 s。主詞 I 的動詞不加 s。'},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Lee',text:'Where did you go last summer?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I went to the beach with my family.',correct:true},{text:'I go to the beach with my family.',correct:false},{text:'I goed to the beach with my family.',correct:false}],explanation:'go 的過去式是 went（不規則動詞，不說 goed）。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Grandma',text:'When is your birthday?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'My birthday is on March 15th.',correct:true},{text:'My birthday is in March 15th.',correct:false},{text:'My birthday is at March 15th.',correct:false}],explanation:'具體日期前用介系詞 on（on March 15th）。月份前用 in，幾點前用 at。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Tom',text:'Where do you live?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I live in Taipei.',correct:true},{text:'I live at Taipei.',correct:false},{text:'I live on Taipei.',correct:false}],explanation:'城市名稱前用介系詞 in（I live in Taipei）。at 用於具體地點，on 用於街道名。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'May',text:'What is your favorite subject at school?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'My favorite subject is English.',correct:true},{text:'My favorite subject are English.',correct:false},{text:'My favorite subjects is English.',correct:false}],explanation:'My favorite subject 是單數，be 動詞用 is。'},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'How often do you exercise?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I exercise three times a week.',correct:true},{text:'I exercise three time a week.',correct:false},{text:'I exercised three times a week.',correct:false}],explanation:'time 表示「次數」時用複數 times（three times）。問現在習慣用現在簡單式。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Kevin',text:'Can your little sister swim?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"No, she can't. But she can ride a bike.",correct:true},{text:"No, she cannot. But she can rides a bike.",correct:false},{text:"No, she doesn't. But she can ride a bike.",correct:false}],explanation:"Can she...? 的否定回答是 No, she can't.，can 後面接原形動詞 ride（不加 s）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:'You must finish your homework before dinner.'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Okay, I will finish it right now.',correct:true},{text:'Okay, I will finishes it right now.',correct:false},{text:'Okay, I wills finish it right now.',correct:false}],explanation:'will 是助動詞，後面接原形動詞 finish（不加 s，will 本身也不加 s）。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Sue',text:'Is this your pen or Tom\'s?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"It's mine. I brought it from home.",correct:true},{text:"It's my. I brought it from home.",correct:false},{text:"It's me. I brought it from home.",correct:false}],explanation:"mine 是所有代名詞（= my pen），不需要再加名詞。不能說 it's my（my 後面必須接名詞）。"},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:'Whose bag is this on the floor?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"It's hers. She left it here.",correct:true},{text:"It's her. She left it here.",correct:false},{text:"It's she's. She left it here.",correct:false}],explanation:"hers 是所有代名詞（= her bag），是獨立使用的形式。her 是所有格形容詞，後面必須接名詞。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Roy',text:'Do you have a pet?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, I have a cat. Its name is Mochi.',correct:true},{text:"Yes, I have a cat. It's name is Mochi.",correct:false},{text:"Yes, I have a cat. Their name is Mochi.",correct:false}],explanation:"its（它的）是所有格，不加撇號。it's = it is（有撇號是縮寫）。貓是單數，用 its 不用 their。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'What do you want to be when you grow up?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I want to be a doctor.',correct:true},{text:'I want be a doctor.',correct:false},{text:'I wants to be a doctor.',correct:false}],explanation:'want to + 原形動詞 是固定用法（want to be）。主詞 I 的動詞不加 s（want，不是 wants）。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Fiona',text:'Do you like playing sports?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, I love playing basketball!',correct:true},{text:'Yes, I love to playing basketball!',correct:false},{text:'Yes, I love play basketball!',correct:false}],explanation:'love/like/enjoy 後面可接動名詞（Ving）：love playing。不能說 love to playing 或 love play。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Danny',text:'How do you come to school every day?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I come to school by bus.',correct:true},{text:'I come to school with bus.',correct:false},{text:'I come to school in bus.',correct:false}],explanation:'交通方式用 by + 交通工具（by bus、by train、by bike）。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:'What\'s the weather like today?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"It's sunny and warm today.",correct:true},{text:"Is sunny and warm today.",correct:false},{text:"They're sunny and warm today.",correct:false}],explanation:"天氣用虛主詞 It 開頭：It's sunny. 不能省略主詞，也不能用 they。"},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Chen',text:'What are you going to do this weekend?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'm going to visit my grandparents.",correct:true},{text:"I'm going visit my grandparents.",correct:false},{text:"I go to visit my grandparents.",correct:false}],explanation:"be going to + 原形動詞 表示計劃好的未來：I'm going to visit（不能省略 to）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Tina',text:'Have you had lunch yet?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"No, not yet. I'm still hungry.",correct:true},{text:"No, I haven't had yet. I'm still hungry.",correct:false},{text:"No, I didn't. I'm still hungry.",correct:false}],explanation:"Have you...yet? 詢問是否已完成，簡短否定回答是 No, not yet. 或 No, I haven't."},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Jay',text:'Is the library open on Sundays?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, it is. It opens at nine.',correct:true},{text:'Yes, it does. It opens at nine.',correct:false},{text:'Yes, they are. It opens at nine.',correct:false}],explanation:"Is it open? 是問「狀態」，回答 Yes, it is.（用 be 動詞）。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'Which one is bigger, a cat or a dog?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'A dog is usually bigger than a cat.',correct:true},{text:'A dog is usually more big than a cat.',correct:false},{text:'A dog is usually biggest than a cat.',correct:false}],explanation:'單音節形容詞（big）的比較級加 -er：bigger（比較級），不用 more big 或 biggest。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Grace',text:'Who is the tallest student in your class?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Jason is. He is the tallest of all.',correct:true},{text:'Jason is. He is the most tall of all.',correct:false},{text:'Jason is. He is taller of all.',correct:false}],explanation:'最高級：tall → the tallest（單音節加 -est）。「在所有人當中」用 of all。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Brian',text:'Is English harder than math for you?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'No, I think math is harder than English.',correct:true},{text:'No, I think math is more harder than English.',correct:false},{text:'No, I think math is hardest than English.',correct:false}],explanation:'hard 的比較級是 harder（不能說 more harder，雙重比較錯誤）。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:'Should I buy apples or oranges?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Buy both! We need some fruit.',correct:true},{text:'Buy both! We need some fruits.',correct:false},{text:'Buy both! We needs some fruit.',correct:false}],explanation:'fruit 通常作為不可數名詞（some fruit），不用 fruits。We needs 是錯的，主詞 we 用 need。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Helen',text:'Do you have any brothers or sisters?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, I have one brother and two sisters.',correct:true},{text:'Yes, I have one brother and two sister.',correct:false},{text:'Yes, I has one brother and two sisters.',correct:false}],explanation:'sister 是可數名詞，兩個要用複數 sisters。主詞 I 的動詞用 have（不是 has）。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Carl',text:'What are you afraid of?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'm afraid of spiders.",correct:true},{text:"I'm afraid from spiders.",correct:false},{text:"I'm scare of spiders.",correct:false}],explanation:"afraid of 是固定搭配（害怕某事物）。afraid 是形容詞，不能說 scare of（scare 是動詞）。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'What must students do before the exam?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'They must study hard and get enough sleep.',correct:true},{text:'They must studies hard and gets enough sleep.',correct:false},{text:'They musts study hard and get enough sleep.',correct:false}],explanation:'must 是助動詞，後面接原形動詞（study、get），must 本身也不加 s。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Oliver',text:'Let\'s go to the park after school!'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"That sounds great! Let's go!",correct:true},{text:"That sound great! Let's go!",correct:false},{text:"That is sound great! Let's go!",correct:false}],explanation:"That sounds great! 中 sounds 是第三人稱單數現在式，That 是主詞，動詞加 s。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Vicky',text:"I don't understand this math problem."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Let me help you. It's not that difficult.",correct:true},{text:"Let me to help you. It's not that difficult.",correct:false},{text:"Let I help you. It's not that difficult.",correct:false}],explanation:"Let + 受格 + 原形動詞。Let me help（不是 Let me to help，也不是 Let I）。"},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:'Why are you so tired today?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Because I stayed up late watching a movie.',correct:true},{text:'Because I stay up late to watch a movie.',correct:false},{text:'Because I was stay up late watching a movie.',correct:false}],explanation:'解釋過去原因用過去式：stayed up late（昨晚熬夜）。watching 是現在分詞表示伴隨動作。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Grandma',text:'Do you know how to cook?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'A little. I can make fried eggs.',correct:true},{text:'A little. I can makes fried eggs.',correct:false},{text:'A little. I know to make fried eggs.',correct:false}],explanation:'can 後面接原形動詞 make（不加 s）。know to make 不是自然英語，要說 know how to make。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Noah',text:'What time does the movie start?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'It starts at seven thirty.',correct:true},{text:'It start at seven thirty.',correct:false},{text:'It is start at seven thirty.',correct:false}],explanation:'第三人稱單數（it）現在簡單式動詞加 s：starts。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Iris',text:'Can I borrow your pencil?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Of course! Here you are.',correct:true},{text:'Of course! Here you is.',correct:false},{text:'Of course! Here is you.',correct:false}],explanation:'"Here you are." 是遞交物品時的固定說法，相當於「給你」。'},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Lin',text:'What is the opposite of "hot"?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'The opposite of "hot" is "cold".',correct:true},{text:'The opposite of "hot" are "cold".',correct:false},{text:'The opposite from "hot" is "cold".',correct:false}],explanation:'The opposite of...（...的反義詞）是固定說法，用介系詞 of 不是 from，主詞是 The opposite（單數）用 is。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:'Please turn off the TV. It\'s too loud.'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Sorry, I will turn it off right away.',correct:true},{text:'Sorry, I will turn off it right away.',correct:false},{text:'Sorry, I will turn it of right away.',correct:false}],explanation:'"turn off" 是分離動詞片語（phrasal verb），接代名詞時代名詞放中間：turn it off（不是 turn off it）。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Ryan',text:'Did you enjoy the school trip yesterday?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes! It was so much fun.',correct:true},{text:'Yes! It is so much fun.',correct:false},{text:'Yes! It was so many fun.',correct:false}],explanation:'昨天的事用過去式：it was（不是 is）。fun 是不可數名詞，用 much 修飾（so much fun），不用 many。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Ella',text:'What do you usually do after dinner?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I usually take a walk with my dog.',correct:true},{text:'I usually takes a walk with my dog.',correct:false},{text:'I am usually take a walk with my dog.',correct:false}],explanation:'主詞 I 現在簡單式動詞不加 s。頻率副詞 usually 放在動詞 take 前面。'},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:'Have you met our new neighbor yet?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"No, not yet. Is she nice?",correct:true},{text:"No, I didn't meet yet. Is she nice?",correct:false},{text:"No, I haven't meet yet. Is she nice?",correct:false}],explanation:"Have you...yet? 的簡短否定回答是 No, not yet. 完整回答是 No, I haven't.（現在完成式）。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'What would you like to drink?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'd like a glass of orange juice, please.",correct:true},{text:"I like a glass of orange juice, please.",correct:false},{text:"I would like to orange juice, please.",correct:false}],explanation:"would like + 名詞 表示「想要（某物）」：I'd like a glass of...。不能直接說 I like（現在式）或加多餘的 to。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Ethan',text:'Which bag is yours? The red one or the blue one?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'The blue one is mine.',correct:true},{text:'The blue one is my.',correct:false},{text:'The blue one is me.',correct:false}],explanation:'mine 是獨立的所有代名詞（= my bag），不需要後面接名詞。不能用 my（後面沒有名詞）或 me（受格）。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Sofia',text:'How was your weekend?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'It was great! I went to the zoo.',correct:true},{text:'It is great! I went to the zoo.',correct:false},{text:'It were great! I went to the zoo.',correct:false}],explanation:'週末已過去，用過去式 was（it 是單數，過去式用 was 不用 were）。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:'Would you like some more cake?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, please! It's delicious.",correct:true},{text:"Yes, please! It's deliciously.",correct:false},{text:"Yes, please! It's delicius.",correct:false}],explanation:"delicious 是形容詞（好吃的），It's delicious. 主詞補語用形容詞，不用副詞 deliciously。"},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Wang',text:'What sport do you enjoy the most?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I enjoy swimming the most.',correct:true},{text:'I enjoy to swim the most.',correct:false},{text:'I enjoy swim the most.',correct:false}],explanation:'enjoy 後面接動名詞（Ving）：enjoy swimming。不能接不定詞（to swim）或原形（swim）。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Max',text:'How long does it take to walk to school from your house?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'It takes about fifteen minutes.',correct:true},{text:'It take about fifteen minutes.',correct:false},{text:'It is take about fifteen minutes.',correct:false}],explanation:'"It takes + 時間" 是表示花費時間的固定句型，主詞 It 是第三人稱單數，用 takes。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Mia',text:'Are you good at drawing?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Not really. But I like watching others draw.',correct:true},{text:'Not really. But I like to watch others to draw.',correct:false},{text:'Not really. But I like watching others to draw.',correct:false}],explanation:'like 後接 Ving（watching）。"watch + 受詞 + 原形動詞" 是感官動詞句型（watch others draw），不加 to。'},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:'Who cooked dinner tonight?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Mom did. She made chicken soup.',correct:true},{text:'Mom cooked. She made chicken soup.',correct:false},{text:'It was Mom cooked. She made chicken soup.',correct:false}],explanation:'Who 開頭的問句，強調回答用「人 + did」（Mom did），不重複說完整動詞。'},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'Don\'t forget to bring your textbook tomorrow.'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Don't worry! I won't forget.",correct:true},{text:"Don't worry! I won't forgot.",correct:false},{text:"Don't worry! I will not forget to.",correct:false}],explanation:"won't = will not，後面接原形動詞 forget。I will not forget to 的 to 是多餘的（forget 後沒有接什麼動作）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Chris',text:'What is your favorite color?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'My favorite color is blue.',correct:true},{text:'My favorite color are blue.',correct:false},{text:'I favorite color is blue.',correct:false}],explanation:'My favorite color 是單數名詞，be 動詞用 is。My 是所有格（我的），不是主格 I。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Zoe',text:'Excuse me, is there a bathroom near here?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, there is. It's at the end of the hall.",correct:true},{text:"Yes, there is. It's in the end of the hall.",correct:false},{text:"Yes, there is. It's on the end of the hall.",correct:false}],explanation:'"at the end of..." 是固定用法（在...的盡頭），介系詞用 at，不是 in 或 on。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:'You look hungry. Did you eat anything?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Not yet. I haven't eaten anything since lunch.",correct:true},{text:"Not yet. I didn't eat anything since lunch.",correct:false},{text:"Not yet. I haven't ate anything since lunch.",correct:false}],explanation:"since 表示「從某時間點開始」，要配合現在完成式。have/has + eaten（p.p.），不是 ate。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Felix',text:'Is it okay if I use your eraser?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Sure, go ahead!',correct:true},{text:'Sure, go ahead to!',correct:false},{text:'Sure, go ahead it!',correct:false}],explanation:'"Go ahead!" 是「請便！」「繼續吧！」的固定說法，不需要加 to 或 it。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Penny',text:'You have a dog, right? What\'s his name?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'His name is Biscuit. He is very friendly.',correct:true},{text:'His name is Biscuit. He are very friendly.',correct:false},{text:'His name is Biscuit. It are very friendly.',correct:false}],explanation:'狗是單數，代名詞用 he 或 she（有性別）。be 動詞單數過去/現在用 is（不是 are）。'},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'Class, please be quiet and listen carefully.'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, Teacher. We will listen.',correct:true},{text:'Yes, Teacher. We listening.',correct:false},{text:'Yes, Teacher. We are listen.',correct:false}],explanation:'We will listen 是完整的未來式句子（will + 原形動詞）。We listening 缺少 be 動詞，We are listen 則應該是 We are listening。'},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Uncle',text:'Why don\'t we go for a picnic this Sunday?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Great idea! I hope the weather will be nice.',correct:true},{text:'Great idea! I hope the weather will nice.',correct:false},{text:'Great idea! I hope the weather be nice.',correct:false}],explanation:'hope + that 子句：I hope (that) the weather will be nice. will be 是未來式的完整形式（will + be，不能省略 be）。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Clara',text:'What does "brave" mean?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'It means not being afraid of difficult things.',correct:true},{text:'It means not be afraid of difficult things.',correct:false},{text:'It means no being afraid of difficult things.',correct:false}],explanation:'"mean + Ving" 後接動名詞：means not being afraid。否定動名詞：not + Ving（not being）。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Tyler',text:'My mom is a nurse. What does your mom do?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'She is a teacher. She teaches at an elementary school.',correct:true},{text:'She is a teacher. She teach at an elementary school.',correct:false},{text:'She is teacher. She teaches at an elementary school.',correct:false}],explanation:'第三人稱單數 she 的動詞加 s：teaches。職業名詞前要加冠詞：a teacher（不能說 is teacher）。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Grandma',text:'Do you want me to make you some hot chocolate?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, please! That would be wonderful.',correct:true},{text:'Yes, please! That would wonderful.',correct:false},{text:'Yes, please! That will wonderful.',correct:false}],explanation:'"That would be wonderful." 是表達感謝接受的禮貌說法，would be 是 would + be（be 不可省略）。'},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Kim',text:'What is two plus five?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Two plus five is seven.',correct:true},{text:'Two plus five are seven.',correct:false},{text:'Two and five is seven.',correct:false}],explanation:'數學題用 plus（加）：Two plus five is seven.（結果是單數，用 is）。「加」是 plus，不是 and。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Emily',text:'Have you ever tried sushi?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, I have. I tried it last year and loved it!",correct:true},{text:"Yes, I did. I tried it last year and loved it!",correct:false},{text:"Yes, I tried. I tried it last year and loved it!",correct:false}],explanation:"Have you ever...? 用現在完成式回答：Yes, I have.（不是 Yes, I did. 或 Yes, I tried.）"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Liam',text:'What are these called in English?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'They are called chopsticks.',correct:true},{text:'They are call chopsticks.',correct:false},{text:'They called chopsticks.',correct:false}],explanation:'被動語態：are called（是 be 動詞 + p.p.）。They called 是主動語態但少了受詞，They are call 則 call 應為 called。'},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'Is this sentence correct: "He go to school every day"?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'No, it should be "He goes to school every day."',correct:true},{text:'No, it should be "He going to school every day."',correct:false},{text:'No, it should be "He is go to school every day."',correct:false}],explanation:'第三人稱單數（He）現在簡單式：go → goes（加 es）。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Owen',text:'My sister speaks three languages! That\'s amazing!'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Wow, really? Which languages can she speak?',correct:true},{text:'Wow, really? Which languages she can speak?',correct:false},{text:'Wow, really? Which languages can speaks she?',correct:false}],explanation:'疑問句語序：疑問詞 + 助動詞（can）+ 主詞（she）+ 原形動詞（speak）。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Hana',text:'Can I have a look at your drawing?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Sure! But I think it needs more color.',correct:true},{text:'Sure! But I think it need more color.',correct:false},{text:'Sure! But I thinks it needs more color.',correct:false}],explanation:'主詞 it 是第三人稱單數，動詞加 s：needs。主詞 I 的動詞不加 s：think。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:'You should eat your vegetables.'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Okay, but I don't really like broccoli.",correct:true},{text:"Okay, but I am not really like broccoli.",correct:false},{text:"Okay, but I doesn't really like broccoli.",correct:false}],explanation:"I 是第一人稱，否定助動詞用 don't（不是 doesn't，也不是 am not like）。"},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:'What time did you go to bed last night?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I went to bed at ten o\'clock.',correct:true},{text:'I go to bed at ten o\'clock last night.',correct:false},{text:'I was go to bed at ten o\'clock.',correct:false}],explanation:'過去的事用過去式：went（go 的過去式）。go 是不規則動詞，不能說 goed 或加 was 在原形前。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Luna',text:"I'm feeling a bit cold. Is the window open?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, it is. Let me close it for you.",correct:true},{text:"Yes, it does. Let me close it for you.",correct:false},{text:"Yes, it opens. Let me close it for you.",correct:false}],explanation:"Is the window open? 問的是狀態（open 是形容詞），用 be 動詞回答：Yes, it is."},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Victor',text:'What kind of music do you like?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I like pop music and sometimes jazz.',correct:true},{text:'I like pop music and sometime jazz.',correct:false},{text:'I likes pop music and sometimes jazz.',correct:false}],explanation:'sometimes（有時）是頻率副詞，sometime 意思是「某個時候」。主詞 I 動詞不加 s。'},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:"Everybody, please turn to page twenty."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Okay! I can't find my book. Can I share with Anna?",correct:true},{text:"Okay! I can't find my book. Can I share to Anna?",correct:false},{text:"Okay! I can't find my book. Can I share with Anna's?",correct:false}],explanation:'"share with someone" 是固定搭配（和某人一起用）。share to 不正確。Anna\'s 是所有格，這裡需要的是人名 Anna。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Rose',text:'Why do you look so happy today?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Because I got full marks on my test!',correct:true},{text:'Because I get full marks on my test!',correct:false},{text:'Because I getting full marks on my test!',correct:false}],explanation:'解釋過去原因用過去式：got（get 的過去式）。describing a past event, use simple past.'},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Uncle',text:'What are you looking for?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'm looking for my glasses. I can't find them.",correct:true},{text:"I'm looking for my glasses. I can't find it.",correct:false},{text:"I'm looking for my glasses. I can't finds them.",correct:false}],explanation:'glasses（眼鏡）是複數名詞，代名詞用 them（不是 it）。can 後面接原形動詞 find（不加 s）。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Ned',text:'Have you ever seen a shooting star?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes! I saw one last summer. It was beautiful.",correct:true},{text:"Yes! I have seen one last summer. It was beautiful.",correct:false},{text:"Yes! I seed one last summer. It was beautiful.",correct:false}],explanation:'last summer 是明確過去時間點，要用過去簡單式 saw（see 的過去式），不用現在完成式。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:"Dinner's ready! Can you call your brother?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Sure! I will go and get him.',correct:true},{text:'Sure! I will go and gets him.',correct:false},{text:'Sure! I will goes and get him.',correct:false}],explanation:'will 後面接原形動詞：will go（不加 s）。and 連接兩個原形動詞：go and get（get 也不加 s）。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Stella',text:'Do you prefer cats or dogs?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I prefer dogs because they are more playful.',correct:true},{text:'I prefer dogs because they are more playfuller.',correct:false},{text:'I prefer dogs because they are playfuller.',correct:false}],explanation:'多音節形容詞（playful）的比較級用 more + 形容詞（more playful），不能再加 -er。'},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Park',text:'What do we call the person who teaches us?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'We call that person a teacher.',correct:true},{text:'We call that person teacher.',correct:false},{text:'We calls that person a teacher.',correct:false}],explanation:'職業名詞前要用不定冠詞 a（a teacher）。主詞 We 的動詞不加 s（call，不是 calls）。'},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Grandma',text:'You are so tall now! How tall are you?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'm about 160 centimeters tall.",correct:true},{text:"I'm about 160 centimeters tall's.",correct:false},{text:"I'm about 160 tall centimeters.",correct:false}],explanation:'"I am + 數字 + 單位 + tall" 是描述身高的標準結構：160 centimeters tall（單位在數字後、形容詞前）。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Ash',text:'My pencil broke. Do you have a spare one?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Sure, here is one. You can use it.',correct:true},{text:'Sure, here is one. You can using it.',correct:false},{text:'Sure, here is one. You can used it.',correct:false}],explanation:'can 後面接原形動詞 use（不是 using 或 used）。'},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Kate',text:'Do you know where the school library is?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, it's on the second floor, next to the art room.",correct:true},{text:"Yes, it's on second floor, next to art room.",correct:false},{text:"Yes, it's in the second floor, next to the art room.",correct:false}],explanation:'"on the second floor" 是固定說法（在幾樓用 on，不是 in）。floor 和 room 前要用定冠詞 the。'},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'What should you say when someone helps you?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'You should say "Thank you very much."',correct:true},{text:'You should says "Thank you very much."',correct:false},{text:'You should to say "Thank you very much."',correct:false}],explanation:'should 後面接原形動詞 say（不加 s，也不加 to）。'},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Hugo',text:'Is it raining outside?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, it is. Don't forget your umbrella.",correct:true},{text:"Yes, it does. Don't forget your umbrella.",correct:false},{text:"Yes, it has. Don't forget your umbrella.",correct:false}],explanation:"Is it raining? 是現在進行式，回答 Yes, it is.（用 be 動詞，不是 does 或 has）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Wren',text:'How do you spell your name?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"It's M-I-A. My name is Mia.",correct:true},{text:"It's M-I-A. My name Mia.",correct:false},{text:"It's M-I-A. My name are Mia.",correct:false}],explanation:'"My name is Mia." 中 name 是單數，be 動詞用 is。不能省略 be 動詞。'},
 ];
 
 const ADVANCED_Q = [
@@ -222,6 +314,98 @@ const ADVANCED_Q = [
   {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'This story was written by a famous writer, was it?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"No, it wasn't. It was written by an unknown author.",correct:true},{text:"No, it weren't. It was written by an unknown author.",correct:false},{text:"No, it isn't. It was written by an unknown author.",correct:false}],explanation:"Was it? 的否定回答是 No, it wasn't.，被動語態過去式 it 用 was/wasn't。"},
   {dialogue:[{speaker:'A',avatar:'👦',name:'Ken',text:"I called you yesterday, but you didn't answer. What were you doing?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Sorry, I was taking a shower at that time.',correct:true},{text:'Sorry, I took a shower at that time.',correct:false},{text:'Sorry, I am taking a shower at that time.',correct:false}],explanation:'was/were + Ving 是過去進行式，表示「當時正在做的事」，所以用 I was taking a shower。'},
   {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:'You can speak Japanese very well, can you?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Actually, I can't speak it very well yet.",correct:true},{text:"Actually, I cannot speaks it very well yet.",correct:false},{text:"Actually, I am not speak it very well yet.",correct:false}],explanation:"can't 後面接原形動詞 speak（不加 s）。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'Have you finished your report yet?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Not yet. I've only written the introduction.",correct:true},{text:"Not yet. I've only write the introduction.",correct:false},{text:"Not yet. I only wrote the introduction yet.",correct:false}],explanation:"現在完成式否定：I've only written（have + p.p.）。yet 用於現在完成式問句和否定句，不搭配過去簡單式。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Jake',text:'Have you heard? A new shopping mall is being built downtown.'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Really? How long has it been under construction?',correct:true},{text:'Really? How long has it been constructing?',correct:false},{text:'Really? How long did it under construction?',correct:false}],explanation:"has it been under construction 是現在完成式詢問持續狀態。under construction 是「施工中」的固定說法。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Mia',text:'Your English has improved so much! What is your secret?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I've been watching English movies every day.",correct:true},{text:"I've been watch English movies every day.",correct:false},{text:"I've watched English movies every day for watching.",correct:false}],explanation:"現在完成進行式：have/has been + Ving，強調持續進行的動作。I've been watching = I have been watching。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:'Why does the house smell so good?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Because Dad has been baking cookies for the past hour.",correct:true},{text:"Because Dad has baking cookies for the past hour.",correct:false},{text:"Because Dad was baking cookies since one hour.",correct:false}],explanation:"現在完成進行式 has been baking 表示「一直在烤」。for 表持續時間（for the past hour），since 表起點（since 3 o'clock）。"},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Mr. Green',text:'I heard you got a perfect score on the test!'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes! It's the best result I've ever gotten.",correct:true},{text:"Yes! It's the best result I ever got.",correct:false},{text:"Yes! It's the best result I've ever get.",correct:false}],explanation:"最高級 + I've ever + p.p. 是「有史以來最...」的固定句型。gotten 是 get 的過去分詞（美式英語）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Leo',text:'Did you manage to fix the computer?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Not yet. I've tried everything, but it still won't start.",correct:true},{text:"Not yet. I tried everything, but it still won't start.",correct:false},{text:"Not yet. I've tried everything, but it still doesn't started.",correct:false}],explanation:"I've tried everything 強調「試遍了所有方法」（結果仍未解決），用現在完成式表示與現在的關聯。won't start 表示「就是不肯啟動」。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Grace',text:'How many times have you been to Tainan?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I've been there three times. I love the food!",correct:true},{text:"I went there three times. I love the food!",correct:false},{text:"I've went there three times. I love the food!",correct:false}],explanation:"How many times have you been...? 問的是累積次數，用現在完成式回答：I've been（have been），不是 went 或 've went。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Ms. Lin',text:"The books in this room are used by students, aren't they?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, they are. Anyone can borrow them.",correct:true},{text:"Yes, they are used. Anyone can borrow them.",correct:false},{text:"Yes, they do. Anyone can borrow them.",correct:false}],explanation:"Are they used? 問的是被動語態的狀態，回答 Yes, they are.（be 動詞回應 be 動詞）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Kevin',text:'Was this bridge built a long time ago?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, it was. It was built over a hundred years ago.',correct:true},{text:'Yes, it was. It was build over a hundred years ago.',correct:false},{text:'Yes, it did. It was built over a hundred years ago.',correct:false}],explanation:"Was it built? 過去被動回答：Yes, it was.（was/were + p.p.，p.p. 是 built，不是原形 build）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:"I love your new jacket. Where was it made?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'It was made in Italy. My mom gave it to me.',correct:true},{text:'It made in Italy. My mom gave it to me.',correct:false},{text:'It is made in Italy. My mom gave it to me.',correct:false}],explanation:"Where was it made? 問過去被動，回答也用過去被動 It was made in Italy.（不能省略 was）。"},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Park',text:"English is spoken by millions of people worldwide, isn't it?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, it is. It's one of the most widely used languages.",correct:true},{text:"Yes, it does. It's one of the most widely used languages.",correct:false},{text:"Yes, it speaks. It's one of the most widely used languages.",correct:false}],explanation:"is spoken 是現在被動語態，確認問答用 Yes, it is.（be 動詞對應 be 動詞）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Viv',text:'Oh no! My phone was stolen on the bus!'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"That's terrible! You should report it to the police right away.",correct:true},{text:"That's terrible! You should to report it to the police right away.",correct:false},{text:"That's terrible! You should reported it to the police right away.",correct:false}],explanation:"should + 原形動詞（report），不加 to，也不用過去式 reported。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Dan',text:"My bike was repaired by the mechanic this morning."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Great! Was it expensive to fix?',correct:true},{text:'Great! Did it expensive to fix?',correct:false},{text:'Great! Was it expensively to fix?',correct:false}],explanation:"Was it expensive? 問費用，expensive 是形容詞（不是副詞 expensively）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Lisa',text:"The package will be delivered tomorrow, won't it?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, that's what the tracking website says.",correct:true},{text:"Yes, that's what tracking website says.",correct:false},{text:"Yes, that's what the tracking website said it.",correct:false}],explanation:"the tracking website 需要定冠詞 the。says 是 what 子句的動詞（第三人稱單數加 s）。said it 多了受詞，what 已經是受詞。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Cora',text:"You've met my brother Sam before, haven't you?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, I have. We met at your birthday party last year.",correct:true},{text:"Yes, I did. We met at your birthday party last year.",correct:false},{text:"Yes, I have met. We met at your birthday party last year.",correct:false}],explanation:"haven't you? 的確認回答用 Yes, I have.（現在完成式 have 對應 have）。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:"It's a beautiful day, isn't it?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, it is! Perfect weather for a picnic.",correct:true},{text:"Yes, it isn't! Perfect weather for a picnic.",correct:false},{text:"Yes, it does! Perfect weather for a picnic.",correct:false}],explanation:"isn't it? 是肯定句後的否定附加問句，確認同意時回答 Yes, it is.（不是 Yes, it isn't）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:"You didn't leave the milk out overnight, did you?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Sorry, I did. I forgot to put it back.",correct:true},{text:"Sorry, I didn't. I forgot to put it back.",correct:false},{text:"Sorry, I left. I forgot to put it back.",correct:false}],explanation:"didn't...did you? 期待否定答案，但若事實上有做，則誠實回答 Yes, I did.（Sorry 表道歉，事實是有做）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Ben',text:"Your sister doesn't like spicy food, does she?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Actually, she does. She loves hot sauce!",correct:true},{text:"Actually, she doesn't. She loves hot sauce!",correct:false},{text:"Actually, she is. She loves hot sauce!",correct:false}],explanation:"doesn't she? 預期否定，但若她其實喜歡，用 Yes, she does. / Actually, she does.（矛盾事實用肯定）。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Ms. Wang',text:"You've never tried durian, have you?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Actually, I have! I tried it once and loved it.",correct:true},{text:"Actually, I haven't! I tried it once and loved it.",correct:false},{text:"Actually, I did! I tried it once and loved it.",correct:false}],explanation:"have you? 是否定句後的附加問句，若事實上有（吃過），回答 Yes, I have.（現在完成式）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Abby',text:"The homework was due yesterday, wasn't it?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes, it was. Did you hand it in?",correct:true},{text:"Yes, it did. Did you hand it in?",correct:false},{text:"Yes, it is. Did you hand it in?",correct:false}],explanation:"was 是過去式 be 動詞，附加問句 wasn't it? 確認後回答 Yes, it was.（過去式 be 動詞）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Grandma',text:'You must have been exhausted after the marathon!'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I was! I could barely walk afterward.',correct:true},{text:'I must! I could barely walk afterward.',correct:false},{text:'I was must! I could barely walk afterward.',correct:false}],explanation:"You must have been... 是「一定很...」的情態完成式推測。回答用 I was!（確認那個狀態）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Ted',text:'I knocked on your door at noon but no one answered.'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Oh, I must have been sleeping. I was up late last night.',correct:true},{text:'Oh, I must have slept. I was up late last night.',correct:false},{text:'Oh, I should have been sleeping. I was up late last night.',correct:false}],explanation:"must have been sleeping 表示對過去某時刻行為的合理推測（一定當時正在睡覺）。must have + p.p. 是情態完成式推測。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'Why did you miss the field trip last week?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I had a fever. I should have told you sooner. Sorry.',correct:true},{text:'I had a fever. I should tell you sooner. Sorry.',correct:false},{text:'I had a fever. I should told you sooner. Sorry.',correct:false}],explanation:"should have told 是「過去應該做但沒有做」，用 should have + p.p.（told 是 tell 的 p.p.）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Pam',text:"Tom left his wallet at home again!"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'He could have checked his bag before leaving!',correct:true},{text:'He could checked his bag before leaving!',correct:false},{text:'He could has checked his bag before leaving!',correct:false}],explanation:"could have + p.p. 表示「本來可以做但沒有做」。正確結構：could have checked（have 不變為 has）。"},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:'I heard you failed the driving test.'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yeah. I might have practiced more before taking it.',correct:true},{text:'Yeah. I might practiced more before taking it.',correct:false},{text:'Yeah. I might to have practiced more before taking it.',correct:false}],explanation:"might have + p.p. 表示「也許本來應該做」。might 後直接接 have（不加 to），再接 p.p.（practiced）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:"Did you eat all the cake? I was saving it for the party!"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'm sorry! I didn't know. I shouldn't have eaten it.",correct:true},{text:"I'm sorry! I didn't know. I shouldn't eat it.",correct:false},{text:"I'm sorry! I didn't know. I shouldn't have eat it.",correct:false}],explanation:"shouldn't have eaten 表示「過去不應該做但做了」。p.p. 是 eaten（eat → ate → eaten，三態變化）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Ron',text:'Where were you during the earthquake yesterday?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'I was hiding under my desk when it happened.',correct:true},{text:'I hid under my desk when it was happening.',correct:false},{text:'I was hide under my desk when it happened.',correct:false}],explanation:"過去進行式 was hiding 表示「地震時正在躲」。when 引導的過去式 it happened 是短暫事件，打斷正在進行的動作。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Nora',text:"What was the teacher explaining when you came in late?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'She was explaining how to solve quadratic equations.',correct:true},{text:'She explained how to solve quadratic equations.',correct:false},{text:'She was explain how to solve quadratic equations.',correct:false}],explanation:"was explaining 是過去進行式（was + Ving），表示「我進來時，她正在解說」。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:"Why didn't you answer when I called your name?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Sorry! I was thinking about something else.',correct:true},{text:'Sorry! I thought about something else.',correct:false},{text:'Sorry! I were thinking about something else.',correct:false}],explanation:"was thinking 是過去進行式（主詞 I 用 was，不是 were）。表示「當時正在想別的事」。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Will',text:'Did you see the accident on the way to school?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes! Two cars crashed into each other just as I was walking by.',correct:true},{text:'Yes! Two cars were crashing into each other when I walked by.',correct:false},{text:'Yes! Two cars was crashing into each other when I walked by.',correct:false}],explanation:"just as I was walking by（我正走過時）是過去進行式背景，crashed（撞上）是突發短暫動作用過去簡單式。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:"You look pale. Are you all right?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'm okay. I was working until midnight last night.",correct:true},{text:"I'm okay. I worked until midnight last night.",correct:false},{text:"I'm okay. I am working until midnight last night.",correct:false}],explanation:"was working until midnight 強調「昨晚一直工作到半夜」（過去進行式表示持續進行的動作）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Ivy',text:'If you could travel anywhere, where would you go?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I would go to Iceland to see the Northern Lights.",correct:true},{text:"I will go to Iceland to see the Northern Lights.",correct:false},{text:"I would went to Iceland to see the Northern Lights.",correct:false}],explanation:"If + 過去式（could），主句用 would + 原形動詞（would go）。這是第二類條件句（假設語氣）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Sam',text:'If it rains this Saturday, will the game be canceled?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Yes, it will be postponed to next weekend.',correct:true},{text:'Yes, it would be postponed to next weekend.',correct:false},{text:'Yes, it will postpone to next weekend.',correct:false}],explanation:"If + 現在式，主句用 will + 原形動詞（第一類條件句，真實可能）。被動：will be postponed。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:'What will you do if you pass the exam?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"If I pass, I'll treat my friends to dinner!",correct:true},{text:"If I will pass, I'll treat my friends to dinner!",correct:false},{text:"If I pass, I would treat my friends to dinner!",correct:false}],explanation:"if 子句用現在式（pass），主句用 will（I'll = I will）。if 子句不用 will，主句不用 would（那是假設）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Cara',text:'What would happen if there were no internet?'},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:'Life would be very different and much slower.',correct:true},{text:'Life will be very different and much slower.',correct:false},{text:'Life would very different and much slower.',correct:false}],explanation:"If + were（假設），主句用 would + 原形動詞（would be）。be 動詞不能省略，主句不用 will。"},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Uncle',text:"I might visit next month. If I come, can we go hiking?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Of course! If you come, we'll definitely go.",correct:true},{text:"Of course! If you will come, we'll definitely go.",correct:false},{text:"Of course! If you come, we would definitely go.",correct:false}],explanation:"if 子句用現在式（you come），主句用 will（we'll go）。這是第一類真實條件句。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:"If you had studied harder, you would have passed."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I know. I really should have prepared better.",correct:true},{text:"I know. I really should prepare better.",correct:false},{text:"I know. I really should have prepare better.",correct:false}],explanation:"對過去事實的遺憾：should have + p.p.（prepared）。prepared 是 prepare 的過去分詞。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Art',text:"Excuse me, can you tell me where the nearest bank is?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Sure. It's about two blocks down this street on the left.",correct:true},{text:"Sure. It's about two blocks down on left of this street.",correct:false},{text:"Sure. It about two blocks down this street on the left.",correct:false}],explanation:"on the left 是「在左邊」的固定說法（the 不可省）。It's（= It is）不能省略 be 動詞。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Eva',text:"Do you know when the next bus arrives?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'm not sure. Let me check the schedule.",correct:true},{text:"I'm not sure. Let me to check the schedule.",correct:false},{text:"I'm not sure. Let me checking the schedule.",correct:false}],explanation:"Let me + 原形動詞（check），不加 to，也不用 Ving（checking）。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Ms. Chen',text:"Could you tell me how long the exam will last?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"It will last for about ninety minutes.",correct:true},{text:"It will lasts for about ninety minutes.",correct:false},{text:"It will last about for ninety minutes.",correct:false}],explanation:"will + 原形動詞（last），不加 s。for 放在時間長度前（last for ninety minutes），介系詞位置固定在時間前。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Eric',text:"I wonder if you've seen my keys anywhere."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I think I saw them on the kitchen counter.",correct:true},{text:"I think I saw it on the kitchen counter.",correct:false},{text:"I think I see them on the kitchen counter.",correct:false}],explanation:"keys 是複數，代名詞用 them（不是 it）。看到的是過去的事，用過去式 saw（不是 see）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Grandma',text:"I'm not sure whether to take the train or the bus."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"The train is faster, but the bus is more comfortable.",correct:true},{text:"The train is more faster, but the bus is more comfortable.",correct:false},{text:"The train is fastest, but the bus is more comfortable.",correct:false}],explanation:"fast 的比較級是 faster（單音節加 -er），不說 more faster（雙重比較錯誤）。比較兩者用比較級，不用最高級。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Nadia',text:"Please tell me what time the library closes."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I believe it closes at nine on weekdays.",correct:true},{text:"I believe it closes at nine in weekdays.",correct:false},{text:"I believe it close at nine on weekdays.",correct:false}],explanation:"on weekdays 是「在平日」（on + 複數時間詞）。第三人稱單數 it 的動詞加 s：closes。"},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Ray',text:"Can anyone explain why water boils at 100 degrees?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"It's because of the atmospheric pressure at sea level.",correct:true},{text:"It because of the atmospheric pressure at sea level.",correct:false},{text:"It's because the atmospheric pressure at sea level.",correct:false}],explanation:"因果關係：It's because of + 名詞（because of + 名詞），或 because + 子句。不能省略 be 動詞，也不能在 because 後直接接名詞（那是 because of）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:"The book that you recommended was excellent!"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'm glad you liked it. It's one of my favorites.",correct:true},{text:"I'm glad you liked it. It's one of my favorite.",correct:false},{text:"I'm glad you like it. It's one of my favorites.",correct:false}],explanation:"one of my favorites（我最喜歡的之一）—one of 後接複數名詞。過去式 you liked it（說明是談論剛讀完的書）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Cole',text:"The girl who sits next to me in class is very talented."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Oh, I know her! She plays the violin beautifully.",correct:true},{text:"Oh, I know her! She play the violin beautifully.",correct:false},{text:"Oh, I know she! She plays the violin beautifully.",correct:false}],explanation:"know her（認識她）—受格用 her，不是主格 she。第三人稱單數 she plays（動詞加 s）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Rosa',text:"The movie that we watched last night had a surprise ending."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I know! I didn't expect it at all.",correct:true},{text:"I know! I didn't expected it at all.",correct:false},{text:"I know! I wasn't expect it at all.",correct:false}],explanation:"didn't + 原形動詞（expect）。didn't expected 是雙重過去式錯誤，wasn't expect 則 was 不能搭配原形動詞。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:"The student whose project won the prize was very surprised."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes! I didn't think her project was that impressive.",correct:true},{text:"Yes! I didn't thought her project was that impressive.",correct:false},{text:"Yes! I don't think her project was that impressive.",correct:false}],explanation:"didn't + 原形動詞 think（過去簡單式否定）。描述過去的想法用過去式，所以不是 don't think。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Eli',text:"Is there anyone in this class who speaks French?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I think Amy does. She studied in Paris for a year.",correct:true},{text:"I think Amy does. She studied in Paris since a year.",correct:false},{text:"I think Amy is. She studied in Paris for a year.",correct:false}],explanation:"Does she speak French? 的強調回答用 does。for a year 表示時間長度（for + 期間），since 用於起點（since 2020）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:"The restaurant where we had your birthday dinner closed down."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"What a shame! The food there was always so good.",correct:true},{text:"What a shame! The food there were always so good.",correct:false},{text:"What a shame! The food there was always very well.",correct:false}],explanation:"food 是不可數單數名詞，be 動詞用 was。形容食物好吃用 good（形容詞），不用 well（副詞，修飾動作）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Suki',text:"I enjoy reading books that are based on true stories."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Me too! I find them more interesting than fiction.",correct:true},{text:"Me too! I find them more interesting than fictionally.",correct:false},{text:"Me too! I find them more interest than fiction.",correct:false}],explanation:"more interesting than 是比較級（interesting 多音節，用 more）。fiction 是名詞，不用副詞形式 fictionally。"},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:"Remember to stop talking and start focusing on your work."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Sorry, I'll stop chatting and focus right now.",correct:true},{text:"Sorry, I'll stop to chat and focus right now.",correct:false},{text:"Sorry, I'll stop chatting and to focus right now.",correct:false}],explanation:"stop + Ving = 停止做某事（stop chatting）。stop to do = 停下來去做另一件事。focus 和 chatting 為 and 連接的並列，形式一致（stop chatting and focus）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Ann',text:"Did you remember to lock the door when you left?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Oh no! I forgot to lock it. We need to go back.",correct:true},{text:"Oh no! I forgot locking it. We need to go back.",correct:false},{text:"Oh no! I forgot lock it. We need to go back.",correct:false}],explanation:"forget to + 原形動詞 = 忘記去做（未做）。forget Ving = 忘記曾經做過的事。這裡是「忘記去鎖」（沒鎖），所以用 forgot to lock。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Ian',text:"How about trying a new restaurant tonight?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Sounds fun! I've been wanting to try Thai food.",correct:true},{text:"Sounds fun! I've been want to try Thai food.",correct:false},{text:"Sounds fun! I'm wanting to try Thai food.",correct:false}],explanation:"have been wanting 是現在完成進行式（have been + Ving）表達持續的願望。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Ms. Park',text:"I need someone to help me carry these boxes."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'll help you! Where do you need them?",correct:true},{text:"I'll help you! Where do you need it?",correct:false},{text:"I'll help you! Where you need them?",correct:false}],explanation:"boxes 是複數，代名詞用 them（不是 it）。疑問句語序：Where do you need them?（助動詞 do 在主詞前）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Lisa',text:"My older sister has decided to study abroad next year."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"That's exciting! Which country has she chosen?",correct:true},{text:"That's exciting! Which country she has chosen?",correct:false},{text:"That's exciting! Which country did she has chosen?",correct:false}],explanation:"疑問句語序：疑問詞 + 助動詞 has + 主詞 she + p.p. chosen（現在完成式疑問句）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Finn',text:"By the time we arrived at the cinema, the movie had already started."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"That's too bad! Did you still go in?",correct:true},{text:"That's too bad! Did you still went in?",correct:false},{text:"That's too bad! Have you still gone in?",correct:false}],explanation:"Did you + 原形動詞（go）。過去時間事件用過去簡單式問句 Did you...?，不用 went 或現在完成式。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Fay',text:"We hadn't eaten anything all day when we finally found a restaurant."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"You must have been starving! What did you order?",correct:true},{text:"You must have starved! What did you order?",correct:false},{text:"You must be starving! What did you order?",correct:false}],explanation:"must have been starving 是情態完成進行式，推測「當時一定很餓」。must be starving 是現在推測，時態不符。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:"Before I got home, the kids had already cleaned the house!"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Wow, they must have worked really hard!",correct:true},{text:"Wow, they must work really hard!",correct:false},{text:"Wow, they must have work really hard!",correct:false}],explanation:"must have worked 是情態完成式（must have + p.p.），推測過去的行為。worked 是過去分詞。"},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Lim',text:"I realized I had left my phone at home after I arrived at school."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Oh no! Did you go back to get it?",correct:true},{text:"Oh no! Did you went back to get it?",correct:false},{text:"Oh no! Have you gone back to get it?",correct:false}],explanation:"Did you + 原形動詞 go（過去事件的問句）。went 不接在 did 後。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Zac',text:"When I called her, she had already left the office."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"So did you leave a message?",correct:true},{text:"So did you left a message?",correct:false},{text:"So have you left a message?",correct:false}],explanation:"過去事件的問句用 Did you + 原形動詞（leave）。left 不能接在 did 後。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Bea',text:"The concert had been going on for two hours before we arrived."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Oh! Did you miss the opening acts then?",correct:true},{text:"Oh! Did you missed the opening acts then?",correct:false},{text:"Oh! Had you missed the opening acts then?",correct:false}],explanation:"詢問過去發生的具體事件用 Did you + 原形動詞 miss。missed 不能接在 did 後。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:"Please make sure your essays are submitted before Friday."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Understood! Can we submit them by email?",correct:true},{text:"Understood! Can we submit it by email?",correct:false},{text:"Understood! Can we submits them by email?",correct:false}],explanation:"essays 是複數，代名詞 them。can 後接原形動詞 submit（不加 s）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Ray',text:"Your presentation was great! You must have practiced a lot."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Thanks! I practiced for three hours every night this week.",correct:true},{text:"Thanks! I practiced since three hours every night this week.",correct:false},{text:"Thanks! I have practiced for three hours every night this week.",correct:false}],explanation:"every night this week 配合過去簡單式（practiced）。for 表示持續的時間長度。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Dot',text:"I'm not sure what to buy for my dad's birthday."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"How about getting him a book? He loves reading.",correct:true},{text:"How about to get him a book? He loves reading.",correct:false},{text:"How about get him a book? He loves reading.",correct:false}],explanation:"How about + Ving（getting）。不能接 to get 或直接接原形 get。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Grandma',text:"You are the most hardworking student I have ever taught."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Thank you so much! That means a lot to me.",correct:true},{text:"Thank you so much! That mean a lot to me.",correct:false},{text:"Thank you so much! That means lot to me.",correct:false}],explanation:"That means a lot to me.（那對我意義重大）—主詞 That（單數）動詞 means 加 s。a lot 前需要冠詞 a。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Arlo',text:"I've never seen such a beautiful sunset before!"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Neither have I. It's absolutely stunning.",correct:true},{text:"Neither I have. It's absolutely stunning.",correct:false},{text:"Me neither have. It's absolutely stunning.",correct:false}],explanation:"Neither have I. 是「我也沒有」的倒裝句型（Neither + 助動詞 + 主詞）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Hailey',text:"I enjoy cooking, but I'm not very good at it."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Practice makes perfect! You'll get better over time.",correct:true},{text:"Practice makes perfect! You get better over time.",correct:false},{text:"Practice make perfect! You'll get better over time.",correct:false}],explanation:"Practice makes perfect. 是諺語（Practice 是主詞，單數，makes 加 s）。You'll（= You will）表示未來的進步。"},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Uncle',text:"Do you know what your strengths and weaknesses are?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I think I'm good at working with others, but I need to improve my time management.",correct:true},{text:"I think I'm good at work with others, but I need to improve my time management.",correct:false},{text:"I think I'm good in working with others, but I need to improve my time management.",correct:false}],explanation:"be good at + Ving（good at working）。at 是固定介系詞，不是 in。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Ms. Kim',text:"I'd like you to write a short paragraph about your goals."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Sure! Should I write about my academic or career goals?",correct:true},{text:"Sure! Should I write about my academic or career goal?",correct:false},{text:"Sure! Should I write on my academic or career goals?",correct:false}],explanation:"goals（複數）表達多個目標。write about（寫關於...）是固定搭配，不是 write on。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Cal',text:"What do you think is the most important quality in a friend?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I think honesty is the most important. Without trust, friendship doesn't last.",correct:true},{text:"I think honesty is most important. Without trust, friendship doesn't last.",correct:false},{text:"I think honesty is the most importantly. Without trust, friendship doesn't last.",correct:false}],explanation:"最高級前要有定冠詞 the（the most important）。important 是形容詞（不用副詞 importantly）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Lea',text:"Have you decided what club to join this semester?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Not yet. I'm still trying to decide between the debate club and the art club.",correct:true},{text:"Not yet. I'm still trying to decide among the debate club and the art club.",correct:false},{text:"Not yet. I'm still trying to decide between the debate club or the art club.",correct:false}],explanation:"between 用於兩者之間（between A and B），among 用於三者以上。between...and（不是 between...or）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:"You look tired. Why don't you take a break?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I would, but I have a deadline to meet.",correct:true},{text:"I would, but I have a deadline to meeting.",correct:false},{text:"I would, but I have a deadline meeting.",correct:false}],explanation:"have a deadline to meet 是 have + 名詞 + to + 原形動詞（不定詞作後置修飾）。meet（不是 meeting）。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Rex',text:"I've been feeling really stressed lately."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Have you tried talking to someone about it? It really helps.",correct:true},{text:"Have you tried to talk to someone about it? It really helps.",correct:false},{text:"Have you tried talk to someone about it? It really helps.",correct:false}],explanation:"try + Ving = 嘗試做（試試看某方法）。try to + 原形 = 努力設法做。這裡是「試著聊聊看」，所以用 tried talking。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Mel',text:"I can't decide whether to take the science track or the arts track."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Think about what subjects you enjoy most. That should help you decide.",correct:true},{text:"Think about what subjects you enjoy most. That should help you to decided.",correct:false},{text:"Think about what subjects you enjoy most. That should helps you decide.",correct:false}],explanation:"help + 受詞 + 原形動詞（help you decide），不加 to。should 後接原形 help（不是 helps）。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:"You seem to know a lot about cooking!"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I've been learning from my mom since I was little.",correct:true},{text:"I've been learning from my mom since I am little.",correct:false},{text:"I'm learning from my mom since I was little.",correct:false}],explanation:"since I was little 是從小到現在，since 後接過去式（was）。have been learning（現在完成進行式）表示持續至今。"},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Ho',text:"Your score has improved a lot this term!"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Thank you! I've been putting in a lot more effort.",correct:true},{text:"Thank you! I've been put in a lot more effort.",correct:false},{text:"Thank you! I put in a lot more effort this term.",correct:false}],explanation:"have been putting 是現在完成進行式（have been + Ving），強調這個學期一直持續的努力。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Milo',text:"What's the best piece of advice you've ever received?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Never give up, no matter how difficult things get.",correct:true},{text:"Never give up, no matter how things get difficult.",correct:false},{text:"Never give up, no matter how difficult things gets.",correct:false}],explanation:"no matter how + 形容詞 + 主詞 + 動詞（how difficult things get）—語序固定，形容詞在主詞前。things 是複數，動詞 get 不加 s。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:"Which do you find more challenging—speaking or writing in English?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I find speaking more challenging because I'm worried about making mistakes.",correct:true},{text:"I find speaking more challenging because I'm worry about making mistakes.",correct:false},{text:"I find speaking more challengingly because I'm worried about making mistakes.",correct:false}],explanation:"find + 受詞 + 形容詞（more challenging），不是副詞 challengingly。worried 是形容詞（I'm worried），不是動詞形式 worry。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Grandma',text:"It's getting late. You had better go home before dark."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"You're right. I had better leave now.",correct:true},{text:"You're right. I had better to leave now.",correct:false},{text:"You're right. I better leave now.",correct:false}],explanation:"had better + 原形動詞（leave），不加 to，也不省略 had。這是強烈建議的固定句型。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Nick',text:"I used to hate vegetables when I was a child."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Really? I used to feel the same way, but now I love them.",correct:true},{text:"Really? I use to feel the same way, but now I love them.",correct:false},{text:"Really? I was used to feel the same way, but now I love them.",correct:false}],explanation:"used to + 原形動詞 表示「過去習慣（現在不再）」，固定形式是 used to（不是 use to，也不是 was used to feel）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Gwen',text:"Are you used to living in the city now?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Pretty much. I'm getting used to the noise and the traffic.",correct:true},{text:"Pretty much. I'm getting used to live with the noise.",correct:false},{text:"Pretty much. I'm used to live in the city.",correct:false}],explanation:"be/get used to + Ving（getting used to the noise）。to 是介系詞，後接名詞或動名詞，不接原形動詞。"},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Chen',text:"It is said that reading improves your writing skills."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I believe so. I try to read at least one book a month.",correct:true},{text:"I believe so. I try reading at least one book a month.",correct:false},{text:"I believe so. I try to read at least one book in a month.",correct:false}],explanation:"try to + 原形動詞 = 努力嘗試去做（try reading = 試試看讀，語意略不同）。a month 是固定說法（每個月），不說 in a month。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Joel',text:"My parents want me to become a doctor."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"And what do you want? It's your life, after all.",correct:true},{text:"And what do you want? It's yours life, after all.",correct:false},{text:"And what do you want? It's you life, after all.",correct:false}],explanation:"your life（你的生活）—your 是所有格形容詞，後接名詞。yours 是獨立所有代名詞（後不接名詞）。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Alice',text:"I'm thinking of quitting the swim team. It takes up too much time."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Are you sure? You've worked so hard to get where you are.",correct:true},{text:"Are you sure? You worked so hard to get where you are.",correct:false},{text:"Are you sure? You've work so hard to get where you are.",correct:false}],explanation:"You've worked（現在完成式 have + p.p.）強調到目前為止累積的努力。p.p. 是 worked，不是原形 work。"},
+  {dialogue:[{speaker:'A',avatar:'👨',name:'Dad',text:"Next time you borrow something, remember to return it promptly."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I will. I'm sorry I kept it for so long.",correct:true},{text:"I will. I'm sorry I've kept it since so long.",correct:false},{text:"I will. I'm sorry I keep it for so long.",correct:false}],explanation:"kept 是過去簡單式（keep 的過去式），表示已結束的狀況。for so long 表時間長度，since 用於起點（since last week），不是 since so long。"},
+  {dialogue:[{speaker:'A',avatar:'👩‍🏫',name:'Teacher',text:"Has anyone here ever participated in a public speaking competition?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Yes! I participated in one last year and won second place.",correct:true},{text:"Yes! I have participated in one last year and won second place.",correct:false},{text:"Yes! I participated in one last year and win second place.",correct:false}],explanation:"last year 是明確過去時間點，用過去簡單式 participated（不用現在完成式）。win 的過去式是 won。"},
+  {dialogue:[{speaker:'A',avatar:'👦',name:'Kai',text:"Do you prefer working alone or with a group?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"It depends on the task. I prefer working alone for creative projects.",correct:true},{text:"It depends of the task. I prefer working alone for creative projects.",correct:false},{text:"It depends on the task. I prefer work alone for creative projects.",correct:false}],explanation:"depend on（取決於）是固定介系詞搭配，不是 depend of。prefer + Ving（working）表達一般偏好，不接原形 work。"},
+  {dialogue:[{speaker:'A',avatar:'👧',name:'Petra',text:"I can hardly believe how fast this year has gone by!"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I know! It feels like we just started, and now it's almost over.",correct:true},{text:"I know! It feels as we just started, and now it's almost over.",correct:false},{text:"I know! It feels like we just start, and now it's almost over.",correct:false}],explanation:"It feels like + 子句（feels like we just started）。started 是過去式，表「就像剛開始一樣」。feels as 不是正確說法。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Mom',text:"I wish you would help more around the house."},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I'm sorry. I'll start doing more chores from now on.",correct:true},{text:"I'm sorry. I'll start to do more chores since now on.",correct:false},{text:"I'm sorry. I start doing more chores from now on.",correct:false}],explanation:"from now on（從現在起）是固定說法，不是 since now on。I'll（= I will）表示當下做出的決定。"},
+  {dialogue:[{speaker:'A',avatar:'👨‍🏫',name:'Mr. Yao',text:"What would you do differently if you could redo this project?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"I would spend more time planning before starting to write.",correct:true},{text:"I would spend more time to plan before starting to write.",correct:false},{text:"I will spend more time planning before starting to write.",correct:false}],explanation:"spend time + Ving（spend more time planning）是固定搭配，不接 to plan。If + could，主句用 would（假設語氣），不用 will。"},
+  {dialogue:[{speaker:'A',avatar:'👩',name:'Aunt',text:"You seem tired. Have you been sleeping enough lately?"},{speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}],options:[{text:"Not really. I've been staying up late to study for finals.",correct:true},{text:"Not really. I've been stay up late to study for finals.",correct:false},{text:"Not really. I stayed up late to study for finals lately.",correct:false}],explanation:"have been staying up 是現在完成進行式，表示「最近一直熬夜」的持續行為。lately（最近）與完成式搭配，不與過去簡單式 stayed 搭配。"},
 ];
 
 // GEPT: realistic multi-turn dialogues with richer context and situational settings
@@ -320,7 +504,7 @@ const GEPT_Q = [
     context:"📱 情境：你致電給朋友的家人，朋友不在家。",
     dialogue:[
       {speaker:'A',avatar:'🧒',name:'You',text:"Hello, may I speak to Jason, please?"},
-      {speaker:'B',avatar:'👩',name:'Jason's Mom',text:"I'm afraid he's not in right now. He's gone to the library to work on a project."},
+      {speaker:'B',avatar:'👩',name:"Jason's Mom",text:"I'm afraid he's not in right now. He's gone to the library to work on a project."},
       {speaker:'A',avatar:'🧒',name:'You',text:"Oh, I see. Do you know what time he's expected back?"},
       {speaker:'B',avatar:'👩',name:'Mom',text:'___',isQuestion:true}
     ],
@@ -345,6 +529,1386 @@ const GEPT_Q = [
       {text:"Your rate is including breakfast for two guests each morning, is serving from six-thirty to ten.",correct:false}
     ],
     explanation:"主詞 Your rate 是單數，動詞用 includes（不是 include）。served from... 是過去分詞片語作後置修飾，修飾 breakfast（早餐是「被提供」的）。"
+  },
+  {
+    context:"✈️ 情境：你在機場辦理登機手續。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'd like to check in for my flight to Singapore. It departs at 3:15."},
+      {speaker:'B',avatar:'👩',name:'Check-in Staff',text:"Of course. May I have your passport and booking reference, please?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Here you are. And I have one suitcase to check in."},
+      {speaker:'B',avatar:'👩',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Please place your bag on the scale. Do you have any fragile items inside?",correct:true},
+      {text:"Please place your bag on scale. Have you any fragile items inside?",correct:false},
+      {text:"Please put your bag on the scale. Do you have some fragile items inside?",correct:false}
+    ],
+    explanation:"the scale 需要定冠詞 the。Do you have any...? 是詢問「有沒有」的標準句型（any 用於疑問句），不是 Have you any（較舊式）或 some（some 用於肯定句或有禮貌的請求）。"
+  },
+  {
+    context:"🏥 情境：你到藥局購買感冒藥。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, I'm looking for something for a cold. I have a runny nose and a sore throat."},
+      {speaker:'B',avatar:'👨‍⚕️',name:'Pharmacist',text:"How long have you had these symptoms?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Since yesterday morning. I don't have a fever, though."},
+      {speaker:'B',avatar:'👨‍⚕️',name:'Pharmacist',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"In that case, I'd recommend this combination medicine. Take it three times a day after meals.",correct:true},
+      {text:"In that case, I'd recommend this combination medicine. Take it three times a day after meal.",correct:false},
+      {text:"In that case, I recommend you this combination medicine. Take it three times a day after meals.",correct:false}
+    ],
+    explanation:"after meals（飯後）用複數，指每頓飯後。recommend something to someone，或 recommend that...，不說 recommend someone something（recommend 不是雙受詞動詞）。"
+  },
+  {
+    context:"📮 情境：你到郵局寄一個包裹到海外。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hello. I'd like to send this package to Canada, please."},
+      {speaker:'B',avatar:'👩',name:'Postal Clerk',text:"Would you like to send it by standard mail or express?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"How long does each option take?"},
+      {speaker:'B',avatar:'👩',name:'Clerk',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Standard takes about two to three weeks, while express usually arrives within five business days.",correct:true},
+      {text:"Standard takes about two to three weeks, while express usually arrive within five business days.",correct:false},
+      {text:"Standard take about two to three weeks, while express usually arrives within five business day.",correct:false}
+    ],
+    explanation:"主詞 express（快遞）是單數，動詞 arrives 加 s。business days（工作天）是複數名詞。standard 也是單數，takes 加 s。"
+  },
+  {
+    context:"🏦 情境：你到銀行想開一個新帳戶。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Good morning. I'd like to open a savings account, please."},
+      {speaker:'B',avatar:'👩',name:'Bank Teller',text:"Certainly. Do you currently have any accounts with us?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"No, this would be my first one. What documents do I need?"},
+      {speaker:'B',avatar:'👩',name:'Teller',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"You'll need to bring your national ID and proof of address, such as a utility bill.",correct:true},
+      {text:"You'll need to bring your national ID and a proof of address, such as utility bill.",correct:false},
+      {text:"You'll need bring your national ID and proof of address, such as a utility bill.",correct:false}
+    ],
+    explanation:"need to + 原形動詞（need to bring）。proof of address 前不加冠詞（不可數用法）。a utility bill（一張水電帳單）前要用不定冠詞 a。"
+  },
+  {
+    context:"🎬 情境：你在電影院購票。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Two tickets for the seven o'clock showing of 'Sky High', please."},
+      {speaker:'B',avatar:'👦',name:'Box Office Staff',text:"I'm sorry, that showing is sold out. We have seats available for the nine-thirty showing."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"That's a bit late. Are there any seats left for the earlier showing at five?"},
+      {speaker:'B',avatar:'👦',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Let me check. Yes, there are still a few seats available in the front rows.",correct:true},
+      {text:"Let me check. Yes, there is still a few seats available in the front rows.",correct:false},
+      {text:"Let me check. Yes, there are still a few seat available in the front rows.",correct:false}
+    ],
+    explanation:"a few seats（幾個座位）是複數，用 There are。seats 是複數名詞，the front rows（前幾排）也用複數。"
+  },
+  {
+    context:"🏋️ 情境：你到健身房詢問會員資格。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'm interested in joining the gym. Could you tell me about your membership options?"},
+      {speaker:'B',avatar:'👩',name:'Gym Staff',text:"Of course! We have monthly and annual memberships. The annual plan works out much cheaper in the long run."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"That sounds good. Does the membership include all the facilities?"},
+      {speaker:'B',avatar:'👩',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Yes, it includes the gym floor, swimming pool, and group fitness classes at no extra charge.",correct:true},
+      {text:"Yes, it include the gym floor, swimming pool, and group fitness classes at no extra charge.",correct:false},
+      {text:"Yes, it includes the gym floor, swimming pool, and group fitness class at no extra charge.",correct:false}
+    ],
+    explanation:"主詞 it（membership）是單數，動詞 includes 加 s。group fitness classes 是複數（有多個課程）。"
+  },
+  {
+    context:"🏠 情境：你正在聯絡房東，詢問租屋事宜。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hello, I'm calling about the apartment listed online. Is it still available?"},
+      {speaker:'B',avatar:'👨',name:'Landlord',text:"Yes, it is. It's a two-bedroom flat with a balcony. Would you like to arrange a viewing?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Yes, please. Could you also tell me if utilities are included in the rent?"},
+      {speaker:'B',avatar:'👨',name:'Landlord',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Water is included, but you'll need to set up your own electricity and internet accounts.",correct:true},
+      {text:"Water is included, but you'll need to set up your own electricity and internet account.",correct:false},
+      {text:"Water is included, but you'll need set up your own electricity and internet accounts.",correct:false}
+    ],
+    explanation:"need to + 原形動詞（need to set up）。accounts（帳戶）用複數，因為電費和網路是兩個不同的帳戶。"
+  },
+  {
+    context:"✂️ 情境：你去理髮廳剪頭髮。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'd like a haircut, please. Do you take walk-ins?"},
+      {speaker:'B',avatar:'👩',name:'Hairdresser',text:"Yes, we do. Have a seat and I'll be with you in about ten minutes. What style are you thinking of?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"I'd like it trimmed about three centimeters, and maybe some layers at the back."},
+      {speaker:'B',avatar:'👩',name:'Hairdresser',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"That sounds lovely. Would you also like me to blow-dry it after the cut?",correct:true},
+      {text:"That sounds lovely. Would you also like me blow-dry it after the cut?",correct:false},
+      {text:"That sounds lovely. Would you also like I blow-dry it after the cut?",correct:false}
+    ],
+    explanation:"would you like + 受詞 + to + 原形動詞（like me to blow-dry）。me 是受格，不是主格 I。to 不可省略。"
+  },
+  {
+    context:"🚌 情境：你在公車站詢問路線。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, does this bus go to the National Museum?"},
+      {speaker:'B',avatar:'👴',name:'Passenger',text:"No, you need to take the number 30. This one goes to the train station."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Oh, I see. Do you know how often the number 30 runs?"},
+      {speaker:'B',avatar:'👴',name:'Passenger',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I believe it comes every fifteen minutes or so. There's a stop just around the corner.",correct:true},
+      {text:"I believe it comes every fifteen minutes or so. There's a stop just around corner.",correct:false},
+      {text:"I believe it come every fifteen minutes or so. There's a stop just around the corner.",correct:false}
+    ],
+    explanation:"it（公車）是第三人稱單數，comes 加 s。around the corner（在轉角處）是固定說法，需要定冠詞 the。"
+  },
+  {
+    context:"🛠️ 情境：你把手機拿去維修店。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, my phone screen cracked when I dropped it this morning. Can it be repaired?"},
+      {speaker:'B',avatar:'👦',name:'Technician',text:"Let me take a look. Yes, we can replace the screen. It usually takes about two hours."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"How much would it cost?"},
+      {speaker:'B',avatar:'👦',name:'Technician',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"It depends on the model, but for your phone it should be around eight hundred dollars.",correct:true},
+      {text:"It depends of the model, but for your phone it should be around eight hundred dollars.",correct:false},
+      {text:"It depends on the model, but for your phone it would costs around eight hundred dollars.",correct:false}
+    ],
+    explanation:"depend on（取決於）固定用 on，不是 of。would cost（不是 would costs）—would 後接原形動詞，不加 s。"
+  },
+  {
+    context:"🏫 情境：家長日，你的父母正在和老師溝通。",
+    dialogue:[
+      {speaker:'A',avatar:'👨‍🏫',name:'Teacher',text:"Thank you for coming today. Overall, your child has shown great improvement this semester."},
+      {speaker:'B',avatar:'👨',name:'Parent',text:"We're glad to hear that. Are there any areas where they still need to work on?"},
+      {speaker:'A',avatar:'👨‍🏫',name:'Teacher',text:"They're doing well in science and math, but I'd like to see more effort in written assignments."},
+      {speaker:'B',avatar:'👨',name:'Parent',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"We'll encourage them to spend more time on writing at home. Thank you for the feedback.",correct:true},
+      {text:"We'll encourage them spending more time on writing at home. Thank you for the feedback.",correct:false},
+      {text:"We'll encourage them to spend more time in writing at home. Thank you for the feedback.",correct:false}
+    ],
+    explanation:"encourage + 受詞 + to + 原形動詞（encourage them to spend）。spend time on + Ving/名詞（on writing）—on 是正確介系詞，不是 in。"
+  },
+  {
+    context:"🌐 情境：你打電話給網路客服，反映網路斷線問題。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hello, I'd like to report a problem with my internet connection. It's been down since this morning."},
+      {speaker:'B',avatar:'👩',name:'Customer Service',text:"I'm sorry to hear that. Could you tell me your account number and the address of the property?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Sure. The account number is 7742801 and the address is 23 Maple Road."},
+      {speaker:'B',avatar:'👩',name:'Customer Service',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Thank you. Our system shows there's a maintenance issue in your area. Engineers should have it fixed by this evening.",correct:true},
+      {text:"Thank you. Our system shows there's a maintenance issue in your area. Engineers should have it fix by this evening.",correct:false},
+      {text:"Thank you. Our system shows there's a maintenance issue in your area. Engineers should fixed it by this evening.",correct:false}
+    ],
+    explanation:"have it fixed 是使役句型（have + 受詞 + p.p.），表示「讓它被修好」。p.p. 是 fixed，不是原形 fix。should 後接原形動詞 have（不是 should fixed）。"
+  },
+  {
+    context:"🚗 情境：你把車子送去修車廠。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"My car has been making a strange noise whenever I brake. I think something might be wrong with the brakes."},
+      {speaker:'B',avatar:'👨',name:'Mechanic',text:"We'll have a look at it. Can you leave the car with us until this afternoon?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Yes, that's fine. Will you call me once you've diagnosed the problem?"},
+      {speaker:'B',avatar:'👨',name:'Mechanic',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Absolutely. We'll call you as soon as we know what needs to be done.",correct:true},
+      {text:"Absolutely. We'll call you as soon as we'll know what needs to be done.",correct:false},
+      {text:"Absolutely. We'll call you as soon as we know what needed to be done.",correct:false}
+    ],
+    explanation:"as soon as 引導的時間子句用現在式（we know），不用 will（we'll know）。what needs to be done 是現在被動的間接問句（need to be done，不是 needed）。"
+  },
+  {
+    context:"🎓 情境：你正在申請學校，和招生人員面談。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Admissions Officer',text:"Thank you for coming in today. Could you tell me why you're interested in our school?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"I've heard that your science program is one of the best in the region, and I'm very passionate about research."},
+      {speaker:'A',avatar:'👩',name:'Admissions Officer',text:"That's great. What are your academic strengths?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I excel in mathematics and physics, and I've also done volunteer work at a local research lab.",correct:true},
+      {text:"I excel at mathematics and physics, and I also done volunteer work at a local research lab.",correct:false},
+      {text:"I excel in mathematics and physics, and I've also do volunteer work at a local research lab.",correct:false}
+    ],
+    explanation:"excel in（在某領域擅長）是固定搭配，不是 excel at。I've also done 是現在完成式（have + p.p. done），不是 also done 或 also do。"
+  },
+  {
+    context:"🌿 情境：你在旅遊諮詢中心詢問行程。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'm planning to visit the east coast for three days. Could you recommend some must-see spots?"},
+      {speaker:'B',avatar:'👩',name:'Tourist Officer',text:"Of course! Taroko Gorge is absolutely stunning and shouldn't be missed. Are you interested in outdoor activities?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Yes, very much. I enjoy hiking and cycling."},
+      {speaker:'B',avatar:'👩',name:'Tourist Officer',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Then the Rift Valley cycling route would be perfect for you. The scenery is breathtaking.",correct:true},
+      {text:"Then the Rift Valley cycling route would be perfect to you. The scenery is breathtaking.",correct:false},
+      {text:"Then Rift Valley cycling route would perfect for you. The scenery is breathtaking.",correct:false}
+    ],
+    explanation:"the Rift Valley（花東縱谷）需要定冠詞 the。would be perfect（would + be，be 不可省略）。"
+  },
+  {
+    context:"📚 情境：你在圖書館詢問借書規定。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, how many books can I borrow at one time?"},
+      {speaker:'B',avatar:'👩',name:'Librarian',text:"With a standard library card, you can borrow up to ten books at once."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"And what's the loan period?"},
+      {speaker:'B',avatar:'👩',name:'Librarian',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Books can be borrowed for two weeks and renewed once online if no one else has reserved them.",correct:true},
+      {text:"Books can be borrow for two weeks and renewed once online if no one else has reserved them.",correct:false},
+      {text:"Books can be borrowed for two weeks and renew once online if no one else reserved them.",correct:false}
+    ],
+    explanation:"被動語態：can be borrowed（can be + p.p.）。renewed 是過去分詞，和 borrowed 並列（can be borrowed and renewed）。if no one else has reserved them 用現在完成式。"
+  },
+  {
+    context:"🍵 情境：你在咖啡廳點餐，並詢問特餐。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'll have a latte, please. And could you tell me what today's lunch special is?"},
+      {speaker:'B',avatar:'👦',name:'Barista',text:"Today's special is a grilled chicken panini with a side salad. It comes with a drink of your choice."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"That sounds great. Is it possible to get the salad dressing on the side?"},
+      {speaker:'B',avatar:'👦',name:'Barista',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Of course! I'll let the kitchen know. Will that be for here or to go?",correct:true},
+      {text:"Of course! I'll let the kitchen to know. Will that be for here or to go?",correct:false},
+      {text:"Of course! I'll let the kitchen knows. Will that be for here or go?",correct:false}
+    ],
+    explanation:"let + 受詞 + 原形動詞（let the kitchen know），不加 to，knows 也不加 s。for here or to go（內用還是外帶）是固定說法。"
+  },
+  {
+    context:"👓 情境：你到眼鏡行配新眼鏡。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"I'd like to get a new pair of glasses. My current prescription is about a year old—should I get my eyes checked first?"},
+      {speaker:'B',avatar:'👩',name:'Optician',text:"That's a good idea. Your vision may have changed. We can do a full eye exam here in about twenty minutes."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Perfect. And about how long does it take for new glasses to be made?"},
+      {speaker:'B',avatar:'👩',name:'Optician',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Standard lenses are usually ready within three to five business days. Rush orders can be done in one day at an extra cost.",correct:true},
+      {text:"Standard lens are usually ready within three to five business days. Rush orders can be done in one day at an extra cost.",correct:false},
+      {text:"Standard lenses are usually ready within three to five business days. Rush orders can done in one day at an extra cost.",correct:false}
+    ],
+    explanation:"lenses（鏡片）是複數名詞。can be done 是被動語態（can be + p.p.），不能省略 be。"
+  },
+  {
+    context:"🛒 情境：你在超市找不到想買的商品。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, I'm looking for organic oat milk. I couldn't find it in the dairy aisle."},
+      {speaker:'B',avatar:'👩',name:'Store Staff',text:"We carry several brands. Let me check whether we currently have it in stock."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Thank you. Do you also carry almond milk?"},
+      {speaker:'B',avatar:'👩',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Yes, both almond and oat milk are in aisle seven, next to the regular dairy products.",correct:true},
+      {text:"Yes, both almond and oat milk is in aisle seven, next to the regular dairy products.",correct:false},
+      {text:"Yes, both almond and oat milk are in aisle seven, next to regular dairy products.",correct:false}
+    ],
+    explanation:"both...and...（兩者都）接複數動詞 are（不是 is）。the regular dairy products 需要定冠詞 the（特指那個區域的商品）。"
+  },
+  {
+    context:"🎭 情境：你在博物館詢問導覽資訊。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, are there any guided tours available today?"},
+      {speaker:'B',avatar:'👨',name:'Museum Staff',text:"Yes, we have English tours at ten and two. The next one starts in about thirty minutes."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Is it necessary to book in advance, or can we just join on the day?"},
+      {speaker:'B',avatar:'👨',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"You're welcome to join on the day, but I recommend booking online in case the tour is full.",correct:true},
+      {text:"You're welcome to join on the day, but I recommend to book online in case the tour is full.",correct:false},
+      {text:"You're welcome joining on the day, but I recommend booking online in case the tour will be full.",correct:false}
+    ],
+    explanation:"recommend + Ving（recommend booking），不接 to book。in case 引導的子句用現在式（the tour is full），不用 will。be welcome to + 原形動詞（welcome to join）。"
+  },
+  {
+    context:"💼 情境：你正在應徵兼職工作，電話面試中。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Manager',text:"Thanks for applying. Could you tell me why you're interested in this part-time position?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"I'm looking for experience in customer service, and this role seems like a great fit for my schedule."},
+      {speaker:'A',avatar:'👩',name:'Manager',text:"Good. Are you available to work on weekends?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Yes, I'm available both Saturday and Sunday, though I'd prefer the afternoon shift if possible.",correct:true},
+      {text:"Yes, I'm available both Saturday and Sunday, though I'd prefer afternoon shift if possible.",correct:false},
+      {text:"Yes, I'm available both Saturday and Sunday, though I prefer the afternoon shift if possible.",correct:false}
+    ],
+    explanation:"the afternoon shift（下午班）需要定冠詞 the。I'd prefer（= I would prefer）是有禮貌的表達，比現在式 I prefer 更正式委婉。"
+  },
+  {
+    context:"🌡️ 情境：你因身體不適去看家庭醫生。",
+    dialogue:[
+      {speaker:'A',avatar:'👨‍⚕️',name:'Doctor',text:"Hello. What seems to be the problem today?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"I've been feeling dizzy and nauseous for the past two days. I also have a slight fever."},
+      {speaker:'A',avatar:'👨‍⚕️',name:'Doctor',text:"I see. Have you been eating and drinking enough?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Not really. I haven't had much of an appetite, and I've probably been drinking less water than I should.",correct:true},
+      {text:"Not really. I haven't had much of an appetite, and I've probably been drinking less water than I should be.",correct:false},
+      {text:"Not really. I haven't much appetite, and I've probably been drinking less water than I should.",correct:false}
+    ],
+    explanation:"haven't had much of an appetite（沒什麼食慾）是自然說法，of an 不可省。less water than I should（比我應該喝的少）中 should 後省略了 drink，是正確的省略。"
+  },
+  {
+    context:"🏡 情境：你幫鄰居收了一個快遞包裹，現在通知他們。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi Mrs. Chang, it's your neighbor from apartment 5B. A delivery came for you while you were out."},
+      {speaker:'B',avatar:'👩',name:'Neighbor',text:"Oh, thank you so much! I've been waiting for that. Was it a large box?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Yes, quite large. I've left it in front of your door."},
+      {speaker:'B',avatar:'👩',name:'Neighbor',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"That's so kind of you! I'll come pick it up right away.",correct:true},
+      {text:"That's so kind of you! I'll come to pick it up right away.",correct:false},
+      {text:"That's so kind of you! I'll come pick up it right away.",correct:false}
+    ],
+    explanation:"come pick it up（來取）是 come + 原形動詞（不加 to 也可接受，但更自然）。pick it up 是分離動詞片語，代名詞 it 放中間，不能說 pick up it。"
+  },
+  {
+    context:"🖥️ 情境：你打電話給電腦技術支援中心。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'm having trouble with my laptop. It keeps shutting down on its own."},
+      {speaker:'B',avatar:'👦',name:'Tech Support',text:"I'm sorry to hear that. How long has this been happening?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"It started about three days ago. I haven't installed anything new recently."},
+      {speaker:'B',avatar:'👦',name:'Tech Support',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"It could be a cooling issue. Could you check whether the vents on the bottom are blocked?",correct:true},
+      {text:"It could be a cooling issue. Could you check if the vents on the bottom are blocking?",correct:false},
+      {text:"It could be a cooling issue. Could you check whether the vents on the bottom were blocked?",correct:false}
+    ],
+    explanation:"whether 引導的間接問句用現在式（are blocked）—passive，詢問現在的狀態。are blocking 是主動，vents 不會主動去 block。"
+  },
+  {
+    context:"🎪 情境：你在文化節活動中與工作人員溝通。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, I signed up to volunteer at today's event. Where should I report?"},
+      {speaker:'B',avatar:'👩',name:'Coordinator',text:"Great, thank you for joining us! All volunteers are meeting at the registration tent first."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Got it. Is there anything I should bring or wear?"},
+      {speaker:'B',avatar:'👩',name:'Coordinator',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Please wear comfortable shoes and bring a water bottle. We'll provide the volunteer T-shirts.",correct:true},
+      {text:"Please wear comfortable shoes and bring a water bottle. We'll provide volunteer T-shirts.",correct:false},
+      {text:"Please wear comfortable shoe and bring a water bottle. We'll provide the volunteer T-shirts.",correct:false}
+    ],
+    explanation:"comfortable shoes（舒適的鞋）用複數（通常說鞋子是複數）。the volunteer T-shirts 用定冠詞 the，因為指的是特定的志工T恤。"
+  },
+  {
+    context:"🌸 情境：你的外國筆友來台灣拜訪，你帶他參觀。",
+    dialogue:[
+      {speaker:'A',avatar:'👦',name:'Pen Pal',text:"This night market is incredible! What do you recommend trying first?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"You have to try stinky tofu—it's a must! The smell is strong, but the taste is amazing."},
+      {speaker:'A',avatar:'👦',name:'Pen Pal',text:"I'm a little nervous about the smell, to be honest."},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I understand! Just try a small piece first. Once you taste it, you might actually enjoy it.",correct:true},
+      {text:"I understand! Just try a small piece first. Once you'll taste it, you might actually enjoy it.",correct:false},
+      {text:"I understand! Just try a small piece first. Once you taste it, you might actually enjoyed it.",correct:false}
+    ],
+    explanation:"once 引導的時間子句用現在式（you taste），不用 will。might + 原形動詞（enjoy），不用過去式 enjoyed。"
+  },
+  {
+    context:"🏕️ 情境：你打電話預訂露營區場地。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hello, I'd like to make a camping reservation for next Saturday and Sunday."},
+      {speaker:'B',avatar:'👩',name:'Campsite Staff',text:"How many people will be in your group, and will you be bringing your own tent?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"There'll be six of us, and yes, we have our own tents. Do you have sites that can fit two tents?"},
+      {speaker:'B',avatar:'👩',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Yes, our deluxe sites accommodate up to eight people and have space for two large tents.",correct:true},
+      {text:"Yes, our deluxe sites accommodate up to eight person and have space for two large tents.",correct:false},
+      {text:"Yes, our deluxe sites accommodate to up eight people and have space for two large tent.",correct:false}
+    ],
+    explanation:"accommodate up to（最多容納）是固定用法，不說 accommodate to up。eight people（八個人）用複數。two large tents（兩頂帳篷）也是複數。"
+  },
+  {
+    context:"🎨 情境：你在藝術工作室詢問課程。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'm interested in taking a watercolor painting course. Do you offer classes for beginners?"},
+      {speaker:'B',avatar:'👩',name:'Instructor',text:"Yes, we do! Our beginner course runs every Saturday morning for eight weeks."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"That sounds perfect. What materials do I need to bring?"},
+      {speaker:'B',avatar:'👩',name:'Instructor',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"All materials are provided for the first class. After that, we'll give you a list of what you'll need to purchase.",correct:true},
+      {text:"All materials are provided for the first class. After that, we'll give you a list of what you'll need purchase.",correct:false},
+      {text:"All materials is provided for the first class. After that, we'll give you a list of what you'll need to purchase.",correct:false}
+    ],
+    explanation:"All materials（所有材料）是複數，動詞用 are provided。need to + 原形動詞（need to purchase）—to 不能省略。"
+  },
+  {
+    context:"🛫 情境：你在機場辦理出境，安全檢查後找不到登機門。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, I'm looking for Gate C12. I've been walking for a while but I can't seem to find it."},
+      {speaker:'B',avatar:'👨',name:'Airport Staff',text:"Gate C12 is in the C terminal. You'll need to take the shuttle bus—it runs every eight minutes."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Oh no! My flight boards in twenty minutes. Will I make it in time?"},
+      {speaker:'B',avatar:'👨',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"You should be fine if you head to the shuttle stop right now. It's just down the hall to your left.",correct:true},
+      {text:"You should be fine if you'll head to the shuttle stop right now. It's just down the hall to your left.",correct:false},
+      {text:"You should fine if you head to the shuttle stop right now. It's just down the hall to your left.",correct:false}
+    ],
+    explanation:"if 引導的條件子句用現在式（you head），不用 will。should be fine（should + be，be 不可省略）。"
+  },
+  {
+    context:"🍱 情境：你在公司訂便當，幫同事詢問餐點選項。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'd like to place a group order for twelve people. Do you offer set lunch boxes?"},
+      {speaker:'B',avatar:'👩',name:'Restaurant Staff',text:"Yes, we have three options: chicken, pork, and vegetarian. Each comes with rice and two sides."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Could we mix and match? We have colleagues with dietary restrictions."},
+      {speaker:'B',avatar:'👩',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Of course! Just let us know how many of each you'd like when you confirm the order.",correct:true},
+      {text:"Of course! Just let us know how many of each you'd like when you'll confirm the order.",correct:false},
+      {text:"Of course! Just let we know how many of each you'd like when you confirm the order.",correct:false}
+    ],
+    explanation:"when 引導的時間子句用現在式（you confirm），不用 will。let us know（讓我們知道）—us 是受格，不是主格 we。"
+  },
+  {
+    context:"🎵 情境：你幫學校社團聯絡場地租借事宜。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'm calling on behalf of our school music club. We'd like to rent a rehearsal room this weekend."},
+      {speaker:'B',avatar:'👨',name:'Facility Manager',text:"Sure. Which day are you looking at, and for how many hours?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"We're hoping for Sunday afternoon, from two to five."},
+      {speaker:'B',avatar:'👨',name:'Manager',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Let me check the schedule. Yes, room B is available on Sunday from two to five-thirty if you need a bit more time.",correct:true},
+      {text:"Let me check the schedule. Yes, room B is available on Sunday from two to five-thirty if you'll need a bit more time.",correct:false},
+      {text:"Let me check the schedule. Yes, room B is available in Sunday from two to five-thirty if you need a bit more time.",correct:false}
+    ],
+    explanation:"on Sunday（星期日）用介系詞 on，不是 in。if 子句用現在式（you need），不用 will。"
+  },
+  {
+    context:"🧳 情境：你在旅館辦理退房，行李寄放。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Good morning. I'd like to check out, please. My name is Lin, Room 408."},
+      {speaker:'B',avatar:'👩',name:'Receptionist',text:"Certainly. Here's your final bill. Is there anything from the minibar or room service we should add?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"No, nothing extra. Could I leave my bags here until this afternoon? My flight is at six."},
+      {speaker:'B',avatar:'👩',name:'Receptionist',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Of course! We're happy to store your luggage. We'll give you a tag so you can collect it whenever you're ready.",correct:true},
+      {text:"Of course! We're happy to store your luggage. We'll give you a tag so you can collect it whenever you'll be ready.",correct:false},
+      {text:"Of course! We're happy to store your luggages. We'll give you a tag so you can collect it whenever you're ready.",correct:false}
+    ],
+    explanation:"luggage 是不可數名詞，沒有複數形式（不說 luggages）。whenever you're ready（隨時準備好就來取）—whenever 引導的子句用現在式，不用 will。"
+  },
+  {
+    context:"🌍 情境：學校交換生計畫，你和外國學生互相介紹。",
+    dialogue:[
+      {speaker:'A',avatar:'👧',name:'Exchange Student',text:"Hi! I'm Sarah, the exchange student from Germany. I just arrived yesterday."},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Welcome to Taiwan, Sarah! I'm your buddy for this semester. How are you finding it so far?"},
+      {speaker:'A',avatar:'👧',name:'Sarah',text:"Everyone is so friendly! But I'm a little worried about the language barrier."},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Don't worry! Most signs are in both Chinese and English, and I'll help translate whenever you need.",correct:true},
+      {text:"Don't worry! Most signs are in both Chinese and English, and I'll help to translate whenever you need.",correct:false},
+      {text:"Don't worry! Most signs are in both Chinese and English, and I'll help translate whenever you'll need.",correct:false}
+    ],
+    explanation:"help + 原形動詞（help translate），加 to 也可但不加更自然。whenever you need（隨時有需要）—whenever 子句用現在式，不用 will。"
+  },
+  {
+    context:"🏪 情境：你去便利商店詢問關於包裹取件。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, I received a notification that I have a package to pick up here."},
+      {speaker:'B',avatar:'👦',name:'Store Clerk',text:"Sure! Could I have your ID and the pick-up code from the notification?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Of course. Here's my ID, and the code is 8831."},
+      {speaker:'B',avatar:'👦',name:'Clerk',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Thank you. Let me retrieve your package from the storage area. It'll just take a moment.",correct:true},
+      {text:"Thank you. Let me to retrieve your package from the storage area. It'll just take a moment.",correct:false},
+      {text:"Thank you. Let me retrieve your package from storage area. It'll just take a moment.",correct:false}
+    ],
+    explanation:"Let me + 原形動詞（retrieve），不加 to。the storage area 需要定冠詞 the（特指那個存放區域）。"
+  },
+  {
+    context:"📝 情境：你向補習班諮詢課程，詢問師資和上課方式。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"I'm looking for an English conversation class. Could you tell me more about your program?"},
+      {speaker:'B',avatar:'👩',name:'Counselor',text:"We offer small group classes of five to eight students, led by native-speaking teachers."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"That sounds great. How are students assessed?"},
+      {speaker:'B',avatar:'👩',name:'Counselor',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Progress is evaluated through monthly speaking tests and a portfolio of written work.",correct:true},
+      {text:"Progress is evaluate through monthly speaking tests and a portfolio of written work.",correct:false},
+      {text:"Progress is evaluated through monthly speaking test and a portfolio of written work.",correct:false}
+    ],
+    explanation:"被動語態：is evaluated（is + p.p.），不能說 is evaluate。monthly speaking tests（每月口試）用複數，因為是持續多次的測驗。"
+  },
+  {
+    context:"🌊 情境：你在海灘度假，詢問水上活動安全規定。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'd like to try surfing today. Is it safe for beginners?"},
+      {speaker:'B',avatar:'👦',name:'Instructor',text:"Conditions are pretty good today. Have you ever surfed before?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"No, this would be my first time. Are there any safety rules I should know?"},
+      {speaker:'B',avatar:'👦',name:'Instructor',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Absolutely. Always stay within the designated area and never surf alone. We'll go over everything in the briefing.",correct:true},
+      {text:"Absolutely. Always stay in the designated area and never surf alone. We'll go over everything in the briefing.",correct:false},
+      {text:"Absolutely. Always stay within designated area and never surf alone. We'll go over everything in the briefing.",correct:false}
+    ],
+    explanation:"within the designated area（在指定範圍內）—within 表示「在...範圍之內」更精確，定冠詞 the 不可省。stay in 也可接受但語意略有不同。"
+  },
+  {
+    context:"🔧 情境：你聯絡水電工，家裡水管漏水。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hello, I have a plumbing emergency. There's water leaking from under my kitchen sink."},
+      {speaker:'B',avatar:'👨',name:'Plumber',text:"I see. How much water are we talking about? Is it a slow drip or is it flowing freely?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"It's more of a steady flow. I've turned off the water supply for now."},
+      {speaker:'B',avatar:'👨',name:'Plumber',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Good thinking. I can come over within the hour. It sounds like a pipe connection may have come loose.",correct:true},
+      {text:"Good thinking. I can come over within the hour. It sounds like a pipe connection may have came loose.",correct:false},
+      {text:"Good thinking. I can come over within an hour. It sounds like a pipe connection may have come loose.",correct:false}
+    ],
+    explanation:"may have come loose（可能已經鬆脫）—情態完成式 may have + p.p.，come 的 p.p. 還是 come（不是 came）。within the hour（就在這一小時內）是慣用語。"
+  },
+  {
+    context:"🎤 情境：你參加英語演講比賽，賽後和評審交流。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Judge',text:"Your speech was very well delivered. You have excellent pronunciation and good eye contact."},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Thank you so much. I've been practicing for weeks."},
+      {speaker:'A',avatar:'👩',name:'Judge',text:"Is there anything you feel you could improve on?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I think I could work on slowing down when I'm nervous. I tend to speak too quickly under pressure.",correct:true},
+      {text:"I think I could work on slow down when I'm nervous. I tend to speak too quickly under pressure.",correct:false},
+      {text:"I think I could work on slowing down when I'm nervous. I tend speaking too quickly under pressure.",correct:false}
+    ],
+    explanation:"work on + Ving（work on slowing down）—on 是介系詞，後接動名詞。tend to + 原形動詞（tend to speak），不接 Ving。"
+  },
+  {
+    context:"🚢 情境：你在旅行社預訂郵輪假期。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"I'm interested in booking a cruise for next spring. What do you currently have available?"},
+      {speaker:'B',avatar:'👩',name:'Travel Agent',text:"We have a seven-night Mediterranean cruise departing in April. It includes stops at four ports."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"That sounds wonderful. Are meals included in the package?"},
+      {speaker:'B',avatar:'👩',name:'Agent',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Breakfast and dinner are included, but lunch is not. Shore excursions are optional and priced separately.",correct:true},
+      {text:"Breakfast and dinner are included, but lunch is not. Shore excursions are optional and price separately.",correct:false},
+      {text:"Breakfast and dinner is included, but lunch is not. Shore excursions are optional and priced separately.",correct:false}
+    ],
+    explanation:"Breakfast and dinner（早餐和晚餐）是複數主詞，動詞用 are included。priced separately（另外計費）是形容詞用法（過去分詞作形容詞），不是動詞原形 price。"
+  },
+  {
+    context:"📡 情境：你向房東反映公寓Wi-Fi問題。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi Mr. Wu, sorry to bother you. The Wi-Fi in the apartment has been very slow for the past few days."},
+      {speaker:'B',avatar:'👨',name:'Landlord',text:"Oh, I'm sorry about that. Have you tried restarting the router?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Yes, I've tried that several times but it hasn't helped."},
+      {speaker:'B',avatar:'👨',name:'Landlord',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I'll contact the internet provider and have someone come to check the connection as soon as possible.",correct:true},
+      {text:"I'll contact the internet provider and have someone to come to check the connection as soon as possible.",correct:false},
+      {text:"I'll contact the internet provider and have someone comes to check the connection as soon as possible.",correct:false}
+    ],
+    explanation:"have someone + 原形動詞（have someone come）—使役動詞 have 後接受詞再接原形動詞，不加 to，也不用第三人稱 comes。"
+  },
+  {
+    context:"🌺 情境：你在花店為朋友的婚禮訂花束。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"I'd like to order a bridal bouquet for a wedding on the 20th. Is that enough notice?"},
+      {speaker:'B',avatar:'👩',name:'Florist',text:"Absolutely. We'd love to help. Do you have a color scheme or flower preference in mind?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"The bride loves soft pinks and whites. She's particularly fond of roses and peonies."},
+      {speaker:'B',avatar:'👩',name:'Florist',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Lovely choices. I can design something elegant using those flowers within your budget if you let me know the price range.",correct:true},
+      {text:"Lovely choices. I can design something elegant using those flowers within your budget if you'll let me know the price range.",correct:false},
+      {text:"Lovely choices. I can design something elegantly using those flowers within your budget if you let me know the price range.",correct:false}
+    ],
+    explanation:"if 子句用現在式（you let me know），不用 will。design something elegant—elegant 是形容詞修飾 something，不用副詞 elegantly。"
+  },
+  {
+    context:"🎯 情境：你在社區中心詢問語言課程。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I heard you offer free Japanese classes here. Is that right?"},
+      {speaker:'B',avatar:'👩',name:'Staff',text:"Yes, we do. Classes are held on Tuesday and Thursday evenings."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"I'm a complete beginner. Would I need any prior knowledge to join?"},
+      {speaker:'B',avatar:'👩',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Not at all. The beginner course assumes no previous knowledge, so you can start right away.",correct:true},
+      {text:"Not at all. The beginner course assumes no previous knowledge, so you can start right now.",correct:false},
+      {text:"Not at all. The beginner course assume no previous knowledge, so you can start right away.",correct:false}
+    ],
+    explanation:"The beginner course 是單數主詞，動詞 assumes 加 s。right away（馬上、立刻）是慣用語，right now 也可，但 right away 更常用於「可以即刻開始」的語境。"
+  },
+  {
+    context:"🧪 情境：學校科展，你向評審介紹自己的實驗。",
+    dialogue:[
+      {speaker:'A',avatar:'👨‍🔬',name:'Judge',text:"This is an impressive project. Could you walk me through your methodology?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Of course. I tested how different light sources affect the growth rate of bean sprouts over four weeks."},
+      {speaker:'A',avatar:'👨‍🔬',name:'Judge',text:"Interesting. What was your most significant finding?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Plants exposed to LED light grew 30% faster than those under fluorescent light, which was quite surprising.",correct:true},
+      {text:"Plants exposed to LED light growed 30% faster than those under fluorescent light, which was quite surprising.",correct:false},
+      {text:"Plants exposed to LED light grew 30% more fast than those under fluorescent light, which was quite surprising.",correct:false}
+    ],
+    explanation:"grow 的過去式是 grew（不規則動詞，不說 growed）。30% faster（快 30%）—fast 是單音節，比較級加 -er，不說 more fast。"
+  },
+  {
+    context:"🌙 情境：你在夜間市集向外國遊客介紹台灣小吃。",
+    dialogue:[
+      {speaker:'A',avatar:'👨',name:'Tourist',text:"There are so many options! I don't know where to start. What would you recommend?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"You should definitely try scallion pancakes—they're crispy, savory, and very popular here."},
+      {speaker:'A',avatar:'👨',name:'Tourist',text:"That sounds delicious. Is it spicy at all?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Not at all. It's quite mild. But if you want something spicy, I can take you to a stall that sells spicy chicken cutlets.",correct:true},
+      {text:"Not at all. It's quite mild. But if you'll want something spicy, I can take you to a stall that sells spicy chicken cutlets.",correct:false},
+      {text:"Not at all. It's quite mild. But if you want something spicy, I can take you to a stall that sell spicy chicken cutlets.",correct:false}
+    ],
+    explanation:"if 子句用現在式（you want），不用 will。a stall that sells（攤位是單數，sells 加 s）—關係子句中動詞隨先行詞變化。"
+  },
+  {
+    context:"🚀 情境：你參加英語夏令營，向營隊老師說明活動想法。",
+    dialogue:[
+      {speaker:'A',avatar:'👩‍🏫',name:'Camp Director',text:"We're planning the schedule for the final day. Any ideas for an activity the whole camp can enjoy?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"How about an international food fair? Everyone could bring a dish from their home country."},
+      {speaker:'A',avatar:'👩‍🏫',name:'Director',text:"That's a brilliant idea! Do you think you could help organize it?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I'd be happy to! I'll start by making a sign-up sheet so everyone knows what to bring.",correct:true},
+      {text:"I'd be happy to! I'll start by make a sign-up sheet so everyone knows what to bring.",correct:false},
+      {text:"I'd be happy to! I'll start by making a sign-up sheet so everyone know what to bring.",correct:false}
+    ],
+    explanation:"start by + Ving（start by making）—by 是介系詞，後接動名詞。everyone（每個人）是單數，動詞 knows 加 s。"
+  },
+  {
+    context:"🏊 情境：你替年幼的弟弟在游泳學校報名。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'd like to enroll my younger brother in swimming lessons. He's six years old and a complete beginner."},
+      {speaker:'B',avatar:'👩',name:'Swim School Staff',text:"We have a class for children aged five to eight on Saturday mornings. Does that work for your schedule?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Yes, that's perfect. How long is each session?"},
+      {speaker:'B',avatar:'👩',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Each class is forty-five minutes long, and we keep the group sizes small—no more than eight children per instructor.",correct:true},
+      {text:"Each class is forty-five minutes long, and we keep the group size small—no more than eight children per instructor.",correct:false},
+      {text:"Each class are forty-five minutes long, and we keep the group sizes small—no more than eight children per instructor.",correct:false}
+    ],
+    explanation:"Each class 是單數，be 動詞用 is（不是 are）。group sizes（班級規模）用複數是因為指多個班的規模，也可說 group size（單數，泛指規模這個概念），兩者均可。"
+  },
+  {
+    context:"🎻 情境：你詢問音樂廳一場演奏會的相關資訊。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hello, I'd like some information about the chamber music concert on the 18th."},
+      {speaker:'B',avatar:'👩',name:'Box Office',text:"Of course. The concert starts at seven-thirty and features works by Mozart and Brahms."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Are there any student discounts available?"},
+      {speaker:'B',avatar:'👩',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Yes, students with a valid ID can get twenty percent off the regular ticket price.",correct:true},
+      {text:"Yes, students with a valid ID can gets twenty percent off the regular ticket price.",correct:false},
+      {text:"Yes, students with a valid ID can get twenty percent of the regular ticket price.",correct:false}
+    ],
+    explanation:"can + 原形動詞（can get），不加 s（gets 是錯誤）。twenty percent off（打八折，即減少20%）用 off，off the price（從原價扣掉），不是 of the price（of 表「某部分」）。"
+  },
+  {
+    context:"🌱 情境：你在環保展覽中和工作人員交流。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Exhibit Staff',text:"Hi, welcome! Are you interested in learning about sustainable living?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Very much so. I've been trying to reduce my plastic use, but I'm not sure where to start."},
+      {speaker:'A',avatar:'👩',name:'Staff',text:"That's a great first step! What changes have you already made?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I've switched to reusable bags and a metal straw. I'm also trying to buy fewer packaged foods.",correct:true},
+      {text:"I've switch to reusable bags and a metal straw. I'm also trying to buy fewer packaged foods.",correct:false},
+      {text:"I've switched to reusable bags and a metal straw. I'm also trying to buy less packaged foods.",correct:false}
+    ],
+    explanation:"I've switched（have + p.p.，switched 是 switch 的過去分詞）。fewer 修飾可數名詞複數（fewer packaged foods，食物種類是可數），less 修飾不可數名詞。"
+  },
+  {
+    context:"🏰 情境：你在歷史古蹟詢問參觀資訊。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, is photography allowed inside the fort?"},
+      {speaker:'B',avatar:'👨',name:'Guard',text:"Photography is permitted in most areas, but flash photography is prohibited in the exhibition rooms."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Understood. Is there an audio guide available in English?"},
+      {speaker:'B',avatar:'👨',name:'Guard',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Yes, English audio guides can be rented at the main entrance for a small fee.",correct:true},
+      {text:"Yes, English audio guides can be rent at the main entrance for a small fee.",correct:false},
+      {text:"Yes, English audio guides can rented at the main entrance for a small fee.",correct:false}
+    ],
+    explanation:"被動語態：can be rented（can be + p.p.），p.p. 是 rented，不是原形 rent。被動語態中 be 不可省略。"
+  },
+  {
+    context:"🎲 情境：你和朋友討論週末計畫，提議去露天音樂節。",
+    dialogue:[
+      {speaker:'A',avatar:'👧',name:'Friend',text:"I'm so bored. There's nothing to do this weekend."},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Actually, there's an outdoor music festival happening at the park on Saturday. Want to go?"},
+      {speaker:'A',avatar:'👧',name:'Friend',text:"That sounds fun! Is it free, or do we need to buy tickets?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Entry is free, but some of the special performances require a paid ticket. I'll check online.",correct:true},
+      {text:"Entry is free, but some of the special performances require a paid ticket. I'll check on line.",correct:false},
+      {text:"Entry is free, but some of special performances require a paid ticket. I'll check online.",correct:false}
+    ],
+    explanation:"some of the special performances（一些特別表演）—some of 後接 the + 名詞複數。online（網路上）是一個詞，不是兩個詞（on line 意思不同）。"
+  },
+  {
+    context:"🧑‍💻 情境：你在找工作，詢問人力資源公司的服務。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"I've just graduated and I'm looking for my first full-time job. Can your agency help?"},
+      {speaker:'B',avatar:'👩',name:'HR Consultant',text:"Absolutely. We specialize in placing recent graduates. What field are you interested in?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"I studied communications and I'm interested in marketing or public relations."},
+      {speaker:'B',avatar:'👩',name:'Consultant',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Those are in high demand right now. I'll set up a profile for you and match you with relevant openings.",correct:true},
+      {text:"Those are in high demand right now. I'll set up a profile for you and match you with relevant opening.",correct:false},
+      {text:"Those are in high demands right now. I'll set up a profile for you and match you with relevant openings.",correct:false}
+    ],
+    explanation:"in high demand（需求量大）—demand 在此作不可數名詞，不加 s。relevant openings（相關職缺）用複數，因為有多個職缺。"
+  },
+  {
+    context:"🎊 情境：你幫公司籌辦年終派對，聯絡場地。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'm planning a year-end party for about fifty people. Do you have a private event space available?"},
+      {speaker:'B',avatar:'👩',name:'Venue Coordinator',text:"We do! Our banquet hall holds up to eighty guests and can be decorated according to your theme."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"That's perfect. Does catering need to be arranged separately?"},
+      {speaker:'B',avatar:'👩',name:'Coordinator',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"We offer in-house catering packages, or you're welcome to bring in your own caterer if you prefer.",correct:true},
+      {text:"We offer in-house catering packages, or you're welcome to bring your own caterer if you prefer.",correct:false},
+      {text:"We offer in-house catering package, or you're welcome to bring in your own caterer if you prefer.",correct:false}
+    ],
+    explanation:"bring in（引進、帶進來）是強調把外部餐飲帶入場地，bring 也可以但 bring in 更地道。catering packages（餐飲套餐）用複數。"
+  },
+  {
+    context:"🩺 情境：你在診所辦理轉診手續。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"My doctor here recommended I see a specialist. Could you help me arrange a referral to the regional hospital?"},
+      {speaker:'B',avatar:'👩',name:'Clinic Staff',text:"Of course. Do you have the specialist's name, or would you like us to recommend one?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"My doctor already recommended a Dr. Huang in the orthopedics department."},
+      {speaker:'B',avatar:'👩',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"In that case, I'll send your medical records to Dr. Huang's office and confirm an appointment time for you.",correct:true},
+      {text:"In that case, I'll send your medical records to Dr. Huang's office and confirm a appointment time for you.",correct:false},
+      {text:"In that case, I'll send your medical record to Dr. Huang's office and confirm an appointment time for you.",correct:false}
+    ],
+    explanation:"an appointment（一個預約）—appointment 以母音開頭，不定冠詞用 an。medical records（病歷）用複數。"
+  },
+  {
+    context:"🧁 情境：你在烘焙教室報名課程。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'd like to sign up for a baking class. I'm particularly interested in French pastries."},
+      {speaker:'B',avatar:'👩',name:'Instructor',text:"Great choice! Our French pastry course is six sessions, every Wednesday evening."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Do I need to have any experience?"},
+      {speaker:'B',avatar:'👩',name:'Instructor',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"No prior experience is needed. All tools and ingredients are provided, so just bring your enthusiasm!",correct:true},
+      {text:"No prior experience is needed. All tools and ingredient are provided, so just bring your enthusiasm!",correct:false},
+      {text:"No prior experiences are needed. All tools and ingredients are provided, so just bring your enthusiasm!",correct:false}
+    ],
+    explanation:"experience（經驗）作不可數名詞時不加 s。ingredients（食材）是複數可數名詞，要加 s。"
+  },
+  {
+    context:"🔍 情境：你在失物招領處詢問遺失物品。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I think I left my umbrella on the MRT this morning. Has anything been turned in?"},
+      {speaker:'B',avatar:'👩',name:'Staff',text:"We've had several items turned in today. Could you describe it?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"It's a dark blue folding umbrella with a wooden handle. It has my name written on the strap."},
+      {speaker:'B',avatar:'👩',name:'Staff',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Let me check in the back. We did receive a blue umbrella earlier—it matches your description.",correct:true},
+      {text:"Let me check in the back. We did received a blue umbrella earlier—it matches your description.",correct:false},
+      {text:"Let me check in the back. We did receive a blue umbrella earlier—it match your description.",correct:false}
+    ],
+    explanation:"did + 原形動詞（did receive）—強調語氣，did 後接原形，不加過去式。matches（與...相符）—主詞 it 是單數，動詞加 s。"
+  },
+  {
+    context:"🎓 情境：你和大學教授討論畢業論文方向。",
+    dialogue:[
+      {speaker:'A',avatar:'👨‍🏫',name:'Professor',text:"You've submitted a good topic proposal. Have you decided on your research approach yet?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"I'm leaning toward a qualitative approach—interviews and case studies rather than statistics."},
+      {speaker:'A',avatar:'👨‍🏫',name:'Professor',text:"That's a reasonable choice. What challenges do you anticipate?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I think finding willing participants might be difficult, and ensuring the reliability of the data could also be challenging.",correct:true},
+      {text:"I think finding willing participants might be difficult, and ensure the reliability of the data could also be challenging.",correct:false},
+      {text:"I think to find willing participants might be difficult, and ensuring the reliability of the data could also be challenging.",correct:false}
+    ],
+    explanation:"Finding（動名詞）和 ensuring（動名詞）是並列主詞，保持一致形式。think + Ving（think finding）—Ving 作主語比不定詞更自然。"
+  },
+  {
+    context:"🌤️ 情境：你致電天氣查詢服務，詢問週末天氣。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'm planning an outdoor event this Sunday. Could you give me a forecast for the Taipei area?"},
+      {speaker:'B',avatar:'👩',name:'Forecaster',text:"Sunday is looking partly cloudy with a high of about 26 degrees. There's a 30% chance of afternoon showers."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Should I prepare for rain just in case?"},
+      {speaker:'B',avatar:'👩',name:'Forecaster',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"It would be wise to have a backup plan or bring some canopies. The showers, if they occur, should be brief.",correct:true},
+      {text:"It would be wise to have a backup plan or bring some canopies. The showers, if they will occur, should be brief.",correct:false},
+      {text:"It would be wise having a backup plan or bring some canopies. The showers, if they occur, should be brief.",correct:false}
+    ],
+    explanation:"it would be wise to + 原形動詞（to have）—不用 Ving。if they occur（如果發生的話）—if 子句用現在式，不用 will。"
+  },
+  {
+    context:"🦮 情境：你詢問寵物醫院的看診安排。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'd like to make an appointment for my dog. He's been scratching a lot and I'm worried it might be an allergy."},
+      {speaker:'B',avatar:'👩',name:'Receptionist',text:"Of course. When would be a convenient time for you?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Would tomorrow afternoon be possible?"},
+      {speaker:'B',avatar:'👩',name:'Receptionist',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Let me check. We have a slot at two-thirty and another at four. Which would work better for you?",correct:true},
+      {text:"Let me check. We have a slot at two-thirty and another at four. Which would work best for you?",correct:false},
+      {text:"Let me check. We have a slot at two-thirty and another at four. Which would works better for you?",correct:false}
+    ],
+    explanation:"比較兩個選項用比較級 better（not best，best 是最高級，用於三者以上）。would + 原形動詞（would work），不加 s。"
+  },
+  {
+    context:"🛳️ 情境：你在遊輪上詢問服務人員行程安排。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, could you tell me what activities are scheduled for tomorrow?"},
+      {speaker:'B',avatar:'👩',name:'Crew Member',text:"Tomorrow we'll be docking at Okinawa from nine to four. There are optional shore excursions available."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Do I need to sign up in advance for the excursions?"},
+      {speaker:'B',avatar:'👩',name:'Crew Member',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Yes, spaces are limited, so we recommend booking at the excursion desk before eight this evening.",correct:true},
+      {text:"Yes, spaces are limited, so we recommend to book at the excursion desk before eight this evening.",correct:false},
+      {text:"Yes, spaces are limited, so we recommend booking at excursion desk before eight this evening.",correct:false}
+    ],
+    explanation:"recommend + Ving（recommend booking）—recommend 後接動名詞，不接 to + 原形。the excursion desk（那個行程櫃台）需要定冠詞 the。"
+  },
+  {
+    context:"🎭 情境：你和同學討論學校話劇的角色分配。",
+    dialogue:[
+      {speaker:'A',avatar:'👦',name:'Classmate',text:"The drama club is casting for the spring play. Are you going to audition?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"I'm thinking about it, but I'm nervous. I've never performed on stage before."},
+      {speaker:'A',avatar:'👦',name:'Classmate',text:"You should go for it! Which role are you considering?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I'm interested in the narrator role because I'm more comfortable speaking than acting.",correct:true},
+      {text:"I'm interested in the narrator role because I'm more comfortable to speak than acting.",correct:false},
+      {text:"I'm interested on the narrator role because I'm more comfortable speaking than acting.",correct:false}
+    ],
+    explanation:"be interested in（對...感興趣）固定用介系詞 in，不是 on。be comfortable + Ving（comfortable speaking）表「擅長/自在於做某事」，不用 to speak。"
+  },
+  {
+    context:"🌾 情境：你參加農場體驗活動，向農場主人詢問。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Good morning! We're here for the farm experience program. What will we be doing today?"},
+      {speaker:'B',avatar:'👨',name:'Farmer',text:"Welcome! This morning you'll help with harvesting vegetables, and after lunch we'll show you how to make tofu."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"That sounds amazing. Is there anything we should be careful about?"},
+      {speaker:'B',avatar:'👨',name:'Farmer',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Just be careful not to step on the crops, and please wash your hands before handling the vegetables.",correct:true},
+      {text:"Just be careful not step on the crops, and please wash your hands before handling the vegetables.",correct:false},
+      {text:"Just be careful not to step on the crops, and please wash your hands before handle the vegetables.",correct:false}
+    ],
+    explanation:"be careful not to + 原形動詞（not to step）。before + Ving（before handling）—before 是介系詞，後接動名詞。"
+  },
+  {
+    context:"💻 情境：你在圖書館使用電腦，向館員詢問使用規定。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Excuse me, how long can I use one of the library computers?"},
+      {speaker:'B',avatar:'👩',name:'Librarian',text:"Each session is limited to one hour. If no one is waiting, you may extend it for another thirty minutes."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Can I print documents here as well?"},
+      {speaker:'B',avatar:'👩',name:'Librarian',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Yes, printing is available at the service desk. It's five dollars per page for black and white, and ten for color.",correct:true},
+      {text:"Yes, printing is available at service desk. It's five dollars per page for black and white, and ten for color.",correct:false},
+      {text:"Yes, printing is available at the service desk. It's five dollar per page for black and white, and ten for color.",correct:false}
+    ],
+    explanation:"the service desk 需要定冠詞 the。five dollars（五元）是複數，不是 five dollar（dollar 是單數）。"
+  },
+  {
+    context:"🌠 情境：你和家人在山上觀星，向導遊詢問星座知識。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"The sky is so clear tonight! Could you point out some constellations?"},
+      {speaker:'B',avatar:'👨',name:'Guide',text:"Of course! That bright cluster to the north is the Big Dipper. Can you see the handle shape?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Yes! And what's that really bright star just above the horizon?"},
+      {speaker:'B',avatar:'👨',name:'Guide',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"That's Venus—it's actually a planet, not a star. It's one of the brightest objects in the night sky.",correct:true},
+      {text:"That's Venus—it's actually a planet, not a star. It's one of the most bright objects in the night sky.",correct:false},
+      {text:"That's Venus—it's actually a planet, not a star. It's one of the bright objects in the night sky.",correct:false}
+    ],
+    explanation:"brightest（最亮的）—bright 是單音節形容詞，最高級加 -est，不用 most bright。one of the + 最高級 + 複數名詞（one of the brightest objects）。"
+  },
+  {
+    context:"🏗️ 情境：你向建設公司詢問新建案的資訊。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I saw your advertisement for the new residential complex. Could I get more details?"},
+      {speaker:'B',avatar:'👩',name:'Sales Rep',text:"Of course! We have units ranging from one-bedroom to three-bedroom apartments. Which size are you interested in?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Probably a two-bedroom. What floor options are available?"},
+      {speaker:'B',avatar:'👩',name:'Sales Rep',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"We still have two-bedroom units on floors eight through fifteen. Would you like to schedule a viewing?",correct:true},
+      {text:"We still have two-bedroom units in floors eight through fifteen. Would you like to schedule a viewing?",correct:false},
+      {text:"We still have two-bedroom unit on floors eight through fifteen. Would you like to schedule a viewing?",correct:false}
+    ],
+    explanation:"on floors（在幾樓）—樓層用介系詞 on。two-bedroom units（兩房單位）用複數，因為有多個可選。"
+  },
+  {
+    context:"📣 情境：你致電廣播電台，報名參加電話問答節目。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'd like to participate in today's trivia segment. Is it too late to register?"},
+      {speaker:'B',avatar:'👩',name:'Radio Host',text:"You're just in time! We're accepting callers for the next ten minutes. What's your name and age?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"I'm Lin Wei, and I'm seventeen. I love music trivia especially."},
+      {speaker:'B',avatar:'👩',name:'Host',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Perfect! Today's topic is actually classic rock, so that should suit you well. Stay on the line.",correct:true},
+      {text:"Perfect! Today's topic is actually classic rock, so that should suit you good. Stay on the line.",correct:false},
+      {text:"Perfect! Today's topic is actually classic rock, so that should suits you well. Stay on the line.",correct:false}
+    ],
+    explanation:"suit you well（很適合你）—well 是副詞修飾動詞 suit，不是形容詞 good（good 修飾名詞）。should + 原形動詞 suit（不加 s）。"
+  },
+  {
+    context:"🧳 情境：你在海關被問及入境原因。",
+    dialogue:[
+      {speaker:'A',avatar:'👮',name:'Customs Officer',text:"Good afternoon. What is the purpose of your visit?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"I'm here for a two-week language program at a local university."},
+      {speaker:'A',avatar:'👮',name:'Officer',text:"Do you have your program acceptance letter with you?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Yes, I have it right here, along with my enrollment confirmation and accommodation details.",correct:true},
+      {text:"Yes, I have it right here, along with my enrollment confirmation and accommodate details.",correct:false},
+      {text:"Yes, I have it right here, along with my enrollment confirmation and accommodation detail.",correct:false}
+    ],
+    explanation:"accommodation（住宿）是名詞，不是動詞 accommodate。details（細節）用複數，因為有多項內容。"
+  },
+  {
+    context:"🍜 情境：你在餐廳協助外國朋友點餐，朋友有飲食限制。",
+    dialogue:[
+      {speaker:'A',avatar:'👦',name:'Friend',text:"I'm vegetarian, so I need to be careful. Could you help me order?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Of course! I'll ask the server for you."},
+      {speaker:'A',avatar:'👦',name:'Friend',text:"Can you also check if the soup contains any meat broth?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Sure! Excuse me—my friend is vegetarian. Could you tell us whether this soup is made with meat stock?",correct:true},
+      {text:"Sure! Excuse me—my friend is vegetarian. Could you tell us if this soup is made with meat stocks?",correct:false},
+      {text:"Sure! Excuse me—my friend is vegetarian. Could you tell us whether this soup was made with meat stock?",correct:false}
+    ],
+    explanation:"meat stock（肉高湯）通常作不可數名詞，不加 s。間接問句詢問現在製作方式用現在式（is made），不用過去式 was made。"
+  },
+  {
+    context:"🎙️ 情境：你正在接受學校廣播站的採訪，談論環保議題。",
+    dialogue:[
+      {speaker:'A',avatar:'👧',name:'Interviewer',text:"We're speaking with students about environmental action. What do you personally do to help the environment?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"I try to reduce waste by bringing reusable containers and avoiding single-use plastics."},
+      {speaker:'A',avatar:'👧',name:'Interviewer',text:"That's admirable. What do you think is the biggest challenge young people face in going green?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I think convenience is the biggest obstacle. Eco-friendly options are often less accessible or more expensive.",correct:true},
+      {text:"I think convenience is the most big obstacle. Eco-friendly options are often less accessible or more expensive.",correct:false},
+      {text:"I think convenience is the biggest obstacle. Eco-friendly options are often lesser accessible or more expensive.",correct:false}
+    ],
+    explanation:"biggest 是 big 的最高級（不說 most big）。less accessible（較不容易取得）—less 是 little 的比較級，修飾形容詞；不說 lesser（lesser 用於抽象或正式語境）。"
+  },
+  {
+    context:"🏪 情境：你在藥妝店詢問護膚品。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"I'm looking for a sunscreen suitable for sensitive skin. Could you recommend something?"},
+      {speaker:'B',avatar:'👩',name:'Beauty Advisor',text:"Of course. Do you prefer a chemical or mineral sunscreen?"},
+      {speaker:'A',avatar:'🧒',name:'You',text:"I'm not sure of the difference, to be honest."},
+      {speaker:'B',avatar:'👩',name:'Advisor',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Mineral sunscreen sits on top of the skin and reflects UV rays, making it gentler and ideal for sensitive skin.",correct:true},
+      {text:"Mineral sunscreen sits on top of the skin and reflects UV rays, make it gentler and ideal for sensitive skin.",correct:false},
+      {text:"Mineral sunscreen sit on top of the skin and reflects UV rays, making it gentler and ideal for sensitive skin.",correct:false}
+    ],
+    explanation:"Mineral sunscreen 是單數，動詞 sits 加 s。making it gentler（分詞構句，表示結果）—making 是現在分詞，不是原形 make。"
+  },
+  {
+    context:"🏔️ 情境：你向登山嚮導詢問路線難度和準備事項。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"We're planning to hike Jade Mountain next month. What level of fitness is required?"},
+      {speaker:'B',avatar:'👨',name:'Guide',text:"It's a challenging hike, so you'll need good cardiovascular fitness and strong legs."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"We've been training for about three months. What gear should we bring?"},
+      {speaker:'B',avatar:'👨',name:'Guide',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Layered clothing is essential since temperatures drop significantly at altitude. Trekking poles are also strongly recommended.",correct:true},
+      {text:"Layered clothing is essential since temperatures drop significant at altitude. Trekking poles are also strongly recommended.",correct:false},
+      {text:"Layered clothing is essential since temperatures drops significantly at altitude. Trekking poles are also strongly recommended.",correct:false}
+    ],
+    explanation:"drop significantly（顯著下降）—significantly 是副詞修飾動詞 drop。temperatures（氣溫）是複數主詞，動詞 drop 不加 s。"
+  },
+  {
+    context:"🎪 情境：你在活動現場幫忙引導觀眾，和工作人員協調。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Event Manager',text:"We need more volunteers near the east entrance. Can you head over there after your current post?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Sure. I'll finish up here in about five minutes and then head over."},
+      {speaker:'A',avatar:'👩',name:'Manager',text:"Great. Also, could you remind visitors to keep their wristbands visible at all times?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Of course. I'll make sure to inform each person as they pass through. Is there anything else?",correct:true},
+      {text:"Of course. I'll make sure to inform each person as they passes through. Is there anything else?",correct:false},
+      {text:"Of course. I'll make sure inform each person as they pass through. Is there anything else?",correct:false}
+    ],
+    explanation:"make sure to + 原形動詞（to inform）—to 不可省略。as they pass through—they 是複數，動詞 pass 不加 s。"
+  },
+  {
+    context:"🌺 情境：你代表學校參加國際交流活動，向外賓介紹台灣文化。",
+    dialogue:[
+      {speaker:'A',avatar:'👨',name:'Visitor',text:"I've heard that Taiwanese culture is a wonderful blend of influences. Could you elaborate?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Absolutely. Taiwan's culture is shaped by indigenous traditions, Chinese heritage, Japanese influence, and Western trends."},
+      {speaker:'A',avatar:'👨',name:'Visitor',text:"That's fascinating. Which aspect do you feel defines Taiwan's identity most?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I think it's the warmth and hospitality of the people—Taiwanese are known for being incredibly welcoming to visitors.",correct:true},
+      {text:"I think it's the warmth and hospitality of the people—Taiwanese are knew for being incredibly welcoming to visitors.",correct:false},
+      {text:"I think it's the warmth and hospitality of the people—Taiwanese are known for to be incredibly welcoming to visitors.",correct:false}
+    ],
+    explanation:"be known for + Ving（known for being）—for 是介系詞，後接動名詞。knew 是 know 的過去式，不能用在 are knew（被動應是 are known）。"
+  },
+  {
+    context:"📦 情境：你在網購平台聯絡賣家，詢問退換貨政策。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I received the jacket I ordered, but it doesn't fit properly. What's your return policy?"},
+      {speaker:'B',avatar:'👩',name:'Seller',text:"We accept returns within fourteen days of delivery, provided the item is unworn and in original packaging."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"I only tried it on once. Does that count as unworn?"},
+      {speaker:'B',avatar:'👩',name:'Seller',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Trying it on is fine as long as there's no damage or odor. Please include the original tags when you send it back.",correct:true},
+      {text:"Trying it on is fine as long as there's no damage or odor. Please include original tags when you send it back.",correct:false},
+      {text:"Trying it on is fine as long as there's no damage or odor. Please include the original tags when you'll send it back.",correct:false}
+    ],
+    explanation:"the original tags（原始標籤）需要定冠詞 the（指的是特定那件衣服的標籤）。when you send it back—when 子句用現在式，不用 will。"
+  },
+  {
+    context:"🏄 情境：你在海外學英語，和同學討論週末計劃。",
+    dialogue:[
+      {speaker:'A',avatar:'👧',name:'Classmate',text:"A few of us are going to the farmers' market on Sunday. Would you like to join?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"I'd love to! I've never been to one. What can I expect?"},
+      {speaker:'A',avatar:'👧',name:'Classmate',text:"There are local vendors selling fresh produce, homemade jams, crafts, and street food."},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"That sounds wonderful. Should I bring cash, or do most vendors accept card payments?",correct:true},
+      {text:"That sounds wonderful. Should I bring cash, or do most vendor accept card payments?",correct:false},
+      {text:"That sounds wonderful. Should I bring cash, or does most vendors accept card payments?",correct:false}
+    ],
+    explanation:"most vendors（大多數攤販）是複數主詞，助動詞用 do（不是 does）。vendors 是複數名詞（不是 vendor）。"
+  },
+  {
+    context:"🎓 情境：你參加大學開放日，向招生老師提問。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Admissions Tutor',text:"Welcome to our open day! Do you have any questions about the program?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Yes, I'm interested in your journalism course. What kind of work experience do students typically gain?"},
+      {speaker:'A',avatar:'👩',name:'Tutor',text:"Students complete internships at local media outlets and produce their own news segments."},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"That's really impressive. Is it possible to do an internship abroad as part of the program?",correct:true},
+      {text:"That's really impressive. Is it possible to do an internship abroad as part in the program?",correct:false},
+      {text:"That's really impressive. Is it possible doing an internship abroad as part of the program?",correct:false}
+    ],
+    explanation:"It is possible to + 原形動詞（to do）—不定詞，不是 Ving（doing）。as part of（作為...的一部分）是固定說法，不是 as part in。"
+  },
+  {
+    context:"🌅 情境：你在海外青年旅館認識旅行夥伴，計畫隔天行程。",
+    dialogue:[
+      {speaker:'A',avatar:'👦',name:'Traveler',text:"I'm heading to the old town tomorrow. Want to come along?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"I'd love to! I've heard the architecture there is stunning."},
+      {speaker:'A',avatar:'👦',name:'Traveler',text:"It really is. We should get there early to avoid the crowds."},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Agreed. How about we meet in the lobby at eight and grab breakfast on the way?",correct:true},
+      {text:"Agreed. How about we meet in lobby at eight and grab breakfast on the way?",correct:false},
+      {text:"Agreed. How about we meet in the lobby at eight and grab breakfast in the way?",correct:false}
+    ],
+    explanation:"the lobby（大廳）需要定冠詞 the。on the way（在途中）是固定說法，不是 in the way（on the way 表示「在前往的途中」）。"
+  },
+  {
+    context:"🔑 情境：你入住民宿，向房東了解住宿規定。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Thank you for having us. Could you go over the house rules before we settle in?"},
+      {speaker:'B',avatar:'👩',name:'Host',text:"Of course! Quiet hours are from ten at night to eight in the morning. No smoking inside."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Understood. Is there a curfew for returning at night?"},
+      {speaker:'B',avatar:'👩',name:'Host',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"No curfew, but please try to be quiet when coming in late so as not to disturb the other guests.",correct:true},
+      {text:"No curfew, but please try to be quiet when coming in late so as to not disturb the other guests.",correct:false},
+      {text:"No curfew, but please try to be quiet when coming in late so as not disturb the other guests.",correct:false}
+    ],
+    explanation:"so as not to + 原形動詞（so as not to disturb）是固定句型，表示「以免...」。not 放在 to 前（not to），不是 to not，也不能省略 to。"
+  },
+  {
+    context:"🌿 情境：你向社區園藝社諮詢如何加入。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"I noticed the community garden and I'd love to get involved. How does one join?"},
+      {speaker:'B',avatar:'👨',name:'Garden Coordinator',text:"We'd love to have you! There's a small annual fee, and members take turns looking after designated plots."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"I don't have much gardening experience. Is that a problem?"},
+      {speaker:'B',avatar:'👨',name:'Coordinator',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Not at all. Many of our members started as beginners. We offer workshops throughout the year to help people learn.",correct:true},
+      {text:"Not at all. Many of our members started as beginners. We offer workshops through the year to help people learn.",correct:false},
+      {text:"Not at all. Many of our members started as beginners. We offer workshop throughout the year to help people learn.",correct:false}
+    ],
+    explanation:"throughout the year（全年）—throughout 表示「貫穿整個時間段」，through the year 雖然文法上正確但語意略弱。workshops 是複數（多個工作坊）。"
+  },
+  {
+    context:"💡 情境：你參加創業說明會，向講師提問。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Speaker',text:"We've covered the basics of starting a business. Any questions before we wrap up?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Yes—what do you think is the most common reason why startups fail in their first year?"},
+      {speaker:'A',avatar:'👩',name:'Speaker',text:"Great question. I'd say it's usually a combination of poor cash flow management and underestimating competition."},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"That's really insightful. Would you recommend any books or resources for someone just starting out?",correct:true},
+      {text:"That's really insightful. Would you recommend any books or resources for someone just starting?",correct:false},
+      {text:"That's really insightful. Would you recommend some books or resources for someone just starting out?",correct:false}
+    ],
+    explanation:"any books or resources（任何書籍或資源）—疑問句中用 any，不用 some（some 用於肯定句或禮貌請求）。starting out（剛起步）是固定片語，不說 just starting。"
+  },
+  {
+    context:"📸 情境：你在國家公園詢問拍攝野生動物的規定。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"We're hoping to photograph some wildlife. Are there any restrictions we should know about?"},
+      {speaker:'B',avatar:'👩',name:'Ranger',text:"Please stay on marked trails at all times and keep a safe distance from any animals you encounter."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"Of course. What distance is considered safe for, say, deer?"},
+      {speaker:'B',avatar:'👩',name:'Ranger',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"For deer, we recommend staying at least thirty meters away. Never approach or feed wild animals.",correct:true},
+      {text:"For deer, we recommend to stay at least thirty meters away. Never approach or feed wild animals.",correct:false},
+      {text:"For deer, we recommend staying at least thirty meter away. Never approach or feed wild animals.",correct:false}
+    ],
+    explanation:"recommend + Ving（recommend staying）—recommend 後接動名詞，不接 to + 原形。thirty meters（三十公尺）是複數，不是 thirty meter。"
+  },
+  {
+    context:"🧩 情境：你在社區活動中協助策劃遊戲，向參與者說明規則。",
+    dialogue:[
+      {speaker:'A',avatar:'👧',name:'Participant',text:"Could you explain how the game works? I've never played this before."},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Of course! Each team gets a set of clue cards. You have to figure out where the treasure is hidden."},
+      {speaker:'A',avatar:'👧',name:'Participant',text:"How much time do we have?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"You have thirty minutes. Once the timer starts, you can use any clues on your card to narrow down the location.",correct:true},
+      {text:"You have thirty minutes. Once the timer will start, you can use any clues on your card to narrow down the location.",correct:false},
+      {text:"You have thirty minutes. Once the timer starts, you can use any clues in your card to narrow down location.",correct:false}
+    ],
+    explanation:"once 引導的時間子句用現在式（the timer starts），不用 will。on your card（在你的卡片上）—on 指在某表面上。narrow down the location 需要定冠詞 the。"
+  },
+  {
+    context:"☕ 情境：你在咖啡廳和商業夥伴開會，討論合作計畫。",
+    dialogue:[
+      {speaker:'A',avatar:'👨',name:'Partner',text:"I've reviewed your proposal and I'm quite impressed. There are a few details I'd like to discuss, though."},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Of course! I'm open to any suggestions or modifications."},
+      {speaker:'A',avatar:'👨',name:'Partner',text:"The timeline seems ambitious. Can it be adjusted if needed?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Absolutely. The timeline is flexible, and I'm happy to revise it based on your feedback.",correct:true},
+      {text:"Absolutely. The timeline is flexible, and I'm happy to revise it based in your feedback.",correct:false},
+      {text:"Absolutely. The timeline is flexible, and I'm happy to revise it basing on your feedback.",correct:false}
+    ],
+    explanation:"based on（根據...）是固定介系詞搭配，不是 based in。basing on 不是正確用法（based on 是形容詞片語修飾 it）。"
+  },
+  {
+    context:"🚴 情境：你在租借單車前，向店員詢問路線和規定。",
+    dialogue:[
+      {speaker:'A',avatar:'🧒',name:'You',text:"Hi, I'd like to rent a bike for the afternoon. Are there any good cycling routes nearby?"},
+      {speaker:'B',avatar:'👩',name:'Shop Clerk',text:"Definitely! The riverside path is very popular—it's about twelve kilometers and mostly flat."},
+      {speaker:'A',avatar:'🧒',name:'You',text:"That sounds perfect. What do I need to bring, and are there any rules I should know?"},
+      {speaker:'B',avatar:'👩',name:'Clerk',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Just bring your ID for the deposit. Helmets are mandatory by law, and we provide them free of charge.",correct:true},
+      {text:"Just bring your ID for the deposit. Helmets are mandatory by law, and we provide it free of charge.",correct:false},
+      {text:"Just bring your ID for deposit. Helmets are mandatory by the law, and we provide them free of charge.",correct:false}
+    ],
+    explanation:"helmets（安全帽，複數）—them（複數代名詞）。for the deposit（押金）需要定冠詞 the。by law（依法）是固定說法，不加 the（不說 by the law）。"
+  },
+  {
+    context:"🎠 情境：你帶外國朋友參加台灣廟會，介紹習俗。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Friend',text:"This is incredible! What's the significance of all the lanterns and incense?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Lanterns represent good luck and guidance, while incense is used as an offering to the gods."},
+      {speaker:'A',avatar:'👩',name:'Friend',text:"Is it okay for non-believers to join in the activities?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Absolutely! Everyone is welcome to participate. Just be respectful and follow what others are doing.",correct:true},
+      {text:"Absolutely! Everyone are welcome to participate. Just be respectful and follow what others are doing.",correct:false},
+      {text:"Absolutely! Everyone is welcome to participate. Just be respectful and follow what other are doing.",correct:false}
+    ],
+    explanation:"Everyone 是單數代名詞，be 動詞用 is（Everyone is welcome）。others（其他人）是複數代名詞，be 動詞用 are（others are doing）。"
+  },
+  {
+    context:"🏫 情境：你在學校英語角和外籍訪客閒聊，分享學習英語的經驗。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Visitor',text:"Your English is very impressive! How long have you been studying?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Thank you! I've been studying for about eight years, but I really started improving when I began watching English shows."},
+      {speaker:'A',avatar:'👩',name:'Visitor',text:"That's a great strategy. What do you find most challenging about English?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"For me, it's idiomatic expressions—they don't always translate directly, so I have to learn them in context.",correct:true},
+      {text:"For me, it's idiomatic expressions—they don't always translate direct, so I have to learn them in context.",correct:false},
+      {text:"For me, it's idiomatic expressions—they don't always translate directly, so I have to learn it in context.",correct:false}
+    ],
+    explanation:"translate directly（直接翻譯）—directly 是副詞修飾動詞，不是形容詞 direct（修飾名詞）。them 指代複數的 idiomatic expressions，不是 it。"
+  },
+  {
+    context:"🌻 情境：你在農夫市集擔任攤位義工，向顧客介紹有機農產品。",
+    dialogue:[
+      {speaker:'A',avatar:'👨',name:'Customer',text:"Are all the products here organically grown?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Yes, everything on this stall is certified organic. We work directly with local farmers."},
+      {speaker:'A',avatar:'👨',name:'Customer',text:"Impressive! What would you recommend for someone cooking for the first time?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I'd suggest starting with cherry tomatoes and sweet potatoes—they're easy to cook and very versatile.",correct:true},
+      {text:"I'd suggest starting with cherry tomatoes and sweet potato—they're easy to cook and very versatile.",correct:false},
+      {text:"I'd suggest to start with cherry tomatoes and sweet potatoes—they're easy to cook and very versatile.",correct:false}
+    ],
+    explanation:"suggest + Ving（suggest starting）—suggest 後接動名詞，不接 to + 原形。sweet potatoes（地瓜）是複數（有多種/多顆）。"
+  },
+  {
+    context:"🎡 情境：你在遊樂園擔任旅遊大使，協助遊客解決問題。",
+    dialogue:[
+      {speaker:'A',avatar:'👧',name:'Visitor',text:"Excuse me, my daughter is afraid of heights. Which rides would be suitable for her?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"No problem! We have several family-friendly options that are low to the ground."},
+      {speaker:'A',avatar:'👧',name:'Visitor',text:"That's a relief. Could you also tell me where the closest restroom is?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Of course! There's one just around the corner, next to the ice cream stand. It's clearly marked on your map.",correct:true},
+      {text:"Of course! There's one just around corner, next to the ice cream stand. It's clearly marked on your map.",correct:false},
+      {text:"Of course! There's one just around the corner, next to the ice cream stand. It's clear marked on your map.",correct:false}
+    ],
+    explanation:"around the corner（轉角處）固定說法，the 不可省。clearly marked（清楚標示）—clearly 是副詞修飾過去分詞 marked，不是形容詞 clear。"
+  },
+  {
+    context:"🌐 情境：你在網路研討會上，以英語向國際聽眾提問。",
+    dialogue:[
+      {speaker:'A',avatar:'👨‍💼',name:'Speaker',text:"That concludes my presentation on digital marketing trends. I'd now like to open it up for questions."},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Thank you for the insightful talk. My question is about the role of short-form video content."},
+      {speaker:'A',avatar:'👨‍💼',name:'Speaker',text:"Great question. Go ahead!"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Do you think short-form videos will eventually replace traditional advertising, or will they complement each other?",correct:true},
+      {text:"Do you think short-form videos will eventual replace traditional advertising, or will they complement each other?",correct:false},
+      {text:"Do you think short-form videos will eventually replace traditional advertising, or they will complement each other?",correct:false}
+    ],
+    explanation:"eventually（最終）是副詞修飾動詞 replace，不是形容詞 eventual（修飾名詞）。or 連接的並列句保持語序一致：will they（疑問語序）。"
+  },
+  {
+    context:"🎨 情境：你在美術館義賣活動中協助接待，向訪客說明作品。",
+    dialogue:[
+      {speaker:'A',avatar:'👨',name:'Visitor',text:"This piece is striking. Could you tell me a bit about the artist?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Certainly. This work is by a local artist named Wu Ching. She's been painting for over twenty years."},
+      {speaker:'A',avatar:'👨',name:'Visitor',text:"Her use of color is extraordinary. Is this piece available for purchase?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Yes, it is. All proceeds from today's event go to a local children's charity.",correct:true},
+      {text:"Yes, it is. All proceed from today's event goes to a local children's charity.",correct:false},
+      {text:"Yes, it does. All proceeds from today's event go to a local children's charity.",correct:false}
+    ],
+    explanation:"Is this piece available? 用 be 動詞問，回答 Yes, it is.（不是 does）。All proceeds（全部收益）是複數主詞，動詞 go 不加 s（proceeds 是 proceed 的複數名詞）。"
+  },
+  {
+    context:"🗣️ 情境：你在語言交流活動中，和母語者練習英文對話。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Language Partner',text:"Your fluency has improved a lot since we first started practicing together!"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Thank you! I've been making a conscious effort to think in English rather than translating in my head."},
+      {speaker:'A',avatar:'👩',name:'Partner',text:"That's exactly the right approach. Is there a particular area you want to focus on today?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"I'd like to work on using more natural expressions. Sometimes I feel my sentences sound too formal.",correct:true},
+      {text:"I'd like to work on using more natural expressions. Sometimes I feel my sentences sound too formally.",correct:false},
+      {text:"I'd like to work in using more natural expressions. Sometimes I feel my sentences sound too formal.",correct:false}
+    ],
+    explanation:"work on + Ving（work on using）—on 是固定介系詞。sound + 形容詞（sound too formal）—sound 是連綴動詞，接形容詞，不是副詞 formally。"
+  },
+  {
+    context:"🏙️ 情境：你在城市規劃論壇上，以學生代表身份發表意見。",
+    dialogue:[
+      {speaker:'A',avatar:'👨‍💼',name:'Moderator',text:"We'd like to hear from young people. What changes would make your city more livable?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"Thank you for the opportunity. I believe expanding public transportation would have the greatest impact."},
+      {speaker:'A',avatar:'👨‍💼',name:'Moderator',text:"Could you elaborate on what specific improvements you have in mind?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"Firstly, increasing the frequency of bus services, and secondly, extending metro lines to suburban areas.",correct:true},
+      {text:"Firstly, increase the frequency of bus services, and secondly, extending metro lines to suburban areas.",correct:false},
+      {text:"Firstly, increasing the frequency of bus services, and secondly, extend metro lines to suburban areas.",correct:false}
+    ],
+    explanation:"並列結構要一致：increasing...and extending（兩個動名詞），不能混用原形（increase）或混用動名詞（extending）和原形（extend）。"
+  },
+  {
+    context:"🌊 情境：你和環保組織志工一起進行海灘清潔活動。",
+    dialogue:[
+      {speaker:'A',avatar:'👩',name:'Volunteer Coordinator',text:"Thank you all for coming today. We've collected over fifty kilograms of trash so far!"},
+      {speaker:'B',avatar:'🧒',name:'You',text:"That's incredible. It's sad to see how much plastic ends up on the beach."},
+      {speaker:'A',avatar:'👩',name:'Coordinator',text:"Exactly. Do you have any ideas for how we can raise more awareness in the community?"},
+      {speaker:'B',avatar:'🧒',name:'You',text:'___',isQuestion:true}
+    ],
+    options:[
+      {text:"We could partner with local schools to run educational workshops, and post photos of our cleanup on social media to inspire others.",correct:true},
+      {text:"We could partner with local schools to run educational workshops, and post photos of our cleanup on social media to inspire other.",correct:false},
+      {text:"We could partner with local schools to running educational workshops, and post photos of our cleanup on social media to inspire others.",correct:false}
+    ],
+    explanation:"could + 原形動詞（partner、post）—並列原形動詞，不用 running。others（其他人）是複數代名詞（不是 other，other 是形容詞需接名詞）。"
   },
 ];
 

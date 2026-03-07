@@ -194,6 +194,115 @@ const BASIC_Q = [
   {before:"He",blank:"doesn't",after:"like cold weather.",options:["doesn't","don't","isn't","aren't"],hint:"💡 He 的否定助動詞是什麼？",explanation:"He 是第三人稱單數，否定用 doesn't，後接原形動詞。"},
   {before:"We",blank:"don't",after:"have homework today.",options:["don't","doesn't","isn't","aren't"],hint:"💡 We 的否定助動詞是什麼？",explanation:"We 是複數，否定用 don't。"},
   {before:"It",blank:"is",after:"raining outside.",options:["am","is","are","were"],hint:"💡 It = 第三人稱單數",explanation:"It 是第三人稱單數，be 動詞用 is。"},
+  {before:"The dog",blank:"is",after:"barking loudly.",options:["am","is","are","was"],hint:"💡 The dog = 單數動物",explanation:"狗狗是單數，用 is。"},
+  {before:"My friends",blank:"are",after:"playing soccer.",options:["am","is","are","were"],hint:"💡 My friends = 複數",explanation:"朋友們是複數，用 are。"},
+  {before:"The sky",blank:"is",after:"blue today.",options:["am","is","are","was"],hint:"💡 The sky = 單數",explanation:"天空是單數，用 is。"},
+  {before:"We",blank:"were",after:"happy at the party.",options:["is","are","was","were"],hint:"💡 過去式複數",explanation:"我們過去用 were。"},
+  {before:"The bird",blank:"can",after:"fly high.",options:["can","cans","is","are"],hint:"💡 表示能力",explanation:"鳥兒會飛，用 can。"},
+  {before:"You",blank:"will",after:"like this cake.",options:["will","wills","is","was"],hint:"💡 未來式",explanation:"你會喜歡，用 will。"},
+  {before:"She",blank:"should",after:"drink more water.",options:["should","shoulds","are","is"],hint:"💡 表示建議",explanation:"她應該多喝水，用 should。"},
+  {before:"They",blank:"must",after:"go to bed now.",options:["must","musts","are","is"],hint:"💡 表示必須",explanation:"他們必須睡覺，用 must。"},
+  {before:"Does he",blank:"have",after:"a new bike?",options:["have","has","is","are"],hint:"💡 Does 問句",explanation:"Does 他有… 用 have（原形）。"},
+  {before:"He",blank:"doesn't",after:"eat candy.",options:["doesn't","don't","isn't","aren't"],hint:"💡 He 的否定",explanation:"他不吃糖，用 doesn't。"},
+  {before:"The flowers",blank:"are",after:"beautiful.",options:["am","is","are","was"],hint:"💡 複數花朵",explanation:"花兒們是複數，用 are。"},
+  {before:"Yesterday I",blank:"was",after:"sick.",options:["is","are","was","were"],hint:"💡 Yesterday + I",explanation:"昨天我用 was。"},
+  {before:"The boys",blank:"were",after:"running fast.",options:["is","are","was","were"],hint:"💡 過去式複數男孩",explanation:"男孩們過去用 were。"},
+  {before:"My mom",blank:"can",after:"cook delicious food.",options:["can","cans","is","are"],hint:"💡 媽媽的能力",explanation:"媽媽會煮飯，用 can。"},
+  {before:"Tomorrow we",blank:"will",after:"visit grandma.",options:["will","wills","is","was"],hint:"💡 未來式 we",explanation:"明天我們用 will。"},
+  {before:"You",blank:"should",after:"brush your teeth.",options:["should","shoulds","are","is"],hint:"💡 每天建議",explanation:"你應該刷牙，用 should。"},
+  {before:"We",blank:"must",after:"finish homework.",options:["must","musts","are","is"],hint:"💡 必須做的事",explanation:"我們必須寫作業，用 must。"},
+  {before:"Does the cat",blank:"have",after:"a ball?",options:["have","has","is","are"],hint:"💡 問貓咪",explanation:"貓咪有球嗎？用 have。"},
+  {before:"She",blank:"doesn't",after:"like vegetables.",options:["doesn't","don't","isn't","aren't"],hint:"💡 She 的否定",explanation:"她不喜歡蔬菜，用 doesn't。"},
+  {before:"The sun",blank:"is",after:"shining bright.",options:["am","is","are","was"],hint:"💡 太陽",explanation:"太陽在發光，用 is。"},
+  {before:"Birds",blank:"are",after:"flying in the sky.",options:["am","is","are","was"],hint:"💡 複數鳥",explanation:"鳥兒們在飛，用 are。"},
+  {before:"I",blank:"am",after:"a big boy now.",options:["am","is","are","was"],hint:"💡 I 是大男孩",explanation:"我現在是大男孩，用 am。"},
+  {before:"The teacher",blank:"is",after:"kind.",options:["am","is","are","was"],hint:"💡 老師單數",explanation:"老師很親切，用 is。"},
+  {before:"My toys",blank:"are",after:"on the floor.",options:["am","is","are","was"],hint:"💡 玩具複數",explanation:"玩具們在地上，用 are。"},
+  {before:"Last night it",blank:"was",after:"rainy.",options:["is","are","was","were"],hint:"💡 昨晚",explanation:"昨晚下雨，用 was。"},
+  {before:"The kids",blank:"were",after:"laughing.",options:["is","are","was","were"],hint:"💡 小孩過去",explanation:"小孩們在笑，用 were。"},
+  {before:"The monkey",blank:"can",after:"climb trees.",options:["can","cans","is","are"],hint:"💡 猴子能力",explanation:"猴子會爬樹，用 can。"},
+  {before:"We",blank:"will",after:"have fun!",options:["will","wills","is","was"],hint:"💡 未來快樂",explanation:"我們會很快樂，用 will。"},
+  {before:"You",blank:"should",after:"share your toys.",options:["should","shoulds","are","is"],hint:"💡 分享建議",explanation:"你應該分享玩具，用 should。"},
+  {before:"Children",blank:"must",after:"listen to teachers.",options:["must","musts","are","is"],hint:"💡 必須聽話",explanation:"小孩必須聽老師，用 must。"},
+  {before:"Does your dad",blank:"have",after:"a car?",options:["have","has","is","are"],hint:"💡 爸爸的車",explanation:"你爸爸有車嗎？用 have。"},
+  {before:"He",blank:"doesn't",after:"play video games.",options:["doesn't","don't","isn't","aren't"],hint:"💡 他不玩遊戲",explanation:"他不玩電動，用 doesn't。"},
+  {before:"The elephant",blank:"is",after:"big and gray.",options:["am","is","are","was"],hint:"💡 大象",explanation:"大象又大又灰，用 is。"},
+  {before:"Stars",blank:"are",after:"in the sky.",options:["am","is","are","was"],hint:"💡 星星複數",explanation:"星星在天上，用 are。"},
+  {before:"I",blank:"am",after:"excited for school.",options:["am","is","are","was"],hint:"💡 我興奮",explanation:"我對上學很興奮，用 am。"},
+  {before:"The cake",blank:"is",after:"sweet.",options:["am","is","are","was"],hint:"💡 蛋糕",explanation:"蛋糕很甜，用 is。"},
+  {before:"My family",blank:"is",after:"having dinner.",options:["am","is","are","was"],hint:"💡 家庭單數",explanation:"我家正在吃飯，用 is。"},
+  {before:"The puppies",blank:"are",after:"cute and playful.",options:["am","is","are","was"],hint:"💡 小狗複數",explanation:"小狗們又可愛又頑皮，用 are。"},
+  {before:"Yesterday we",blank:"were",after:"at the zoo.",options:["is","are","was","were"],hint:"💡 昨天去動物園",explanation:"昨天我們在動物園，用 were。"},
+  {before:"The fish",blank:"can",after:"swim fast.",options:["can","cans","is","are"],hint:"💡 魚會游泳",explanation:"魚兒游得很快，用 can。"},
+  {before:"Next week I",blank:"will",after:"go to the beach.",options:["will","wills","is","was"],hint:"💡 下週去海邊",explanation:"下週我會去海邊，用 will。"},
+  {before:"You",blank:"should",after:"say thank you.",options:["should","shoulds","are","is"],hint:"💡 說謝謝",explanation:"你應該說謝謝，用 should。"},
+  {before:"We",blank:"must",after:"be kind to animals.",options:["must","musts","are","is"],hint:"💡 對動物好",explanation:"我們必須對動物好，用 must。"},
+  {before:"Does the rabbit",blank:"have",after:"long ears?",options:["have","has","is","are"],hint:"💡 兔子耳朵",explanation:"兔子有長耳朵嗎？用 have。"},
+  {before:"She",blank:"doesn't",after:"fear the dark.",options:["doesn't","don't","isn't","aren't"],hint:"💡 她不怕黑",explanation:"她不怕黑，用 doesn't。"},
+  {before:"The rainbow",blank:"is",after:"colorful.",options:["am","is","are","was"],hint:"💡 彩虹",explanation:"彩虹很漂亮，用 is。"},
+  {before:"Apples",blank:"are",after:"healthy food.",options:["am","is","are","was"],hint:"💡 蘋果健康",explanation:"蘋果是健康食物，用 are。"},
+  {before:"I",blank:"am",after:"good at drawing.",options:["am","is","are","was"],hint:"💡 我會畫畫",explanation:"我很會畫畫，用 am。"},
+  {before:"The lion",blank:"is",after:"the king of the jungle.",options:["am","is","are","was"],hint:"💡 獅子王",explanation:"獅子是叢林之王，用 is。"},
+  {before:"The students",blank:"are",after:"studying hard.",options:["am","is","are","was"],hint:"💡 學生們努力",explanation:"學生們在努力讀書，用 are。"},
+  {before:"Last summer it",blank:"was",after:"very hot.",options:["is","are","was","were"],hint:"💡 去年夏天熱",explanation:"去年夏天很熱，用 was。"},
+  {before:"The girls",blank:"were",after:"dancing.",options:["is","are","was","were"],hint:"💡 女孩們跳舞",explanation:"女孩們在跳舞，用 were。"},
+  {before:"My brother",blank:"can",after:"ride a bike.",options:["can","cans","is","are"],hint:"💡 哥哥會騎車",explanation:"哥哥會騎腳踏車，用 can。"},
+  {before:"Tomorrow you",blank:"will",after:"meet new friends.",options:["will","wills","is","was"],hint:"💡 明天見朋友",explanation:"明天你會認識新朋友，用 will。"},
+  {before:"We",blank:"should",after:"recycle paper.",options:["should","shoulds","are","is"],hint:"💡 回收紙張",explanation:"我們應該回收紙，用 should。"},
+  {before:"You",blank:"must",after:"look both ways.",options:["must","musts","are","is"],hint:"💡 過馬路",explanation:"你必須左右看，用 must。"},
+  {before:"Does the teacher",blank:"have",after:"a red pen?",options:["have","has","is","are"],hint:"💡 老師的筆",explanation:"老師有紅筆嗎？用 have。"},
+  {before:"He",blank:"doesn't",after:"watch TV every day.",options:["doesn't","don't","isn't","aren't"],hint:"💡 他不天天看電視",explanation:"他不是每天看電視，用 doesn't。"},
+  {before:"The moon",blank:"is",after:"round and white.",options:["am","is","are","was"],hint:"💡 月亮",explanation:"月亮又圓又白，用 is。"},
+  {before:"Bananas",blank:"are",after:"yellow and sweet.",options:["am","is","are","was"],hint:"💡 香蕉",explanation:"香蕉又黃又甜，用 are。"},
+  {before:"I",blank:"am",after:"learning English.",options:["am","is","are","was"],hint:"💡 我在學英文",explanation:"我在學英文，用 am。"},
+  {before:"The robot",blank:"is",after:"fun to play with.",options:["am","is","are","was"],hint:"💡 機器人",explanation:"機器人很好玩，用 is。"},
+  {before:"The butterflies",blank:"are",after:"flying around.",options:["am","is","are","was"],hint:"💡 蝴蝶複數",explanation:"蝴蝶們在飛，用 are。"},
+  {before:"Last weekend we",blank:"were",after:"at the farm.",options:["is","are","was","were"],hint:"💡 上週末在農場",explanation:"上週末我們在農場，用 were。"},
+  {before:"The horse",blank:"can",after:"run very fast.",options:["can","cans","is","are"],hint:"💡 馬跑得快",explanation:"馬跑得很快，用 can。"},
+  {before:"Next year I",blank:"will",after:"be in grade 3.",options:["will","wills","is","was"],hint:"💡 明年升三年級",explanation:"明年我會升三年級，用 will。"},
+  {before:"Children",blank:"should",after:"wash hands before eating.",options:["should","shoulds","are","is"],hint:"💡 吃飯前洗手",explanation:"小朋友應該吃飯前洗手，用 should。"},
+  {before:"We",blank:"must",after:"respect elders.",options:["must","musts","are","is"],hint:"💡 尊敬長輩",explanation:"我們必須尊敬長輩，用 must。"},
+  {before:"Does your sister",blank:"have",after:"long hair?",options:["have","has","is","are"],hint:"💡 姐姐的頭髮",explanation:"你姐姐有長頭髮嗎？用 have。"},
+  {before:"She",blank:"doesn't",after:"like spiders.",options:["doesn't","don't","isn't","aren't"],hint:"💡 她不喜歡蜘蛛",explanation:"她不喜歡蜘蛛，用 doesn't。"},
+  {before:"The ice cream",blank:"is",after:"cold and yummy.",options:["am","is","are","was"],hint:"💡 冰淇淋",explanation:"冰淇淋又冰又好吃，用 is。"},
+  {before:"Books",blank:"are",after:"our best friends.",options:["am","is","are","was"],hint:"💡 書是朋友",explanation:"書是我們最好的朋友，用 are。"},
+  {before:"I",blank:"am",after:"proud of you.",options:["am","is","are","was"],hint:"💡 我為你驕傲",explanation:"我為你感到驕傲，用 am。"},
+  {before:"The penguin",blank:"is",after:"black and white.",options:["am","is","are","was"],hint:"💡 企鵝",explanation:"企鵝黑白相間，用 is。"},
+  {before:"The bees",blank:"are",after:"busy making honey.",options:["am","is","are","was"],hint:"💡 蜜蜂忙碌",explanation:"蜜蜂們忙著釀蜜，用 are。"},
+  {before:"Yesterday the park",blank:"was",after:"crowded.",options:["is","are","was","were"],hint:"💡 公園昨天擁擠",explanation:"昨天公園很擁擠，用 was。"},
+  {before:"The twins",blank:"were",after:"playing together.",options:["is","are","was","were"],hint:"💡 雙胞胎一起玩",explanation:"雙胞胎一起玩，用 were。"},
+  {before:"The dolphin",blank:"can",after:"jump high.",options:["can","cans","is","are"],hint:"💡 海豚會跳",explanation:"海豚會跳很高，用 can。"},
+  {before:"In the future robots",blank:"will",after:"help us.",options:["will","wills","is","was"],hint:"💡 未來機器人",explanation:"未來機器人會幫我們，用 will。"},
+  {before:"We",blank:"should",after:"save water.",options:["should","shoulds","are","is"],hint:"💡 節約用水",explanation:"我們應該節約用水，用 should。"},
+  {before:"You",blank:"must",after:"be careful on the road.",options:["must","musts","are","is"],hint:"💡 小心過馬路",explanation:"你必須小心過馬路，用 must。"},
+  {before:"Does the cow",blank:"have",after:"four legs?",options:["have","has","is","are"],hint:"💡 牛有四條腿",explanation:"牛有四條腿嗎？用 have。"},
+  {before:"He",blank:"doesn't",after:"cry easily.",options:["doesn't","don't","isn't","aren't"],hint:"💡 他不容易哭",explanation:"他不容易哭，用 doesn't。"},
+  {before:"The teddy bear",blank:"is",after:"soft and cuddly.",options:["am","is","are","was"],hint:"💡 泰迪熊",explanation:"泰迪熊又軟又可愛，用 is。"},
+  {before:"Fruits",blank:"are",after:"good for health.",options:["am","is","are","was"],hint:"💡 水果健康",explanation:"水果對健康很好，用 are。"},
+  {before:"I",blank:"am",after:"ready for school.",options:["am","is","are","was"],hint:"💡 準備上學",explanation:"我準備好上學了，用 am。"},
+  {before:"The giraffe",blank:"is",after:"tall and graceful.",options:["am","is","are","was"],hint:"💡 長頸鹿",explanation:"長頸鹿又高又優雅，用 is。"},
+  {before:"The ducks",blank:"are",after:"swimming in the pond.",options:["am","is","are","was"],hint:"💡 鴨子游泳",explanation:"鴨子們在池塘游泳，用 are。"},
+  {before:"Last night the moon",blank:"was",after:"bright.",options:["is","are","was","were"],hint:"💡 月亮昨晚亮",explanation:"昨晚月亮很亮，用 was。"},
+  {before:"The children",blank:"were",after:"building sandcastles.",options:["is","are","was","were"],hint:"💡 堆沙堡",explanation:"小孩們在堆沙堡，用 were。"},
+  {before:"The kangaroo",blank:"can",after:"jump very high.",options:["can","cans","is","are"],hint:"💡 袋鼠跳高",explanation:"袋鼠可以跳得很高，用 can。"},
+  {before:"Next month we",blank:"will",after:"celebrate New Year.",options:["will","wills","is","was"],hint:"💡 下個月過新年",explanation:"下個月我們會慶祝新年，用 will。"},
+  {before:"You",blank:"should",after:"be polite.",options:["should","shoulds","are","is"],hint:"💡 要有禮貌",explanation:"你應該要有禮貌，用 should。"},
+  {before:"We",blank:"must",after:"protect the earth.",options:["must","musts","are","is"],hint:"💡 保護地球",explanation:"我們必須保護地球，用 must。"},
+  {before:"Does the penguin",blank:"have",after:"wings?",options:["have","has","is","are"],hint:"💡 企鵝有翅膀",explanation:"企鵝有翅膀嗎？用 have。"},
+  {before:"She",blank:"doesn't",after:"forget her homework.",options:["doesn't","don't","isn't","aren't"],hint:"💡 她不忘作業",explanation:"她不會忘記作業，用 doesn't。"},
+  {before:"The chocolate",blank:"is",after:"sweet and yummy.",options:["am","is","are","was"],hint:"💡 巧克力",explanation:"巧克力又甜又好吃，用 is。"},
+  {before:"Cookies",blank:"are",after:"my favorite snack.",options:["am","is","are","was"],hint:"💡 餅乾",explanation:"餅乾是我最愛的點心，用 are。"},
+  {before:"I",blank:"am",after:"thankful for my family.",options:["am","is","are","was"],hint:"💡 感謝家人",explanation:"我感謝我的家人，用 am。"},
+  {before:"The owl",blank:"is",after:"wise.",options:["am","is","are","was"],hint:"💡 貓頭鷹聰明",explanation:"貓頭鷹很聰明，用 is。"},
+  {before:"The fireflies",blank:"are",after:"glowing at night.",options:["am","is","are","was"],hint:"💡 螢火蟲發光",explanation:"螢火蟲在晚上發光，用 are。"},
+  {before:"Last year my dog",blank:"was",after:"a puppy.",options:["is","are","was","were"],hint:"💡 去年小狗",explanation:"去年我的狗還是小狗，用 was。"},
+  {before:"The students",blank:"were",after:"excited for the trip.",options:["is","are","was","were"],hint:"💡 學生興奮",explanation:"學生們對旅行很興奮，用 were。"},
+  {before:"The cheetah",blank:"can",after:"run the fastest.",options:["can","cans","is","are"],hint:"💡 獵豹跑最快",explanation:"獵豹跑得最快，用 can。"},
+  {before:"In 2027 I",blank:"will",after:"be 10 years old.",options:["will","wills","is","was"],hint:"💡 未來 10 歲",explanation:"2027 年我會 10 歲，用 will。"},
+  {before:"We",blank:"should",after:"help our friends.",options:["should","shoulds","are","is"],hint:"💡 幫助朋友",explanation:"我們應該幫助朋友，用 should。"},
+  {before:"You",blank:"must",after:"tell the truth.",options:["must","musts","are","is"],hint:"💡 說實話",explanation:"你必須說實話，用 must。"},
+  {before:"Does the zebra",blank:"have",after:"stripes?",options:["have","has","is","are"],hint:"💡 斑馬條紋",explanation:"斑馬有條紋嗎？用 have。"},
+  {before:"He",blank:"doesn't",after:"like rainy days.",options:["doesn't","don't","isn't","aren't"],hint:"💡 他不喜歡下雨",explanation:"他不喜歡下雨天，用 doesn't。"}
 ];
 
 const ADVANCED_Q = [
@@ -209,6 +318,102 @@ const ADVANCED_Q = [
   {before:"She has been sick",blank:"since",after:"Monday.",options:["since","for","during","from"],hint:"💡 現在完成式 + ___ + 時間點",explanation:"since 後面接「時間點」（Monday），for 後面接「時間長度」（three days）。"},
   {before:"He must",blank:"have forgotten",after:"the meeting.",options:["have forgotten","forget","has forgotten","be forgetting"],hint:"💡 must + ___ + p.p. 表示對過去的推測",explanation:"must have + p.p. 表示對過去的強烈推測。"},
   {before:"We have studied English",blank:"for",after:"three years.",options:["for","since","during","from"],hint:"💡 現在完成式 + ___ + 時間長度",explanation:"for 後面接時間長度（three years），since 後面接時間點。"},
+  // ── 現在完成式 ──
+  {before:"Tom",blank:"has visited",after:"Paris three times.",options:["has visited","visited","have visited","is visiting"],hint:"💡 Tom 去過巴黎三次，強調累積次數",explanation:"現在完成式表示過去到現在的累積經驗。Tom（第三人稱單數）用 has + p.p.（visited）。"},
+  {before:"My parents",blank:"have never eaten",after:"sushi before.",options:["have never eaten","has never eaten","never eat","never ate"],hint:"💡 父母從未吃過壽司，have + never + p.p.",explanation:"My parents 是複數，現在完成式用 have。never 放在 have 後、p.p. 前：have never eaten。"},
+  {before:"The train",blank:"has just arrived",after:"at the station.",options:["has just arrived","just arrived","have just arrived","is just arrived"],hint:"💡 火車「剛剛」到站，just + 現在完成式",explanation:"just 與現在完成式搭配：has just + p.p.（arrived）。主詞 The train 是單數，用 has。"},
+  {before:"Have you",blank:"ever seen",after:"a shooting star?",options:["ever seen","seen ever","ever saw","never seen"],hint:"💡 你「曾經」看過流星嗎？",explanation:"Have you ever + p.p.? 是詢問人生經驗的標準句型。ever 放在 have 後、p.p. 前。"},
+  {before:"She",blank:"hasn't replied",after:"to my message yet.",options:["hasn't replied","haven't replied","didn't reply","doesn't reply"],hint:"💡 她「還沒」回覆，現在完成式否定",explanation:"現在完成式否定：hasn't + p.p.（replied）。yet 通常用於現在完成式否定句句尾。"},
+  {before:"I",blank:"have already booked",after:"a table for dinner.",options:["have already booked","already booked","has already booked","had already booked"],hint:"💡 我「已經」訂好位子了，already + 現在完成式",explanation:"already 通常與現在完成式搭配：have already + p.p.（booked）。表示動作已完成。"},
+  {before:"The students",blank:"have been studying",after:"English since primary school.",options:["have been studying","are studying","have studied","were studying"],hint:"💡 從小學就開始讀，現在還在讀，持續到現在",explanation:"現在完成進行式 have been + Ving 表示從過去持續到現在仍在進行的動作，強調持續性。"},
+  {before:"It",blank:"has rained",after:"a lot this month.",options:["has rained","have rained","had rained","rained"],hint:"💡 這個月（到目前為止）雨下了很多",explanation:"this month 表示到現在為止的這個月，用現在完成式 has + p.p.（rained）。主詞 It 是單數。"},
+  {before:"We",blank:"have lost",after:"our tickets.",options:["have lost","lost","has lost","are lost"],hint:"💡 我們的票不見了（影響到現在）",explanation:"現在完成式 have + p.p.（lost）表示過去發生、對現在有影響的事。票不見了所以現在進不去。"},
+  {before:"Jason",blank:"hasn't eaten",after:"anything since this morning.",options:["hasn't eaten","didn't eat","haven't eaten","wasn't eating"],hint:"💡 Jason 從今早「到現在」都沒吃東西",explanation:"Jason 是第三人稱單數，否定用 hasn't。since + 時間點配合現在完成式：hasn't eaten since this morning。"},
+  {before:"How long",blank:"have you lived",after:"in Taipei?",options:["have you lived","do you live","did you live","are you living"],hint:"💡 詢問住了多久，How long + 現在完成式",explanation:"How long have you + p.p.? 用來詢問某狀態持續多久。暗示至今仍住在台北。"},
+  {before:"They",blank:"have decided",after:"to change their plans.",options:["have decided","has decided","decided","are decided"],hint:"💡 他們已決定改變計畫",explanation:"They 是複數，現在完成式用 have decided。表示已做出決定（對現在有影響）。"},
+  {before:"Nothing",blank:"has changed",after:"since I moved away.",options:["has changed","have changed","changed","was changed"],hint:"💡 Nothing 接單數動詞，since 搭配現在完成式",explanation:"Nothing 是單數，所以用 has。since + 時間點（I moved away）配合現在完成式 has changed。"},
+  {before:"I",blank:"have been",after:"to the night market twice this week.",options:["have been","went","had been","am"],hint:"💡 這週去過夜市兩次，強調累積次數",explanation:"have been to + 地點 表示「去過某地（但已回來）」。I + have been，twice this week 說明次數。"},
+  {before:"The company",blank:"has expanded",after:"greatly over the past few years.",options:["has expanded","expanded","have expanded","is expanding"],hint:"💡 公司在過去幾年裡（到現在）大幅擴展",explanation:"over the past few years 配合現在完成式：has + p.p.（expanded）。The company 是單數用 has。"},
+  // ── 被動語態 ──
+  {before:"This letter",blank:"was written",after:"by my grandmother.",options:["was written","is written","were written","wrote"],hint:"💡 信是「被」祖母寫的，過去被動",explanation:"被動語態：was（過去式）+ p.p.（written）。This letter 是單數，用 was。by 後面接行為者。"},
+  {before:"The cakes",blank:"are made",after:"with fresh ingredients.",options:["are made","is made","were made","make"],hint:"💡 蛋糕（現在）是用新鮮食材「製作的」",explanation:"現在式被動語態：are + p.p.（made）。The cakes 是複數，用 are。表示目前的習慣或事實。"},
+  {before:"The new rules",blank:"will be announced",after:"tomorrow.",options:["will be announced","will announce","are announced","were announced"],hint:"💡 新規定明天「將被宣布」，未來被動",explanation:"未來式被動語態：will be + p.p.（announced）。不論主詞單複數，will be 形式不變。"},
+  {before:"The painting",blank:"is being restored",after:"by a professional artist.",options:["is being restored","was being restored","has been restored","will be restored"],hint:"💡 畫「正在被」專業藝術家修復（現在進行）",explanation:"現在進行式被動語態：is being + p.p.（restored）。The painting 是單數，表示此刻正在進行的被動動作。"},
+  {before:"The report",blank:"had been finished",after:"before the boss arrived.",options:["had been finished","was finished","has been finished","were finished"],hint:"💡 老闆到來「之前」報告就已被完成，過去完成被動",explanation:"過去完成式被動語態：had been + p.p.（finished）。表示在過去某時間點之前已完成的被動動作。"},
+  {before:"English",blank:"is spoken",after:"in many countries around the world.",options:["is spoken","are spoken","was spoken","speaks"],hint:"💡 英語在許多國家「被說」，現在習慣性被動",explanation:"現在式被動語態：is + p.p.（spoken）。English 是單數不可數，用 is。表示普遍事實。"},
+  {before:"The new bridge",blank:"was completed",after:"last year after three years of construction.",options:["was completed","were completed","has been completed","is completed"],hint:"💡 橋「去年」完工，過去被動",explanation:"過去式被動語態：was + p.p.（completed）。last year 確認用過去式，主詞 The new bridge 是單數。"},
+  {before:"Students",blank:"are not allowed",after:"to use their phones during the exam.",options:["are not allowed","aren't allowing","are not allowing","do not allow"],hint:"💡 學生「不被允許」使用手機，現在被動否定",explanation:"被動語態否定：are not + p.p.（allowed）。Students 是複數，表示規定或禁令。"},
+  {before:"A new school",blank:"is going to be built",after:"in our neighborhood next year.",options:["is going to be built","is going to build","will build","builds"],hint:"💡 新學校「將要被建造」，be going to 被動",explanation:"be going to 的被動語態：is going to be + p.p.（built）。表示計畫中的未來被動動作。"},
+  {before:"The package",blank:"hasn't been delivered",after:"yet.",options:["hasn't been delivered","haven't been delivered","wasn't delivered","didn't deliver"],hint:"💡 包裹「還沒被送達」，現在完成被動否定",explanation:"現在完成式被動否定：hasn't been + p.p.（delivered）。The package 是單數，yet 置句尾。"},
+  {before:"The children",blank:"were being looked after",after:"by their grandparents while their parents were away.",options:["were being looked after","were looked after","are being looked after","had been looked after"],hint:"💡 孩子們在那段期間「正被」照顧，過去進行被動",explanation:"過去進行式被動語態：were being + p.p.（looked after）。強調在過去某段時間持續進行的被動動作。"},
+  {before:"Her wallet",blank:"was stolen",after:"on the bus yesterday.",options:["was stolen","is stolen","were stolen","has stolen"],hint:"💡 錢包昨天在公車上「被偷」",explanation:"過去式被動語態：was + p.p.（stolen）。Her wallet 是單數，yesterday 確認用過去式。"},
+  {before:"This song",blank:"has been heard",after:"by millions of people worldwide.",options:["has been heard","is heard","was heard","have been heard"],hint:"💡 這首歌已被數百萬人聽過，現在完成被動",explanation:"現在完成式被動語態：has been + p.p.（heard）。This song 是單數用 has，by millions 指聽眾範圍。"},
+  {before:"The meeting",blank:"has been postponed",after:"to next Monday.",options:["has been postponed","was postponed","have been postponed","is postponed"],hint:"💡 會議「已被」延後到下週一，現在完成被動",explanation:"現在完成式被動語態：has been + p.p.（postponed）。The meeting 是單數，表示對現在有影響的被動動作。"},
+  {before:"The trees",blank:"need to be watered",after:"every day in summer.",options:["need to be watered","need to water","needs watering","are need watered"],hint:"💡 樹「需要被澆水」，need to be + p.p.",explanation:"need to be + p.p. 是表示需要被做某事的被動語態。The trees 是複數，need 不加 s。"},
+  // ── 附加問句 ──
+  {before:"You can swim,",blank:"can't you",after:"?",options:["can't you","cannot you","can you","couldn't you"],hint:"💡 肯定句 can → 否定附加問句",explanation:"附加問句：前半句肯定（can）→ 後半句否定（can't you）。主詞是 you，助動詞是 can。"},
+  {before:"She won't be late,",blank:"will she",after:"?",options:["will she","won't she","would she","will her"],hint:"💡 否定句 won't → 肯定附加問句",explanation:"前半句否定（won't）→ 後半句用肯定（will she）。主詞 she 不變。"},
+  {before:"The students have done their homework,",blank:"haven't they",after:"?",options:["haven't they","have they","didn't they","hasn't she"],hint:"💡 現在完成式的附加問句",explanation:"前半句是現在完成式肯定（have done）→ 後半句否定（haven't they）。they 對應 the students。"},
+  {before:"It was raining when you left,",blank:"wasn't it",after:"?",options:["wasn't it","was it","weren't it","isn't it"],hint:"💡 過去式的附加問句",explanation:"前半句肯定過去式（was raining）→ 後半句否定（wasn't it）。主詞是 It。"},
+  {before:"Let's take a break,",blank:"shall we",after:"?",options:["shall we","will we","won't we","should we"],hint:"💡 Let's... 開頭的附加問句固定用法",explanation:"Let's + 原形動詞 的附加問句固定用 shall we?，表示提議邀請對方一起行動。"},
+  {before:"Nobody called while I was out,",blank:"did they",after:"?",options:["did they","didn't they","did anybody","didn't anyone"],hint:"💡 nobody 含否定意義，附加問句用肯定",explanation:"nobody 含有否定意義，附加問句用肯定形式（did they）。they 代替 nobody，did 因為主句是過去式。"},
+  {before:"He hardly ever makes mistakes,",blank:"does he",after:"?",options:["does he","doesn't he","did he","is he"],hint:"💡 hardly ever 含否定，附加問句用肯定",explanation:"hardly 是半否定詞，附加問句用肯定形式（does he）。現在式一般動詞用 does。"},
+  {before:"You've met my sister before,",blank:"haven't you",after:"?",options:["haven't you","have you","didn't you","don't you"],hint:"💡 you've = you have，現在完成式的附加問句",explanation:"you've = you have，肯定現在完成式 → 否定附加問句（haven't you）。"},
+  {before:"They used to live here,",blank:"didn't they",after:"?",options:["didn't they","weren't they","wouldn't they","used they"],hint:"💡 used to 的附加問句用 did/didn't",explanation:"used to 的附加問句通常用 did/didn't + 主詞。前半句肯定（used to）→ 後半句否定（didn't they）。"},
+  {before:"There's something wrong with this machine,",blank:"isn't there",after:"?",options:["isn't there","is there","aren't there","doesn't there"],hint:"💡 There is... 的附加問句",explanation:"There is 的附加問句：主詞用 there，前半句肯定（There's）→ 後半句否定（isn't there）。"},
+  {before:"We should leave earlier,",blank:"shouldn't we",after:"?",options:["shouldn't we","should we","wouldn't we","don't we"],hint:"💡 情態動詞 should 的附加問句",explanation:"前半句肯定（should）→ 後半句否定（shouldn't we）。情態動詞的附加問句直接用情態動詞本身。"},
+  {before:"Sarah doesn't like spicy food,",blank:"does she",after:"?",options:["does she","doesn't she","did she","is she"],hint:"💡 否定句 doesn't → 肯定附加問句",explanation:"前半句否定（doesn't）→ 後半句肯定（does she）。she 對應 Sarah，用現在式 does。"},
+  // ── 情態完成式 ──
+  {before:"You",blank:"should have saved",after:"your work before turning off the computer.",options:["should have saved","should save","should have been saving","had to save"],hint:"💡 過去應該做但沒做（現在後悔）",explanation:"should have + p.p. 表示「過去應該做但沒做」，帶有遺憾或批評的含意。"},
+  {before:"He",blank:"could have taken",after:"the earlier train, but he overslept.",options:["could have taken","could take","should have taken","would take"],hint:"💡 他「本可以」搭早班火車，但他沒有",explanation:"could have + p.p. 表示「過去有能力做但沒做」或「本來可以的機會錯過了」。"},
+  {before:"They",blank:"might have left",after:"already when we arrived.",options:["might have left","might leave","may left","could leave"],hint:"💡 我們到的時候他們「可能已經離開」了",explanation:"might have + p.p. 表示對過去情況的不確定推測，可能性較低。"},
+  {before:"You",blank:"shouldn't have eaten",after:"so much junk food.",options:["shouldn't have eaten","shouldn't eat","should have eaten","hadn't eaten"],hint:"💡 你「不應該吃」那麼多垃圾食物（事後批評）",explanation:"shouldn't have + p.p. 表示「過去不應該做但做了」，帶有批評或遺憾。"},
+  {before:"She",blank:"must have studied",after:"very hard to pass such a difficult exam.",options:["must have studied","must study","should have studied","had to study"],hint:"💡 她能通過那麼難的考試，「一定是」很努力讀書",explanation:"must have + p.p. 表示對過去的強烈推測，幾乎確定發生過。"},
+  {before:"I",blank:"would have helped",after:"you if you had asked me.",options:["would have helped","will help","should have helped","could have helped"],hint:"💡 如果你當時開口，我「本來會幫」你",explanation:"would have + p.p. 用於與過去事實相反的假設句主句（If + 過去完成式, would have + p.p.）。"},
+  {before:"They",blank:"can't have finished",after:"the project so quickly without extra help.",options:["can't have finished","couldn't finish","couldn't have finished","won't have finished"],hint:"💡 他們不可能那麼快就完成，否定推測",explanation:"can't have + p.p. 表示「不可能已經發生」，是對過去情況的強烈否定推測。"},
+  {before:"The lights are still on. She",blank:"may have forgotten",after:"to turn them off.",options:["may have forgotten","must have forgotten","might forget","should forget"],hint:"💡 燈還亮著，她「可能忘記」關燈了",explanation:"may have + p.p. 表示對過去情況較有可能的推測（比 might 確定性稍高）。"},
+  {before:"You",blank:"ought to have told",after:"her the truth from the beginning.",options:["ought to have told","ought to tell","should tell","must tell"],hint:"💡 你「本應該」一開始就告訴她真相",explanation:"ought to have + p.p. 表示「過去應該做但沒做」，語氣類似 should have + p.p.，更正式。"},
+  {before:"He",blank:"could have been",after:"a professional musician if he had practiced more.",options:["could have been","could be","should have been","would be"],hint:"💡 如果他多練習，他「本可以成為」專業音樂家",explanation:"could have been 表示過去有潛力但沒實現的可能，用於與過去事實相反的假設情境。"},
+  {before:"They",blank:"must have been waiting",after:"for hours when we finally showed up.",options:["must have been waiting","must have waited","might be waiting","should wait"],hint:"💡 我們出現時，他們「一定已經等了」好幾個小時",explanation:"must have been + Ving 是完成進行式的推測形式，表示過去某時一定正在持續進行的動作。"},
+  {before:"I",blank:"shouldn't have said",after:"those unkind words to her.",options:["shouldn't have said","should have said","didn't have to say","hadn't said"],hint:"💡 我不應該說那些話（現在後悔）",explanation:"shouldn't have + p.p. 表示過去做了但不應該做的事，說話者感到後悔。"},
+  // ── 時間介系詞 since / for / by / until ──
+  {before:"I haven't seen him",blank:"since",after:"last Christmas.",options:["since","for","during","until"],hint:"💡 自從去年聖誕節（時間點）就沒見過他",explanation:"since 後接時間點（last Christmas），for 後接時間長度（three months）。配合現在完成式。"},
+  {before:"She has been learning piano",blank:"for",after:"six months.",options:["for","since","by","from"],hint:"💡 學了六個月（時間長度）",explanation:"for 後接時間長度（six months），since 後接時間點（January）。配合現在完成進行式。"},
+  {before:"Please finish your homework",blank:"by",after:"eight o'clock.",options:["by","until","since","before"],hint:"💡 「在」八點「之前」完成，不是一直做到八點",explanation:"by 表示「截止時間點」，until/till 表示「一直持續到某時間點」。by eight = 八點前完成。"},
+  {before:"They waited",blank:"until",after:"the rain stopped before leaving.",options:["until","by","since","for"],hint:"💡 他們等了很久，「直到」雨停才離開",explanation:"until/till 表示動作持續到某時間點才停止。waited until the rain stopped 表示等的動作一直延續到雨停。"},
+  {before:"He had lived in London",blank:"for",after:"ten years before moving to Paris.",options:["for","since","by","during"],hint:"💡 在倫敦住了十年（時間長度），過去完成式",explanation:"for + 時間長度（ten years）配合過去完成式 had lived，表示在過去某時間點之前持續了的時長。"},
+  {before:"The store has been open",blank:"since",after:"eight in the morning.",options:["since","for","by","until"],hint:"💡 從早上八點（時間點）就開著",explanation:"since 後接時間點（eight in the morning），配合現在完成式 has been open。"},
+  {before:"I will stay here",blank:"until",after:"you come back.",options:["until","since","for","by"],hint:"💡 我「一直待在這裡直到」你回來",explanation:"until 表示動作持續到某時間點。I will stay until you come back 表示一直待著等。"},
+  {before:"The library has been closed",blank:"since",after:"the renovation started last month.",options:["since","for","until","from"],hint:"💡 自從上個月翻修開始（時間點）就關閉了",explanation:"since + 時間點（the renovation started last month）配合現在完成式 has been closed。"},
+  // ── 虛擬語氣 ──
+  {before:"If I",blank:"were",after:"you, I would apologize to her.",options:["were","was","am","will be"],hint:"💡 假設我是你（與現在事實相反），if 子句用什麼？",explanation:"與現在事實相反的假設句，if 子句用過去式。were 在假設語氣中比 was 更正式（If I were you 是標準用法）。"},
+  {before:"If she",blank:"had studied",after:"harder, she would have passed the test.",options:["had studied","studied","would study","has studied"],hint:"💡 如果她當時更努力讀（但沒有），假設過去",explanation:"與過去事實相反的假設句：If + 過去完成式（had studied），主句用 would have + p.p.（would have passed）。"},
+  {before:"I wish I",blank:"could speak",after:"Japanese fluently.",options:["could speak","can speak","would speak","spoke"],hint:"💡 I wish 後接假設語氣，表示希望但目前做不到",explanation:"I wish + 過去式 表示對現在事實的遺憾。could speak 表示目前希望能說但無法流利說日文。"},
+  {before:"If you",blank:"had told",after:"me earlier, I could have helped you.",options:["had told","told","would tell","tell"],hint:"💡 如果你早點告訴我（但沒有），假設過去事實",explanation:"與過去事實相反的假設句，if 子句用過去完成式（had told），主句用 could have + p.p.（could have helped）。"},
+  {before:"I wish she",blank:"were",after:"here with us today.",options:["were","was","is","had been"],hint:"💡 I wish + 假設語氣，希望她在（但她不在）",explanation:"I wish + 過去式（were）表示對現在情況的遺憾。she were 是假設語氣的標準形式。"},
+  {before:"If the traffic",blank:"weren't",after:"so bad, we would arrive on time.",options:["weren't","isn't","isn't going to be","won't be"],hint:"💡 如果交通不這麼糟（但實際上很糟），與現在相反",explanation:"與現在事實相反的假設句：If + 過去式（weren't），主句用 would + 原形（would arrive）。"},
+  {before:"She talks to her plants as if they",blank:"could understand",after:"her.",options:["could understand","can understand","would understand","understood"],hint:"💡 as if 後接假設語氣（好像它們能懂一樣）",explanation:"as if 後接假設語氣，表示與現實不符的比喻。過去式（could understand）表示對現在的假設。"},
+  {before:"If only I",blank:"had brought",after:"an umbrella today!",options:["had brought","brought","have brought","would bring"],hint:"💡 If only 表示強烈遺憾，假設過去",explanation:"If only + 過去完成式（had brought）表示對過去事件的強烈遺憾：今天沒帶傘（但很希望有帶）。"},
+  {before:"He behaves as if he",blank:"knew",after:"everything.",options:["knew","knows","would know","has known"],hint:"💡 他表現得好像他什麼都知道（未必是真）",explanation:"as if 後接假設語氣過去式（knew），表示與現在事實可能不符的假設情況。"},
+  {before:"If I",blank:"hadn't missed",after:"the bus, I wouldn't be late now.",options:["hadn't missed","didn't miss","haven't missed","won't miss"],hint:"💡 如果我沒錯過公車（但我錯過了），與過去事實相反",explanation:"與過去事實相反的混合條件句：If + 過去完成式（hadn't missed）表示過去假設，主句用 wouldn't be（現在的結果）。"},
+  {before:"It's time",blank:"we left",after:"for the airport.",options:["we left","we leave","we will leave","to leave"],hint:"💡 It's time + 假設語氣，表示「是該做的時候了」",explanation:"It's time + 主詞 + 過去式 是固定假設語氣用法，表示現在應該行動。we left 用過去式表示虛擬語氣。"},
+  {before:"If you",blank:"were to come",after:"early, we could finish the work faster.",options:["were to come","come","would come","came"],hint:"💡 If + were to + 原形，用於不太可能實現的假設",explanation:"If + were to + 原形動詞 表示對未來不太可能發生的假設，語氣較正式。結果句用 could/would + 原形。"},
+  // ── 使役句型 ──
+  {before:"My mom",blank:"made me clean",after:"my room before going out.",options:["made me clean","made me to clean","had me cleaned","let me to clean"],hint:"💡 媽媽「強迫我」打掃，make + 受詞 + 原形",explanation:"make（強迫）是使役動詞：make + 受詞（me）+ 原形動詞（clean）。make 後不接 to。"},
+  {before:"She",blank:"had her car repaired",after:"at the garage last week.",options:["had her car repaired","had her car repair","made her car repaired","had repaired her car"],hint:"💡 她「叫人修」她的車，have + 受詞 + p.p.",explanation:"have sth + p.p. 表示「使某事被做」（請人做）。had her car repaired = 叫人修了她的車，car 是被修的對象。"},
+  {before:"The teacher",blank:"let us leave",after:"class early today.",options:["let us leave","let us to leave","made us leave","let us leaving"],hint:"💡 老師「允許我們」提早離開，let + 受詞 + 原形",explanation:"let（允許）是使役動詞：let + 受詞（us）+ 原形動詞（leave）。let 後不接 to。"},
+  {before:"I need to",blank:"get my hair cut",after:"before the wedding.",options:["get my hair cut","get my hair cutting","have cut my hair","make my hair cut"],hint:"💡 我需要「去剪髮」，get + 受詞 + p.p.",explanation:"get sth + p.p. 表示「使某事被做」，語氣比 have 更口語。my hair 是被剪的對象，用 p.p.（cut）。"},
+  {before:"His parents",blank:"had him take",after:"piano lessons every weekend.",options:["had him take","made him to take","had him taken","let him taking"],hint:"💡 父母「安排/要求他」每週末上鋼琴課",explanation:"have + 受詞 + 原形動詞 表示「安排/要求某人做事」。had him take = 叫他去上課（他主動執行）。"},
+  {before:"The manager",blank:"got the team to finish",after:"the report by Friday.",options:["got the team to finish","got the team finish","made the team to finish","had the team finishing"],hint:"💡 主管「促使團隊」完成報告，get + 受詞 + to + 原形",explanation:"get + 受詞 + to + 原形動詞 表示「說服/促使某人做某事」。get 後需要接 to，與 make/let 不同。"},
+  {before:"She",blank:"let her younger sister borrow",after:"her favorite dress for the party.",options:["let her younger sister borrow","made her younger sister borrow","had her younger sister borrowed","let her younger sister to borrow"],hint:"💡 她「允許」妹妹借她最喜歡的裙子",explanation:"let（允許）+ 受詞（her younger sister）+ 原形動詞（borrow）。let 後直接加原形，不加 to。"},
+  {before:"I",blank:"had my laptop fixed",after:"at the computer store.",options:["had my laptop fixed","had fixed my laptop","made my laptop fix","got my laptop fixing"],hint:"💡 我請人修理我的筆電，have + 受詞 + p.p.",explanation:"have + 受詞（my laptop）+ p.p.（fixed）表示「請人做某事」。laptop 是被修的，所以用 p.p.。"},
+  // ── 過去進行式 + 時態綜合 ──
+  {before:"While I",blank:"was cooking",after:"dinner, the phone rang.",options:["was cooking","cooked","have cooked","am cooking"],hint:"💡 我「正在做飯時」電話響了，過去進行式",explanation:"過去進行式 was/were + Ving 表示過去某時刻正在進行的動作。while 引導的背景動作用過去進行式，突發動作用過去簡單式（rang）。"},
+  {before:"They",blank:"were playing",after:"soccer when it started to rain.",options:["were playing","played","had played","have played"],hint:"💡 下雨前他們「正在踢球」，過去進行式",explanation:"when 引導突發事件（started to rain），背景動作（playing soccer）用過去進行式 were + Ving。"},
+  {before:"I",blank:"had finished",after:"eating when she arrived.",options:["had finished","finished","have finished","was finishing"],hint:"💡 她到之前我「已經吃完」了，過去完成式",explanation:"過去完成式 had + p.p. 表示在過去某時間點（she arrived）之前已完成的動作。"},
+  {before:"By this time next year, I",blank:"will have graduated",after:"from university.",options:["will have graduated","will graduate","have graduated","am graduating"],hint:"💡 到明年這個時候，我「將已畢業」，未來完成式",explanation:"未來完成式 will have + p.p. 表示到未來某時間點之前將已完成的動作。By this time next year 是典型的時間觸發語。"},
+  {before:"She was so tired that she",blank:"fell asleep",after:"as soon as she lay down.",options:["fell asleep","was falling asleep","has fallen asleep","had fallen asleep"],hint:"💡 她一躺下「就睡著了」，so...that 結果句",explanation:"so + 形容詞 + that 表示結果，結果句用過去簡單式（fell asleep）描述接踵而來的動作。"},
+  {before:"By the time the ambulance arrived, the patient",blank:"had already been taken",after:"to the hospital.",options:["had already been taken","was already taken","has already been taken","had already taken"],hint:"💡 救護車到之前，病人「已被送」到醫院了，過去完成被動",explanation:"過去完成式被動語態：had been + p.p.（taken）。表示在過去某時間點（ambulance arrived）之前完成的被動動作。"},
 ];
 
 // GEPT: longer, more complex sentences with richer context
@@ -308,6 +513,718 @@ const GEPT_Q = [
     options:["is supposed to be","supposed to be","was supposed to be","has been supposed to"],
     hint:"💡 報告「應該要被提交」，表示義務或期望",
     explanation:"be supposed to + V 表示「應該要、被期望去做」。is supposed to be submitted 是現在式被動，表示今天下午的期限。"
+  },
+  // ── 現在完成進行式 ──
+  {
+    before:"She",
+    blank:"has been writing",
+    after:"her novel for over two years and hopes to finish it by the end of this year.",
+    options:["has been writing","has written","wrote","is writing"],
+    hint:"💡 她「一直在寫」小說已超過兩年，且現在還在進行",
+    explanation:"現在完成進行式 has been + Ving 強調從過去某時開始持續至今的動作。for over two years 表示時間長度，搭配完成進行式。"
+  },
+  {
+    before:"The researchers",
+    blank:"have been studying",
+    after:"this species of butterfly since it was first discovered in 2015.",
+    options:["have been studying","have studied","studied","are studying"],
+    hint:"💡 自 2015 年（時間點）就一直在研究，用什麼時態？",
+    explanation:"since + 時間點（2015）配合現在完成進行式 have been + Ving。強調研究從 2015 年持續至今仍在進行。"
+  },
+  {
+    before:"How long",
+    blank:"have you been working",
+    after:"on this project? You look absolutely exhausted.",
+    options:["have you been working","did you work","do you work","have you worked"],
+    hint:"💡 詢問「到現在已做了多久」，How long + 現在完成進行式",
+    explanation:"How long + have + 主詞 + been + Ving? 用來詢問某動作從過去持續到現在的時長。"
+  },
+  {
+    before:"The city council",
+    blank:"has been debating",
+    after:"over the proposed budget cuts for three consecutive meetings without reaching a conclusion.",
+    options:["has been debating","debated","has debated","had been debating"],
+    hint:"💡 市議會「一直在辯論」，連續三次會議都還在討論",
+    explanation:"現在完成進行式 has been debating 強調動作在過去開始並持續到現在仍未結束（議題仍未解決）。"
+  },
+  {
+    before:"The volcano",
+    blank:"has been releasing",
+    after:"smoke and ash for the past several weeks, raising serious concerns among local residents.",
+    options:["has been releasing","released","has released","will release"],
+    hint:"💡 火山在過去幾週「一直在」噴出煙霧，且仍在持續",
+    explanation:"for the past several weeks 搭配現在完成進行式 has been releasing，強調從過去持續到現在仍進行中的自然現象。"
+  },
+  {
+    before:"My parents",
+    blank:"have been living",
+    after:"in the same neighborhood since before I was born.",
+    options:["have been living","lived","are living","had been living"],
+    hint:"💡 父母自我出生前就「一直住」在同一個社區",
+    explanation:"since + 時間點（before I was born）配合現在完成進行式 have been living，強調持續到現在的居住狀態。"
+  },
+  {
+    before:"The temperature",
+    blank:"has been dropping",
+    after:"steadily all morning, and the forecast says it will continue this afternoon.",
+    options:["has been dropping","dropped","has dropped","drops"],
+    hint:"💡 氣溫整個上午「一直在」下降，且仍在持續",
+    explanation:"all morning 搭配現在完成進行式 has been dropping，強調從上午開始持續到現在的下降趨勢。"
+  },
+  {
+    before:"Despite repeated attempts, the negotiators",
+    blank:"have been trying",
+    after:"to reach a final agreement all week but still haven't succeeded.",
+    options:["have been trying","tried","have tried","try"],
+    hint:"💡 整個星期「一直在努力嘗試」，但仍未成功",
+    explanation:"all week 搭配現在完成進行式 have been trying，強調持續嘗試但尚未成功的狀態。"
+  },
+  {
+    before:"The construction workers",
+    blank:"have been working",
+    after:"on the new highway for two years, and the road is still only half finished.",
+    options:["have been working","worked","are working","had been working"],
+    hint:"💡 工人在新公路上工作了兩年（仍在進行），路還沒蓋好",
+    explanation:"for two years 搭配現在完成進行式 have been working，強調動作持續兩年仍在進行中。"
+  },
+  {
+    before:"That old couple",
+    blank:"have been walking",
+    after:"together every evening at the park ever since they retired from work.",
+    options:["have been walking","walk","walked","have walked"],
+    hint:"💡 那對老夫婦退休以來「一直都在」每晚散步",
+    explanation:"ever since they retired（時間點）配合現在完成進行式 have been walking，強調退休後持續的習慣。"
+  },
+  {
+    before:"I am sorry I missed your calls; I",
+    blank:"have been preparing",
+    after:"for an important job interview all afternoon.",
+    options:["have been preparing","prepared","have prepared","was preparing"],
+    hint:"💡 整個下午「一直在準備」面試（解釋為何沒接電話）",
+    explanation:"現在完成進行式 have been preparing 說明從下午持續到現在的動作，解釋對現在造成的影響（錯過電話）。"
+  },
+  {
+    before:"Since the charity organization was established, it",
+    blank:"has been helping",
+    after:"thousands of disadvantaged children across the region.",
+    options:["has been helping","helped","has helped","is helping"],
+    hint:"💡 自從機構成立以來（時間點），一直在幫助兒童（仍在進行）",
+    explanation:"since + 時間點（was established）配合現在完成進行式 has been helping，強調持續進行的公益活動。"
+  },
+  // ── 過去完成式 ──
+  {
+    before:"The guests",
+    blank:"had eaten",
+    after:"all the food by the time the host finally came out of the kitchen.",
+    options:["had eaten","ate","have eaten","were eating"],
+    hint:"💡 主人從廚房出來之前，客人「已經吃完」所有食物",
+    explanation:"by the time + 過去式（came），前面的動作用過去完成式 had + p.p.（eaten）表示更早完成的動作。"
+  },
+  {
+    before:"She discovered that someone",
+    blank:"had read",
+    after:"her diary without her permission.",
+    options:["had read","has read","read","was reading"],
+    hint:"💡 她「發現」（過去）有人「已經讀過」她的日記",
+    explanation:"discovered（過去）之前就已發生的動作用過去完成式 had + p.p.（read）表示更早發生的事件。"
+  },
+  {
+    before:"Before the new president took office, the previous government",
+    blank:"had accumulated",
+    after:"a record amount of national debt over the past decade.",
+    options:["had accumulated","accumulated","has accumulated","was accumulating"],
+    hint:"💡 新總統就任之前，前政府「已經累積」了大量債務",
+    explanation:"before + 過去式（took office）之前已發生的動作用過去完成式 had + p.p.（accumulated）。"
+  },
+  {
+    before:"When the firefighters finally arrived at the scene, the building",
+    blank:"had already burned",
+    after:"beyond saving.",
+    options:["had already burned","already burned","has already burned","was already burning"],
+    hint:"💡 消防員到時，大樓「已經」燒毀，無法挽救",
+    explanation:"when + 過去式（arrived），之前已完成的動作用過去完成式 had already burned。already 強調動作的提前完成。"
+  },
+  {
+    before:"The team",
+    blank:"had rehearsed",
+    after:"the presentation three times before the conference, so everyone felt confident.",
+    options:["had rehearsed","rehearsed","has rehearsed","would rehearse"],
+    hint:"💡 會議前，團隊「已經排練」三次，所以充滿信心",
+    explanation:"before the conference（時間點）之前完成的動作用過去完成式 had rehearsed。充分的事前準備說明為何充滿信心。"
+  },
+  {
+    before:"I realized I",
+    blank:"had left",
+    after:"my phone at the restaurant only after I got home.",
+    options:["had left","left","have left","was leaving"],
+    hint:"💡 我到家後「才意識到」我「曾把」手機忘在餐廳",
+    explanation:"realized（過去）之前的事件用過去完成式 had left。兩個過去動作：先忘記（had left），後發現（realized）。"
+  },
+  {
+    before:"By the end of the semester, the students",
+    blank:"had learned",
+    after:"over two hundred new vocabulary words and several complex grammar patterns.",
+    options:["had learned","learned","have learned","would learn"],
+    hint:"💡 學期結束時，學生「已經學了」超過兩百個新詞",
+    explanation:"by the end of the semester（過去時間點）之前完成的動作用過去完成式 had learned。"
+  },
+  {
+    before:"The train",
+    blank:"had already departed",
+    after:"by the time we rushed to the station with all our luggage.",
+    options:["had already departed","already departed","has already departed","was departing"],
+    hint:"💡 我們拖著行李趕到車站時，火車「已經開走」了",
+    explanation:"by the time + 過去式（rushed），之前完成的動作用過去完成式 had already departed。"
+  },
+  {
+    before:"The author",
+    blank:"had written",
+    after:"three novels and numerous short stories before she received any public recognition.",
+    options:["had written","has written","wrote","was writing"],
+    hint:"💡 在她獲得任何認可「之前」，她「已寫過」三部小說",
+    explanation:"before she received（過去）之前的動作用過去完成式 had written，表示更早已完成的創作。"
+  },
+  {
+    before:"He felt embarrassed because he",
+    blank:"had told",
+    after:"the same joke he was telling to these very people before.",
+    options:["had told","has told","told","was telling"],
+    hint:"💡 他很尷尬，因為他「已經說過」他正在講的那個笑話",
+    explanation:"felt（過去）+ because 引導的原因，更早發生的動作用過去完成式 had told。"
+  },
+  {
+    before:"The expedition team",
+    blank:"had prepared",
+    after:"thoroughly for six months before finally setting off on their journey.",
+    options:["had prepared","prepared","has prepared","have prepared"],
+    hint:"💡 出發前，探險隊「已充分準備」了六個月",
+    explanation:"before setting off（時間點）之前，用過去完成式 had prepared + for six months 表示準備的時長。"
+  },
+  {
+    before:"I didn't recognize her at first because she",
+    blank:"had changed",
+    after:"her hairstyle completely since the last time we met.",
+    options:["had changed","has changed","changed","was changing"],
+    hint:"💡 我沒認出她，因為她「之前已改變」了髮型",
+    explanation:"didn't recognize（過去）是因為 had changed（更早發生），用過去完成式表示時間順序。"
+  },
+  // ── 複雜被動語態 ──
+  {
+    before:"The ancient manuscripts",
+    blank:"are being preserved",
+    after:"carefully in a temperature-controlled environment to prevent further deterioration.",
+    options:["are being preserved","are preserved","have been preserving","were preserved"],
+    hint:"💡 古老手稿「正在被」小心保存，現在進行被動",
+    explanation:"現在進行式被動語態：are being + p.p.（preserved）。表示目前正在進行的保護措施。"
+  },
+  {
+    before:"By next December, the new community center",
+    blank:"will have been completed",
+    after:"and opened for use by local residents.",
+    options:["will have been completed","will be completed","will complete","will have completed"],
+    hint:"💡 到明年十二月，新社區中心「將已被完成」，未來完成被動",
+    explanation:"未來完成式被動語態：will have been + p.p.（completed）。By + 未來時間點，強調在未來某時間點之前完成的被動動作。"
+  },
+  {
+    before:"The suspect",
+    blank:"had already been taken",
+    after:"in for questioning by the time the detective arrived at the police station.",
+    options:["had already been taken","was already taken","has already been taken","is already taken"],
+    hint:"💡 偵探到時，嫌疑人「已被帶走」問話，過去完成被動",
+    explanation:"過去完成式被動語態：had already been + p.p.（taken）。by the time + 過去式（arrived）表示更早完成的被動動作。"
+  },
+  {
+    before:"All the sensitive files",
+    blank:"had been deleted",
+    after:"from the system before the security breach was even discovered.",
+    options:["had been deleted","were deleted","have been deleted","had deleted"],
+    hint:"💡 安全漏洞被發現之前，檔案「就已被刪除」，過去完成被動",
+    explanation:"過去完成式被動語態：had been + p.p.（deleted）。before the breach was discovered 確認用過去完成式。"
+  },
+  {
+    before:"The new policy on renewable energy",
+    blank:"was finally adopted",
+    after:"by the parliament after months of heated debate among lawmakers.",
+    options:["was finally adopted","finally adopted","has been adopted","were adopted"],
+    hint:"💡 新政策「被」議會「通過」，過去被動",
+    explanation:"過去式被動語態：was + p.p.（adopted）。by the parliament 表示行為者，finally 強調來之不易。"
+  },
+  {
+    before:"These regulations",
+    blank:"are expected to be revised",
+    after:"to cover new types of digital platforms in the near future.",
+    options:["are expected to be revised","are expecting to be revised","expect to revise","were expected to revise"],
+    hint:"💡 法規「預計將被修訂」，be expected to be + p.p.（雙重被動）",
+    explanation:"雙重被動語態：are expected（第一被動）+ to be revised（第二被動不定式）。表示「被預期去被修訂」的正式語法結構。"
+  },
+  {
+    before:"The missing children",
+    blank:"were found",
+    after:"safe and sound in a neighbor's backyard after a three-hour search.",
+    options:["were found","found","have been found","are found"],
+    hint:"💡 失蹤兒童「被找到」，過去被動",
+    explanation:"過去式被動語態：were + p.p.（found）。主詞 The missing children 是複數，搜索活動已結束用過去式。"
+  },
+  {
+    before:"The smartphone model that",
+    blank:"was launched",
+    after:"last year has already sold over ten million units worldwide.",
+    options:["was launched","has been launched","launched","is launched"],
+    hint:"💡 去年「被推出」的手機型號，關係子句中的被動",
+    explanation:"關係子句修飾 the smartphone model，last year 確認用過去式，型號是被推出的，用過去被動 was launched。"
+  },
+  {
+    before:"She was surprised to learn that her application",
+    blank:"had been rejected",
+    after:"by the scholarship committee without any detailed explanation.",
+    options:["had been rejected","was rejected","has been rejected","were rejected"],
+    hint:"💡 她（過去）得知申請書「已被」委員會「拒絕」，過去完成被動",
+    explanation:"learn（過去）→ had been rejected（更早的被動動作）。過去完成式被動：had been + p.p.（rejected）。"
+  },
+  {
+    before:"The road will",
+    blank:"be closed",
+    after:"for major repairs starting next Monday, causing significant traffic disruptions.",
+    options:["be closed","be closing","have been closed","close"],
+    hint:"💡 道路下週一起「將被關閉」，will + 被動",
+    explanation:"未來式被動語態：will + be + p.p.（closed）。for repairs 說明關閉原因。"
+  },
+  {
+    before:"The community garden",
+    blank:"was established",
+    after:"by a group of retired teachers who wanted to give something back to their neighborhood.",
+    options:["was established","established","has been established","is establishing"],
+    hint:"💡 社區花園「被建立」，由退休教師群體創辦，過去被動",
+    explanation:"過去式被動語態：was + p.p.（established）。by + 行為者（a group of retired teachers）表示創辦者。"
+  },
+  {
+    before:"Strict safety measures",
+    blank:"are required",
+    after:"to be implemented at all public gatherings following the recent incident.",
+    options:["are required","require","were required","have required"],
+    hint:"💡 嚴格安全措施「被要求」執行，be required to + V",
+    explanation:"be required to + V 是正式的被動語態表示「被規定/要求」。are required 是現在式，表示目前有效的規定。"
+  },
+  {
+    before:"The annual festival, which",
+    blank:"had been cancelled",
+    after:"for three consecutive years due to the pandemic, finally resumed last summer.",
+    options:["had been cancelled","was cancelled","has been cancelled","were cancelled"],
+    hint:"💡 節慶「之前已被取消」三年，然後去年恢復，過去完成被動",
+    explanation:"關係子句修飾 the festival，在 resumed（過去）之前持續被取消用過去完成被動 had been cancelled。"
+  },
+  {
+    before:"The painting that experts believe",
+    blank:"was created",
+    after:"by an unknown artist in the seventeenth century recently sold for millions at auction.",
+    options:["was created","was creating","has been created","created"],
+    hint:"💡 畫作「被創作」於十七世紀，關係子句中的過去被動",
+    explanation:"關係子句中，seventeenth century 確認用過去式，畫作是被創作的，用過去被動 was created。"
+  },
+  {
+    before:"By the time the investigation is complete, new guidelines",
+    blank:"will have been written",
+    after:"and distributed to all staff members across the organization.",
+    options:["will have been written","will be written","would be written","will have written"],
+    hint:"💡 到調查結束時，新指南「將已被撰寫」，未來完成被動",
+    explanation:"by the time + 現在式（is complete）對應未來完成式被動：will have been + p.p.（written）。"
+  },
+  // ── 條件句 / 假設語氣 ──
+  {
+    before:"If the company",
+    blank:"had invested",
+    after:"more in employee training, it would not be facing such a high turnover rate now.",
+    options:["had invested","invested","would invest","has invested"],
+    hint:"💡 如果公司當初有更多投資（但沒有），就不會面臨這個問題（現在）",
+    explanation:"混合條件句：If + 過去完成式（had invested）表示過去假設，主句 would not be facing（現在）表示現在的結果。"
+  },
+  {
+    before:"",
+    blank:"Had we checked",
+    after:"the weather forecast more carefully, we would have brought proper rain gear.",
+    options:["Had we checked","If we checked","We had checked","If we check"],
+    hint:"💡 過去假設的倒裝形式：Had + 主詞 + p.p.（省略 if）",
+    explanation:"與過去事實相反的假設句可倒裝：Had + 主詞 + p.p. = If + 主詞 + had + p.p.。省略 if 時，had 提前到主詞前。"
+  },
+  {
+    before:"The project might have been completed on schedule if the lead engineer",
+    blank:"hadn't fallen",
+    after:"seriously ill just two weeks before the deadline.",
+    options:["hadn't fallen","didn't fall","hasn't fallen","wouldn't fall"],
+    hint:"💡 如果首席工程師沒有生病（但生了），專案也許就能準時完成",
+    explanation:"與過去事實相反：if + 過去完成式（hadn't fallen），主句 might have been completed（情態完成被動）。"
+  },
+  {
+    before:"I wish the committee",
+    blank:"had considered",
+    after:"our proposal more carefully before making their final decision.",
+    options:["had considered","considered","would consider","has considered"],
+    hint:"💡 I wish + 過去完成式，表示對過去事件的遺憾",
+    explanation:"I wish + 過去完成式（had considered）表示「希望當時有發生但沒發生的事」，帶有對過去的遺憾。"
+  },
+  {
+    before:"",
+    blank:"Were it not",
+    after:"for your generous donation, this medical research project could not have continued.",
+    options:["Were it not","If it is not","Had it not been","Was it not"],
+    hint:"💡 正式倒裝：Were it not for... = If it were not for...（若非...）",
+    explanation:"Were it not for + 名詞 是正式的假設語氣倒裝句型，相當於 If it were not for...，表示「若非...（就不會有現在的結果）」。"
+  },
+  {
+    before:"If only the doctors",
+    blank:"had detected",
+    after:"the illness sooner, she might have had a much better chance of recovery.",
+    options:["had detected","detected","have detected","would detect"],
+    hint:"💡 If only + 過去完成式，強烈表達對過去的遺憾",
+    explanation:"If only + 過去完成式（had detected）表示強烈的遺憾——希望當時更早發現疾病，但沒有。"
+  },
+  {
+    before:"Unless the landlord",
+    blank:"agrees",
+    after:"to lower the rent significantly, we will have no choice but to move out.",
+    options:["agrees","agreed","will agree","would agree"],
+    hint:"💡 Unless（除非）引導的條件句，談未來可能的條件",
+    explanation:"unless = if...not，引導未來可能的條件，子句用現在式（agrees）代替未來式，主句用 will。"
+  },
+  {
+    before:"Suppose you",
+    blank:"were",
+    after:"offered the job in another city, would you actually move your entire family there?",
+    options:["were","are","had been","would be"],
+    hint:"💡 Suppose + 假設，「假設你被提供工作機會」（與現在相反）",
+    explanation:"Suppose（假設）引導的虛擬語氣，談與現在事實相反的情況，用過去式（were offered）。were 是假設語氣的標準形式。"
+  },
+  {
+    before:"The flood damage could have been minimized if the early warning system",
+    blank:"had been functioning",
+    after:"properly at the time of the storm.",
+    options:["had been functioning","was functioning","has been functioning","were functioning"],
+    hint:"💡 如果預警系統當時「一直在正常運作」，損失本可降低",
+    explanation:"與過去事實相反：if + 過去完成進行式（had been functioning），主句 could have been minimized（情態完成被動）。"
+  },
+  {
+    before:"Even if she",
+    blank:"had used",
+    after:"all her strength, she would not have been able to lift that heavy box alone.",
+    options:["had used","used","has used","would use"],
+    hint:"💡 Even if（即使）引導過去假設，她還是無法抬起",
+    explanation:"even if 引導與過去事實相反的假設，用過去完成式（had used）。主句 would not have been able to 是情態完成式。"
+  },
+  {
+    before:"",
+    blank:"Had she realized",
+    after:"the importance of financial planning earlier, she would not be struggling so much now.",
+    options:["Had she realized","If she realizes","When she realized","Though she realized"],
+    hint:"💡 過去假設倒裝：Had she realized... = If she had realized...",
+    explanation:"與過去事實相反的倒裝假設句：Had + 主詞 + p.p. = If + 主詞 + had + p.p.。省略 if，had 提前。"
+  },
+  {
+    before:"The management decided to act as though nothing",
+    blank:"had happened",
+    after:", despite the obvious tension in the room.",
+    options:["had happened","happened","has happened","would happen"],
+    hint:"💡 as though + 過去完成式，表示「好像什麼都沒發生一樣」",
+    explanation:"as though/as if 後接假設語氣。談與過去事實不符的情境，用過去完成式（had happened）。"
+  },
+  {
+    before:"Were the safety regulations",
+    blank:"enforced",
+    after:"more strictly, accidents in the workplace would be far less common.",
+    options:["enforced","to enforce","enforcing","be enforced"],
+    hint:"💡 Were + 主詞 + p.p.（倒裝假設被動）= If...were + p.p.",
+    explanation:"Were + 主詞 + p.p. 是虛擬語氣被動的倒裝形式，相當於 If the safety regulations were enforced more strictly...，談與現在相反的假設。"
+  },
+  {
+    before:"It is essential that every participant",
+    blank:"present",
+    after:"a valid ID before entering the examination hall.",
+    options:["present","presents","presented","has presented"],
+    hint:"💡 It is essential that + 主詞 + 原形動詞（虛擬語氣要求句）",
+    explanation:"It is + 形容詞（essential/important/necessary）+ that + 主詞 + 原形動詞（不加 s）是虛擬語氣的規定句型。"
+  },
+  {
+    before:"The board of directors recommended that the new policy",
+    blank:"be implemented",
+    after:"before the end of the fiscal year.",
+    options:["be implemented","is implemented","was implemented","be implementing"],
+    hint:"💡 recommend that + 主詞 + 原形動詞（虛擬語氣建議句，被動形式）",
+    explanation:"recommend/suggest/propose + that + 主詞 + 原形動詞（不加 s）。被動形式：be + p.p.（be implemented）。"
+  },
+  // ── 分詞構句 ──
+  {
+    before:"",
+    blank:"Acknowledging",
+    after:"the difficulties ahead, the young entrepreneur decided to press on with her business plan.",
+    options:["Acknowledging","Having acknowledged","Acknowledged","To acknowledge"],
+    hint:"💡 主動分詞構句：主詞（she）「承認」困難，然後決定繼續",
+    explanation:"主動分詞構句（Ving）：主句和子句主詞相同（she），Acknowledging 表示她承認困難後所做的決定，與主句動作幾乎同時。"
+  },
+  {
+    before:"",
+    blank:"Having reviewed",
+    after:"all available options, the committee finally agreed on the most cost-effective solution.",
+    options:["Having reviewed","Reviewing","Reviewed","After review"],
+    hint:"💡 完成分詞構句：委員會「已審查完」所有選項後，再做決定",
+    explanation:"Having + p.p.（Having reviewed）表示主要動作發生之前已完成的動作，強調先後順序（先審查後決定）。"
+  },
+  {
+    before:"The new museum wing,",
+    blank:"built",
+    after:"in the early 1990s, is now undergoing a complete renovation.",
+    options:["built","building","having built","to build"],
+    hint:"💡 過去分詞作後位修飾語（= which was built），被動關係",
+    explanation:"過去分詞（p.p.）作名詞後位修飾語：built in the early 1990s = which was built in the early 1990s，表示被動關係。"
+  },
+  {
+    before:"",
+    blank:"Inspired",
+    after:"by his teacher's encouragement, the shy student finally raised his hand to share his opinion.",
+    options:["Inspired","Inspiring","Having inspired","Being inspired"],
+    hint:"💡 過去分詞作分詞構句（被動），學生「被」老師的鼓勵「激勵」",
+    explanation:"被動分詞構句（p.p.）：Inspired by... = Because he was inspired by...。過去分詞表示被動關係，主詞 the student 是被激勵的。"
+  },
+  {
+    before:"With the deadline",
+    blank:"approaching",
+    after:"rapidly, the entire team worked overtime every night to finish the project on time.",
+    options:["approaching","approached","to approach","having approached"],
+    hint:"💡 With + 受詞 + Ving（分詞構句），截止日期「正在逼近」",
+    explanation:"with + 受詞（the deadline）+ Ving（approaching）表示「在...的情況下」。approaching 是主動分詞，deadline 正在接近（主動關係）。"
+  },
+  {
+    before:"",
+    blank:"Having suppressed",
+    after:"her feelings for so long, she finally broke down and cried at the worst possible moment.",
+    options:["Having suppressed","Suppressing","Suppressed","To suppress"],
+    hint:"💡 完成分詞構句：「壓抑了很長時間」之後，她終於崩潰",
+    explanation:"Having + p.p.（Having suppressed）強調動作在主句動作之前已完成，且持續了一段時間（for so long）。"
+  },
+  {
+    before:"The injured hiker,",
+    blank:"found",
+    after:"by a search and rescue team deep in the mountains, was airlifted to the nearest hospital.",
+    options:["found","finding","having found","being found"],
+    hint:"💡 過去分詞後位修飾（= who was found），被動關係",
+    explanation:"過去分詞（found）作後位修飾語，found by a search and rescue team = who was found by...，表示被動。"
+  },
+  {
+    before:"",
+    blank:"Hearing",
+    after:"the fire alarm, the security guards immediately began evacuating everyone from the building.",
+    options:["Hearing","Having heard","Heard","To hear"],
+    hint:"💡 主動分詞構句：警衛「聽到」警報，立刻開始疏散",
+    explanation:"主動分詞構句（Ving）：Hearing 表示與主句動作緊接其後的動作。主詞 the security guards 聽到（主動關係）。"
+  },
+  {
+    before:"With her years of experience",
+    blank:"taken",
+    after:"into account, she was by far the most qualified candidate for the position.",
+    options:["taken","taking","to take","having taken"],
+    hint:"💡 With + 受詞 + p.p.（被動分詞），她的經驗「被考慮進去」",
+    explanation:"with + 受詞（her years of experience）+ p.p.（taken）表示被動關係——她的經驗被考量在內。taken into account = considered。"
+  },
+  {
+    before:"",
+    blank:"Prepared",
+    after:"in strict accordance with the original recipe, the dish tasted exactly as the chef had intended.",
+    options:["Prepared","Preparing","Having prepared","To prepare"],
+    hint:"💡 過去分詞作分詞構句（被動），菜餚「被按照」食譜準備",
+    explanation:"被動分詞構句（p.p.）：Prepared in strict accordance with... = Because it was prepared in strict accordance with...。表示被動關係。"
+  },
+  // ── 倒裝句 ──
+  {
+    before:"Seldom",
+    blank:"has been witnessed",
+    after:"such a moving performance, even by the most seasoned theater critics.",
+    options:["has been witnessed","was witnessed","is witnessed","have been witnessed"],
+    hint:"💡 Seldom 放在句首，主詞與動詞倒裝（否定副詞倒裝）",
+    explanation:"否定副詞 Seldom 放在句首，句子需要倒裝：Seldom + 助動詞 + 主詞 + 動詞原形。has been witnessed（現在完成被動倒裝）。"
+  },
+  {
+    before:"Not until the final results were announced",
+    blank:"did the supporters realize",
+    after:"the true scale of the victory.",
+    options:["did the supporters realize","the supporters realized","supporters did realize","realized the supporters"],
+    hint:"💡 Not until 放在句首，主句倒裝：Not until... + 助動詞 + 主詞 + 動詞",
+    explanation:"Not until + 時間子句，主句倒裝：did + 主詞（the supporters）+ 原形動詞（realize）。Not until 含否定，故主句需倒裝。"
+  },
+  {
+    before:"Rarely",
+    blank:"does one find",
+    after:"a film that manages to appeal equally to both children and adults.",
+    options:["does one find","one finds","one found","found one"],
+    hint:"💡 Rarely 放在句首，否定副詞倒裝，現在式用 does",
+    explanation:"否定副詞 Rarely 放在句首，倒裝：Rarely + does + 主詞（one）+ 原形動詞（find）。"
+  },
+  {
+    before:"Only after she had submitted the report",
+    blank:"did she notice",
+    after:"the serious error she had made on the very first page.",
+    options:["did she notice","she noticed","she did notice","noticed she"],
+    hint:"💡 Only after + 子句，主句倒裝",
+    explanation:"Only after + 完整子句，主句需要倒裝：did + 主詞（she）+ 原形動詞（notice）。Only 含限制意義，故倒裝。"
+  },
+  {
+    before:"So impressed",
+    blank:"was the judge",
+    after:"by the young musician's performance that he offered to personally fund her studies abroad.",
+    options:["was the judge","the judge was","the judge is","is the judge"],
+    hint:"💡 So + 形容詞 + 倒裝，主謂顛倒",
+    explanation:"So + 形容詞（impressed）放在句首，結構為：So + adj. + was/were + 主詞 + that...。倒裝形式：was the judge。"
+  },
+  {
+    before:"No sooner",
+    blank:"had he finished",
+    after:"the presentation than several audience members rushed forward to ask questions.",
+    options:["had he finished","he had finished","did he finish","he finished"],
+    hint:"💡 No sooner...than，「一...就...」，no sooner 後倒裝",
+    explanation:"No sooner + had + 主詞 + p.p....than + 過去式。No sooner had he finished（倒裝）than + 主句（簡單過去）。"
+  },
+  {
+    before:"Not only",
+    blank:"does she help",
+    after:"her clients get better results, but she also charges far less than her competitors.",
+    options:["does she help","she helps","did she help","she helped"],
+    hint:"💡 Not only 放在句首，現在式倒裝",
+    explanation:"Not only 放在句首，後半子句倒裝：Not only + does + 主詞（she）+ 原形動詞（help）...but also...。"
+  },
+  {
+    before:"Under no circumstances",
+    blank:"are employees allowed",
+    after:"to share confidential client information with any third parties.",
+    options:["are employees allowed","employees are allowed","employees allowed","allowed employees are"],
+    hint:"💡 Under no circumstances 含否定，放句首需倒裝",
+    explanation:"Under no circumstances（在任何情況下都不）是否定表達，放句首需要倒裝：are + 主詞（employees）+ 動詞補語（allowed）。"
+  },
+  // ── 情態完成式複合 ──
+  {
+    before:"The traffic was completely jammed. She",
+    blank:"should have taken",
+    after:"the subway instead of driving to the meeting.",
+    options:["should have taken","must have taken","could take","ought to take"],
+    hint:"💡 交通堵塞，她「本應搭」捷運（但沒搭，現在後悔）",
+    explanation:"should have + p.p. 表示「過去應該做但沒做」，帶有遺憾。The traffic was jammed 說明她本該搭捷運的依據。"
+  },
+  {
+    before:"The results were surprisingly good. They",
+    blank:"must have practiced",
+    after:"much harder than we thought.",
+    options:["must have practiced","might have practiced","should have practiced","would have practiced"],
+    hint:"💡 結果意外的好，他們「一定是」比我們想的更努力練習",
+    explanation:"must have + p.p. 表示對過去的強烈正向推測。結果好 → 推測一定練習得很努力。"
+  },
+  {
+    before:"He looked completely lost when I saw him downtown. He",
+    blank:"might have taken",
+    after:"the wrong bus and ended up in an unfamiliar part of the city.",
+    options:["might have taken","must have taken","should have taken","could take"],
+    hint:"💡 他看起來迷路了，他「可能是」搭錯公車了（不確定推測）",
+    explanation:"might have + p.p. 表示對過去的不確定推測，可能性較低。看起來迷路 → 推測原因可能是搭錯車。"
+  },
+  {
+    before:"They",
+    blank:"needn't have",
+    after:"bothered preparing such an elaborate meal when we were just going to order pizza anyway.",
+    options:["needn't have","shouldn't have","mustn't have","couldn't have"],
+    hint:"💡 他們「沒有必要」費心準備（但還是準備了，其實不必）",
+    explanation:"needn't have + p.p. 表示「過去做了但其實沒必要做」。不同於 shouldn't have（不應該做），needn't have 強調白費功夫。"
+  },
+  {
+    before:"The children",
+    blank:"shouldn't have been",
+    after:"left alone in the house for so long. Where were the adults?",
+    options:["shouldn't have been","couldn't have been","mustn't have been","might not have been"],
+    hint:"💡 孩子「不應該被」單獨留在家中（但被留了，表批評）",
+    explanation:"shouldn't have been + p.p./adj. 表示「過去不應發生但發生了」的批評。被動形式：shouldn't have been left alone。"
+  },
+  {
+    before:"The broken lock suggests that someone",
+    blank:"must have been",
+    after:"trying to break into the building sometime last night.",
+    options:["must have been","might have been","could have been","should have been"],
+    hint:"💡 門鎖壞掉，「一定有人」昨晚試圖闖入（強烈推測）",
+    explanation:"must have been + Ving 表示對過去某持續動作的強烈推測。broken lock → evidence → someone was definitely trying to enter。"
+  },
+  {
+    before:"Given how fit she was, she",
+    blank:"could have completed",
+    after:"the marathon with absolutely no problem at all.",
+    options:["could have completed","must have completed","should have completed","would complete"],
+    hint:"💡 以她的體能，她「本來可以」完成馬拉松（暗示她沒有）",
+    explanation:"could have + p.p. 表示「過去有能力做但沒有做的事」。Given how fit she was 說明她本來有這個能力。"
+  },
+  {
+    before:"The storm",
+    blank:"would have caused",
+    after:"far more damage if the levees hadn't held during the heavy rainfall.",
+    options:["would have caused","could have caused","must have caused","should have caused"],
+    hint:"💡 如果堤壩沒有撐住，暴風雨「本來會造成」更大的破壞",
+    explanation:"if 子句（hadn't held）= 與過去事實相反的假設，主句用 would have + p.p.（would have caused）。"
+  },
+  // ── 正式語法結構 ──
+  {
+    before:"It",
+    blank:"has been",
+    after:"three years since the old community library was demolished to make way for a new shopping center.",
+    options:["has been","is","was","had been"],
+    hint:"💡 It has been + 時間 + since + 過去式，表示距今多久",
+    explanation:"It has been + 時間長度 + since + 過去式 是表示「自從...已過了多久」的固定句型。since + 過去式（was demolished）。"
+  },
+  {
+    before:"The harder you",
+    blank:"practice",
+    after:", the more progress you will make in learning a new language.",
+    options:["practice","practiced","will practice","are practicing"],
+    hint:"💡 The + 比較級, the + 比較級，談一般真理用現在式",
+    explanation:"The + 比較級（harder）+ 主詞 + 動詞（現在式），表示一般真理或客觀規律。越努力練習，進步越多。"
+  },
+  {
+    before:"It was the encouraging words from her mentor",
+    blank:"that",
+    after:"gave her the confidence to pursue her lifelong dream.",
+    options:["that","which","what","who"],
+    hint:"💡 強調句型：It was + 強調部分 + that + 其餘句子",
+    explanation:"強調句型（Cleft sentence）：It was + 強調成分（the encouraging words）+ that + 其餘部分。that 是固定用法，不可用 which/what。"
+  },
+  {
+    before:"Such",
+    blank:"was",
+    after:"the impact of the speech that many audience members were moved to tears.",
+    options:["was","is","had been","would be"],
+    hint:"💡 Such was + 名詞 + that，倒裝強調：「影響如此之大...」",
+    explanation:"Such + was/is + 名詞 + that 是倒裝強調句型，相當於 The impact was so great that...。表示程度之深導致某結果。"
+  },
+  {
+    before:"No matter how difficult the situation",
+    blank:"might be",
+    after:", she always maintained a calm and professional attitude.",
+    options:["might be","was","is","would be"],
+    hint:"💡 No matter how + 形容詞 + 主詞 + might be（讓步子句）",
+    explanation:"No matter how + 形容詞 + 主詞 + might be（虛擬讓步）表示「無論情況多麼困難」，might be 用於更正式或更委婉的語氣。"
+  },
+  {
+    before:"It was not until she read the letter a second time",
+    blank:"that",
+    after:"she finally realized what it truly meant.",
+    options:["that","when","which","what"],
+    hint:"💡 強調句型：It was not until...that...，「直到...才...」",
+    explanation:"It was not until + 時間/事件 + that + 主句，是強調「直到某時才...」的強調句型。that 是固定用法。"
+  },
+  {
+    before:"The more experienced the surgeon",
+    blank:"is",
+    after:", the lower the risk of complications during a complex operation.",
+    options:["is","was","be","would be"],
+    hint:"💡 The + 比較級, the + 比較級，談一般真理用現在式",
+    explanation:"The + 比較級 + 主詞 + is（現在式），表示一般真理或客觀規律。外科醫生越有經驗，手術風險越低。"
+  },
+  {
+    before:"",
+    blank:"It is required",
+    after:"that all forms be completed in full before they can be processed by the administrative office.",
+    options:["It is required","It requires","There is required","It is requiring"],
+    hint:"💡 It is required that...（正式被動句型，表示規定/要求）",
+    explanation:"It is + p.p.（required/recommended/expected）+ that 是正式的被動規定句型。表示「規定所有表格必須填寫完整」，that 子句接虛擬語氣原形（be completed）。"
   },
 ];
 
